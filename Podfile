@@ -10,6 +10,7 @@ use_frameworks!
 
 def graphics_components_pods
 	pod 'SkyFloatingLabelTextField'
+	pod 'DLRadioButton'
 end
 
 def networking_pods
@@ -20,10 +21,19 @@ def utilites_pods
     pod 'SwiftyJSON'
 end
 
-target 'Iliad' do
+abstract_target 'Abstract Target' do 
 	graphics_components_pods
 	networking_pods
 	utilites_pods
+
+	target 'IliadProd' do
+	end
+
+	target 'IliadStaging' do
+	end
+
+	target 'IliadDev' do
+	end
 end
 
 

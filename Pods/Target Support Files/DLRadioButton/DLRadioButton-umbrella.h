@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "DLRadioButton.h"
 
-FOUNDATION_EXPORT double Pods_IliadVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_IliadVersionString[];
+FOUNDATION_EXPORT double DLRadioButtonVersionNumber;
+FOUNDATION_EXPORT const unsigned char DLRadioButtonVersionString[];
 

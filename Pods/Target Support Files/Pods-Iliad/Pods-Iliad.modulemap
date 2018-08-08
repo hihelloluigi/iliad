@@ -1,6 +1,0 @@
-framework module Pods_Iliad {
-  umbrella header "Pods-Iliad-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,0 +1,6 @@
+framework module Pods_Abstract_Target_IliadDev {
+  umbrella header "Pods-Abstract Target-IliadDev-umbrella.h"
+
+  export *
+  module * { export * }
+}
