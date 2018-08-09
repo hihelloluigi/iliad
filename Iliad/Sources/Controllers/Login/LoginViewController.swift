@@ -91,15 +91,16 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
 
+    #if DEV
     private func autoFill() {
         // VERY IMPORTANT: If you want to run the app with DEV target you have to insert a file called Credentials.swift with default username and password
         usernameTextField.text = Credentials.username
-        passwordTextField.text = Credentials.wrongPassword
+        passwordTextField.text = Credentials.password
     }
-
     private func autoLogin() {
         loginDidTap(loginButton)
     }
+    #endif
 
     private func performLogin(user: User) {
         guard

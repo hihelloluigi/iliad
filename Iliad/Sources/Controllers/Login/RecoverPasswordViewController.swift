@@ -72,11 +72,14 @@ class RecoverPasswordViewController: UIViewController {
     }
 
     // Mark - Helpers
+    #if DEV
     private func autoFill() {
         // VERY IMPORTANT: If you want to run the app with DEV target you have to insert a file called Credentials.swift with default varibles
         firstTextField.text = Credentials.username
         secondTextField.text = Credentials.email
     }
+    #endif
+
 
     private func changeFormLayout(forgetUsername: Bool) {
         if forgetUsername {
