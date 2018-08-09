@@ -22,6 +22,28 @@ extension APIEndpoint {
             return ("/recover")
         case .recoverPasswordForgetUsername:
             return ("/recover")
+
+        // Logout
+        case .logout:
+            return ("/logout")
+
+        // Informations
+        case .getGeneralInformations:
+            return ("/information")
+        case .getPuk:
+            return ("/information")
+
+        // Actions
+        case .changeEmail:
+            return ("/information")
+        case .changePassword:
+            return ("/information")
+
+        // Credit
+        case .getNationalCredit:
+            return ("/credit")
+        case .getAbroudCredit:
+            return ("/credit")
         }
     }
 }

@@ -10,8 +10,8 @@ import Foundation
 
 extension API {
     class RecoverPasswordClass {
-        class func recoverPassword(username: String, email: String, token: String, _ completionHandler: SuccessHandler?) {
-            API.provider().request(.recoverPassword(username: username, email: email, token: token)) { (result) in
+        class func recoverPassword(username: String, email: String, _ completionHandler: SuccessHandler?) {
+            API.provider().request(.recoverPassword(username: username, email: email)) { (result) in
                 API.responseJson(result, { (json) in
                     guard
                         result.value?.statusCode == 200,
@@ -27,8 +27,8 @@ extension API {
             }
         }
 
-        class func recoverPasswordForgetUsername(name: String, surname: String, email: String, token: String, _ completionHandler: SuccessHandler?) {
-            API.provider().request(.recoverPasswordForgetUsername(name: name, surname: surname, email: email, token: token)) { (result) in
+        class func recoverPasswordForgetUsername(name: String, surname: String, email: String, _ completionHandler: SuccessHandler?) {
+            API.provider().request(.recoverPasswordForgetUsername(name: name, surname: surname, email: email)) { (result) in
                 API.responseJson(result, { (json) in
                     guard
                         result.value?.statusCode == 200,

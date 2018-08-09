@@ -24,10 +24,27 @@ extension API {
             }
         }
 
-        class func login(username: String, password: String, token: String, _ completionHandler: JsonSuccessHandler?) {
-            API.provider().request(.login(username: username, password: password, token: token)) { (result) in
+        class func login(username: String, password: String, _ completionHandler: JsonSuccessHandler?) {
+            API.provider().request(.login(username: username, password: password)) { (result) in
                 API.responseJson(result, { (json) in
                     completionHandler?(json)
+                })
+            }
+        }
+
+        class func logout(_ completionHandler: SuccessHandler?) {
+            API.provider().request(.logout()) { (result) in
+                API.responseJson(result, { (json) in
+                    guard
+                        result.value?.statusCode == 200,
+                        let json = json,
+                        let result = json["iliad"]["0"].string,
+                        let boolResult = result.toBool()
+                        else {
+                            completionHandler?(false)
+                            return
+                    }
+                    completionHandler?(boolResult)
                 })
             }
         }

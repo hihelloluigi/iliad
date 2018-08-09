@@ -15,9 +15,25 @@ enum APIEndpoint {
     
     // Login
     case getToken(username: String, password: String)
-    case login(username: String, password: String, token: String)
+    case login(username: String, password: String)
 
     // Recover password
-    case recoverPassword(username: String, email: String, token: String)
-    case recoverPasswordForgetUsername(name: String, surname: String, email: String, token: String)
+    case recoverPassword(username: String, email: String)
+    case recoverPasswordForgetUsername(name: String, surname: String, email: String)
+
+    // Logout
+    case logout()
+
+    // Informations
+    case getGeneralInformations
+    case getPuk
+
+    // Actions
+    case changeEmail(email: String, emailConfirm: String, password: String)
+    case changePassword(newPassword: String, newPasswordConfirm: String, actualPassword: String)
+
+    // Credit
+    case getNationalCredit
+    case getAbroudCredit
+
 }

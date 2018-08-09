@@ -39,4 +39,11 @@ extension APIEndpoint: TargetType {
     private func getProperEndpoint(api: APIEndpoint) -> URL {
         return URL(string: AppConfig.shared.apiBaseURL)!
     }
+
+    var accessToken: String {
+        guard let token = Config.token() else {
+            return ""
+        }
+        return token
+    }
 }
