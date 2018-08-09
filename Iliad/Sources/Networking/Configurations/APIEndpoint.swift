@@ -13,7 +13,11 @@ import Foundation
  */
 enum APIEndpoint {
     
-    //Login
+    // Login
     case getToken(username: String, password: String)
     case login(username: String, password: String, token: String)
+
+    // Recover password
+    case recoverPassword(username: String, email: String, token: String)
+    case recoverPasswordForgetUsername(name: String, surname: String, email: String, token: String)
 }

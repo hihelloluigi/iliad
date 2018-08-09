@@ -11,9 +11,9 @@ import Moya
 
 extension APIEndpoint: TargetType {
     
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         return [
-            "Content-Type": contentType,
+            "Content-Type": contentType
         ]
     }
     
@@ -40,5 +40,3 @@ extension APIEndpoint: TargetType {
         return URL(string: AppConfig.shared.apiBaseURL)!
     }
 }
-
-

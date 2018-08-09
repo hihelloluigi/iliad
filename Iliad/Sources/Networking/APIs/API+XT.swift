@@ -11,7 +11,6 @@ import Result
 import Moya
 import SwiftyJSON
 
-
 extension API {
     static func responseSuccess(_ result: Result<Moya.Response, MoyaError>, _ completionHandler: SuccessHandler?) {
         API.response(result) { (response) in

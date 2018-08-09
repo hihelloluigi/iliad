@@ -34,7 +34,7 @@ class API {
         let configuration = URLSessionConfiguration.default
         configuration.requestCachePolicy = .useProtocolCachePolicy
         
-        let networkActivityPlugin = NetworkActivityPlugin { (type, target) in
+        let networkActivityPlugin = NetworkActivityPlugin { (type, _) in
             switch type {
             case .began:
                 DispatchQueue.main.async {

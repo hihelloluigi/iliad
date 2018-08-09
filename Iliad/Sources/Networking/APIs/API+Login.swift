@@ -24,22 +24,12 @@ extension API {
             }
         }
 
-        class func login(username: String, password: String, token: String, _ completionHandler: SuccessHandler?) {
+        class func login(username: String, password: String, token: String, _ completionHandler: JsonSuccessHandler?) {
             API.provider().request(.login(username: username, password: password, token: token)) { (result) in
                 API.responseJson(result, { (json) in
-                    guard let json = json else {
-                        completionHandler?(false)
-                        return
-                    }
-
-                    guard let authToken = json["authToken"].string else {
-                        completionHandler?(false)
-                        return
-                    }
-                    completionHandler?(true)
+                    completionHandler?(json)
                 })
             }
         }
-
     }
 }

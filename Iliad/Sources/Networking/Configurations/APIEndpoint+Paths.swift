@@ -11,12 +11,17 @@ import Foundation
 extension APIEndpoint {
     var path: String {
         switch self {
-            
-        //Login
+        // Login
         case .getToken:
             return ("/token")
         case .login:
             return ("/login")
+
+        // Recover password
+        case .recoverPassword:
+            return ("/recover")
+        case .recoverPasswordForgetUsername:
+            return ("/recover")
         }
     }
 }
