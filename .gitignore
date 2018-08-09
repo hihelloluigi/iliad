@@ -67,4 +67,4 @@ fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
 
-Iliad/Sources/Utilities/Credentials\.swift
+Iliad/Configurations/Credentials\.swift
