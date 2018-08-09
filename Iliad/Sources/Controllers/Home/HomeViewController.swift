@@ -70,10 +70,23 @@ class HomeViewController: UIViewController {
 
         tableView.reloadData()
     }
+
+    // Mark - APIs
+    private func logout() {
+        API.LoginClass.logout { (success) in
+            guard success else {
+                print("Impossible to do logout")
+                return
+            }
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     // Mark - Actions
     @IBAction func settingsDidTap(_ sender: Any) {
     }
     @IBAction func logoutDidTap(_ sender: Any) {
+        logout()
     }
 }
 

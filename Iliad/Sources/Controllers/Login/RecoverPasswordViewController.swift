@@ -126,7 +126,7 @@ class RecoverPasswordViewController: UIViewController {
     // Mark - APIs
     private func recoverPassword(username: String, email: String, token: String) {
         recoverButton.startAnimation()
-        API.RecoverPasswordClass.recoverPassword(username: username, email: email, token: token) { (success) in
+        API.RecoverPasswordClass.recoverPassword(username: username, email: email) { (success) in
             self.recoverButton.stopAnimation()
             guard success else {
                 self.showErrorMessage(title: "Errore", message: "Impossibile inviare l'email di ripristino password")
@@ -140,7 +140,7 @@ class RecoverPasswordViewController: UIViewController {
 
     private func forgetUsernameRecoverPassword(name: String, surname: String, email: String, token: String) {
         recoverButton.startAnimation()
-        API.RecoverPasswordClass.recoverPasswordForgetUsername(name: name, surname: surname, email: email, token: token) { (success) in
+        API.RecoverPasswordClass.recoverPasswordForgetUsername(name: name, surname: surname, email: email) { (success) in
             self.recoverButton.stopAnimation()
             guard success else {
                 self.showErrorMessage(title: "Errore", message: "Impossibile inviare l'email di ripristino password")

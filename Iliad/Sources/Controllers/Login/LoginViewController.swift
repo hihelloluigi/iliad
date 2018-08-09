@@ -156,12 +156,12 @@ class LoginViewController: UIViewController {
             }
 
             Config.store(token: token)
-            self.login(username: username, password: password, token: token)
+            self.login(username: username, password: password)
         }
     }
 
-    private func login(username: String, password: String, token: String) {
-        API.LoginClass.login(username: username, password: password, token: token) { (json) in
+    private func login(username: String, password: String) {
+        API.LoginClass.login(username: username, password: password) { (json) in
             guard let json = json else {
                 self.showError(title: "Errore", message: "Impossibile effettuare il login")
                 return
