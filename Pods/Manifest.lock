@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.7.3)
-  - DLRadioButton (1.4.12)
+  - BEMCheckBox (1.4.1)
   - Moya (11.0.2):
     - Moya/Core (= 11.0.2)
   - Moya/Core (11.0.2):
@@ -11,7 +11,7 @@ PODS:
   - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
-  - DLRadioButton
+  - BEMCheckBox
   - Moya
   - SkyFloatingLabelTextField
   - SwiftyJSON
@@ -19,7 +19,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - DLRadioButton
+    - BEMCheckBox
     - Moya
     - Result
     - SkyFloatingLabelTextField
@@ -27,12 +27,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   SkyFloatingLabelTextField: 4cbeece9c3aae97c6019d8fae511cb5b755874f7
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: f2f58d1e4c9dcd4201f63c197a0d4ca4f9dbf963
+PODFILE CHECKSUM: ef91e6003df677798ac10d58af70ac12b64d7cbe
 
 COCOAPODS: 1.5.2

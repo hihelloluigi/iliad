@@ -10,7 +10,7 @@ use_frameworks!
 
 def graphics_components_pods
 	pod 'SkyFloatingLabelTextField'
-	pod 'DLRadioButton'
+	pod 'BEMCheckBox'
 end
 
 def networking_pods
