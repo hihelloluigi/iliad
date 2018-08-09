@@ -11,7 +11,8 @@ use_frameworks!
 def graphics_components_pods
 	pod 'SkyFloatingLabelTextField'
 	pod 'BEMCheckBox'
-	pod 'LGButton'
+	pod 'TransitionButton'
+	pod 'SwiftMessages'
 end
 
 def networking_pods
