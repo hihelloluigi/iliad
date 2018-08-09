@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		279DC7AE83B415FADB26284F /* Pods_Iliad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690054E1B6EB8D8D40C38141 /* Pods_Iliad.framework */; };
 		2A192F91211AF9F3007C1E5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A192F8B211AF9F3007C1E5A /* LaunchScreen.storyboard */; };
 		2A192F93211AF9F3007C1E5A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A192F8F211AF9F3007C1E5A /* Login.storyboard */; };
-		2A192F97211AFD08007C1E5A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192F96211AFD08007C1E5A /* CustomButton.swift */; };
 		2A192F99211AFF16007C1E5A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192F98211AFF16007C1E5A /* LoginViewController.swift */; };
 		2A192F9E211B01F4007C1E5A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192F9D211B01F4007C1E5A /* API.swift */; };
 		2A192FA0211B02E7007C1E5A /* API+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192F9F211B02E7007C1E5A /* API+XT.swift */; };
@@ -27,7 +25,6 @@
 		2A192FBF211B12BD007C1E5A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192F98211AFF16007C1E5A /* LoginViewController.swift */; };
 		2A192FC0211B12BD007C1E5A /* API+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FA1211B0306007C1E5A /* API+Login.swift */; };
 		2A192FC1211B12BD007C1E5A /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FA4211B0366007C1E5A /* Typealiases.swift */; };
-		2A192FC2211B12BD007C1E5A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192F96211AFD08007C1E5A /* CustomButton.swift */; };
 		2A192FC3211B12BD007C1E5A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192F9D211B01F4007C1E5A /* API.swift */; };
 		2A192FC4211B12BD007C1E5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A80F30D211AEF21008D8C89 /* AppDelegate.swift */; };
 		2A192FC5211B12BD007C1E5A /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FAA211B0383007C1E5A /* APIEndpoint.swift */; };
@@ -37,7 +34,6 @@
 		2A192FCA211B12BD007C1E5A /* AppConfig+Staging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FB7211B0638007C1E5A /* AppConfig+Staging.swift */; };
 		2A192FCB211B12BD007C1E5A /* APIEndpoint+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FA8211B0383007C1E5A /* APIEndpoint+Methods.swift */; };
 		2A192FCC211B12BD007C1E5A /* APIEndpoint+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FA7211B0382007C1E5A /* APIEndpoint+Core.swift */; };
-		2A192FCF211B12BD007C1E5A /* Pods_Iliad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690054E1B6EB8D8D40C38141 /* Pods_Iliad.framework */; };
 		2A192FD1211B12BD007C1E5A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A192F8F211AF9F3007C1E5A /* Login.storyboard */; };
 		2A192FD2211B12BD007C1E5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A80F314211AEF22008D8C89 /* Assets.xcassets */; };
 		2A192FD3211B12BD007C1E5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A192F8B211AF9F3007C1E5A /* LaunchScreen.storyboard */; };
@@ -45,7 +41,6 @@
 		2A192FDE211B12C0007C1E5A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192F98211AFF16007C1E5A /* LoginViewController.swift */; };
 		2A192FDF211B12C0007C1E5A /* API+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FA1211B0306007C1E5A /* API+Login.swift */; };
 		2A192FE0211B12C0007C1E5A /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FA4211B0366007C1E5A /* Typealiases.swift */; };
-		2A192FE1211B12C0007C1E5A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192F96211AFD08007C1E5A /* CustomButton.swift */; };
 		2A192FE2211B12C0007C1E5A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192F9D211B01F4007C1E5A /* API.swift */; };
 		2A192FE3211B12C0007C1E5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A80F30D211AEF21008D8C89 /* AppDelegate.swift */; };
 		2A192FE4211B12C0007C1E5A /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FAA211B0383007C1E5A /* APIEndpoint.swift */; };
@@ -55,19 +50,53 @@
 		2A192FEA211B12C0007C1E5A /* APIEndpoint+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FA8211B0383007C1E5A /* APIEndpoint+Methods.swift */; };
 		2A192FEB211B12C0007C1E5A /* APIEndpoint+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FA7211B0382007C1E5A /* APIEndpoint+Core.swift */; };
 		2A192FEC211B12C0007C1E5A /* AppConfig+Dev.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FB9211B064A007C1E5A /* AppConfig+Dev.swift */; };
-		2A192FEE211B12C0007C1E5A /* Pods_Iliad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 690054E1B6EB8D8D40C38141 /* Pods_Iliad.framework */; };
 		2A192FF0211B12C0007C1E5A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A192F8F211AF9F3007C1E5A /* Login.storyboard */; };
 		2A192FF1211B12C0007C1E5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A80F314211AEF22008D8C89 /* Assets.xcassets */; };
 		2A192FF2211B12C0007C1E5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A192F8B211AF9F3007C1E5A /* LaunchScreen.storyboard */; };
 		2A193000211B1766007C1E5A /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FFD211B172C007C1E5A /* Credentials.swift */; };
+		2A193005211B1AD6007C1E5A /* String+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193004211B1AD6007C1E5A /* String+XT.swift */; };
+		2A193006211B1AE4007C1E5A /* String+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193004211B1AD6007C1E5A /* String+XT.swift */; };
+		2A193007211B1AE5007C1E5A /* String+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193004211B1AD6007C1E5A /* String+XT.swift */; };
+		2A193009211B1B2F007C1E5A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193008211B1B2F007C1E5A /* Config.swift */; };
+		2A19300A211B1B67007C1E5A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193008211B1B2F007C1E5A /* Config.swift */; };
+		2A19300B211B1B68007C1E5A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193008211B1B2F007C1E5A /* Config.swift */; };
+		2A19300E211B1C50007C1E5A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19300D211B1C50007C1E5A /* User.swift */; };
+		2A19300F211B1C50007C1E5A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19300D211B1C50007C1E5A /* User.swift */; };
+		2A193010211B1C50007C1E5A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19300D211B1C50007C1E5A /* User.swift */; };
+		2A193012211B1DB3007C1E5A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193011211B1DB3007C1E5A /* HomeViewController.swift */; };
+		2A193013211B1DB3007C1E5A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193011211B1DB3007C1E5A /* HomeViewController.swift */; };
+		2A193014211B1DB3007C1E5A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193011211B1DB3007C1E5A /* HomeViewController.swift */; };
+		2A193016211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */; };
+		2A193017211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */; };
+		2A193018211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */; };
+		2A19301F211B1E7F007C1E5A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A19301D211B1E7F007C1E5A /* Home.storyboard */; };
+		2A193020211B1E7F007C1E5A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A19301D211B1E7F007C1E5A /* Home.storyboard */; };
+		2A193021211B1E7F007C1E5A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A19301D211B1E7F007C1E5A /* Home.storyboard */; };
+		2A193025211B362E007C1E5A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193024211B362E007C1E5A /* CardView.swift */; };
+		2A193026211B362E007C1E5A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193024211B362E007C1E5A /* CardView.swift */; };
+		2A193027211B362E007C1E5A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193024211B362E007C1E5A /* CardView.swift */; };
+		2A193029211B38D9007C1E5A /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193028211B38D9007C1E5A /* BasicCell.swift */; };
+		2A19302A211B38D9007C1E5A /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193028211B38D9007C1E5A /* BasicCell.swift */; };
+		2A19302B211B38D9007C1E5A /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193028211B38D9007C1E5A /* BasicCell.swift */; };
 		2A80F30E211AEF21008D8C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A80F30D211AEF21008D8C89 /* AppDelegate.swift */; };
 		2A80F315211AEF22008D8C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A80F314211AEF22008D8C89 /* Assets.xcassets */; };
+		2AF92DCF211C2DD00058CFD2 /* API+RecoverPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DCE211C2DD00058CFD2 /* API+RecoverPassword.swift */; };
+		2AF92DD2211C32500058CFD2 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */; };
+		2AF92DD3211C32530058CFD2 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */; };
+		2AF92DD4211C32540058CFD2 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */; };
+		2AF92DD5211C33800058CFD2 /* API+RecoverPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DCE211C2DD00058CFD2 /* API+RecoverPassword.swift */; };
+		2AF92DD6211C33800058CFD2 /* API+RecoverPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DCE211C2DD00058CFD2 /* API+RecoverPassword.swift */; };
+		2AF92DD8211C36A50058CFD2 /* UIColor+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */; };
+		2AF92DD9211C36A50058CFD2 /* UIColor+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */; };
+		2AF92DDA211C36A50058CFD2 /* UIColor+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */; };
+		AC40DE2FB908B14B7010935F /* Pods_Abstract_Target_IliadProd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 754F9F367520EC3D64ACF3CC /* Pods_Abstract_Target_IliadProd.framework */; };
+		C6DF32393F8788875A24A7C2 /* Pods_Abstract_Target_IliadStaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC644D73C304814C492214A8 /* Pods_Abstract_Target_IliadStaging.framework */; };
+		CFDD73AC1A4BF5E2BE3B2204 /* Pods_Abstract_Target_IliadDev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CD4109D8897C9AFCA8D71E /* Pods_Abstract_Target_IliadDev.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2A192F8C211AF9F3007C1E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A192F90211AF9F3007C1E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
-		2A192F96211AFD08007C1E5A /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		2A192F98211AFF16007C1E5A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2A192F9D211B01F4007C1E5A /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		2A192F9F211B02E7007C1E5A /* API+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+XT.swift"; sourceTree = "<group>"; };
@@ -83,17 +112,34 @@
 		2A192FB7211B0638007C1E5A /* AppConfig+Staging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppConfig+Staging.swift"; sourceTree = "<group>"; };
 		2A192FB9211B064A007C1E5A /* AppConfig+Dev.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppConfig+Dev.swift"; sourceTree = "<group>"; };
 		2A192FD8211B12BD007C1E5A /* IliadStaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IliadStaging.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A192FD9211B12BD007C1E5A /* iliadStaging-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "iliadStaging-Info.plist"; path = "/Users/luigi/Workspace/iliad/iliadStaging-Info.plist"; sourceTree = "<absolute>"; };
+		2A192FD9211B12BD007C1E5A /* iliadStaging-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "iliadStaging-Info.plist"; path = "/Users/luigi/Workspace/iliad/Iliad/Configurations/Staging/iliadStaging-Info.plist"; sourceTree = "<absolute>"; };
 		2A192FF7211B12C0007C1E5A /* IliadDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IliadDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A192FF8211B12C1007C1E5A /* iliadDev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "iliadDev-Info.plist"; path = "/Users/luigi/Workspace/iliad/iliadDev-Info.plist"; sourceTree = "<absolute>"; };
+		2A192FF8211B12C1007C1E5A /* iliadDev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "iliadDev-Info.plist"; path = "/Users/luigi/Workspace/iliad/Iliad/Configurations/Dev/iliadDev-Info.plist"; sourceTree = "<absolute>"; };
 		2A192FFD211B172C007C1E5A /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		2A193004211B1AD6007C1E5A /* String+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+XT.swift"; sourceTree = "<group>"; };
+		2A193008211B1B2F007C1E5A /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		2A19300D211B1C50007C1E5A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2A193011211B1DB3007C1E5A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+XT.swift"; sourceTree = "<group>"; };
+		2A19301E211B1E7F007C1E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		2A193024211B362E007C1E5A /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		2A193028211B38D9007C1E5A /* BasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
 		2A80F30A211AEF21008D8C89 /* IliadProd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IliadProd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A80F30D211AEF21008D8C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A80F314211AEF22008D8C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A80F319211AEF22008D8C89 /* iliadProd-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iliadProd-Info.plist"; sourceTree = "<group>"; };
-		690054E1B6EB8D8D40C38141 /* Pods_Iliad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Iliad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D530370BE9EF242CC0B8EF31 /* Pods-Iliad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iliad.release.xcconfig"; path = "Pods/Target Support Files/Pods-Iliad/Pods-Iliad.release.xcconfig"; sourceTree = "<group>"; };
-		E10A2C97B6E7F45CBDDDA3DB /* Pods-Iliad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iliad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Iliad/Pods-Iliad.debug.xcconfig"; sourceTree = "<group>"; };
+		2AF92DCE211C2DD00058CFD2 /* API+RecoverPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+RecoverPassword.swift"; sourceTree = "<group>"; };
+		2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
+		2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+XT.swift"; sourceTree = "<group>"; };
+		2FF08424C2EC9A18AEE8E6F2 /* Pods-Abstract Target-IliadStaging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-IliadStaging.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract Target-IliadStaging/Pods-Abstract Target-IliadStaging.debug.xcconfig"; sourceTree = "<group>"; };
+		754F9F367520EC3D64ACF3CC /* Pods_Abstract_Target_IliadProd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstract_Target_IliadProd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		908DF9FC3DA5EA36B7A4F54B /* Pods-Abstract Target-IliadDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-IliadDev.release.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract Target-IliadDev/Pods-Abstract Target-IliadDev.release.xcconfig"; sourceTree = "<group>"; };
+		94448A748CC2882C4B07E2E9 /* Pods-Abstract Target-IliadProd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-IliadProd.release.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract Target-IliadProd/Pods-Abstract Target-IliadProd.release.xcconfig"; sourceTree = "<group>"; };
+		A8CD4109D8897C9AFCA8D71E /* Pods_Abstract_Target_IliadDev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstract_Target_IliadDev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7488A9A80BE83B962C92D8B /* Pods-Abstract Target-IliadProd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-IliadProd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract Target-IliadProd/Pods-Abstract Target-IliadProd.debug.xcconfig"; sourceTree = "<group>"; };
+		BC644D73C304814C492214A8 /* Pods_Abstract_Target_IliadStaging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstract_Target_IliadStaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F74579818C2C7F36B5D468AB /* Pods-Abstract Target-IliadStaging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-IliadStaging.release.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract Target-IliadStaging/Pods-Abstract Target-IliadStaging.release.xcconfig"; sourceTree = "<group>"; };
+		F7D6C6559BB064276CE6ECC1 /* Pods-Abstract Target-IliadDev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-IliadDev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract Target-IliadDev/Pods-Abstract Target-IliadDev.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A192FCF211B12BD007C1E5A /* Pods_Iliad.framework in Frameworks */,
+				C6DF32393F8788875A24A7C2 /* Pods_Abstract_Target_IliadStaging.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A192FEE211B12C0007C1E5A /* Pods_Iliad.framework in Frameworks */,
+				CFDD73AC1A4BF5E2BE3B2204 /* Pods_Abstract_Target_IliadDev.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,28 +163,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				279DC7AE83B415FADB26284F /* Pods_Iliad.framework in Frameworks */,
+				AC40DE2FB908B14B7010935F /* Pods_Abstract_Target_IliadProd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		004341AD034F68D90CB0641A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				690054E1B6EB8D8D40C38141 /* Pods_Iliad.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		2A192F94211AFC72007C1E5A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				2A19300C211B1C3A007C1E5A /* Database */,
 				2A192F9A211B017F007C1E5A /* Networking */,
 				2A80F320211AEF3C008D8C89 /* Controllers */,
+				2A193003211B1AC7007C1E5A /* Extensions */,
 				2A192F95211AFCE3007C1E5A /* Components */,
 				2A192FA3211B0351007C1E5A /* Utilities */,
+				2A19302C211B38E1007C1E5A /* Cells */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -146,7 +187,7 @@
 		2A192F95211AFCE3007C1E5A /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2A192F96211AFD08007C1E5A /* CustomButton.swift */,
+				2A193024211B362E007C1E5A /* CardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -166,6 +207,7 @@
 				2A192F9D211B01F4007C1E5A /* API.swift */,
 				2A192F9F211B02E7007C1E5A /* API+XT.swift */,
 				2A192FA1211B0306007C1E5A /* API+Login.swift */,
+				2AF92DCE211C2DD00058CFD2 /* API+RecoverPassword.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -218,13 +260,39 @@
 			path = Dev;
 			sourceTree = "<group>";
 		};
+		2A193003211B1AC7007C1E5A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2A193004211B1AD6007C1E5A /* String+XT.swift */,
+				2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */,
+				2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2A19300C211B1C3A007C1E5A /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				2A19300D211B1C50007C1E5A /* User.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		2A19302C211B38E1007C1E5A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2A193028211B38D9007C1E5A /* BasicCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		2A80F301211AEF21008D8C89 = {
 			isa = PBXGroup;
 			children = (
 				2A80F30C211AEF21008D8C89 /* Iliad */,
 				2A80F30B211AEF21008D8C89 /* Products */,
-				66121AC3963DC814846714DB /* Pods */,
-				004341AD034F68D90CB0641A /* Frameworks */,
+				E86062355225B95ABD2F5248 /* Pods */,
+				A588A6B86D21B3763DF6ED5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -261,7 +329,8 @@
 		2A80F320211AEF3C008D8C89 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2A192F98211AFF16007C1E5A /* LoginViewController.swift */,
+				2AF92DD0211C323A0058CFD2 /* Login */,
+				2A193011211B1DB3007C1E5A /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -271,6 +340,7 @@
 			children = (
 				2A192F8B211AF9F3007C1E5A /* LaunchScreen.storyboard */,
 				2A192F8F211AF9F3007C1E5A /* Login.storyboard */,
+				2A19301D211B1E7F007C1E5A /* Home.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -279,6 +349,7 @@
 			isa = PBXGroup;
 			children = (
 				2A192FB3211B060A007C1E5A /* AppConfig.swift */,
+				2A193008211B1B2F007C1E5A /* Config.swift */,
 				2A192FB0211B05ED007C1E5A /* Prod */,
 				2A192FB1211B05F3007C1E5A /* Staging */,
 				2A192FB2211B05F8007C1E5A /* Dev */,
@@ -286,11 +357,34 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
-		66121AC3963DC814846714DB /* Pods */ = {
+		2AF92DD0211C323A0058CFD2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				E10A2C97B6E7F45CBDDDA3DB /* Pods-Iliad.debug.xcconfig */,
-				D530370BE9EF242CC0B8EF31 /* Pods-Iliad.release.xcconfig */,
+				2A192F98211AFF16007C1E5A /* LoginViewController.swift */,
+				2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A588A6B86D21B3763DF6ED5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8CD4109D8897C9AFCA8D71E /* Pods_Abstract_Target_IliadDev.framework */,
+				754F9F367520EC3D64ACF3CC /* Pods_Abstract_Target_IliadProd.framework */,
+				BC644D73C304814C492214A8 /* Pods_Abstract_Target_IliadStaging.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E86062355225B95ABD2F5248 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7D6C6559BB064276CE6ECC1 /* Pods-Abstract Target-IliadDev.debug.xcconfig */,
+				908DF9FC3DA5EA36B7A4F54B /* Pods-Abstract Target-IliadDev.release.xcconfig */,
+				B7488A9A80BE83B962C92D8B /* Pods-Abstract Target-IliadProd.debug.xcconfig */,
+				94448A748CC2882C4B07E2E9 /* Pods-Abstract Target-IliadProd.release.xcconfig */,
+				2FF08424C2EC9A18AEE8E6F2 /* Pods-Abstract Target-IliadStaging.debug.xcconfig */,
+				F74579818C2C7F36B5D468AB /* Pods-Abstract Target-IliadStaging.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -302,11 +396,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A192FD5211B12BD007C1E5A /* Build configuration list for PBXNativeTarget "IliadStaging" */;
 			buildPhases = (
-				2A192FBC211B12BD007C1E5A /* [CP] Check Pods Manifest.lock */,
+				B48E894E00CE81831C0ADD22 /* [CP] Check Pods Manifest.lock */,
 				2A192FBD211B12BD007C1E5A /* Sources */,
 				2A192FCE211B12BD007C1E5A /* Frameworks */,
 				2A192FD0211B12BD007C1E5A /* Resources */,
-				2A192FD4211B12BD007C1E5A /* [CP] Embed Pods Frameworks */,
+				CA97CC957028D79B7596449D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -321,11 +415,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A192FF4211B12C0007C1E5A /* Build configuration list for PBXNativeTarget "IliadDev" */;
 			buildPhases = (
-				2A192FDB211B12C0007C1E5A /* [CP] Check Pods Manifest.lock */,
+				393D655E27B24F3D5AAC0A7B /* [CP] Check Pods Manifest.lock */,
 				2A192FDC211B12C0007C1E5A /* Sources */,
 				2A192FED211B12C0007C1E5A /* Frameworks */,
 				2A192FEF211B12C0007C1E5A /* Resources */,
-				2A192FF3211B12C0007C1E5A /* [CP] Embed Pods Frameworks */,
+				2A193023211B2D98007C1E5A /* Swiftlint */,
+				D46CDEB3DF27D8BEF617F2E5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -340,11 +435,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A80F31C211AEF22008D8C89 /* Build configuration list for PBXNativeTarget "IliadProd" */;
 			buildPhases = (
-				42AD899E127D686FB520AC34 /* [CP] Check Pods Manifest.lock */,
+				BAA82AD64FF6E208CCB02982 /* [CP] Check Pods Manifest.lock */,
 				2A80F306211AEF21008D8C89 /* Sources */,
 				2A80F307211AEF21008D8C89 /* Frameworks */,
 				2A80F308211AEF21008D8C89 /* Resources */,
-				86250B09C3A0124FE674DF0E /* [CP] Embed Pods Frameworks */,
+				31B99667BB9DB2078BB8D943 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -398,6 +493,7 @@
 				2A192FD1211B12BD007C1E5A /* Login.storyboard in Resources */,
 				2A192FD2211B12BD007C1E5A /* Assets.xcassets in Resources */,
 				2A192FD3211B12BD007C1E5A /* LaunchScreen.storyboard in Resources */,
+				2A193020211B1E7F007C1E5A /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +504,7 @@
 				2A192FF0211B12C0007C1E5A /* Login.storyboard in Resources */,
 				2A192FF1211B12C0007C1E5A /* Assets.xcassets in Resources */,
 				2A192FF2211B12C0007C1E5A /* LaunchScreen.storyboard in Resources */,
+				2A193021211B1E7F007C1E5A /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,13 +515,58 @@
 				2A192F93211AF9F3007C1E5A /* Login.storyboard in Resources */,
 				2A80F315211AEF22008D8C89 /* Assets.xcassets in Resources */,
 				2A192F91211AF9F3007C1E5A /* LaunchScreen.storyboard in Resources */,
+				2A19301F211B1E7F007C1E5A /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A192FBC211B12BD007C1E5A /* [CP] Check Pods Manifest.lock */ = {
+		2A193023211B2D98007C1E5A /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: Swiftlint not installed, download from https://github.com/realm/Swiftlint\"\nfi";
+		};
+		31B99667BB9DB2078BB8D943 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Abstract Target-IliadProd/Pods-Abstract Target-IliadProd-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
+				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Abstract Target-IliadProd/Pods-Abstract Target-IliadProd-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		393D655E27B24F3D5AAC0A7B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -435,40 +577,14 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Iliad-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Abstract Target-IliadDev-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2A192FD4211B12BD007C1E5A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Iliad/Pods-Iliad-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Iliad/Pods-Iliad-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2A192FDB211B12C0007C1E5A /* [CP] Check Pods Manifest.lock */ = {
+		B48E894E00CE81831C0ADD22 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -479,40 +595,14 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Iliad-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Abstract Target-IliadStaging-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2A192FF3211B12C0007C1E5A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Iliad/Pods-Iliad-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Iliad/Pods-Iliad-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		42AD899E127D686FB520AC34 /* [CP] Check Pods Manifest.lock */ = {
+		BAA82AD64FF6E208CCB02982 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -523,21 +613,23 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Iliad-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Abstract Target-IliadProd-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		86250B09C3A0124FE674DF0E /* [CP] Embed Pods Frameworks */ = {
+		CA97CC957028D79B7596449D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Iliad/Pods-Iliad-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Abstract Target-IliadStaging/Pods-Abstract Target-IliadStaging-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
+				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
@@ -546,6 +638,8 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
@@ -553,7 +647,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Iliad/Pods-Iliad-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Abstract Target-IliadStaging/Pods-Abstract Target-IliadStaging-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D46CDEB3DF27D8BEF617F2E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Abstract Target-IliadDev/Pods-Abstract Target-IliadDev-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
+				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Abstract Target-IliadDev/Pods-Abstract Target-IliadDev-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -567,15 +691,24 @@
 				2A192FBF211B12BD007C1E5A /* LoginViewController.swift in Sources */,
 				2A192FC0211B12BD007C1E5A /* API+Login.swift in Sources */,
 				2A192FC1211B12BD007C1E5A /* Typealiases.swift in Sources */,
-				2A192FC2211B12BD007C1E5A /* CustomButton.swift in Sources */,
+				2A193013211B1DB3007C1E5A /* HomeViewController.swift in Sources */,
 				2A192FC3211B12BD007C1E5A /* API.swift in Sources */,
+				2AF92DD9211C36A50058CFD2 /* UIColor+XT.swift in Sources */,
 				2A192FC4211B12BD007C1E5A /* AppDelegate.swift in Sources */,
+				2A19300F211B1C50007C1E5A /* User.swift in Sources */,
 				2A192FC5211B12BD007C1E5A /* APIEndpoint.swift in Sources */,
 				2A192FC7211B12BD007C1E5A /* APIEndpoint+Tasks.swift in Sources */,
+				2AF92DD5211C33800058CFD2 /* API+RecoverPassword.swift in Sources */,
 				2A192FC8211B12BD007C1E5A /* API+XT.swift in Sources */,
+				2A193006211B1AE4007C1E5A /* String+XT.swift in Sources */,
 				2A192FC9211B12BD007C1E5A /* AppConfig.swift in Sources */,
+				2A193026211B362E007C1E5A /* CardView.swift in Sources */,
 				2A192FCA211B12BD007C1E5A /* AppConfig+Staging.swift in Sources */,
+				2AF92DD3211C32530058CFD2 /* RecoverPasswordViewController.swift in Sources */,
+				2A19300A211B1B67007C1E5A /* Config.swift in Sources */,
+				2A193017211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */,
 				2A192FCB211B12BD007C1E5A /* APIEndpoint+Methods.swift in Sources */,
+				2A19302A211B38D9007C1E5A /* BasicCell.swift in Sources */,
 				2A192FCC211B12BD007C1E5A /* APIEndpoint+Core.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,18 +719,27 @@
 			files = (
 				2A192FDD211B12C0007C1E5A /* APIEndpoint+Paths.swift in Sources */,
 				2A192FDE211B12C0007C1E5A /* LoginViewController.swift in Sources */,
+				2A193014211B1DB3007C1E5A /* HomeViewController.swift in Sources */,
 				2A192FDF211B12C0007C1E5A /* API+Login.swift in Sources */,
 				2A192FE0211B12C0007C1E5A /* Typealiases.swift in Sources */,
-				2A192FE1211B12C0007C1E5A /* CustomButton.swift in Sources */,
+				2AF92DDA211C36A50058CFD2 /* UIColor+XT.swift in Sources */,
+				2A19300B211B1B68007C1E5A /* Config.swift in Sources */,
+				2A193018211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */,
+				2A193027211B362E007C1E5A /* CardView.swift in Sources */,
+				2A19302B211B38D9007C1E5A /* BasicCell.swift in Sources */,
+				2AF92DD6211C33800058CFD2 /* API+RecoverPassword.swift in Sources */,
 				2A192FE2211B12C0007C1E5A /* API.swift in Sources */,
 				2A192FE3211B12C0007C1E5A /* AppDelegate.swift in Sources */,
 				2A192FE4211B12C0007C1E5A /* APIEndpoint.swift in Sources */,
+				2A193007211B1AE5007C1E5A /* String+XT.swift in Sources */,
 				2A192FE6211B12C0007C1E5A /* APIEndpoint+Tasks.swift in Sources */,
 				2A192FE7211B12C0007C1E5A /* API+XT.swift in Sources */,
 				2A192FE8211B12C0007C1E5A /* AppConfig.swift in Sources */,
 				2A192FEA211B12C0007C1E5A /* APIEndpoint+Methods.swift in Sources */,
+				2A193010211B1C50007C1E5A /* User.swift in Sources */,
 				2A193000211B1766007C1E5A /* Credentials.swift in Sources */,
 				2A192FEB211B12C0007C1E5A /* APIEndpoint+Core.swift in Sources */,
+				2AF92DD4211C32540058CFD2 /* RecoverPasswordViewController.swift in Sources */,
 				2A192FEC211B12C0007C1E5A /* AppConfig+Dev.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,15 +752,24 @@
 				2A192F99211AFF16007C1E5A /* LoginViewController.swift in Sources */,
 				2A192FA2211B0306007C1E5A /* API+Login.swift in Sources */,
 				2A192FA5211B0366007C1E5A /* Typealiases.swift in Sources */,
-				2A192F97211AFD08007C1E5A /* CustomButton.swift in Sources */,
+				2A193012211B1DB3007C1E5A /* HomeViewController.swift in Sources */,
 				2A192F9E211B01F4007C1E5A /* API.swift in Sources */,
+				2AF92DD8211C36A50058CFD2 /* UIColor+XT.swift in Sources */,
 				2A80F30E211AEF21008D8C89 /* AppDelegate.swift in Sources */,
+				2A19300E211B1C50007C1E5A /* User.swift in Sources */,
 				2A192FAF211B0383007C1E5A /* APIEndpoint.swift in Sources */,
 				2A192FB6211B061F007C1E5A /* AppConfig+Prod.swift in Sources */,
 				2A192FAB211B0383007C1E5A /* APIEndpoint+Tasks.swift in Sources */,
+				2A193005211B1AD6007C1E5A /* String+XT.swift in Sources */,
 				2A192FA0211B02E7007C1E5A /* API+XT.swift in Sources */,
+				2A193025211B362E007C1E5A /* CardView.swift in Sources */,
 				2A192FB4211B060A007C1E5A /* AppConfig.swift in Sources */,
+				2A193009211B1B2F007C1E5A /* Config.swift in Sources */,
+				2A193016211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */,
+				2AF92DCF211C2DD00058CFD2 /* API+RecoverPassword.swift in Sources */,
 				2A192FAD211B0383007C1E5A /* APIEndpoint+Methods.swift in Sources */,
+				2A193029211B38D9007C1E5A /* BasicCell.swift in Sources */,
+				2AF92DD2211C32500058CFD2 /* RecoverPasswordViewController.swift in Sources */,
 				2A192FAC211B0383007C1E5A /* APIEndpoint+Core.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -642,22 +793,27 @@
 			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
+		2A19301D211B1E7F007C1E5A /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A19301E211B1E7F007C1E5A /* Base */,
+			);
+			name = Home.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2A192FD6211B12BD007C1E5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E10A2C97B6E7F45CBDDDA3DB /* Pods-Iliad.debug.xcconfig */;
+			baseConfigurationReference = 2FF08424C2EC9A18AEE8E6F2 /* Pods-Abstract Target-IliadStaging.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
-				INFOPLIST_FILE = "$(SRCROOT)/iliadStaging-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Staging/iliadStaging-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.IliadStaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -667,17 +823,14 @@
 		};
 		2A192FD7211B12BD007C1E5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D530370BE9EF242CC0B8EF31 /* Pods-Iliad.release.xcconfig */;
+			baseConfigurationReference = F74579818C2C7F36B5D468AB /* Pods-Abstract Target-IliadStaging.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
-				INFOPLIST_FILE = "$(SRCROOT)/iliadStaging-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Staging/iliadStaging-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.IliadStaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -687,17 +840,14 @@
 		};
 		2A192FF5211B12C0007C1E5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E10A2C97B6E7F45CBDDDA3DB /* Pods-Iliad.debug.xcconfig */;
+			baseConfigurationReference = F7D6C6559BB064276CE6ECC1 /* Pods-Abstract Target-IliadDev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
-				INFOPLIST_FILE = "$(SRCROOT)/iliadDev-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Dev/iliadDev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEV";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.IliadDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -708,17 +858,14 @@
 		};
 		2A192FF6211B12C0007C1E5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D530370BE9EF242CC0B8EF31 /* Pods-Iliad.release.xcconfig */;
+			baseConfigurationReference = 908DF9FC3DA5EA36B7A4F54B /* Pods-Abstract Target-IliadDev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
-				INFOPLIST_FILE = "$(SRCROOT)/iliadDev-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Dev/iliadDev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEV";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.IliadDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -843,17 +990,14 @@
 		};
 		2A80F31D211AEF22008D8C89 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E10A2C97B6E7F45CBDDDA3DB /* Pods-Iliad.debug.xcconfig */;
+			baseConfigurationReference = B7488A9A80BE83B962C92D8B /* Pods-Abstract Target-IliadProd.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Prod/iliadProd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.Iliad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -863,17 +1007,14 @@
 		};
 		2A80F31E211AEF22008D8C89 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D530370BE9EF242CC0B8EF31 /* Pods-Iliad.release.xcconfig */;
+			baseConfigurationReference = 94448A748CC2882C4B07E2E9 /* Pods-Abstract Target-IliadProd.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Prod/iliadProd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.Iliad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

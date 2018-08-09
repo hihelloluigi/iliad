@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 class AppConfig {
-    
-    //MARK:- Singleton instance
+
+    // Mark - Singleton instance
     static let shared = AppConfig()
-    
-    //MARK:- Properties
+
+    // Mark - Properties
     var apiBaseURL: String {
         return AppConfig.webserviceConfiguration.urlString
     }
@@ -45,7 +45,7 @@ enum DefaultConfiguration: String {
     var urlString: String {
         switch self {
         case .development:
-            return "https://localhost:1331"
+            return "http://192.168.2.5:1331"
         case .staging:
             return ""
         case .production:
