@@ -30,6 +30,7 @@ class LoginViewController: UIViewController {
 
         // Buttons
     @IBOutlet weak var loginButton: TransitionButton!
+    @IBOutlet weak var infoButton: UIButton!
 
     // Mark - Override
     override func viewDidLoad() {
@@ -66,6 +67,7 @@ class LoginViewController: UIViewController {
         passwordTextField.rightViewMode = .always
 
         logoImageView.tintColor = .iliadRed
+        infoButton.tintColor = .iliadRed
     }
 
     private func recoverUsername() {
@@ -219,6 +221,15 @@ class LoginViewController: UIViewController {
             Config.removeUsername()
         }
     }
+
+    @IBAction func infoDidTap(_ sender: Any) {
+        guard let infoVC = "Login" <%> "InfoViewController" as? InfoViewController else {
+            return
+        }
+
+        infoVC.modalTransitionStyle = .crossDissolve
+        self.present(infoVC, animated: true, completion: nil)
+    }
 }
 
 extension LoginViewController: RecoverPasswordDelegate {
@@ -226,4 +237,3 @@ extension LoginViewController: RecoverPasswordDelegate {
         self.showSuccessMessage(title: "Successo", message: "Email di ripristino password inviata")
     }
 }
-

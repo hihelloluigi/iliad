@@ -78,6 +78,15 @@
 		2A193029211B38D9007C1E5A /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193028211B38D9007C1E5A /* BasicCell.swift */; };
 		2A19302A211B38D9007C1E5A /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193028211B38D9007C1E5A /* BasicCell.swift */; };
 		2A19302B211B38D9007C1E5A /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193028211B38D9007C1E5A /* BasicCell.swift */; };
+		2A232638211C877D0045FBD7 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A232637211C877D0045FBD7 /* InfoViewController.swift */; };
+		2A23263A211C884D0045FBD7 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A232639211C884D0045FBD7 /* Utility.swift */; };
+		2A23263B211C888F0045FBD7 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A232639211C884D0045FBD7 /* Utility.swift */; };
+		2A23263C211C888F0045FBD7 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A232639211C884D0045FBD7 /* Utility.swift */; };
+		2A23263D211C88920045FBD7 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A232637211C877D0045FBD7 /* InfoViewController.swift */; };
+		2A23263E211C88920045FBD7 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A232637211C877D0045FBD7 /* InfoViewController.swift */; };
+		2A232640211C892F0045FBD7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23263F211C892F0045FBD7 /* CustomButton.swift */; };
+		2A232641211C892F0045FBD7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23263F211C892F0045FBD7 /* CustomButton.swift */; };
+		2A232642211C892F0045FBD7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23263F211C892F0045FBD7 /* CustomButton.swift */; };
 		2A47620B211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
 		2A47620C211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
 		2A47620D211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
@@ -127,6 +136,9 @@
 		2A19301E211B1E7F007C1E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		2A193024211B362E007C1E5A /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		2A193028211B38D9007C1E5A /* BasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
+		2A232637211C877D0045FBD7 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		2A232639211C884D0045FBD7 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		2A23263F211C892F0045FBD7 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+XT.swift"; sourceTree = "<group>"; };
 		2A80F30A211AEF21008D8C89 /* IliadProd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IliadProd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A80F30D211AEF21008D8C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +203,7 @@
 		2A192F95211AFCE3007C1E5A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2A23263F211C892F0045FBD7 /* CustomButton.swift */,
 				2A193024211B362E007C1E5A /* CardView.swift */,
 			);
 			path = Components;
@@ -233,6 +246,7 @@
 			children = (
 				2A192FA4211B0366007C1E5A /* Typealiases.swift */,
 				2A192FFD211B172C007C1E5A /* Credentials.swift */,
+				2A232639211C884D0045FBD7 /* Utility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -291,6 +305,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		2A232636211C84120045FBD7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2A193011211B1DB3007C1E5A /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		2A80F301211AEF21008D8C89 = {
 			isa = PBXGroup;
 			children = (
@@ -335,7 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				2AF92DD0211C323A0058CFD2 /* Login */,
-				2A193011211B1DB3007C1E5A /* HomeViewController.swift */,
+				2A232636211C84120045FBD7 /* Home */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -367,6 +389,7 @@
 			children = (
 				2A192F98211AFF16007C1E5A /* LoginViewController.swift */,
 				2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */,
+				2A232637211C877D0045FBD7 /* InfoViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -700,6 +723,7 @@
 			files = (
 				2A192FBE211B12BD007C1E5A /* APIEndpoint+Paths.swift in Sources */,
 				2A192FBF211B12BD007C1E5A /* LoginViewController.swift in Sources */,
+				2A232641211C892F0045FBD7 /* CustomButton.swift in Sources */,
 				2A192FC0211B12BD007C1E5A /* API+Login.swift in Sources */,
 				2A192FC1211B12BD007C1E5A /* Typealiases.swift in Sources */,
 				2A193013211B1DB3007C1E5A /* HomeViewController.swift in Sources */,
@@ -708,6 +732,7 @@
 				2A192FC4211B12BD007C1E5A /* AppDelegate.swift in Sources */,
 				2A19300F211B1C50007C1E5A /* User.swift in Sources */,
 				2A192FC5211B12BD007C1E5A /* APIEndpoint.swift in Sources */,
+				2A23263C211C888F0045FBD7 /* Utility.swift in Sources */,
 				2A192FC7211B12BD007C1E5A /* APIEndpoint+Tasks.swift in Sources */,
 				2AF92DD5211C33800058CFD2 /* API+RecoverPassword.swift in Sources */,
 				2A192FC8211B12BD007C1E5A /* API+XT.swift in Sources */,
@@ -719,6 +744,7 @@
 				2AF92DD3211C32530058CFD2 /* RecoverPasswordViewController.swift in Sources */,
 				2A19300A211B1B67007C1E5A /* Config.swift in Sources */,
 				2A193017211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */,
+				2A23263D211C88920045FBD7 /* InfoViewController.swift in Sources */,
 				2A192FCB211B12BD007C1E5A /* APIEndpoint+Methods.swift in Sources */,
 				2A19302A211B38D9007C1E5A /* BasicCell.swift in Sources */,
 				2A192FCC211B12BD007C1E5A /* APIEndpoint+Core.swift in Sources */,
@@ -733,6 +759,7 @@
 				2A192FDE211B12C0007C1E5A /* LoginViewController.swift in Sources */,
 				2A193014211B1DB3007C1E5A /* HomeViewController.swift in Sources */,
 				2A192FDF211B12C0007C1E5A /* API+Login.swift in Sources */,
+				2A232642211C892F0045FBD7 /* CustomButton.swift in Sources */,
 				2A192FE0211B12C0007C1E5A /* Typealiases.swift in Sources */,
 				2AF92DDA211C36A50058CFD2 /* UIColor+XT.swift in Sources */,
 				2A19300B211B1B68007C1E5A /* Config.swift in Sources */,
@@ -742,6 +769,7 @@
 				2AF92DD6211C33800058CFD2 /* API+RecoverPassword.swift in Sources */,
 				2A192FE2211B12C0007C1E5A /* API.swift in Sources */,
 				2A47620D211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */,
+				2A23263E211C88920045FBD7 /* InfoViewController.swift in Sources */,
 				2A192FE3211B12C0007C1E5A /* AppDelegate.swift in Sources */,
 				2A192FE4211B12C0007C1E5A /* APIEndpoint.swift in Sources */,
 				2A193007211B1AE5007C1E5A /* String+XT.swift in Sources */,
@@ -749,6 +777,7 @@
 				2A192FE7211B12C0007C1E5A /* API+XT.swift in Sources */,
 				2A192FE8211B12C0007C1E5A /* AppConfig.swift in Sources */,
 				2A192FEA211B12C0007C1E5A /* APIEndpoint+Methods.swift in Sources */,
+				2A23263B211C888F0045FBD7 /* Utility.swift in Sources */,
 				2A193010211B1C50007C1E5A /* User.swift in Sources */,
 				2A193000211B1766007C1E5A /* Credentials.swift in Sources */,
 				2A192FEB211B12C0007C1E5A /* APIEndpoint+Core.swift in Sources */,
@@ -763,8 +792,10 @@
 			files = (
 				2A192FAE211B0383007C1E5A /* APIEndpoint+Paths.swift in Sources */,
 				2A192F99211AFF16007C1E5A /* LoginViewController.swift in Sources */,
+				2A232640211C892F0045FBD7 /* CustomButton.swift in Sources */,
 				2A192FA2211B0306007C1E5A /* API+Login.swift in Sources */,
 				2A192FA5211B0366007C1E5A /* Typealiases.swift in Sources */,
+				2A232638211C877D0045FBD7 /* InfoViewController.swift in Sources */,
 				2A193012211B1DB3007C1E5A /* HomeViewController.swift in Sources */,
 				2A192F9E211B01F4007C1E5A /* API.swift in Sources */,
 				2AF92DD8211C36A50058CFD2 /* UIColor+XT.swift in Sources */,
@@ -780,6 +811,7 @@
 				2A47620B211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */,
 				2A193009211B1B2F007C1E5A /* Config.swift in Sources */,
 				2A193016211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */,
+				2A23263A211C884D0045FBD7 /* Utility.swift in Sources */,
 				2AF92DCF211C2DD00058CFD2 /* API+RecoverPassword.swift in Sources */,
 				2A192FAD211B0383007C1E5A /* APIEndpoint+Methods.swift in Sources */,
 				2A193029211B38D9007C1E5A /* BasicCell.swift in Sources */,
