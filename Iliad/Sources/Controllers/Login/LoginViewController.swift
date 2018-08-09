@@ -9,6 +9,7 @@
 import UIKit
 import SkyFloatingLabelTextField
 import BEMCheckBox
+import TransitionButton
 
 class LoginViewController: UIViewController {
 
@@ -28,7 +29,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var subtitleLabel: UILabel!
 
         // Buttons
-    @IBOutlet weak var loginButton: CustomButton!
+    @IBOutlet weak var loginButton: TransitionButton!
 
     // Mark - Override
     override func viewDidLoad() {
@@ -47,7 +48,6 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
 
         showOnlyBackButton(animated)
-//        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
     // Mark - Setup
@@ -90,8 +90,9 @@ class LoginViewController: UIViewController {
     }
 
     private func autoFill() {
+        // VERY IMPORTANT: If you want to run the app with DEV target you have to insert a file called Credentials.swift with default username and password
         usernameTextField.text = Credentials.username
-        passwordTextField.text = Credentials.password
+        passwordTextField.text = Credentials.wrongPassword
     }
 
     private func autoLogin() {
@@ -107,7 +108,11 @@ class LoginViewController: UIViewController {
         }
 
         homeViewController.user = user
-        self.present(navController, animated: true, completion: nil)
+        view.isUserInteractionEnabled = true
+
+        loginButton.stopAnimation(animationStyle: .expand) {
+            self.present(navController, animated: true, completion: nil)
+        }
     }
 
     private func createShowPasswordButton() -> UIButton {
@@ -130,10 +135,20 @@ class LoginViewController: UIViewController {
         }
     }
 
+    private func showError(title: String, message: String) {
+        self.loginButton.stopAnimation()
+        self.showErrorMessage(title: title, message: message)
+        view.isUserInteractionEnabled = true
+    }
+
     // Mark - APIs
     private func getToken(username: String, password: String) {
+        loginButton.startAnimation()
+        view.isUserInteractionEnabled = false
+
         API.LoginClass.getToken(username: username, password: password) { (token, success) in
             guard success, let token = token else {
+                self.showError(title: "Errore", message: "Impossibile effettuare il login")
                 return
             }
 
@@ -145,6 +160,7 @@ class LoginViewController: UIViewController {
     private func login(username: String, password: String, token: String) {
         API.LoginClass.login(username: username, password: password, token: token) { (json) in
             guard let json = json else {
+                self.showError(title: "Errore", message: "Impossibile effettuare il login")
                 return
             }
 
@@ -162,13 +178,18 @@ class LoginViewController: UIViewController {
             return
         }
 
-        guard !usernameText.isEmpty else {
-            
+        if usernameText.isEmpty {
+            usernameTextField.errorMessage = "Inserisci username"
             return
+        } else {
+            usernameTextField.errorMessage = nil
         }
-        guard !passwordText.isEmpty else {
 
+        if passwordText.isEmpty {
+            passwordTextField.errorMessage = "Inserisci password"
             return
+        } else {
+            passwordTextField.errorMessage = nil
         }
 
         if checkBox.on {
@@ -178,14 +199,15 @@ class LoginViewController: UIViewController {
         let passwordBase64 = passwordText.toBase64()
         getToken(username: usernameText, password: passwordBase64)
     }
-
+    
     @IBAction func forgotPasswordDidTap(_ sender: Any) {
         guard let recoverPasswordVC = "Login" <%> "RecoverPasswordViewController" as? RecoverPasswordViewController else {
             return
         }
 
-        self.navigationController?.pushViewController(recoverPasswordVC, animated: true)
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        recoverPasswordVC.delegate = self
+        recoverPasswordVC.modalTransitionStyle = .crossDissolve
+        self.present(recoverPasswordVC, animated: true, completion: nil)
     }
     
     @IBAction func checkBoxChanged(_ sender: Any) {
@@ -198,3 +220,10 @@ class LoginViewController: UIViewController {
         }
     }
 }
+
+extension LoginViewController: RecoverPasswordDelegate {
+    func recoverEmailSend() {
+        self.showSuccessMessage(title: "Successo", message: "Email di ripristino password inviata")
+    }
+}
+

@@ -8,6 +8,11 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+import TransitionButton
+
+protocol RecoverPasswordDelegate: NSObjectProtocol {
+    func recoverEmailSend()
+}
 
 class RecoverPasswordViewController: UIViewController {
 
@@ -25,11 +30,15 @@ class RecoverPasswordViewController: UIViewController {
     @IBOutlet weak var thirdTextField: SkyFloatingLabelTextField!
 
         // Buttons
-    @IBOutlet weak var recoverButton: CustomButton!
+    @IBOutlet weak var recoverButton: TransitionButton!
     @IBOutlet weak var forgetUsernameButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
 
     // Mark - Variables
     var forgetUsername: Bool = false
+
+    // Mark - Delegate
+    weak var delegate: RecoverPasswordDelegate?
 
     // Mark - Override
     override func viewDidLoad() {
@@ -51,6 +60,10 @@ class RecoverPasswordViewController: UIViewController {
     private func setup() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
         self.view.addGestureRecognizer(tapGesture)
+
+        #if DEV
+            autoFill()
+        #endif
     }
     
     private func configurationUI() {
@@ -59,6 +72,12 @@ class RecoverPasswordViewController: UIViewController {
     }
 
     // Mark - Helpers
+    private func autoFill() {
+        // VERY IMPORTANT: If you want to run the app with DEV target you have to insert a file called Credentials.swift with default varibles
+        firstTextField.text = Credentials.username
+        secondTextField.text = Credentials.email
+    }
+
     private func changeFormLayout(forgetUsername: Bool) {
         if forgetUsername {
             // First
@@ -97,20 +116,36 @@ class RecoverPasswordViewController: UIViewController {
         view.endEditing(true)
     }
 
+    private func showError() {
+        showError()
+    }
+
     // Mark - APIs
     private func recoverPassword(username: String, email: String, token: String) {
+        recoverButton.startAnimation()
         API.RecoverPasswordClass.recoverPassword(username: username, email: email, token: token) { (success) in
+            self.recoverButton.stopAnimation()
             guard success else {
+                self.showErrorMessage(title: "Errore", message: "Impossibile inviare l'email di ripristino password")
                 return
             }
+            self.dismiss(animated: true, completion: {
+                self.delegate?.recoverEmailSend()
+            })
         }
     }
 
     private func forgetUsernameRecoverPassword(name: String, surname: String, email: String, token: String) {
+        recoverButton.startAnimation()
         API.RecoverPasswordClass.recoverPasswordForgetUsername(name: name, surname: surname, email: email, token: token) { (success) in
+            self.recoverButton.stopAnimation()
             guard success else {
+                self.showErrorMessage(title: "Errore", message: "Impossibile inviare l'email di ripristino password")
                 return
             }
+            self.dismiss(animated: true, completion: {
+                self.delegate?.recoverEmailSend()
+            })
         }
     }
 
@@ -124,23 +159,37 @@ class RecoverPasswordViewController: UIViewController {
             return
         }
 
-        guard !firstValue.isEmpty else {
+        if firstValue.isEmpty {
+            firstTextField.errorMessage = forgetUsername ? "Inserisci nome" : "Inserisci username"
             return
+        } else {
+            firstTextField.errorMessage = nil
         }
 
-        guard !secondValue.isEmpty else {
+        if secondValue.isEmpty {
+            secondTextField.errorMessage = forgetUsername ? "Inserisci cognome" : "Inserisci email"
             return
+        } else {
+            secondTextField.errorMessage = nil
         }
 
         if forgetUsername {
+            if let thirdValue = thirdTextField.text, thirdValue.isEmpty {
+                forgetUsernameRecoverPassword(name: firstValue, surname: secondValue, email: thirdValue, token: token)
+            } else {
+                thirdTextField.errorMessage = "Inserisci email"
+            }
+        } else {
             recoverPassword(username: firstValue, email: secondValue, token: token)
-        } else if let thirdValue = thirdTextField.text, !thirdValue.isEmpty {
-            forgetUsernameRecoverPassword(name: firstValue, surname: secondValue, email: thirdValue, token: token)
         }
     }
     
     @IBAction func forgetUsernameDidTap(_ sender: Any) {
         forgetUsername = !forgetUsername
         changeFormLayout(forgetUsername: forgetUsername)
+    }
+
+    @IBAction func cancelDidTap(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
