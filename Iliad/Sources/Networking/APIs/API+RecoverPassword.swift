@@ -12,16 +12,34 @@ extension API {
     class RecoverPasswordClass {
         class func recoverPassword(username: String, email: String, token: String, _ completionHandler: SuccessHandler?) {
             API.provider().request(.recoverPassword(username: username, email: email, token: token)) { (result) in
-                API.responseSuccess(result, { (success) in
-                    completionHandler?(success)
+                API.responseJson(result, { (json) in
+                    guard
+                        result.value?.statusCode == 200,
+                        let json = json,
+                        let result = json["iliad"]["0"].string,
+                        let boolResult = result.toBool()
+                    else {
+                        completionHandler?(false)
+                        return
+                    }
+                    completionHandler?(boolResult)
                 })
             }
         }
 
         class func recoverPasswordForgetUsername(name: String, surname: String, email: String, token: String, _ completionHandler: SuccessHandler?) {
             API.provider().request(.recoverPasswordForgetUsername(name: name, surname: surname, email: email, token: token)) { (result) in
-                API.responseSuccess(result, { (success) in
-                    completionHandler?(success)
+                API.responseJson(result, { (json) in
+                    guard
+                        result.value?.statusCode == 200,
+                        let json = json,
+                        let result = json["iliad"]["0"].string,
+                        let boolResult = result.toBool()
+                    else {
+                        completionHandler?(false)
+                        return
+                    }
+                    completionHandler?(boolResult)
                 })
             }
         }

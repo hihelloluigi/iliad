@@ -78,6 +78,9 @@
 		2A193029211B38D9007C1E5A /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193028211B38D9007C1E5A /* BasicCell.swift */; };
 		2A19302A211B38D9007C1E5A /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193028211B38D9007C1E5A /* BasicCell.swift */; };
 		2A19302B211B38D9007C1E5A /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193028211B38D9007C1E5A /* BasicCell.swift */; };
+		2A47620B211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
+		2A47620C211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
+		2A47620D211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
 		2A80F30E211AEF21008D8C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A80F30D211AEF21008D8C89 /* AppDelegate.swift */; };
 		2A80F315211AEF22008D8C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A80F314211AEF22008D8C89 /* Assets.xcassets */; };
 		2AF92DCF211C2DD00058CFD2 /* API+RecoverPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DCE211C2DD00058CFD2 /* API+RecoverPassword.swift */; };
@@ -124,6 +127,7 @@
 		2A19301E211B1E7F007C1E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		2A193024211B362E007C1E5A /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		2A193028211B38D9007C1E5A /* BasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
+		2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+XT.swift"; sourceTree = "<group>"; };
 		2A80F30A211AEF21008D8C89 /* IliadProd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IliadProd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A80F30D211AEF21008D8C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A80F314211AEF22008D8C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 		2A193003211B1AC7007C1E5A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */,
 				2A193004211B1AD6007C1E5A /* String+XT.swift */,
 				2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */,
 				2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */,
@@ -545,21 +550,23 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Abstract Target-IliadProd/Pods-Abstract Target-IliadProd-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
-				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -629,21 +636,23 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Abstract Target-IliadStaging/Pods-Abstract Target-IliadStaging-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
-				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -659,21 +668,23 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Abstract Target-IliadDev/Pods-Abstract Target-IliadDev-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
-				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -703,6 +714,7 @@
 				2A193006211B1AE4007C1E5A /* String+XT.swift in Sources */,
 				2A192FC9211B12BD007C1E5A /* AppConfig.swift in Sources */,
 				2A193026211B362E007C1E5A /* CardView.swift in Sources */,
+				2A47620C211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */,
 				2A192FCA211B12BD007C1E5A /* AppConfig+Staging.swift in Sources */,
 				2AF92DD3211C32530058CFD2 /* RecoverPasswordViewController.swift in Sources */,
 				2A19300A211B1B67007C1E5A /* Config.swift in Sources */,
@@ -729,6 +741,7 @@
 				2A19302B211B38D9007C1E5A /* BasicCell.swift in Sources */,
 				2AF92DD6211C33800058CFD2 /* API+RecoverPassword.swift in Sources */,
 				2A192FE2211B12C0007C1E5A /* API.swift in Sources */,
+				2A47620D211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */,
 				2A192FE3211B12C0007C1E5A /* AppDelegate.swift in Sources */,
 				2A192FE4211B12C0007C1E5A /* APIEndpoint.swift in Sources */,
 				2A193007211B1AE5007C1E5A /* String+XT.swift in Sources */,
@@ -764,6 +777,7 @@
 				2A192FA0211B02E7007C1E5A /* API+XT.swift in Sources */,
 				2A193025211B362E007C1E5A /* CardView.swift in Sources */,
 				2A192FB4211B060A007C1E5A /* AppConfig.swift in Sources */,
+				2A47620B211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */,
 				2A193009211B1B2F007C1E5A /* Config.swift in Sources */,
 				2A193016211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */,
 				2AF92DCF211C2DD00058CFD2 /* API+RecoverPassword.swift in Sources */,
@@ -813,7 +827,10 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Staging/iliadStaging-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.IliadStaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -830,7 +847,10 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Staging/iliadStaging-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.IliadStaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -847,7 +867,10 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Dev/iliadDev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEV";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.IliadDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -865,7 +888,10 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Dev/iliadDev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEV";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.IliadDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -997,7 +1023,10 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Prod/iliadProd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.Iliad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1014,7 +1043,10 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Prod/iliadProd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.Iliad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
