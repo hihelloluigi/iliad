@@ -11,11 +11,13 @@ import Foundation
 extension APIEndpoint {
     var path: String {
         switch self {
-        // Login
+        // Login/Logout
         case .getToken:
             return ("/token")
         case .login:
             return ("/login")
+        case .logout:
+            return ("/logout")
 
         // Recover password
         case .recoverPassword:
@@ -23,17 +25,11 @@ extension APIEndpoint {
         case .recoverPasswordForgetUsername:
             return ("/recover")
 
-        // Logout
-        case .logout:
-            return ("/logout")
-
         // Informations
         case .getGeneralInformations:
             return ("/information")
         case .getPuk:
             return ("/information")
-
-        // Actions
         case .changeEmail:
             return ("/information")
         case .changePassword:
@@ -44,6 +40,20 @@ extension APIEndpoint {
             return ("/credit")
         case .getAbroudCredit:
             return ("/credit")
+
+        // Services
+        case .getServices:
+            return ("/services")
+        case .changeService:
+            return ("/services")
+        case .serviceInfo:
+            return ("/services")
+
+        // Options
+        case .getOptions:
+            return ("/options")
+        case .changeOption:
+            return ("/options")
         }
     }
 }

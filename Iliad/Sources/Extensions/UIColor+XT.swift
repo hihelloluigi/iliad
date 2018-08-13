@@ -51,7 +51,6 @@ extension UIColor {
         self.init(iRed: UIColorMask.redValue(rgb), iGreen: UIColorMask.greenValue(rgb), iBlue: UIColorMask.blueValue(rgb), alpha: (UIColorMask.alphaValue(rgb) / 255))
     }
 
-
     /**
      Create a new color with HEX Int value and Alpha component.
 
@@ -95,10 +94,10 @@ extension UIColor {
         guard let components = self.cgColor.components, self.cgColor.numberOfComponents == 4 else {
             return "Color not RGB."
         }
-        let a = components.map { Int($0 * CGFloat(255)) }
-        let color = String.init(format: "%02x%02x%02x", a[0], a[1], a[2])
+        let maps = components.map { Int($0 * CGFloat(255)) }
+        let color = String.init(format: "%02x%02x%02x", maps[0], maps[1], maps[2])
         if includeAlpha {
-            let alpha = String.init(format: "%02x", a[3])
+            let alpha = String.init(format: "%02x", maps[3])
             return "\(color)\(alpha)"
         }
         return color

@@ -12,7 +12,21 @@ import Moya
 extension APIEndpoint {
     var method: Moya.Method {
         switch self {
-        case .getToken, .login, .recoverPassword, .recoverPasswordForgetUsername, .logout, .getGeneralInformations, .getPuk, .changeEmail, .changePassword, .getNationalCredit, .getAbroudCredit:
+        case .getToken,
+             .login,
+             .recoverPassword,
+             .recoverPasswordForgetUsername,
+             .logout, .getGeneralInformations,
+             .getPuk,
+             .changeEmail,
+             .changePassword,
+             .getNationalCredit,
+             .getAbroudCredit,
+             .getServices,
+             .changeService,
+             .serviceInfo,
+             .getOptions,
+             .changeOption:
             return .get
         }
     }
