@@ -36,9 +36,9 @@ extension APIEndpoint {
             return ("/information")
 
         // Credit
-        case .getNationalCredit:
+        case .getNationalConsumption:
             return ("/credit")
-        case .getAbroudCredit:
+        case .getAbroudConsumption:
             return ("/credit")
 
         // Services

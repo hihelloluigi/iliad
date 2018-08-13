@@ -31,8 +31,8 @@ enum APIEndpoint {
     case changePassword(newPassword: String, newPasswordConfirm: String, actualPassword: String)
 
     // Credit
-    case getNationalCredit
-    case getAbroudCredit
+    case getNationalConsumption
+    case getAbroudConsumption
 
     // Services
     case getServices

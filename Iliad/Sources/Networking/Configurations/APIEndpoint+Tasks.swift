@@ -28,9 +28,9 @@ extension APIEndpoint {
 
         // Informations
         case .getGeneralInformations:
-            return .requestParameters(parameters: ["info": true, "token": accessToken], encoding: parameterEncoding)
+            return .requestParameters(parameters: ["info": "true", "token": accessToken], encoding: parameterEncoding)
         case .getPuk:
-            return .requestParameters(parameters: ["puk": true, "token": accessToken], encoding: parameterEncoding)
+            return .requestParameters(parameters: ["puk": "true", "token": accessToken], encoding: parameterEncoding)
         case .changeEmail(let email, let emailConfirm, let password):
             return .requestParameters(parameters: ["email": email, "email_confirm": emailConfirm, "password": password, "token": accessToken], encoding: parameterEncoding)
         case .changePassword(let newPassword, let newPasswordConfirm, let actualPassword):
@@ -39,24 +39,24 @@ extension APIEndpoint {
                                                    "password": actualPassword, "token": accessToken], encoding: parameterEncoding)
 
         // Credit
-        case .getNationalCredit:
-            return .requestParameters(parameters: ["credit": true, "token": accessToken], encoding: parameterEncoding)
-        case .getAbroudCredit:
-            return .requestParameters(parameters: ["estero": true, "token": accessToken], encoding: parameterEncoding)
+        case .getNationalConsumption:
+            return .requestParameters(parameters: ["credit": "true", "token": accessToken], encoding: parameterEncoding)
+        case .getAbroudConsumption:
+            return .requestParameters(parameters: ["estero": "true", "token": accessToken], encoding: parameterEncoding)
 
         // Services
         case .getServices:
-            return .requestParameters(parameters: ["services": true, "token": accessToken], encoding: parameterEncoding)
+            return .requestParameters(parameters: ["services": "true", "token": accessToken], encoding: parameterEncoding)
         case .changeService(let activate, let service):
-            return .requestParameters(parameters: ["change_services": true, "activate": activate, "update": service, "token": accessToken], encoding: parameterEncoding)
+            return .requestParameters(parameters: ["change_services": "true", "activate": activate, "update": service, "token": accessToken], encoding: parameterEncoding)
         case .serviceInfo(let service):
-            return .requestParameters(parameters: ["info": true, "type": service, "token": accessToken], encoding: parameterEncoding)
+            return .requestParameters(parameters: ["info": "true", "type": service, "token": accessToken], encoding: parameterEncoding)
 
         // Options
         case .getOptions:
-            return .requestParameters(parameters: ["option": true, "token": accessToken], encoding: parameterEncoding)
+            return .requestParameters(parameters: ["option": "true", "token": accessToken], encoding: parameterEncoding)
         case .changeOption(let activate, let option):
-            return .requestParameters(parameters: ["change_options": true, "activate": activate, "update": option, "token": accessToken], encoding: parameterEncoding)
+            return .requestParameters(parameters: ["change_options": "true", "activate": activate, "update": option, "token": accessToken], encoding: parameterEncoding)
         }
     }
 }
