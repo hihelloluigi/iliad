@@ -80,7 +80,6 @@ class RecoverPasswordViewController: UIViewController {
     }
     #endif
 
-
     private func changeFormLayout(forgetUsername: Bool) {
         if forgetUsername {
             // First

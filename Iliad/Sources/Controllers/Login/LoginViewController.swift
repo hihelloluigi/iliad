@@ -32,6 +32,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: TransitionButton!
     @IBOutlet weak var infoButton: UIButton!
 
+    // Mark - Variables
+    var showPasswordButton: UIButton?
+
     // Mark - Override
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +61,7 @@ class LoginViewController: UIViewController {
         
         #if DEV
             autoFill()
-//            autoLogin()
+            autoLogin()
         #endif
     }
 
@@ -104,17 +107,19 @@ class LoginViewController: UIViewController {
 
     private func performLogin(user: User) {
         guard
-            let navController = "Home" <%> "NavigationController" as? UINavigationController,
-            let homeViewController = navController.viewControllers.first as? HomeViewController
-            else {
-                return
+            let tabBarController = "Main" <%> "MainTabBarController" as? MainTabBarController,
+            let navController = tabBarController.viewControllers?.first as? UINavigationController,
+            let consumptionViewController = navController.viewControllers.first as? ConsumptionViewController
+        else {
+            return
         }
 
-        homeViewController.user = user
+        //TODO - save user
+
         view.isUserInteractionEnabled = true
 
         loginButton.stopAnimation(animationStyle: .expand) {
-            self.present(navController, animated: true, completion: nil)
+            self.present(tabBarController, animated: true, completion: nil)
         }
     }
 
@@ -123,18 +128,26 @@ class LoginViewController: UIViewController {
         button.setImage(#imageLiteral(resourceName: "ic_showPassowrd"), for: .normal)
         button.frame = CGRect(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height)
         button.tintColor = .lightGray
-        let longGesture = UILongPressGestureRecognizer(target: self, action: #selector(showPassword(sender:)))
-        button.addGestureRecognizer(longGesture)
+
+        showPasswordButton = button
+
+        let singleTapGesture = SingleTouchDownGestureRecognizer(target: self, action: #selector(showPassword(sender:)))
+        button.addGestureRecognizer(singleTapGesture)
 
         return button
     }
 
-    // TODO - Small delay to fix
-    @objc func showPassword(sender: UILongPressGestureRecognizer) {
+    @objc func showPassword(sender: UITapGestureRecognizer) {
+        guard let showPasswordButton = showPasswordButton else {
+            return
+        }
+
         if sender.state == .began {
             passwordTextField.isSecureTextEntry = false
+            showPasswordButton.tintColor = .iliadRed
         } else if sender.state == .ended {
             passwordTextField.isSecureTextEntry = true
+            showPasswordButton.tintColor = .lightGray
         }
     }
 

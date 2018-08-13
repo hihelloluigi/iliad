@@ -10,6 +10,10 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    // Mark - Outlets
+    @IBOutlet weak var settingsButton: UIBarButtonItem!
+    @IBOutlet weak var logoutButton: UIBarButtonItem!
+
     // Mark - Override
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,5 +31,23 @@ class ProfileViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+
+    // Mark - APIs
+    private func logout() {
+        API.LoginClass.logout { (success) in
+            guard success else {
+                print("Impossible to do logout")
+                return
+            }
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    // Mark - Actions
+    @IBAction func settingsDidTap(_ sender: Any) {
+    }
+    @IBAction func logoutDidTap(_ sender: Any) {
+        logout()
     }
 }

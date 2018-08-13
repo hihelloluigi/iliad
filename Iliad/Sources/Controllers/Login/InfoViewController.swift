@@ -32,7 +32,6 @@ class InfoViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
 
     // Mark - Actions
     @IBAction func backDidTap(_ sender: Any) {
