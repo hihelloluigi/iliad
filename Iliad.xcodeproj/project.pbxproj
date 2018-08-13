@@ -63,15 +63,15 @@
 		2A19300E211B1C50007C1E5A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19300D211B1C50007C1E5A /* User.swift */; };
 		2A19300F211B1C50007C1E5A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19300D211B1C50007C1E5A /* User.swift */; };
 		2A193010211B1C50007C1E5A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19300D211B1C50007C1E5A /* User.swift */; };
-		2A193012211B1DB3007C1E5A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193011211B1DB3007C1E5A /* HomeViewController.swift */; };
-		2A193013211B1DB3007C1E5A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193011211B1DB3007C1E5A /* HomeViewController.swift */; };
-		2A193014211B1DB3007C1E5A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193011211B1DB3007C1E5A /* HomeViewController.swift */; };
+		2A193012211B1DB3007C1E5A /* ConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193011211B1DB3007C1E5A /* ConsumptionViewController.swift */; };
+		2A193013211B1DB3007C1E5A /* ConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193011211B1DB3007C1E5A /* ConsumptionViewController.swift */; };
+		2A193014211B1DB3007C1E5A /* ConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193011211B1DB3007C1E5A /* ConsumptionViewController.swift */; };
 		2A193016211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */; };
 		2A193017211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */; };
 		2A193018211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */; };
-		2A19301F211B1E7F007C1E5A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A19301D211B1E7F007C1E5A /* Home.storyboard */; };
-		2A193020211B1E7F007C1E5A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A19301D211B1E7F007C1E5A /* Home.storyboard */; };
-		2A193021211B1E7F007C1E5A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A19301D211B1E7F007C1E5A /* Home.storyboard */; };
+		2A19301F211B1E7F007C1E5A /* Consumption.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A19301D211B1E7F007C1E5A /* Consumption.storyboard */; };
+		2A193020211B1E7F007C1E5A /* Consumption.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A19301D211B1E7F007C1E5A /* Consumption.storyboard */; };
+		2A193021211B1E7F007C1E5A /* Consumption.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A19301D211B1E7F007C1E5A /* Consumption.storyboard */; };
 		2A193025211B362E007C1E5A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193024211B362E007C1E5A /* CardView.swift */; };
 		2A193026211B362E007C1E5A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193024211B362E007C1E5A /* CardView.swift */; };
 		2A193027211B362E007C1E5A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193024211B362E007C1E5A /* CardView.swift */; };
@@ -87,11 +87,61 @@
 		2A232640211C892F0045FBD7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23263F211C892F0045FBD7 /* CustomButton.swift */; };
 		2A232641211C892F0045FBD7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23263F211C892F0045FBD7 /* CustomButton.swift */; };
 		2A232642211C892F0045FBD7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23263F211C892F0045FBD7 /* CustomButton.swift */; };
+		2A232643211CA3540045FBD7 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FFD211B172C007C1E5A /* Credentials.swift */; };
+		2A232644211CA3540045FBD7 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FFD211B172C007C1E5A /* Credentials.swift */; };
+		2A232691211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A232690211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift */; };
+		2A232692211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A232690211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift */; };
+		2A232693211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A232690211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift */; };
 		2A47620B211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
 		2A47620C211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
 		2A47620D211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
 		2A80F30E211AEF21008D8C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A80F30D211AEF21008D8C89 /* AppDelegate.swift */; };
 		2A80F315211AEF22008D8C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A80F314211AEF22008D8C89 /* Assets.xcassets */; };
+		2AAF695D21219533005DECE5 /* API+Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF695C21219533005DECE5 /* API+Information.swift */; };
+		2AAF695E21219533005DECE5 /* API+Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF695C21219533005DECE5 /* API+Information.swift */; };
+		2AAF695F21219533005DECE5 /* API+Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF695C21219533005DECE5 /* API+Information.swift */; };
+		2AAF6961212196E5005DECE5 /* API+Consumption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF6960212196E5005DECE5 /* API+Consumption.swift */; };
+		2AAF6962212196E5005DECE5 /* API+Consumption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF6960212196E5005DECE5 /* API+Consumption.swift */; };
+		2AAF6963212196E5005DECE5 /* API+Consumption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF6960212196E5005DECE5 /* API+Consumption.swift */; };
+		2AAF69652121975F005DECE5 /* API+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69642121975F005DECE5 /* API+Service.swift */; };
+		2AAF69662121975F005DECE5 /* API+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69642121975F005DECE5 /* API+Service.swift */; };
+		2AAF69672121975F005DECE5 /* API+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69642121975F005DECE5 /* API+Service.swift */; };
+		2AAF696921219A3D005DECE5 /* API+Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF696821219A3D005DECE5 /* API+Option.swift */; };
+		2AAF696A21219A3D005DECE5 /* API+Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF696821219A3D005DECE5 /* API+Option.swift */; };
+		2AAF696B21219A3D005DECE5 /* API+Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF696821219A3D005DECE5 /* API+Option.swift */; };
+		2AAF69812121BC57005DECE5 /* Options.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF697B2121BC56005DECE5 /* Options.storyboard */; };
+		2AAF69822121BC57005DECE5 /* Options.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF697B2121BC56005DECE5 /* Options.storyboard */; };
+		2AAF69832121BC57005DECE5 /* Options.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF697B2121BC56005DECE5 /* Options.storyboard */; };
+		2AAF69842121BC57005DECE5 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF697D2121BC56005DECE5 /* Profile.storyboard */; };
+		2AAF69852121BC57005DECE5 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF697D2121BC56005DECE5 /* Profile.storyboard */; };
+		2AAF69862121BC57005DECE5 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF697D2121BC56005DECE5 /* Profile.storyboard */; };
+		2AAF69872121BC57005DECE5 /* Services.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF697F2121BC57005DECE5 /* Services.storyboard */; };
+		2AAF69882121BC57005DECE5 /* Services.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF697F2121BC57005DECE5 /* Services.storyboard */; };
+		2AAF69892121BC57005DECE5 /* Services.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF697F2121BC57005DECE5 /* Services.storyboard */; };
+		2AAF69902121BC95005DECE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF698E2121BC95005DECE5 /* Main.storyboard */; };
+		2AAF69912121BC95005DECE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF698E2121BC95005DECE5 /* Main.storyboard */; };
+		2AAF69922121BC95005DECE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF698E2121BC95005DECE5 /* Main.storyboard */; };
+		2AAF69952121BD3E005DECE5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69942121BD3E005DECE5 /* MainTabBarController.swift */; };
+		2AAF69962121BD3E005DECE5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69942121BD3E005DECE5 /* MainTabBarController.swift */; };
+		2AAF69972121BD3E005DECE5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69942121BD3E005DECE5 /* MainTabBarController.swift */; };
+		2AAF69992121BF27005DECE5 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69982121BF27005DECE5 /* OptionsViewController.swift */; };
+		2AAF699A2121BF27005DECE5 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69982121BF27005DECE5 /* OptionsViewController.swift */; };
+		2AAF699B2121BF27005DECE5 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69982121BF27005DECE5 /* OptionsViewController.swift */; };
+		2AAF699D2121BF3A005DECE5 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF699C2121BF3A005DECE5 /* ServicesViewController.swift */; };
+		2AAF699E2121BF3A005DECE5 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF699C2121BF3A005DECE5 /* ServicesViewController.swift */; };
+		2AAF699F2121BF3A005DECE5 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF699C2121BF3A005DECE5 /* ServicesViewController.swift */; };
+		2AAF69A12121BF4F005DECE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69A02121BF4F005DECE5 /* ProfileViewController.swift */; };
+		2AAF69A22121BF4F005DECE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69A02121BF4F005DECE5 /* ProfileViewController.swift */; };
+		2AAF69A32121BF4F005DECE5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69A02121BF4F005DECE5 /* ProfileViewController.swift */; };
+		2AAF69A52121CB2F005DECE5 /* Consumption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69A42121CB2F005DECE5 /* Consumption.swift */; };
+		2AAF69A62121CB2F005DECE5 /* Consumption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69A42121CB2F005DECE5 /* Consumption.swift */; };
+		2AAF69A72121CB2F005DECE5 /* Consumption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69A42121CB2F005DECE5 /* Consumption.swift */; };
+		2AAF69AD2121CE95005DECE5 /* Date+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69AC2121CE95005DECE5 /* Date+XT.swift */; };
+		2AAF69AE2121CE95005DECE5 /* Date+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69AC2121CE95005DECE5 /* Date+XT.swift */; };
+		2AAF69AF2121CE95005DECE5 /* Date+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69AC2121CE95005DECE5 /* Date+XT.swift */; };
+		2AAF69B12121DBFD005DECE5 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69B02121DBFD005DECE5 /* OptionCell.swift */; };
+		2AAF69B22121DD72005DECE5 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69B02121DBFD005DECE5 /* OptionCell.swift */; };
+		2AAF69B32121DD72005DECE5 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69B02121DBFD005DECE5 /* OptionCell.swift */; };
 		2AF92DCF211C2DD00058CFD2 /* API+RecoverPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DCE211C2DD00058CFD2 /* API+RecoverPassword.swift */; };
 		2AF92DD2211C32500058CFD2 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */; };
 		2AF92DD3211C32530058CFD2 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */; };
@@ -131,19 +181,35 @@
 		2A193004211B1AD6007C1E5A /* String+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+XT.swift"; sourceTree = "<group>"; };
 		2A193008211B1B2F007C1E5A /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		2A19300D211B1C50007C1E5A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		2A193011211B1DB3007C1E5A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2A193011211B1DB3007C1E5A /* ConsumptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionViewController.swift; sourceTree = "<group>"; };
 		2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+XT.swift"; sourceTree = "<group>"; };
-		2A19301E211B1E7F007C1E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		2A19301E211B1E7F007C1E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Consumption.storyboard; sourceTree = "<group>"; };
 		2A193024211B362E007C1E5A /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		2A193028211B38D9007C1E5A /* BasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
 		2A232637211C877D0045FBD7 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		2A232639211C884D0045FBD7 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		2A23263F211C892F0045FBD7 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		2A232690211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTouchDownGestureRecognizer.swift; sourceTree = "<group>"; };
 		2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+XT.swift"; sourceTree = "<group>"; };
 		2A80F30A211AEF21008D8C89 /* IliadProd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IliadProd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A80F30D211AEF21008D8C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A80F314211AEF22008D8C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A80F319211AEF22008D8C89 /* iliadProd-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iliadProd-Info.plist"; sourceTree = "<group>"; };
+		2AAF695C21219533005DECE5 /* API+Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Information.swift"; sourceTree = "<group>"; };
+		2AAF6960212196E5005DECE5 /* API+Consumption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Consumption.swift"; sourceTree = "<group>"; };
+		2AAF69642121975F005DECE5 /* API+Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Service.swift"; sourceTree = "<group>"; };
+		2AAF696821219A3D005DECE5 /* API+Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Option.swift"; sourceTree = "<group>"; };
+		2AAF697C2121BC56005DECE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Options.storyboard; sourceTree = "<group>"; };
+		2AAF697E2121BC56005DECE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		2AAF69802121BC57005DECE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Services.storyboard; sourceTree = "<group>"; };
+		2AAF698F2121BC95005DECE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2AAF69942121BD3E005DECE5 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		2AAF69982121BF27005DECE5 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		2AAF699C2121BF3A005DECE5 /* ServicesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesViewController.swift; sourceTree = "<group>"; };
+		2AAF69A02121BF4F005DECE5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2AAF69A42121CB2F005DECE5 /* Consumption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consumption.swift; sourceTree = "<group>"; };
+		2AAF69AC2121CE95005DECE5 /* Date+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+XT.swift"; sourceTree = "<group>"; };
+		2AAF69B02121DBFD005DECE5 /* OptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
 		2AF92DCE211C2DD00058CFD2 /* API+RecoverPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+RecoverPassword.swift"; sourceTree = "<group>"; };
 		2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 		2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+XT.swift"; sourceTree = "<group>"; };
@@ -205,6 +271,7 @@
 			children = (
 				2A23263F211C892F0045FBD7 /* CustomButton.swift */,
 				2A193024211B362E007C1E5A /* CardView.swift */,
+				2A232690211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -225,6 +292,10 @@
 				2A192F9F211B02E7007C1E5A /* API+XT.swift */,
 				2A192FA1211B0306007C1E5A /* API+Login.swift */,
 				2AF92DCE211C2DD00058CFD2 /* API+RecoverPassword.swift */,
+				2AAF695C21219533005DECE5 /* API+Information.swift */,
+				2AAF6960212196E5005DECE5 /* API+Consumption.swift */,
+				2AAF69642121975F005DECE5 /* API+Service.swift */,
+				2AAF696821219A3D005DECE5 /* API+Option.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -245,7 +316,6 @@
 			isa = PBXGroup;
 			children = (
 				2A192FA4211B0366007C1E5A /* Typealiases.swift */,
-				2A192FFD211B172C007C1E5A /* Credentials.swift */,
 				2A232639211C884D0045FBD7 /* Utility.swift */,
 			);
 			path = Utilities;
@@ -283,6 +353,7 @@
 			children = (
 				2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */,
 				2A193004211B1AD6007C1E5A /* String+XT.swift */,
+				2AAF69AC2121CE95005DECE5 /* Date+XT.swift */,
 				2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */,
 				2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */,
 			);
@@ -293,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				2A19300D211B1C50007C1E5A /* User.swift */,
+				2AAF69A42121CB2F005DECE5 /* Consumption.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -301,16 +373,17 @@
 			isa = PBXGroup;
 			children = (
 				2A193028211B38D9007C1E5A /* BasicCell.swift */,
+				2AAF69B02121DBFD005DECE5 /* OptionCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		2A232636211C84120045FBD7 /* Home */ = {
+		2A232636211C84120045FBD7 /* Consumption */ = {
 			isa = PBXGroup;
 			children = (
-				2A193011211B1DB3007C1E5A /* HomeViewController.swift */,
+				2A193011211B1DB3007C1E5A /* ConsumptionViewController.swift */,
 			);
-			path = Home;
+			path = Consumption;
 			sourceTree = "<group>";
 		};
 		2A80F301211AEF21008D8C89 = {
@@ -357,7 +430,11 @@
 			isa = PBXGroup;
 			children = (
 				2AF92DD0211C323A0058CFD2 /* Login */,
-				2A232636211C84120045FBD7 /* Home */,
+				2AAF69932121BD0C005DECE5 /* TabBar */,
+				2A232636211C84120045FBD7 /* Consumption */,
+				2AAF696E2121BB60005DECE5 /* Options */,
+				2AAF696D2121BB58005DECE5 /* Services */,
+				2AAF696C2121BB4F005DECE5 /* Profile */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -367,7 +444,11 @@
 			children = (
 				2A192F8B211AF9F3007C1E5A /* LaunchScreen.storyboard */,
 				2A192F8F211AF9F3007C1E5A /* Login.storyboard */,
-				2A19301D211B1E7F007C1E5A /* Home.storyboard */,
+				2AAF698E2121BC95005DECE5 /* Main.storyboard */,
+				2A19301D211B1E7F007C1E5A /* Consumption.storyboard */,
+				2AAF697B2121BC56005DECE5 /* Options.storyboard */,
+				2AAF697F2121BC57005DECE5 /* Services.storyboard */,
+				2AAF697D2121BC56005DECE5 /* Profile.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -377,11 +458,44 @@
 			children = (
 				2A192FB3211B060A007C1E5A /* AppConfig.swift */,
 				2A193008211B1B2F007C1E5A /* Config.swift */,
+				2A192FFD211B172C007C1E5A /* Credentials.swift */,
 				2A192FB0211B05ED007C1E5A /* Prod */,
 				2A192FB1211B05F3007C1E5A /* Staging */,
 				2A192FB2211B05F8007C1E5A /* Dev */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		2AAF696C2121BB4F005DECE5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2AAF69A02121BF4F005DECE5 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2AAF696D2121BB58005DECE5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2AAF699C2121BF3A005DECE5 /* ServicesViewController.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2AAF696E2121BB60005DECE5 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				2AAF69982121BF27005DECE5 /* OptionsViewController.swift */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		2AAF69932121BD0C005DECE5 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				2AAF69942121BD3E005DECE5 /* MainTabBarController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		2AF92DD0211C323A0058CFD2 /* Login */ = {
@@ -518,10 +632,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AAF69852121BC57005DECE5 /* Profile.storyboard in Resources */,
 				2A192FD1211B12BD007C1E5A /* Login.storyboard in Resources */,
+				2AAF69822121BC57005DECE5 /* Options.storyboard in Resources */,
+				2AAF69912121BC95005DECE5 /* Main.storyboard in Resources */,
 				2A192FD2211B12BD007C1E5A /* Assets.xcassets in Resources */,
 				2A192FD3211B12BD007C1E5A /* LaunchScreen.storyboard in Resources */,
-				2A193020211B1E7F007C1E5A /* Home.storyboard in Resources */,
+				2AAF69882121BC57005DECE5 /* Services.storyboard in Resources */,
+				2A193020211B1E7F007C1E5A /* Consumption.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,10 +647,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AAF69862121BC57005DECE5 /* Profile.storyboard in Resources */,
 				2A192FF0211B12C0007C1E5A /* Login.storyboard in Resources */,
+				2AAF69832121BC57005DECE5 /* Options.storyboard in Resources */,
+				2AAF69922121BC95005DECE5 /* Main.storyboard in Resources */,
 				2A192FF1211B12C0007C1E5A /* Assets.xcassets in Resources */,
 				2A192FF2211B12C0007C1E5A /* LaunchScreen.storyboard in Resources */,
-				2A193021211B1E7F007C1E5A /* Home.storyboard in Resources */,
+				2AAF69892121BC57005DECE5 /* Services.storyboard in Resources */,
+				2A193021211B1E7F007C1E5A /* Consumption.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,10 +662,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AAF69842121BC57005DECE5 /* Profile.storyboard in Resources */,
 				2A192F93211AF9F3007C1E5A /* Login.storyboard in Resources */,
+				2AAF69812121BC57005DECE5 /* Options.storyboard in Resources */,
+				2AAF69902121BC95005DECE5 /* Main.storyboard in Resources */,
 				2A80F315211AEF22008D8C89 /* Assets.xcassets in Resources */,
 				2A192F91211AF9F3007C1E5A /* LaunchScreen.storyboard in Resources */,
-				2A19301F211B1E7F007C1E5A /* Home.storyboard in Resources */,
+				2AAF69872121BC57005DECE5 /* Services.storyboard in Resources */,
+				2A19301F211B1E7F007C1E5A /* Consumption.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,31 +847,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AAF6962212196E5005DECE5 /* API+Consumption.swift in Sources */,
 				2A192FBE211B12BD007C1E5A /* APIEndpoint+Paths.swift in Sources */,
+				2AAF69AE2121CE95005DECE5 /* Date+XT.swift in Sources */,
 				2A192FBF211B12BD007C1E5A /* LoginViewController.swift in Sources */,
 				2A232641211C892F0045FBD7 /* CustomButton.swift in Sources */,
 				2A192FC0211B12BD007C1E5A /* API+Login.swift in Sources */,
 				2A192FC1211B12BD007C1E5A /* Typealiases.swift in Sources */,
-				2A193013211B1DB3007C1E5A /* HomeViewController.swift in Sources */,
+				2AAF699E2121BF3A005DECE5 /* ServicesViewController.swift in Sources */,
+				2A193013211B1DB3007C1E5A /* ConsumptionViewController.swift in Sources */,
 				2A192FC3211B12BD007C1E5A /* API.swift in Sources */,
 				2AF92DD9211C36A50058CFD2 /* UIColor+XT.swift in Sources */,
 				2A192FC4211B12BD007C1E5A /* AppDelegate.swift in Sources */,
 				2A19300F211B1C50007C1E5A /* User.swift in Sources */,
+				2A232643211CA3540045FBD7 /* Credentials.swift in Sources */,
+				2A232692211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
 				2A192FC5211B12BD007C1E5A /* APIEndpoint.swift in Sources */,
 				2A23263C211C888F0045FBD7 /* Utility.swift in Sources */,
 				2A192FC7211B12BD007C1E5A /* APIEndpoint+Tasks.swift in Sources */,
+				2AAF69A62121CB2F005DECE5 /* Consumption.swift in Sources */,
+				2AAF69962121BD3E005DECE5 /* MainTabBarController.swift in Sources */,
+				2AAF69B22121DD72005DECE5 /* OptionCell.swift in Sources */,
 				2AF92DD5211C33800058CFD2 /* API+RecoverPassword.swift in Sources */,
 				2A192FC8211B12BD007C1E5A /* API+XT.swift in Sources */,
+				2AAF695E21219533005DECE5 /* API+Information.swift in Sources */,
 				2A193006211B1AE4007C1E5A /* String+XT.swift in Sources */,
 				2A192FC9211B12BD007C1E5A /* AppConfig.swift in Sources */,
 				2A193026211B362E007C1E5A /* CardView.swift in Sources */,
+				2AAF69662121975F005DECE5 /* API+Service.swift in Sources */,
+				2AAF699A2121BF27005DECE5 /* OptionsViewController.swift in Sources */,
 				2A47620C211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */,
 				2A192FCA211B12BD007C1E5A /* AppConfig+Staging.swift in Sources */,
 				2AF92DD3211C32530058CFD2 /* RecoverPasswordViewController.swift in Sources */,
 				2A19300A211B1B67007C1E5A /* Config.swift in Sources */,
 				2A193017211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */,
+				2AAF696A21219A3D005DECE5 /* API+Option.swift in Sources */,
 				2A23263D211C88920045FBD7 /* InfoViewController.swift in Sources */,
 				2A192FCB211B12BD007C1E5A /* APIEndpoint+Methods.swift in Sources */,
+				2AAF69A22121BF4F005DECE5 /* ProfileViewController.swift in Sources */,
 				2A19302A211B38D9007C1E5A /* BasicCell.swift in Sources */,
 				2A192FCC211B12BD007C1E5A /* APIEndpoint+Core.swift in Sources */,
 			);
@@ -755,32 +894,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AAF6963212196E5005DECE5 /* API+Consumption.swift in Sources */,
 				2A192FDD211B12C0007C1E5A /* APIEndpoint+Paths.swift in Sources */,
+				2AAF69AF2121CE95005DECE5 /* Date+XT.swift in Sources */,
 				2A192FDE211B12C0007C1E5A /* LoginViewController.swift in Sources */,
-				2A193014211B1DB3007C1E5A /* HomeViewController.swift in Sources */,
+				2A193014211B1DB3007C1E5A /* ConsumptionViewController.swift in Sources */,
 				2A192FDF211B12C0007C1E5A /* API+Login.swift in Sources */,
 				2A232642211C892F0045FBD7 /* CustomButton.swift in Sources */,
+				2AAF699F2121BF3A005DECE5 /* ServicesViewController.swift in Sources */,
 				2A192FE0211B12C0007C1E5A /* Typealiases.swift in Sources */,
 				2AF92DDA211C36A50058CFD2 /* UIColor+XT.swift in Sources */,
 				2A19300B211B1B68007C1E5A /* Config.swift in Sources */,
 				2A193018211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */,
 				2A193027211B362E007C1E5A /* CardView.swift in Sources */,
 				2A19302B211B38D9007C1E5A /* BasicCell.swift in Sources */,
+				2A232693211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
 				2AF92DD6211C33800058CFD2 /* API+RecoverPassword.swift in Sources */,
 				2A192FE2211B12C0007C1E5A /* API.swift in Sources */,
 				2A47620D211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */,
+				2AAF69A72121CB2F005DECE5 /* Consumption.swift in Sources */,
+				2AAF69972121BD3E005DECE5 /* MainTabBarController.swift in Sources */,
+				2AAF69B32121DD72005DECE5 /* OptionCell.swift in Sources */,
 				2A23263E211C88920045FBD7 /* InfoViewController.swift in Sources */,
 				2A192FE3211B12C0007C1E5A /* AppDelegate.swift in Sources */,
+				2AAF695F21219533005DECE5 /* API+Information.swift in Sources */,
 				2A192FE4211B12C0007C1E5A /* APIEndpoint.swift in Sources */,
 				2A193007211B1AE5007C1E5A /* String+XT.swift in Sources */,
 				2A192FE6211B12C0007C1E5A /* APIEndpoint+Tasks.swift in Sources */,
+				2AAF69672121975F005DECE5 /* API+Service.swift in Sources */,
+				2AAF699B2121BF27005DECE5 /* OptionsViewController.swift in Sources */,
 				2A192FE7211B12C0007C1E5A /* API+XT.swift in Sources */,
 				2A192FE8211B12C0007C1E5A /* AppConfig.swift in Sources */,
 				2A192FEA211B12C0007C1E5A /* APIEndpoint+Methods.swift in Sources */,
 				2A23263B211C888F0045FBD7 /* Utility.swift in Sources */,
 				2A193010211B1C50007C1E5A /* User.swift in Sources */,
+				2AAF696B21219A3D005DECE5 /* API+Option.swift in Sources */,
 				2A193000211B1766007C1E5A /* Credentials.swift in Sources */,
 				2A192FEB211B12C0007C1E5A /* APIEndpoint+Core.swift in Sources */,
+				2AAF69A32121BF4F005DECE5 /* ProfileViewController.swift in Sources */,
 				2AF92DD4211C32540058CFD2 /* RecoverPasswordViewController.swift in Sources */,
 				2A192FEC211B12C0007C1E5A /* AppConfig+Dev.swift in Sources */,
 			);
@@ -790,31 +941,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AAF6961212196E5005DECE5 /* API+Consumption.swift in Sources */,
 				2A192FAE211B0383007C1E5A /* APIEndpoint+Paths.swift in Sources */,
+				2AAF69AD2121CE95005DECE5 /* Date+XT.swift in Sources */,
 				2A192F99211AFF16007C1E5A /* LoginViewController.swift in Sources */,
 				2A232640211C892F0045FBD7 /* CustomButton.swift in Sources */,
 				2A192FA2211B0306007C1E5A /* API+Login.swift in Sources */,
 				2A192FA5211B0366007C1E5A /* Typealiases.swift in Sources */,
+				2AAF699D2121BF3A005DECE5 /* ServicesViewController.swift in Sources */,
 				2A232638211C877D0045FBD7 /* InfoViewController.swift in Sources */,
-				2A193012211B1DB3007C1E5A /* HomeViewController.swift in Sources */,
+				2A193012211B1DB3007C1E5A /* ConsumptionViewController.swift in Sources */,
 				2A192F9E211B01F4007C1E5A /* API.swift in Sources */,
 				2AF92DD8211C36A50058CFD2 /* UIColor+XT.swift in Sources */,
 				2A80F30E211AEF21008D8C89 /* AppDelegate.swift in Sources */,
+				2A232644211CA3540045FBD7 /* Credentials.swift in Sources */,
+				2A232691211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
 				2A19300E211B1C50007C1E5A /* User.swift in Sources */,
 				2A192FAF211B0383007C1E5A /* APIEndpoint.swift in Sources */,
 				2A192FB6211B061F007C1E5A /* AppConfig+Prod.swift in Sources */,
+				2AAF69A52121CB2F005DECE5 /* Consumption.swift in Sources */,
+				2AAF69952121BD3E005DECE5 /* MainTabBarController.swift in Sources */,
+				2AAF69B12121DBFD005DECE5 /* OptionCell.swift in Sources */,
 				2A192FAB211B0383007C1E5A /* APIEndpoint+Tasks.swift in Sources */,
 				2A193005211B1AD6007C1E5A /* String+XT.swift in Sources */,
+				2AAF695D21219533005DECE5 /* API+Information.swift in Sources */,
 				2A192FA0211B02E7007C1E5A /* API+XT.swift in Sources */,
 				2A193025211B362E007C1E5A /* CardView.swift in Sources */,
 				2A192FB4211B060A007C1E5A /* AppConfig.swift in Sources */,
+				2AAF69652121975F005DECE5 /* API+Service.swift in Sources */,
+				2AAF69992121BF27005DECE5 /* OptionsViewController.swift in Sources */,
 				2A47620B211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */,
 				2A193009211B1B2F007C1E5A /* Config.swift in Sources */,
 				2A193016211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */,
 				2A23263A211C884D0045FBD7 /* Utility.swift in Sources */,
 				2AF92DCF211C2DD00058CFD2 /* API+RecoverPassword.swift in Sources */,
+				2AAF696921219A3D005DECE5 /* API+Option.swift in Sources */,
 				2A192FAD211B0383007C1E5A /* APIEndpoint+Methods.swift in Sources */,
 				2A193029211B38D9007C1E5A /* BasicCell.swift in Sources */,
+				2AAF69A12121BF4F005DECE5 /* ProfileViewController.swift in Sources */,
 				2AF92DD2211C32500058CFD2 /* RecoverPasswordViewController.swift in Sources */,
 				2A192FAC211B0383007C1E5A /* APIEndpoint+Core.swift in Sources */,
 			);
@@ -839,12 +1003,44 @@
 			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
-		2A19301D211B1E7F007C1E5A /* Home.storyboard */ = {
+		2A19301D211B1E7F007C1E5A /* Consumption.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2A19301E211B1E7F007C1E5A /* Base */,
 			);
-			name = Home.storyboard;
+			name = Consumption.storyboard;
+			sourceTree = "<group>";
+		};
+		2AAF697B2121BC56005DECE5 /* Options.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AAF697C2121BC56005DECE5 /* Base */,
+			);
+			name = Options.storyboard;
+			sourceTree = "<group>";
+		};
+		2AAF697D2121BC56005DECE5 /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AAF697E2121BC56005DECE5 /* Base */,
+			);
+			name = Profile.storyboard;
+			sourceTree = "<group>";
+		};
+		2AAF697F2121BC57005DECE5 /* Services.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AAF69802121BC57005DECE5 /* Base */,
+			);
+			name = Services.storyboard;
+			sourceTree = "<group>";
+		};
+		2AAF698E2121BC95005DECE5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AAF698F2121BC95005DECE5 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -45,7 +45,7 @@ enum DefaultConfiguration: String {
     var urlString: String {
         switch self {
         case .development:
-            return "http://192.168.2.5:1331"
+            return "http://192.168.1.112:1331"
         case .staging:
             return ""
         case .production:
