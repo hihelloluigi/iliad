@@ -43,6 +43,8 @@ extension APIEndpoint {
             return .requestParameters(parameters: ["credit": "true", "token": accessToken], encoding: parameterEncoding)
         case .getAbroudConsumption:
             return .requestParameters(parameters: ["estero": "true", "token": accessToken], encoding: parameterEncoding)
+        case .getConsumptionDetails:
+            return .requestParameters(parameters: ["details": "true", "token": accessToken], encoding: parameterEncoding)
 
         // Services
         case .getServices:

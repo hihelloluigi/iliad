@@ -40,6 +40,8 @@ extension APIEndpoint {
             return ("/credit")
         case .getAbroudConsumption:
             return ("/credit")
+        case .getConsumptionDetails:
+            return ("/credit")
 
         // Services
         case .getServices:

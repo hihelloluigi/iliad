@@ -22,6 +22,7 @@ extension APIEndpoint {
              .changePassword,
              .getNationalConsumption,
              .getAbroudConsumption,
+             .getConsumptionDetails,
              .getServices,
              .changeService,
              .serviceInfo,

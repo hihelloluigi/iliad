@@ -25,5 +25,13 @@ extension API {
                 })
             }
         }
+
+        class func getConsumptionDetails(_ completionHandler: JsonSuccessHandler?) {
+            API.provider().request(.getConsumptionDetails) { (result) in
+                API.responseJson(result, { (json) in
+                    completionHandler?(json)
+                })
+            }
+        }
     }
 }

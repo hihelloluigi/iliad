@@ -33,6 +33,7 @@ enum APIEndpoint {
     // Credit
     case getNationalConsumption
     case getAbroudConsumption
+    case getConsumptionDetails
 
     // Services
     case getServices
