@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,10 +18,65 @@
                     <view key="view" contentMode="scaleToFill" id="hnX-aE-Fwg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rWH-c6-hQJ">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="option cell" rowHeight="92" id="iG3-5I-Ehf" customClass="OptionCell" customModule="IliadDev" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iG3-5I-Ehf" id="m6L-Dh-ljV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vEm-1d-kZw">
+                                                    <rect key="frame" x="15" y="19" width="345" height="54"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="[Description]" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kw7-gk-udb">
+                                                            <rect key="frame" x="0.0" y="17" width="302" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="751" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XAU-qU-NQ4">
+                                                            <rect key="frame" x="302" y="11.5" width="45" height="31"/>
+                                                            <color key="onTintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <connections>
+                                                                <action selector="switchDidChange:" destination="iG3-5I-Ehf" eventType="valueChanged" id="wgw-1Q-Z8k"/>
+                                                            </connections>
+                                                        </switch>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vEm-1d-kZw" secondAttribute="trailing" id="3pO-3u-ITV"/>
+                                                <constraint firstItem="vEm-1d-kZw" firstAttribute="top" secondItem="m6L-Dh-ljV" secondAttribute="topMargin" constant="8" id="NmA-vu-N8d"/>
+                                                <constraint firstItem="vEm-1d-kZw" firstAttribute="leading" secondItem="m6L-Dh-ljV" secondAttribute="leadingMargin" id="QtH-qL-DnN"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vEm-1d-kZw" secondAttribute="bottom" constant="8" id="Ur0-5M-pfm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="Kw7-gk-udb" id="jJ2-qb-cZi"/>
+                                            <outlet property="optionSwitch" destination="XAU-qU-NQ4" id="oSq-Jm-aLG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rWH-c6-hQJ" firstAttribute="leading" secondItem="WoI-x5-NGY" secondAttribute="leading" id="Ctv-JZ-KuS"/>
+                            <constraint firstItem="rWH-c6-hQJ" firstAttribute="trailing" secondItem="WoI-x5-NGY" secondAttribute="trailing" id="EZN-fO-otc"/>
+                            <constraint firstItem="rWH-c6-hQJ" firstAttribute="top" secondItem="WoI-x5-NGY" secondAttribute="top" id="NyD-83-P29"/>
+                            <constraint firstItem="rWH-c6-hQJ" firstAttribute="bottom" secondItem="WoI-x5-NGY" secondAttribute="bottom" id="qSm-OD-AcJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WoI-x5-NGY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Servizi" id="Ysi-Gj-z01"/>
+                    <connections>
+                        <outlet property="tableView" destination="rWH-c6-hQJ" id="8Ut-L0-I9m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPq-Nw-TtX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

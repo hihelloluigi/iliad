@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +21,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9S0-0m-oru"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profilo" id="Evy-ld-uJ2"/>
+                    <navigationItem key="navigationItem" title="Profilo" id="Evy-ld-uJ2">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="ic_logout" id="mDE-OS-WdN">
+                                <color key="tintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="logoutDidTap:" destination="wgQ-eL-mph" id="Bbb-GF-LUr"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="ic_settings" id="6jI-DS-Xi5">
+                                <color key="tintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="settingsDidTap:" destination="wgQ-eL-mph" id="Ka1-s7-Idk"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQp-gp-t3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,4 +68,8 @@
             <point key="canvasLocation" x="-457" y="-233"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_logout" width="24" height="24"/>
+        <image name="ic_settings" width="28" height="28"/>
+    </resources>
 </document>
