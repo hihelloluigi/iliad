@@ -75,7 +75,7 @@ class ConsumptionViewController: UIViewController {
             DetailsRow(type: .call, value: consumption.calls, extraValue: consumption.extraCalls, image: #imageLiteral(resourceName: "ic_call")),
             DetailsRow(type: .sms, value: consumption.sms, extraValue: consumption.extraSMS, image: #imageLiteral(resourceName: "ic_sms")),
             DetailsRow(type: .mms, value: consumption.mms, extraValue: consumption.extraMMS, image: #imageLiteral(resourceName: "ic_mms")),
-            DetailsRow(type: .data, value: consumption.data, extraValue: consumption.extraData, image: #imageLiteral(resourceName: "ic_mms"))
+            DetailsRow(type: .data, value: consumption.data, extraValue: consumption.extraData, image: #imageLiteral(resourceName: "ic_internet"))
         ]
 
         tableView.reloadData()

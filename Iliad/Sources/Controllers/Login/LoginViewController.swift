@@ -116,10 +116,12 @@ class LoginViewController: UIViewController {
 
         //TODO - save user
 
-        view.isUserInteractionEnabled = true
-
-        loginButton.stopAnimation(animationStyle: .expand) {
-            self.present(tabBarController, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            self.loginButton.stopAnimation(animationStyle: .expand, completion: {
+                self.present(tabBarController, animated: true, completion: {
+                    self.view.isUserInteractionEnabled = true
+                })
+            })
         }
     }
 
