@@ -8,6 +8,8 @@
 
 import Foundation
 
+// Resource: https://github.com/Fast0n/iliad
+
 /**
  Defines endpoints exposed by the remote APIs.
  */

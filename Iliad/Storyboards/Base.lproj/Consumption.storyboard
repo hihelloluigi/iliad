@@ -12,10 +12,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Consumi-->
         <scene sceneID="cKK-BH-ujY">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="Cqb-Xo-poc" customClass="HomeViewController" customModule="IliadDev" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConsumptionViewController" id="Cqb-Xo-poc" customClass="ConsumptionViewController" customModule="IliadDev" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z2k-by-HeO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,7 +176,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XkJ-Tf-ckf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" leftItemsSupplementBackButton="YES" id="wHp-XG-vrR">
+                    <navigationItem key="navigationItem" title="Consumi" leftItemsSupplementBackButton="YES" id="wHp-XG-vrR">
                         <rightBarButtonItems>
                             <barButtonItem title="Item" image="ic_logout" id="YVS-Hp-z1W">
                                 <color key="tintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
