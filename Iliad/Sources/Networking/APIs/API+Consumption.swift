@@ -9,17 +9,17 @@
 import Foundation
 
 extension API {
-    class CreditClass {
-        class func getNationalCredit(_ completionHandler: JsonSuccessHandler?) {
-            API.provider().request(.getNationalCredit) { (result) in
+    class ConsumptionClass {
+        class func getNationalConsumption(_ completionHandler: JsonSuccessHandler?) {
+            API.provider().request(.getNationalConsumption) { (result) in
                 API.responseJson(result, { (json) in
                     completionHandler?(json)
                 })
             }
         }
 
-        class func getAbroudCredit(_ completionHandler: JsonSuccessHandler?) {
-            API.provider().request(.getAbroudCredit) { (result) in
+        class func getAbroudConsumption(_ completionHandler: JsonSuccessHandler?) {
+            API.provider().request(.getAbroudConsumption) { (result) in
                 API.responseJson(result, { (json) in
                     completionHandler?(json)
                 })

@@ -21,3 +21,4 @@ typealias TagDidSelected = (_ newString: String) -> Void
 typealias UnreadMessageHandler = (_ success: Bool, _ badgeUnread: Int?) -> Void
 
 typealias ResponseHandler = (_ response: Response?) -> Void
+typealias OptionHandler = (_ key: String?, _ isOn: Bool) -> Void
