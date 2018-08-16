@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Yzw-yS-i8P">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="BN8-NT-JPM">
+            <objects>
+                <viewController id="Yzw-yS-i8P" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7uQ-Jz-2gR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jh0-W3-sTE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="tintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem id="hSj-NE-nTd">
+                                        <barButtonItem key="rightBarButtonItem" image="ic_info" id="Ewj-yr-Pp5"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ogM-eN-yNf">
+                                <rect key="frame" x="82" y="72" width="211" height="140.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sim" translatesAutoresizingMaskIntoConstraints="NO" id="rgu-SK-97E">
+                                        <rect key="frame" x="73" y="0.0" width="65" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="EGY-Pi-Zei"/>
+                                            <constraint firstAttribute="width" constant="65" id="VuD-2P-Xi1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9Fp-yf-Xdl">
+                                        <rect key="frame" x="0.0" y="81" width="211" height="59.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benvenuto in iliad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="OaP-c8-kSu">
+                                                <rect key="frame" x="0.0" y="0.0" width="211" height="33.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <color key="textColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La rivoluzione è arrivata" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IS-BY-UMb">
+                                                <rect key="frame" x="0.0" y="41.5" width="211" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="KY3-XU-fKg">
+                                <rect key="frame" x="32" y="557" width="311" height="94"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBO-8k-sAa" customClass="TransitionButton" customModule="TransitionButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="50"/>
+                                        <color key="backgroundColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="lDb-pf-9gS"/>
+                                        </constraints>
+                                        <state key="normal" title="LOG IN">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="spinnerColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e88-UY-FxQ">
+                                        <rect key="frame" x="0.0" y="66" width="311" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal" title="Password dimenticata?">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jh0-W3-sTE" firstAttribute="trailing" secondItem="O07-Yx-3hf" secondAttribute="trailing" id="6AC-lz-ziU"/>
+                            <constraint firstItem="jh0-W3-sTE" firstAttribute="leading" secondItem="O07-Yx-3hf" secondAttribute="leading" id="Hsx-dS-sDb"/>
+                            <constraint firstItem="ogM-eN-yNf" firstAttribute="top" secondItem="jh0-W3-sTE" secondAttribute="bottom" constant="8" id="J4x-lU-WtQ"/>
+                            <constraint firstItem="KY3-XU-fKg" firstAttribute="leading" secondItem="O07-Yx-3hf" secondAttribute="leading" constant="32" id="URw-CK-tyl"/>
+                            <constraint firstItem="O07-Yx-3hf" firstAttribute="bottom" secondItem="KY3-XU-fKg" secondAttribute="bottom" constant="16" id="aC8-Z9-rHn"/>
+                            <constraint firstItem="O07-Yx-3hf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ogM-eN-yNf" secondAttribute="trailing" constant="32" id="bAz-oK-j0k"/>
+                            <constraint firstItem="jh0-W3-sTE" firstAttribute="top" secondItem="O07-Yx-3hf" secondAttribute="top" id="eGp-Fd-apJ"/>
+                            <constraint firstItem="ogM-eN-yNf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="O07-Yx-3hf" secondAttribute="leading" constant="32" id="eK6-MF-wXk"/>
+                            <constraint firstItem="ogM-eN-yNf" firstAttribute="centerX" secondItem="7uQ-Jz-2gR" secondAttribute="centerX" id="iM9-Ao-T37"/>
+                            <constraint firstItem="O07-Yx-3hf" firstAttribute="trailing" secondItem="KY3-XU-fKg" secondAttribute="trailing" constant="32" id="r1C-dT-ZZv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O07-Yx-3hf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yKv-ex-imi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3798" y="5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_info" width="24" height="24"/>
+        <image name="ic_sim" width="28" height="22"/>
+    </resources>
+</document>
