@@ -1,0 +1,19 @@
+/* 
+  Login.strings
+  Iliad
+
+  Created by Luigi Aiello on 16/08/18.
+  Copyright © 2018 Luigi Aiello. All rights reserved.
+*/
+
+"TITLE" = "Benvenuto in iliad";
+"SUBTITLE" = "La rivoluzione è arrivata";
+"USERNAME_PLACEHOLDER" = "Username";
+"PASSWORD_PLACEHOLDER" = "Password";
+"SAVE_USERNAME" = "Memorizza username";
+"LOGIN_BUTTON" = "LOG IN";
+"FOROT_PASSWORD_BUTTON" = "Password dimenticata?";
+"LOGIN_ERROR_MESSAGE" = "Impossibile effettuare il login";
+"USERNAME_TEXTFIELD_ERROR" = "Inserisci username";
+"PASSWORD_TEXTFIELD_ERROR" = "Inserisci password";
+"RESET_PASSWORD_SUCCESS_MESSAGE" = "Email di ripristino password inviata";

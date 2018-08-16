@@ -1,0 +1,12 @@
+/* 
+  Commons.strings
+  Iliad
+
+  Created by Luigi Aiello on 16/08/18.
+  Copyright © 2018 Luigi Aiello. All rights reserved.
+*/
+
+"SUCCESS" = "Successo";
+"ERROR" = "Errore";
+"BACK" = "Indietro";
+"CANCEL" = "Annulla";
