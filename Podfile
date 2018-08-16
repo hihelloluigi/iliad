@@ -21,12 +21,18 @@ end
 
 def utilites_pods
     pod 'SwiftyJSON'
+    pod 'IQKeyboardManager'
+end
+
+def debugging_pods
+    pod 'Reveal-SDK', :configurations => ['Debug']
 end
 
 abstract_target 'Abstract Target' do 
 	graphics_components_pods
 	networking_pods
 	utilites_pods
+	debugging_pods
 
 	target 'IliadProd' do
 	end
