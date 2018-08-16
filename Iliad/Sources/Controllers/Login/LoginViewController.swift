@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
     // Mark - Outlets
         // Views
     @IBOutlet weak var checkBox: BEMCheckBox!
+    @IBOutlet weak var customNavigationBar: UINavigationBar!
     
         // Text fields
     @IBOutlet weak var usernameTextField: SkyFloatingLabelTextField!
@@ -27,10 +28,12 @@ class LoginViewController: UIViewController {
         // Labels
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
-
+    @IBOutlet weak var savePasswordLabel: UILabel!
+    
         // Buttons
     @IBOutlet weak var loginButton: TransitionButton!
-    @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var forgotButton: UIButton!
+    @IBOutlet weak var infoBarButton: UIBarButtonItem!
 
     // Mark - Variables
     var showPasswordButton: UIButton?
@@ -41,6 +44,7 @@ class LoginViewController: UIViewController {
 
         setup()
         configurationUI()
+        configurationText()
         recoverUsername()
     }
 
@@ -48,20 +52,17 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        showOnlyBackButton(animated)
-    }
-
     // Mark - Setup
     private func setup() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
         self.view.addGestureRecognizer(tapGesture)
-        
+
+        usernameTextField.delegate = self
+        passwordTextField.delegate = self
+
         #if DEV
-            autoFill()
-            autoLogin()
+//            autoFill()
+//            autoLogin()
         #endif
     }
 
@@ -70,7 +71,17 @@ class LoginViewController: UIViewController {
         passwordTextField.rightViewMode = .always
 
         logoImageView.tintColor = .iliadRed
-        infoButton.tintColor = .iliadRed
+        customNavigationBar.shadowImage = UIImage()
+    }
+
+    private func configurationText() {
+        titleLabel.text = "Login" ~> "TITLE"
+        subtitleLabel.text = "Login" ~> "SUBTITLE"
+        usernameTextField.placeholder = "Login" ~> "USERNAME_PLACEHOLDER"
+        passwordTextField.placeholder = "Login" ~> "PASSWORD_PLACEHOLDER"
+        savePasswordLabel.text = "Login" ~> "SAVE_USERNAME"
+        loginButton.setTitle("Login" ~> "LOGIN_BUTTON", for: .normal)
+        forgotButton.setTitle("Login" ~> "FOROT_PASSWORD_BUTTON", for: .normal)
     }
 
     private func recoverUsername() {
@@ -82,14 +93,6 @@ class LoginViewController: UIViewController {
     }
 
     // Mark - Helpers
-    private func showOnlyBackButton(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = .clear
-    }
-
     @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
@@ -104,26 +107,6 @@ class LoginViewController: UIViewController {
         loginDidTap(loginButton)
     }
     #endif
-
-    private func performLogin(user: User) {
-        guard
-            let tabBarController = "Main" <%> "MainTabBarController" as? MainTabBarController,
-            let navController = tabBarController.viewControllers?.first as? UINavigationController,
-            let consumptionViewController = navController.viewControllers.first as? ConsumptionViewController
-        else {
-            return
-        }
-
-        //TODO - save user
-
-        DispatchQueue.main.async {
-            self.loginButton.stopAnimation(animationStyle: .expand, completion: {
-                self.present(tabBarController, animated: true, completion: {
-                    self.view.isUserInteractionEnabled = true
-                })
-            })
-        }
-    }
 
     private func createShowPasswordButton() -> UIButton {
         let button = UIButton(type: .custom)
@@ -159,6 +142,27 @@ class LoginViewController: UIViewController {
         view.isUserInteractionEnabled = true
     }
 
+    // Mark - Segue
+    private func performLogin(user: User) {
+        guard
+            let tabBarController = "Main" <%> "MainTabBarController" as? MainTabBarController,
+            let lastNavController = tabBarController.viewControllers?.last as? UINavigationController,
+            let profileViewController = lastNavController.viewControllers.last as? ProfileViewController
+            else {
+                return
+        }
+
+        profileViewController.user = user
+
+        DispatchQueue.main.async {
+            self.loginButton.stopAnimation(animationStyle: .expand, completion: {
+                self.present(tabBarController, animated: true, completion: {
+                    self.view.isUserInteractionEnabled = true
+                })
+            })
+        }
+    }
+    
     // Mark - APIs
     private func getToken(username: String, password: String) {
         loginButton.startAnimation()
@@ -166,7 +170,7 @@ class LoginViewController: UIViewController {
 
         API.LoginClass.getToken(username: username, password: password) { (token, success) in
             guard success, let token = token else {
-                self.showError(title: "Errore", message: "Impossibile effettuare il login")
+                self.showError(title: "Commons" ~> "ERROR", message: "Login" ~> "LOGIN_ERROR_MESSAGE")
                 return
             }
 
@@ -178,11 +182,11 @@ class LoginViewController: UIViewController {
     private func login(username: String, password: String) {
         API.LoginClass.login(username: username, password: password) { (json) in
             guard let json = json else {
-                self.showError(title: "Errore", message: "Impossibile effettuare il login")
+                self.showError(title: "Commons" ~> "ERROR", message: "Login" ~> "LOGIN_ERROR_MESSAGE")
                 return
             }
 
-            let user = User(json: json)
+            let user = User(json: json["iliad"])
             self.performLogin(user: user)
         }
     }
@@ -195,16 +199,16 @@ class LoginViewController: UIViewController {
         else {
             return
         }
-
+        
         if usernameText.isEmpty {
-            usernameTextField.errorMessage = "Inserisci username"
+            usernameTextField.errorMessage = "Login" ~> "USERNAME_TEXTFIELD_ERROR"
             return
         } else {
             usernameTextField.errorMessage = nil
         }
 
         if passwordText.isEmpty {
-            passwordTextField.errorMessage = "Inserisci password"
+            passwordTextField.errorMessage = "Login" ~> "PASSWORD_TEXTFIELD_ERROR"
             return
         } else {
             passwordTextField.errorMessage = nil
@@ -248,8 +252,23 @@ class LoginViewController: UIViewController {
     }
 }
 
+// Mark - Text Field Delegate
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField else {
+            textField.resignFirstResponder()
+            return true
+        }
+
+        nextField.becomeFirstResponder()
+
+        return false
+    }
+}
+
+// Mark - Recover Password View Controller Delegate
 extension LoginViewController: RecoverPasswordDelegate {
     func recoverEmailSend() {
-        self.showSuccessMessage(title: "Successo", message: "Email di ripristino password inviata")
+        self.showSuccessMessage(title: "Commons" ~> "SUCCESS", message: "Login" ~> "RESET_PASSWORD_SUCCESS_MESSAGE")
     }
 }

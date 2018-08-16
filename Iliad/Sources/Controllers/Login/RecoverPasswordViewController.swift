@@ -17,6 +17,11 @@ protocol RecoverPasswordDelegate: NSObjectProtocol {
 class RecoverPasswordViewController: UIViewController {
 
     // Mark - Outlets
+        // Views
+    @IBOutlet weak var customNavigationBar: UINavigationBar!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var textFieldsStackView: UIStackView!
+
         // Image Views
     @IBOutlet weak var lockImageView: UIImageView!
 
@@ -32,7 +37,7 @@ class RecoverPasswordViewController: UIViewController {
         // Buttons
     @IBOutlet weak var recoverButton: TransitionButton!
     @IBOutlet weak var forgetUsernameButton: UIButton!
-    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var cancelBarButton: UIBarButtonItem!
 
     // Mark - Variables
     var forgetUsername: Bool = false
@@ -46,6 +51,7 @@ class RecoverPasswordViewController: UIViewController {
 
         setup()
         configurationUI()
+        configurationText()
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,6 +60,7 @@ class RecoverPasswordViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.scrollView.contentSize = self.textFieldsStackView.frame.size
     }
 
     // Mark - Setup
@@ -62,13 +69,21 @@ class RecoverPasswordViewController: UIViewController {
         self.view.addGestureRecognizer(tapGesture)
 
         #if DEV
-            autoFill()
+//            autoFill()
         #endif
     }
     
     private func configurationUI() {
         lockImageView.tintColor = .iliadRed
         changeFormLayout(forgetUsername: forgetUsername)
+        customNavigationBar.shadowImage = UIImage()
+    }
+
+    private func configurationText() {
+        titleLabel.text = "RecoverPassword" ~> "TITLE"
+        subtitleLabel.text = "RecoverPassword" ~> "SUBTITLE"
+        recoverButton.setTitle("RecoverPassword" ~> "RECOVER_BUTTON", for: .normal)
+        cancelBarButton.title = "Commons" ~> "CANCEL"
     }
 
     // Mark - Helpers
@@ -83,34 +98,34 @@ class RecoverPasswordViewController: UIViewController {
     private func changeFormLayout(forgetUsername: Bool) {
         if forgetUsername {
             // First
-            firstTextField.placeholder = "Nome"
+            firstTextField.placeholder = "RecoverPassword" ~> "NAME_PLACEHOLDER"
             firstTextField.textContentType = .name
 
             // Second
-            secondTextField.placeholder = "Cognome"
+            secondTextField.placeholder = "RecoverPassword" ~> "SURNAME_PLACEHOLDER"
             secondTextField.textContentType = .name
 
             // Third
-            thirdTextField.placeholder = "Email"
+            thirdTextField.placeholder = "RecoverPassword" ~> "EMAIL_PLACEHOLDER"
             thirdTextField.textContentType = .emailAddress
             thirdTextField.keyboardType = .emailAddress
             thirdTextField.isHidden = false
 
-            forgetUsernameButton.setTitle("Conosci il tuo id utente?", for: .normal)
+            forgetUsernameButton.setTitle("RecoverPassword" ~> "KNOWN_USERNAME", for: .normal)
         } else {
             // First
-            firstTextField.placeholder = "Username"
+            firstTextField.placeholder = "RecoverPassword" ~> "USERNAME_PLACEHOLDER"
             firstTextField.keyboardType = .numberPad
 
             // Second
-            secondTextField.placeholder = "Email"
+            secondTextField.placeholder = "RecoverPassword" ~> "EMAIL_PLACEHOLDER"
             secondTextField.textContentType = .emailAddress
             secondTextField.keyboardType = .emailAddress
 
             // Third
             thirdTextField.isHidden = true
 
-            forgetUsernameButton.setTitle("Non conosci il tuo id utente?", for: .normal)
+            forgetUsernameButton.setTitle("RecoverPassword" ~> "MISSING_USERNAME", for: .normal)
         }
     }
 
@@ -128,7 +143,7 @@ class RecoverPasswordViewController: UIViewController {
         API.RecoverPasswordClass.recoverPassword(username: username, email: email) { (success) in
             self.recoverButton.stopAnimation()
             guard success else {
-                self.showErrorMessage(title: "Errore", message: "Impossibile inviare l'email di ripristino password")
+                self.showErrorMessage(title: "Commons" ~> "ERROR", message: "RecoverPassword" ~> "RESET_PASSWORD_ERROR_MESSAGE")
                 return
             }
             self.dismiss(animated: true, completion: {
@@ -142,7 +157,7 @@ class RecoverPasswordViewController: UIViewController {
         API.RecoverPasswordClass.recoverPasswordForgetUsername(name: name, surname: surname, email: email) { (success) in
             self.recoverButton.stopAnimation()
             guard success else {
-                self.showErrorMessage(title: "Errore", message: "Impossibile inviare l'email di ripristino password")
+                self.showErrorMessage(title: "Commons" ~> "ERROR", message: "RecoverPassword" ~> "RESET_PASSWORD_ERROR_MESSAGE")
                 return
             }
             self.dismiss(animated: true, completion: {
@@ -162,14 +177,14 @@ class RecoverPasswordViewController: UIViewController {
         }
 
         if firstValue.isEmpty {
-            firstTextField.errorMessage = forgetUsername ? "Inserisci nome" : "Inserisci username"
+            firstTextField.errorMessage = forgetUsername ? "RecoverPassword" ~> "NAME_TEXTFIELD_ERROR" : "RecoverPassword" ~> "USERNAME_TEXTFIELD_ERROR"
             return
         } else {
             firstTextField.errorMessage = nil
         }
 
         if secondValue.isEmpty {
-            secondTextField.errorMessage = forgetUsername ? "Inserisci cognome" : "Inserisci email"
+            secondTextField.errorMessage = forgetUsername ? "RecoverPassword" ~> "SURNAME_TEXTFIELD_ERROR" : "RecoverPassword" ~> "EMAIL_TEXTFIELD_ERROR"
             return
         } else {
             secondTextField.errorMessage = nil
@@ -179,7 +194,7 @@ class RecoverPasswordViewController: UIViewController {
             if let thirdValue = thirdTextField.text, thirdValue.isEmpty {
                 forgetUsernameRecoverPassword(name: firstValue, surname: secondValue, email: thirdValue, token: token)
             } else {
-                thirdTextField.errorMessage = "Inserisci email"
+                thirdTextField.errorMessage = "RecoverPassword" ~> "EMAIL_TEXTFIELD_ERROR"
             }
         } else {
             recoverPassword(username: firstValue, email: secondValue, token: token)
