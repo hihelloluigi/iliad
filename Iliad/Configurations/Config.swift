@@ -7,78 +7,51 @@
 //
 
 import Foundation
+import KeychainAccess
+import SwiftyUserDefaults
 /**
  This class is used to access the local configuration of the app.
  */
+
+extension DefaultsKeys {
+    static let saveUsername = DefaultsKey<Bool>("kSaveUsername")
+    static let autoLogin = DefaultsKey<Bool>("kAutoLogin")
+    static let loginWithBiometric = DefaultsKey<Bool>("kLoginWithBiometric")
+}
+
 class Config {
 
     // MARK: - Constants
-    fileprivate static let kToken = "kToken"
+    fileprivate static let keychain = Keychain(service: Bundle.main.bundleIdentifier ?? "")
+    static var token: String?
+
+    // Keychain
     fileprivate static let kUsername = "kUsername"
+    fileprivate static let kPassword = "kPassword"
 
-    /**
-     Stores a user token in user defaults.
-     - parameter token: the token that should be stored
-     */
-    class func store(token: String) {
-        let defaults = UserDefaults.standard
-        defaults.setValue(token, forKey: kToken)
-
-        defaults.synchronize()
-    }
-
-    /**
-     Remove a user token in user defaults.
-     */
-    class func removeToken() {
-        let defaults = UserDefaults.standard
-        defaults.removeObject(forKey: kToken)
-
-        defaults.synchronize()
-    }
-
-    /**
-     Returns the user token currently stored in user defaults.
-     - returns: the token currently stored in the user defaults or `nil` if no token can be found
-     */
-    class func token() -> String? {
-        guard let token = UserDefaults.standard.value(forKey: kToken) as? String else {
-            return nil
-        }
-
-        return token
-    }
-
-    /**
-     Stores a user token in user defaults.
-     - parameter token: the token that should be stored
-     */
+    // Mark - Username
     class func store(username: String) {
-        let defaults = UserDefaults.standard
-        defaults.setValue(username, forKey: kUsername)
-
-        defaults.synchronize()
+        keychain[kUsername] = username
     }
 
-    /**
-     Remove a user token in user defaults.
-     */
-    class func removeUsername() {
-        let defaults = UserDefaults.standard
-        defaults.removeObject(forKey: kUsername)
-
-        defaults.synchronize()
-    }
-
-    /**
-     Returns the user token currently stored in user defaults.
-     - returns: the token currently stored in the user defaults or `nil` if no token can be found
-     */
     class func username() -> String? {
-        guard let username = UserDefaults.standard.value(forKey: kUsername) as? String else {
-            return nil
-        }
+        return keychain[kUsername]
+    }
 
-        return username
+    class func removeUsername() {
+        keychain[kUsername] = nil
+    }
+
+    // Mark - Password
+    class func store(password: String) {
+        keychain[kPassword] = password
+    }
+
+    class func password() -> String? {
+        return keychain[kPassword]
+    }
+
+    class func removePassword() {
+        keychain[kPassword] = nil
     }
 }
