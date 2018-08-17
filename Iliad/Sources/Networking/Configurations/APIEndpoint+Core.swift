@@ -41,7 +41,7 @@ extension APIEndpoint: TargetType {
     }
 
     var accessToken: String {
-        guard let token = Config.token() else {
+        guard let token = Config.token else {
             return ""
         }
         return token
