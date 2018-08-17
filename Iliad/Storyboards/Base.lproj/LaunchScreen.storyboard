@@ -18,28 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qIl-j9-PQk">
-                                <rect key="frame" x="82" y="96" width="211" height="140.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UhQ-f6-gGn">
+                                <rect key="frame" x="82" y="72" width="211" height="140.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_simRed" translatesAutoresizingMaskIntoConstraints="NO" id="HOQ-7I-TCU">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sim" translatesAutoresizingMaskIntoConstraints="NO" id="a9o-5g-xgT">
                                         <rect key="frame" x="73" y="0.0" width="65" height="65"/>
                                         <color key="tintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="65" id="WnE-xh-jMH"/>
-                                            <constraint firstAttribute="height" constant="65" id="pIa-Xx-a8a"/>
+                                            <constraint firstAttribute="height" constant="65" id="V1c-Yr-Abj"/>
+                                            <constraint firstAttribute="width" constant="65" id="zlB-tX-ajj"/>
                                         </constraints>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2C0-HV-nrI">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dof-1N-9Qe">
                                         <rect key="frame" x="0.0" y="81" width="211" height="59.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benvenuto in iliad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="Ba7-w7-M2R">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benvenuto in iliad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="sIo-cN-xzs">
                                                 <rect key="frame" x="0.0" y="0.0" width="211" height="33.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <color key="textColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La rivoluzione è arrivata" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="0k2-mf-pBz">
-                                                <rect key="frame" x="22" y="41.5" width="167" height="18"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La rivoluzione è arrivata" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.60000002384185791" translatesAutoresizingMaskIntoConstraints="NO" id="OLf-ig-oLb">
+                                                <rect key="frame" x="0.0" y="41.5" width="211" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -51,10 +51,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qIl-j9-PQk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="76" id="4BS-nI-cPI"/>
-                            <constraint firstItem="qIl-j9-PQk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="KZH-Kw-QU7"/>
-                            <constraint firstItem="qIl-j9-PQk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="OQN-gK-Tku"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qIl-j9-PQk" secondAttribute="trailing" constant="32" id="i0r-Rs-U3e"/>
+                            <constraint firstItem="UhQ-f6-gGn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="IgU-l5-krx"/>
+                            <constraint firstItem="UhQ-f6-gGn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="W0b-hX-Z1q"/>
+                            <constraint firstItem="UhQ-f6-gGn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="aod-U7-6QF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UhQ-f6-gGn" secondAttribute="trailing" constant="32" id="snO-5X-23r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -65,6 +65,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_simRed" width="28" height="22"/>
+        <image name="ic_sim" width="28" height="22"/>
     </resources>
 </document>

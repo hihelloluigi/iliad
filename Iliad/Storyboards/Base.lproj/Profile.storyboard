@@ -18,11 +18,11 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" id="wgQ-eL-mph" customClass="ProfileViewController" customModule="IliadDev" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wse-Ne-97T">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="684"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yx7-fk-0o3">
-                                <rect key="frame" x="0.0" y="113" width="375" height="687"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="684"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="45U-gv-Pgh">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="594"/>
@@ -337,7 +337,7 @@
                                     <action selector="logoutDidTap:" destination="wgQ-eL-mph" id="Bbb-GF-LUr"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem id="6jI-DS-Xi5">
+                            <barButtonItem image="ic_settings" id="6jI-DS-Xi5">
                                 <color key="tintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="settingsDidTap:" destination="wgQ-eL-mph" id="Ka1-s7-Idk"/>
@@ -381,9 +381,10 @@
             <objects>
                 <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Gmx-cH-b5J" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Xt2-QT-OsJ">
-                        <rect key="frame" x="0.0" y="20" width="375" height="93"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="Xt2-QT-OsJ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -602,7 +603,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rac-8d-Wuo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1156" y="-233"/>
+            <point key="canvasLocation" x="855" y="-235"/>
         </scene>
         <!--Change Password View Controller-->
         <scene sceneID="D4C-LW-aTh">
@@ -805,7 +806,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="stB-xo-61v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1799" y="-233"/>
+            <point key="canvasLocation" x="1398" y="-235"/>
         </scene>
     </scenes>
     <resources>
@@ -814,6 +815,7 @@
         <image name="ic_logout" width="24" height="24"/>
         <image name="ic_profile_rounded" width="24" height="24"/>
         <image name="ic_recoverPassword" width="64" height="64"/>
+        <image name="ic_settings" width="28" height="28"/>
         <image name="ic_sim" width="28" height="22"/>
     </resources>
 </document>
