@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rWH-c6-hQJ">
-                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="113" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="option cell" rowHeight="92" id="iG3-5I-Ehf" customClass="OptionCell" customModule="IliadDev" customModuleProvider="target">
@@ -30,17 +30,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="91.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vEm-1d-kZw">
-                                                    <rect key="frame" x="15" y="19" width="345" height="54"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vEm-1d-kZw">
+                                                    <rect key="frame" x="15" y="11" width="345" height="70"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="[Description]" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kw7-gk-udb">
-                                                            <rect key="frame" x="0.0" y="17" width="302" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="25" width="279" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="751" verticalHuggingPriority="750" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XAU-qU-NQ4">
-                                                            <rect key="frame" x="302" y="11.5" width="45" height="31"/>
+                                                            <rect key="frame" x="295" y="19.5" width="52" height="31"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="dVG-EH-TDp"/>
+                                                            </constraints>
                                                             <color key="onTintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <connections>
                                                                 <action selector="switchDidChange:" destination="iG3-5I-Ehf" eventType="valueChanged" id="wgw-1Q-Z8k"/>
@@ -50,10 +53,10 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="vEm-1d-kZw" secondAttribute="trailing" id="3pO-3u-ITV"/>
-                                                <constraint firstItem="vEm-1d-kZw" firstAttribute="top" secondItem="m6L-Dh-ljV" secondAttribute="topMargin" constant="8" id="NmA-vu-N8d"/>
-                                                <constraint firstItem="vEm-1d-kZw" firstAttribute="leading" secondItem="m6L-Dh-ljV" secondAttribute="leadingMargin" id="QtH-qL-DnN"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="vEm-1d-kZw" secondAttribute="bottom" constant="8" id="Ur0-5M-pfm"/>
+                                                <constraint firstItem="vEm-1d-kZw" firstAttribute="leading" secondItem="m6L-Dh-ljV" secondAttribute="leadingMargin" id="3A3-GW-XWc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vEm-1d-kZw" secondAttribute="trailing" id="8AT-dx-6vQ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vEm-1d-kZw" secondAttribute="bottom" id="U4P-bi-Xfh"/>
+                                                <constraint firstItem="vEm-1d-kZw" firstAttribute="top" secondItem="m6L-Dh-ljV" secondAttribute="topMargin" id="m7r-2M-LGl"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -88,7 +91,7 @@
                 <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="n7V-Q6-evr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="T5S-jr-Ihf">
-                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="93"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
