@@ -95,8 +95,35 @@
 		2A47620B211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
 		2A47620C211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
 		2A47620D211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
+		2A63F8FD2125A618009D515C /* Commons.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA61775212596080062CA49 /* Commons.strings */; };
+		2A63F8FE2125A618009D515C /* Commons.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA61775212596080062CA49 /* Commons.strings */; };
+		2A63F9082125C117009D515C /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A63F9072125C117009D515C /* ChangePasswordViewController.swift */; };
+		2A63F9092125C117009D515C /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A63F9072125C117009D515C /* ChangePasswordViewController.swift */; };
+		2A63F90A2125C117009D515C /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A63F9072125C117009D515C /* ChangePasswordViewController.swift */; };
+		2A63F90C2125C122009D515C /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A63F90B2125C122009D515C /* ChangeEmailViewController.swift */; };
+		2A63F90D2125C122009D515C /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A63F90B2125C122009D515C /* ChangeEmailViewController.swift */; };
+		2A63F90E2125C122009D515C /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A63F90B2125C122009D515C /* ChangeEmailViewController.swift */; };
+		2A63F9102125C12C009D515C /* ShowPukViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A63F90F2125C12C009D515C /* ShowPukViewController.swift */; };
+		2A63F9112125C12C009D515C /* ShowPukViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A63F90F2125C12C009D515C /* ShowPukViewController.swift */; };
+		2A63F9122125C12C009D515C /* ShowPukViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A63F90F2125C12C009D515C /* ShowPukViewController.swift */; };
+		2A63F9152125C904009D515C /* ChangeEmail.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A63F9142125C904009D515C /* ChangeEmail.strings */; };
+		2A63F9162125C904009D515C /* ChangeEmail.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A63F9142125C904009D515C /* ChangeEmail.strings */; };
+		2A63F9172125C904009D515C /* ChangeEmail.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A63F9142125C904009D515C /* ChangeEmail.strings */; };
+		2A63F9192125CA3C009D515C /* ChangePassword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A63F9182125CA3C009D515C /* ChangePassword.strings */; };
+		2A63F91A2125CA3C009D515C /* ChangePassword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A63F9182125CA3C009D515C /* ChangePassword.strings */; };
+		2A63F91B2125CA3C009D515C /* ChangePassword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A63F9182125CA3C009D515C /* ChangePassword.strings */; };
 		2A80F30E211AEF21008D8C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A80F30D211AEF21008D8C89 /* AppDelegate.swift */; };
 		2A80F315211AEF22008D8C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A80F314211AEF22008D8C89 /* Assets.xcassets */; };
+		2AA61771212593DF0062CA49 /* Login.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA61770212593DF0062CA49 /* Login.strings */; };
+		2AA61773212594A80062CA49 /* Login.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA61770212593DF0062CA49 /* Login.strings */; };
+		2AA61774212594A80062CA49 /* Login.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA61770212593DF0062CA49 /* Login.strings */; };
+		2AA61776212596080062CA49 /* Commons.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA61775212596080062CA49 /* Commons.strings */; };
+		2AA61778212597650062CA49 /* RecoverPassword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA61777212597650062CA49 /* RecoverPassword.strings */; };
+		2AA6177A2125997A0062CA49 /* Info.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA617792125997A0062CA49 /* Info.strings */; };
+		2AA6177B2125997A0062CA49 /* Info.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA617792125997A0062CA49 /* Info.strings */; };
+		2AA6177C2125997A0062CA49 /* Info.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA617792125997A0062CA49 /* Info.strings */; };
+		2AA6177D2125997D0062CA49 /* RecoverPassword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA61777212597650062CA49 /* RecoverPassword.strings */; };
+		2AA6177E2125997E0062CA49 /* RecoverPassword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA61777212597650062CA49 /* RecoverPassword.strings */; };
 		2AAF695D21219533005DECE5 /* API+Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF695C21219533005DECE5 /* API+Information.swift */; };
 		2AAF695E21219533005DECE5 /* API+Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF695C21219533005DECE5 /* API+Information.swift */; };
 		2AAF695F21219533005DECE5 /* API+Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF695C21219533005DECE5 /* API+Information.swift */; };
@@ -191,10 +218,19 @@
 		2A23263F211C892F0045FBD7 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		2A232690211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTouchDownGestureRecognizer.swift; sourceTree = "<group>"; };
 		2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+XT.swift"; sourceTree = "<group>"; };
+		2A63F9072125C117009D515C /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		2A63F90B2125C122009D515C /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
+		2A63F90F2125C12C009D515C /* ShowPukViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPukViewController.swift; sourceTree = "<group>"; };
+		2A63F9142125C904009D515C /* ChangeEmail.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ChangeEmail.strings; sourceTree = "<group>"; };
+		2A63F9182125CA3C009D515C /* ChangePassword.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ChangePassword.strings; sourceTree = "<group>"; };
 		2A80F30A211AEF21008D8C89 /* IliadProd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IliadProd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A80F30D211AEF21008D8C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A80F314211AEF22008D8C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A80F319211AEF22008D8C89 /* iliadProd-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iliadProd-Info.plist"; sourceTree = "<group>"; };
+		2AA61770212593DF0062CA49 /* Login.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Login.strings; sourceTree = "<group>"; };
+		2AA61775212596080062CA49 /* Commons.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Commons.strings; sourceTree = "<group>"; };
+		2AA61777212597650062CA49 /* RecoverPassword.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = RecoverPassword.strings; sourceTree = "<group>"; };
+		2AA617792125997A0062CA49 /* Info.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Info.strings; sourceTree = "<group>"; };
 		2AAF695C21219533005DECE5 /* API+Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Information.swift"; sourceTree = "<group>"; };
 		2AAF6960212196E5005DECE5 /* API+Consumption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Consumption.swift"; sourceTree = "<group>"; };
 		2AAF69642121975F005DECE5 /* API+Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Service.swift"; sourceTree = "<group>"; };
@@ -386,6 +422,15 @@
 			path = Consumption;
 			sourceTree = "<group>";
 		};
+		2A63F9132125C8ED009D515C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2A63F9142125C904009D515C /* ChangeEmail.strings */,
+				2A63F9182125CA3C009D515C /* ChangePassword.strings */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		2A80F301211AEF21008D8C89 = {
 			isa = PBXGroup;
 			children = (
@@ -421,6 +466,7 @@
 		2A80F31F211AEF37008D8C89 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2AA61772212593E70062CA49 /* Translations */,
 				2A80F314211AEF22008D8C89 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -466,10 +512,33 @@
 			path = Configurations;
 			sourceTree = "<group>";
 		};
+		2AA61772212593E70062CA49 /* Translations */ = {
+			isa = PBXGroup;
+			children = (
+				2AA6177F212599810062CA49 /* Login */,
+				2A63F9132125C8ED009D515C /* Profile */,
+				2AA61775212596080062CA49 /* Commons.strings */,
+			);
+			path = Translations;
+			sourceTree = "<group>";
+		};
+		2AA6177F212599810062CA49 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2AA61770212593DF0062CA49 /* Login.strings */,
+				2AA61777212597650062CA49 /* RecoverPassword.strings */,
+				2AA617792125997A0062CA49 /* Info.strings */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		2AAF696C2121BB4F005DECE5 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				2AAF69A02121BF4F005DECE5 /* ProfileViewController.swift */,
+				2A63F90B2125C122009D515C /* ChangeEmailViewController.swift */,
+				2A63F9072125C117009D515C /* ChangePasswordViewController.swift */,
+				2A63F90F2125C12C009D515C /* ShowPukViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -632,14 +701,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AA6177D2125997D0062CA49 /* RecoverPassword.strings in Resources */,
 				2AAF69852121BC57005DECE5 /* Profile.storyboard in Resources */,
 				2A192FD1211B12BD007C1E5A /* Login.storyboard in Resources */,
+				2AA6177B2125997A0062CA49 /* Info.strings in Resources */,
+				2A63F9162125C904009D515C /* ChangeEmail.strings in Resources */,
 				2AAF69822121BC57005DECE5 /* Options.storyboard in Resources */,
 				2AAF69912121BC95005DECE5 /* Main.storyboard in Resources */,
+				2AA61773212594A80062CA49 /* Login.strings in Resources */,
 				2A192FD2211B12BD007C1E5A /* Assets.xcassets in Resources */,
 				2A192FD3211B12BD007C1E5A /* LaunchScreen.storyboard in Resources */,
 				2AAF69882121BC57005DECE5 /* Services.storyboard in Resources */,
 				2A193020211B1E7F007C1E5A /* Consumption.storyboard in Resources */,
+				2A63F8FD2125A618009D515C /* Commons.strings in Resources */,
+				2A63F91A2125CA3C009D515C /* ChangePassword.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,14 +722,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AA6177E2125997E0062CA49 /* RecoverPassword.strings in Resources */,
 				2AAF69862121BC57005DECE5 /* Profile.storyboard in Resources */,
 				2A192FF0211B12C0007C1E5A /* Login.storyboard in Resources */,
+				2AA6177C2125997A0062CA49 /* Info.strings in Resources */,
+				2A63F9172125C904009D515C /* ChangeEmail.strings in Resources */,
 				2AAF69832121BC57005DECE5 /* Options.storyboard in Resources */,
 				2AAF69922121BC95005DECE5 /* Main.storyboard in Resources */,
+				2AA61774212594A80062CA49 /* Login.strings in Resources */,
 				2A192FF1211B12C0007C1E5A /* Assets.xcassets in Resources */,
 				2A192FF2211B12C0007C1E5A /* LaunchScreen.storyboard in Resources */,
 				2AAF69892121BC57005DECE5 /* Services.storyboard in Resources */,
 				2A193021211B1E7F007C1E5A /* Consumption.storyboard in Resources */,
+				2A63F8FE2125A618009D515C /* Commons.strings in Resources */,
+				2A63F91B2125CA3C009D515C /* ChangePassword.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,14 +743,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AA6177A2125997A0062CA49 /* Info.strings in Resources */,
+				2AA61778212597650062CA49 /* RecoverPassword.strings in Resources */,
 				2AAF69842121BC57005DECE5 /* Profile.storyboard in Resources */,
 				2A192F93211AF9F3007C1E5A /* Login.storyboard in Resources */,
+				2A63F9152125C904009D515C /* ChangeEmail.strings in Resources */,
 				2AAF69812121BC57005DECE5 /* Options.storyboard in Resources */,
 				2AAF69902121BC95005DECE5 /* Main.storyboard in Resources */,
+				2AA61771212593DF0062CA49 /* Login.strings in Resources */,
 				2A80F315211AEF22008D8C89 /* Assets.xcassets in Resources */,
 				2A192F91211AF9F3007C1E5A /* LaunchScreen.storyboard in Resources */,
+				2AA61776212596080062CA49 /* Commons.strings in Resources */,
 				2AAF69872121BC57005DECE5 /* Services.storyboard in Resources */,
 				2A19301F211B1E7F007C1E5A /* Consumption.storyboard in Resources */,
+				2A63F9192125CA3C009D515C /* ChangePassword.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,23 +786,31 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Abstract Target-IliadProd/Pods-Abstract Target-IliadProd-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-17/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSAuthenticator/iOSAuthenticator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSAuthenticator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -785,23 +880,31 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Abstract Target-IliadStaging/Pods-Abstract Target-IliadStaging-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-17/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSAuthenticator/iOSAuthenticator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSAuthenticator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -817,23 +920,31 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Abstract Target-IliadDev/Pods-Abstract Target-IliadDev-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-17/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
+				"${BUILT_PRODUCTS_DIR}/iOSAuthenticator/iOSAuthenticator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSAuthenticator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -873,8 +984,10 @@
 				2AAF695E21219533005DECE5 /* API+Information.swift in Sources */,
 				2A193006211B1AE4007C1E5A /* String+XT.swift in Sources */,
 				2A192FC9211B12BD007C1E5A /* AppConfig.swift in Sources */,
+				2A63F9092125C117009D515C /* ChangePasswordViewController.swift in Sources */,
 				2A193026211B362E007C1E5A /* CardView.swift in Sources */,
 				2AAF69662121975F005DECE5 /* API+Service.swift in Sources */,
+				2A63F90D2125C122009D515C /* ChangeEmailViewController.swift in Sources */,
 				2AAF699A2121BF27005DECE5 /* OptionsViewController.swift in Sources */,
 				2A47620C211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */,
 				2A192FCA211B12BD007C1E5A /* AppConfig+Staging.swift in Sources */,
@@ -884,6 +997,7 @@
 				2AAF696A21219A3D005DECE5 /* API+Option.swift in Sources */,
 				2A23263D211C88920045FBD7 /* InfoViewController.swift in Sources */,
 				2A192FCB211B12BD007C1E5A /* APIEndpoint+Methods.swift in Sources */,
+				2A63F9112125C12C009D515C /* ShowPukViewController.swift in Sources */,
 				2AAF69A22121BF4F005DECE5 /* ProfileViewController.swift in Sources */,
 				2A19302A211B38D9007C1E5A /* BasicCell.swift in Sources */,
 				2A192FCC211B12BD007C1E5A /* APIEndpoint+Core.swift in Sources */,
@@ -920,8 +1034,10 @@
 				2AAF695F21219533005DECE5 /* API+Information.swift in Sources */,
 				2A192FE4211B12C0007C1E5A /* APIEndpoint.swift in Sources */,
 				2A193007211B1AE5007C1E5A /* String+XT.swift in Sources */,
+				2A63F90A2125C117009D515C /* ChangePasswordViewController.swift in Sources */,
 				2A192FE6211B12C0007C1E5A /* APIEndpoint+Tasks.swift in Sources */,
 				2AAF69672121975F005DECE5 /* API+Service.swift in Sources */,
+				2A63F90E2125C122009D515C /* ChangeEmailViewController.swift in Sources */,
 				2AAF699B2121BF27005DECE5 /* OptionsViewController.swift in Sources */,
 				2A192FE7211B12C0007C1E5A /* API+XT.swift in Sources */,
 				2A192FE8211B12C0007C1E5A /* AppConfig.swift in Sources */,
@@ -931,6 +1047,7 @@
 				2AAF696B21219A3D005DECE5 /* API+Option.swift in Sources */,
 				2A193000211B1766007C1E5A /* Credentials.swift in Sources */,
 				2A192FEB211B12C0007C1E5A /* APIEndpoint+Core.swift in Sources */,
+				2A63F9122125C12C009D515C /* ShowPukViewController.swift in Sources */,
 				2AAF69A32121BF4F005DECE5 /* ProfileViewController.swift in Sources */,
 				2AF92DD4211C32540058CFD2 /* RecoverPasswordViewController.swift in Sources */,
 				2A192FEC211B12C0007C1E5A /* AppConfig+Dev.swift in Sources */,
@@ -967,8 +1084,10 @@
 				2AAF695D21219533005DECE5 /* API+Information.swift in Sources */,
 				2A192FA0211B02E7007C1E5A /* API+XT.swift in Sources */,
 				2A193025211B362E007C1E5A /* CardView.swift in Sources */,
+				2A63F9082125C117009D515C /* ChangePasswordViewController.swift in Sources */,
 				2A192FB4211B060A007C1E5A /* AppConfig.swift in Sources */,
 				2AAF69652121975F005DECE5 /* API+Service.swift in Sources */,
+				2A63F90C2125C122009D515C /* ChangeEmailViewController.swift in Sources */,
 				2AAF69992121BF27005DECE5 /* OptionsViewController.swift in Sources */,
 				2A47620B211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */,
 				2A193009211B1B2F007C1E5A /* Config.swift in Sources */,
@@ -978,6 +1097,7 @@
 				2AAF696921219A3D005DECE5 /* API+Option.swift in Sources */,
 				2A192FAD211B0383007C1E5A /* APIEndpoint+Methods.swift in Sources */,
 				2A193029211B38D9007C1E5A /* BasicCell.swift in Sources */,
+				2A63F9102125C12C009D515C /* ShowPukViewController.swift in Sources */,
 				2AAF69A12121BF4F005DECE5 /* ProfileViewController.swift in Sources */,
 				2AF92DD2211C32500058CFD2 /* RecoverPasswordViewController.swift in Sources */,
 				2A192FAC211B0383007C1E5A /* APIEndpoint+Core.swift in Sources */,
@@ -1055,11 +1175,8 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Staging/iliadStaging-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.IliadStaging;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleStaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1075,11 +1192,8 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Staging/iliadStaging-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.IliadStaging;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleStaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1095,12 +1209,9 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Dev/iliadDev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEV";
-				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.IliadDev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1116,12 +1227,9 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Dev/iliadDev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEV";
-				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.IliadDev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1251,11 +1359,8 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Prod/iliadProd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.Iliad;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1271,11 +1376,8 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Prod/iliadProd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.Iliad;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
