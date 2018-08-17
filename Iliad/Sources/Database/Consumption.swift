@@ -21,8 +21,6 @@ class Consumption {
     var data: String?
     var maxData: String?
     var extraData: String?
-    var credit: String?
-    var renewal: Date?
 
     // Mark - Init
     init(calls: String?,
@@ -33,9 +31,7 @@ class Consumption {
          extraMMS: String?,
          data: String?,
          maxData: String?,
-         extraData: String?,
-         credit: String?,
-         renewal: String?) {
+         extraData: String?) {
 
         self.calls = calls
         self.extraCalls = extraCalls
@@ -43,28 +39,19 @@ class Consumption {
         self.extraSMS = extraSMS
         self.mms = mms
         self.extraMMS = extraMMS
-        self.data = credit
+        self.data = data
         self.extraData = extraData
-        self.credit = credit
-
-        if let renewal = renewal {
-            self.renewal = Date.from(string: renewal, withFormat: "dd/MM/yyyy")
-        }
     }
 
     init(json: JSON) {
-        self.calls = json["iliad"]["1"]["0"].string
-        self.extraCalls = json["iliad"]["1"]["1"].string
-        self.sms = json["iliad"]["2"]["0"].string
-        self.extraCalls = json["iliad"]["2"]["1"].string
-        self.data = json["iliad"]["3"]["0"].string
-        self.extraData = json["iliad"]["3"]["1"].string
-        self.mms = json["iliad"]["4"]["0"].string
-        self.extraMMS = json["iliad"]["4"]["1"].string
-        let creditRenewal = json["iliad"]["0"]["0"].string?.components(separatedBy: "&")
-        self.credit = creditRenewal?[0]
-        if let stringDate = creditRenewal?[1] {
-            self.renewal = Date.from(string: stringDate, withFormat: "dd/MM/yyyy")
-        }
+        self.calls = json["1"]["0"].string
+        self.extraCalls = json["1"]["1"].string
+        self.sms = json["2"]["0"].string
+        self.extraCalls = json["2"]["1"].string
+        self.data = json["3"]["0"].string
+        self.extraData = json["3"]["1"].string
+        self.mms = json["4"]["0"].string
+        self.extraMMS = json["4"]["1"].string
+
     }
 }

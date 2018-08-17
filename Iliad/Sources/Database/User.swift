@@ -16,6 +16,8 @@ class User {
     var name: String?
     var phoneNumber: String?
     var isSimActive: Bool?
+    var credit: String?
+    var renewal: Date?
 
     // Mark - Init
     init(id: String?,
