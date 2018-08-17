@@ -178,6 +178,9 @@
 		2AE214BF2126FA4F00BB2F1C /* Settings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AE214BE2126FA4F00BB2F1C /* Settings.strings */; };
 		2AE214C02126FA4F00BB2F1C /* Settings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AE214BE2126FA4F00BB2F1C /* Settings.strings */; };
 		2AE214C12126FA4F00BB2F1C /* Settings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AE214BE2126FA4F00BB2F1C /* Settings.strings */; };
+		2AE214C3212705D800BB2F1C /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214C2212705D800BB2F1C /* Credentials.swift */; };
+		2AE214C4212705D800BB2F1C /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214C2212705D800BB2F1C /* Credentials.swift */; };
+		2AE214C5212705D800BB2F1C /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214C2212705D800BB2F1C /* Credentials.swift */; };
 		2AF92DCF211C2DD00058CFD2 /* API+RecoverPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DCE211C2DD00058CFD2 /* API+RecoverPassword.swift */; };
 		2AF92DD2211C32500058CFD2 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */; };
 		2AF92DD3211C32530058CFD2 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */; };
@@ -258,6 +261,7 @@
 		2AE214B52126CB7B00BB2F1C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		2AE214B92126D1AC00BB2F1C /* AutoLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginViewController.swift; sourceTree = "<group>"; };
 		2AE214BE2126FA4F00BB2F1C /* Settings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Settings.strings; sourceTree = "<group>"; };
+		2AE214C2212705D800BB2F1C /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		2AF92DCE211C2DD00058CFD2 /* API+RecoverPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+RecoverPassword.swift"; sourceTree = "<group>"; };
 		2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 		2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+XT.swift"; sourceTree = "<group>"; };
@@ -518,6 +522,7 @@
 			children = (
 				2A192FB3211B060A007C1E5A /* AppConfig.swift */,
 				2A193008211B1B2F007C1E5A /* Config.swift */,
+				2AE214C2212705D800BB2F1C /* Credentials.swift */,
 				2A192FB0211B05ED007C1E5A /* Prod */,
 				2A192FB1211B05F3007C1E5A /* Staging */,
 				2A192FB2211B05F8007C1E5A /* Dev */,
@@ -1013,6 +1018,7 @@
 				2A192FC3211B12BD007C1E5A /* API.swift in Sources */,
 				2AF92DD9211C36A50058CFD2 /* UIColor+XT.swift in Sources */,
 				2A192FC4211B12BD007C1E5A /* AppDelegate.swift in Sources */,
+				2AE214C4212705D800BB2F1C /* Credentials.swift in Sources */,
 				2A19300F211B1C50007C1E5A /* User.swift in Sources */,
 				2A232692211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
 				2A192FC5211B12BD007C1E5A /* APIEndpoint.swift in Sources */,
@@ -1064,6 +1070,7 @@
 				2AF92DDA211C36A50058CFD2 /* UIColor+XT.swift in Sources */,
 				2A19300B211B1B68007C1E5A /* Config.swift in Sources */,
 				2A193018211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */,
+				2AE214C5212705D800BB2F1C /* Credentials.swift in Sources */,
 				2A193027211B362E007C1E5A /* CardView.swift in Sources */,
 				2A19302B211B38D9007C1E5A /* BasicCell.swift in Sources */,
 				2A232693211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
@@ -1115,6 +1122,7 @@
 				2A193012211B1DB3007C1E5A /* ConsumptionViewController.swift in Sources */,
 				2A192F9E211B01F4007C1E5A /* API.swift in Sources */,
 				2AF92DD8211C36A50058CFD2 /* UIColor+XT.swift in Sources */,
+				2AE214C3212705D800BB2F1C /* Credentials.swift in Sources */,
 				2A80F30E211AEF21008D8C89 /* AppDelegate.swift in Sources */,
 				2A232691211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
 				2A19300E211B1C50007C1E5A /* User.swift in Sources */,
