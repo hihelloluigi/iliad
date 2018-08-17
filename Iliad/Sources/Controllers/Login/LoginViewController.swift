@@ -10,6 +10,8 @@ import UIKit
 import SkyFloatingLabelTextField
 import BEMCheckBox
 import TransitionButton
+import iOSAuthenticator
+import SwiftyUserDefaults
 
 class LoginViewController: UIViewController {
 
@@ -46,6 +48,7 @@ class LoginViewController: UIViewController {
         configurationUI()
         configurationText()
         recoverUsername()
+        loginWithBiometric()
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,11 +88,31 @@ class LoginViewController: UIViewController {
     }
 
     private func recoverUsername() {
-        guard let username = Config.username() else {
+        guard
+            Defaults[.saveUsername],
+            let username = Config.username()
+        else {
             return
         }
+
         usernameTextField.text = username
         checkBox.setOn(true, animated: false)
+    }
+
+    private func loginWithBiometric() {
+        guard
+            Defaults[.loginWithBiometric],
+            let username = Config.username(),
+            let password = Config.password()
+        else {
+            return
+        }
+
+        iOSAuthenticator.authenticateWithBiometricsAndPasscode(reason: "Accedi alla tua area personale", success: {
+            self.getToken(username: username, password: password)
+        }, failure: { (error) in
+            print(error)
+        })
     }
 
     // Mark - Helpers
@@ -174,7 +197,7 @@ class LoginViewController: UIViewController {
                 return
             }
 
-            Config.store(token: token)
+            Config.token = token
             self.login(username: username, password: password)
         }
     }
@@ -219,6 +242,7 @@ class LoginViewController: UIViewController {
         }
 
         let passwordBase64 = passwordText.toBase64()
+        Config.store(username: usernameText)
         Config.store(password: passwordBase64)
         getToken(username: usernameText, password: passwordBase64)
     }
@@ -238,9 +262,7 @@ class LoginViewController: UIViewController {
             return
         }
 
-        if !checkBox.on {
-            Config.removeUsername()
-        }
+        Defaults[.saveUsername] = checkBox.on
     }
 
     @IBAction func infoDidTap(_ sender: Any) {

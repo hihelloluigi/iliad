@@ -119,7 +119,7 @@ class ConsumptionViewController: UIViewController {
                     user.renewal = Date.from(string: stringDate, withFormat: "dd/MM/yyyy")
                 }
 
-                NotificationCenter.default.post(name: Notification.Name("profile"), object: nil, userInfo: ["user" : user])
+                NotificationCenter.default.post(name: Notification.Name("profile"), object: nil, userInfo: ["user": user])
             }
 
             self.makeRows(self.nationlConsumption)

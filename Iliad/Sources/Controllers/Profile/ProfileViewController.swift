@@ -134,11 +134,20 @@ class ProfileViewController: UIViewController {
     // Mark - APIs
     private func logout() {
         API.LoginClass.logout { (success) in
-            guard success else {
+            guard
+                success,
+                let window = UIApplication.shared.windows.first,
+                let loginVC = "Login" <%> "LoginViewController" as? LoginViewController
+            else {
                 print("Impossible to do logout")
                 return
             }
-            self.dismiss(animated: true, completion: nil)
+
+            UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                window.rootViewController = loginVC
+            }, completion: { (success) in
+                print(success)
+            })
         }
     }
 
@@ -174,7 +183,13 @@ class ProfileViewController: UIViewController {
 
     // Mark - Actions
     @IBAction func settingsDidTap(_ sender: Any) {
+        guard let settingsVC = "Settings" <%> "SettingsViewController" as? SettingsViewController else {
+            return
+        }
+
+        self.navigationController?.pushViewController(settingsVC, animated: true)
     }
+
     @IBAction func logoutDidTap(_ sender: Any) {
         logout()
     }

@@ -175,7 +175,7 @@ class RecoverPasswordViewController: UIViewController {
         guard
             let firstValue = firstTextField.text,
             let secondValue = secondTextField.text,
-            let token = Config.token()
+            let token = Config.token
         else {
             return
         }
