@@ -1,0 +1,10 @@
+/* 
+  Settings.strings
+  Iliad
+
+  Created by Luigi Aiello on 17/08/18.
+  Copyright © 2018 Luigi Aiello. All rights reserved.
+*/
+
+"AUTO_LOGIN" = "Auto-login";
+"BIOMETRIC_LOGIN" = "Accedi con";
