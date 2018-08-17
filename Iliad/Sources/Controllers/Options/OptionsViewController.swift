@@ -51,6 +51,8 @@ class OptionsViewController: UIViewController {
     private func setupTableView() {
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     // Mark - APIs

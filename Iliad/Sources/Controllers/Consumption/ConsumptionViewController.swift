@@ -8,16 +8,7 @@
 
 import UIKit
 
-enum DataType {
-    case data
-    case call
-    case sms
-    case mms
-    case info
-}
-
 struct DetailsRow {
-    let type: DataType
     let value: String?
     let extraValue: String?
     let image: UIImage?
@@ -32,6 +23,7 @@ class ConsumptionViewController: UIViewController {
     // Mark - Variables
     var nationlConsumption: Consumption?
     var abroadConsumption: Consumption?
+    var user: User?
 
     var rows = [DetailsRow]()
     var isNationalConsumption: Bool = true
@@ -64,6 +56,8 @@ class ConsumptionViewController: UIViewController {
     private func setupTableView() {
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     // Mark - Helpers
@@ -72,10 +66,10 @@ class ConsumptionViewController: UIViewController {
             return
         }
         rows = [
-            DetailsRow(type: .call, value: consumption.calls, extraValue: consumption.extraCalls, image: #imageLiteral(resourceName: "ic_call")),
-            DetailsRow(type: .sms, value: consumption.sms, extraValue: consumption.extraSMS, image: #imageLiteral(resourceName: "ic_sms")),
-            DetailsRow(type: .mms, value: consumption.mms, extraValue: consumption.extraMMS, image: #imageLiteral(resourceName: "ic_mms")),
-            DetailsRow(type: .data, value: consumption.data, extraValue: consumption.extraData, image: #imageLiteral(resourceName: "ic_internet"))
+            DetailsRow(value: consumption.calls, extraValue: consumption.extraCalls, image: #imageLiteral(resourceName: "ic_call")),
+            DetailsRow(value: consumption.sms, extraValue: consumption.extraSMS, image: #imageLiteral(resourceName: "ic_sms")),
+            DetailsRow(value: consumption.mms, extraValue: consumption.extraMMS, image: #imageLiteral(resourceName: "ic_mms")),
+            DetailsRow(value: consumption.data, extraValue: consumption.extraData, image: #imageLiteral(resourceName: "ic_internet"))
         ]
 
         tableView.reloadData()
@@ -115,7 +109,19 @@ class ConsumptionViewController: UIViewController {
                 return
             }
 
-            self.nationlConsumption = Consumption(json: json)
+            self.nationlConsumption = Consumption(json: json["iliad"])
+
+            let creditRenewal = json["iliad"]["0"]["0"].string?.components(separatedBy: "&")
+
+            if let user = self.user {
+                user.credit = creditRenewal?[0]
+                if let stringDate = creditRenewal?[1] {
+                    user.renewal = Date.from(string: stringDate, withFormat: "dd/MM/yyyy")
+                }
+
+                NotificationCenter.default.post(name: Notification.Name("profile"), object: nil, userInfo: ["user" : user])
+            }
+
             self.makeRows(self.nationlConsumption)
         }
     }
@@ -124,7 +130,7 @@ class ConsumptionViewController: UIViewController {
             guard let json = json else {
                 return
             }
-            self.abroadConsumption = Consumption(json: json)
+            self.abroadConsumption = Consumption(json: json["iliad"])
             self.makeRows(self.abroadConsumption)
         }
     }

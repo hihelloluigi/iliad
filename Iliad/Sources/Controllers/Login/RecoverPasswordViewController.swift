@@ -68,6 +68,10 @@ class RecoverPasswordViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
         self.view.addGestureRecognizer(tapGesture)
 
+        firstTextField.delegate = self
+        secondTextField.delegate = self
+        thirdTextField.delegate = self
+
         #if DEV
 //            autoFill()
         #endif
@@ -187,11 +191,19 @@ class RecoverPasswordViewController: UIViewController {
             secondTextField.errorMessage = forgetUsername ? "RecoverPassword" ~> "SURNAME_TEXTFIELD_ERROR" : "RecoverPassword" ~> "EMAIL_TEXTFIELD_ERROR"
             return
         } else {
+            guard Utility.isValidEmail(testStr: secondValue) else {
+                secondTextField.errorMessage = "RecoverPassword" ~> "EMAIL_FORMAT_TEXTFIELD_ERROR"
+                return
+            }
             secondTextField.errorMessage = nil
         }
 
         if forgetUsername {
             if let thirdValue = thirdTextField.text, thirdValue.isEmpty {
+                guard Utility.isValidEmail(testStr: thirdValue) else {
+                    secondTextField.errorMessage = "RecoverPassword" ~> "EMAIL_FORMAT_TEXTFIELD_ERROR"
+                    return
+                }
                 forgetUsernameRecoverPassword(name: firstValue, surname: secondValue, email: thirdValue, token: token)
             } else {
                 thirdTextField.errorMessage = "RecoverPassword" ~> "EMAIL_TEXTFIELD_ERROR"
@@ -208,5 +220,19 @@ class RecoverPasswordViewController: UIViewController {
 
     @IBAction func cancelDidTap(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+}
+
+// Mark - Text Field Delegate
+extension RecoverPasswordViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField else {
+            textField.resignFirstResponder()
+            return true
+        }
+
+        nextField.becomeFirstResponder()
+
+        return false
     }
 }

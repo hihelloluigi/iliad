@@ -61,7 +61,7 @@ class LoginViewController: UIViewController {
         passwordTextField.delegate = self
 
         #if DEV
-//            autoFill()
+            autoFill()
 //            autoLogin()
         #endif
     }
@@ -146,13 +146,13 @@ class LoginViewController: UIViewController {
     private func performLogin(user: User) {
         guard
             let tabBarController = "Main" <%> "MainTabBarController" as? MainTabBarController,
-            let lastNavController = tabBarController.viewControllers?.last as? UINavigationController,
-            let profileViewController = lastNavController.viewControllers.last as? ProfileViewController
+            let firstNavController = tabBarController.viewControllers?.first as? UINavigationController,
+            let consumptionViewController = firstNavController.viewControllers.last as? ConsumptionViewController
             else {
                 return
         }
 
-        profileViewController.user = user
+        consumptionViewController.user = user
 
         DispatchQueue.main.async {
             self.loginButton.stopAnimation(animationStyle: .expand, completion: {
@@ -219,6 +219,7 @@ class LoginViewController: UIViewController {
         }
 
         let passwordBase64 = passwordText.toBase64()
+        Config.store(password: passwordBase64)
         getToken(username: usernameText, password: passwordBase64)
     }
     
