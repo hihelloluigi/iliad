@@ -53,7 +53,6 @@
 		2A192FF0211B12C0007C1E5A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A192F8F211AF9F3007C1E5A /* Login.storyboard */; };
 		2A192FF1211B12C0007C1E5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A80F314211AEF22008D8C89 /* Assets.xcassets */; };
 		2A192FF2211B12C0007C1E5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A192F8B211AF9F3007C1E5A /* LaunchScreen.storyboard */; };
-		2A193000211B1766007C1E5A /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FFD211B172C007C1E5A /* Credentials.swift */; };
 		2A193005211B1AD6007C1E5A /* String+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193004211B1AD6007C1E5A /* String+XT.swift */; };
 		2A193006211B1AE4007C1E5A /* String+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193004211B1AD6007C1E5A /* String+XT.swift */; };
 		2A193007211B1AE5007C1E5A /* String+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193004211B1AD6007C1E5A /* String+XT.swift */; };
@@ -87,8 +86,6 @@
 		2A232640211C892F0045FBD7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23263F211C892F0045FBD7 /* CustomButton.swift */; };
 		2A232641211C892F0045FBD7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23263F211C892F0045FBD7 /* CustomButton.swift */; };
 		2A232642211C892F0045FBD7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23263F211C892F0045FBD7 /* CustomButton.swift */; };
-		2A232643211CA3540045FBD7 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FFD211B172C007C1E5A /* Credentials.swift */; };
-		2A232644211CA3540045FBD7 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FFD211B172C007C1E5A /* Credentials.swift */; };
 		2A232691211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A232690211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift */; };
 		2A232692211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A232690211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift */; };
 		2A232693211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A232690211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift */; };
@@ -216,7 +213,6 @@
 		2A192FD9211B12BD007C1E5A /* iliadStaging-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "iliadStaging-Info.plist"; path = "/Users/luigi/Workspace/iliad/Iliad/Configurations/Staging/iliadStaging-Info.plist"; sourceTree = "<absolute>"; };
 		2A192FF7211B12C0007C1E5A /* IliadDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IliadDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A192FF8211B12C1007C1E5A /* iliadDev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "iliadDev-Info.plist"; path = "/Users/luigi/Workspace/iliad/Iliad/Configurations/Dev/iliadDev-Info.plist"; sourceTree = "<absolute>"; };
-		2A192FFD211B172C007C1E5A /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		2A193004211B1AD6007C1E5A /* String+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+XT.swift"; sourceTree = "<group>"; };
 		2A193008211B1B2F007C1E5A /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		2A19300D211B1C50007C1E5A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -522,7 +518,6 @@
 			children = (
 				2A192FB3211B060A007C1E5A /* AppConfig.swift */,
 				2A193008211B1B2F007C1E5A /* Config.swift */,
-				2A192FFD211B172C007C1E5A /* Credentials.swift */,
 				2A192FB0211B05ED007C1E5A /* Prod */,
 				2A192FB1211B05F3007C1E5A /* Staging */,
 				2A192FB2211B05F8007C1E5A /* Dev */,
@@ -1019,7 +1014,6 @@
 				2AF92DD9211C36A50058CFD2 /* UIColor+XT.swift in Sources */,
 				2A192FC4211B12BD007C1E5A /* AppDelegate.swift in Sources */,
 				2A19300F211B1C50007C1E5A /* User.swift in Sources */,
-				2A232643211CA3540045FBD7 /* Credentials.swift in Sources */,
 				2A232692211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
 				2A192FC5211B12BD007C1E5A /* APIEndpoint.swift in Sources */,
 				2A23263C211C888F0045FBD7 /* Utility.swift in Sources */,
@@ -1097,7 +1091,6 @@
 				2AE214B32126CB5000BB2F1C /* SettingsViewController.swift in Sources */,
 				2A193010211B1C50007C1E5A /* User.swift in Sources */,
 				2AAF696B21219A3D005DECE5 /* API+Option.swift in Sources */,
-				2A193000211B1766007C1E5A /* Credentials.swift in Sources */,
 				2A192FEB211B12C0007C1E5A /* APIEndpoint+Core.swift in Sources */,
 				2A63F9122125C12C009D515C /* ShowPukViewController.swift in Sources */,
 				2AAF69A32121BF4F005DECE5 /* ProfileViewController.swift in Sources */,
@@ -1123,7 +1116,6 @@
 				2A192F9E211B01F4007C1E5A /* API.swift in Sources */,
 				2AF92DD8211C36A50058CFD2 /* UIColor+XT.swift in Sources */,
 				2A80F30E211AEF21008D8C89 /* AppDelegate.swift in Sources */,
-				2A232644211CA3540045FBD7 /* Credentials.swift in Sources */,
 				2A232691211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
 				2A19300E211B1C50007C1E5A /* User.swift in Sources */,
 				2A192FAF211B0383007C1E5A /* APIEndpoint.swift in Sources */,
