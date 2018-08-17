@@ -1,0 +1,6 @@
+framework module iOSAuthenticator {
+  umbrella header "iOSAuthenticator-umbrella.h"
+
+  export *
+  module * { export * }
+}

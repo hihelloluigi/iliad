@@ -19,6 +19,11 @@ def networking_pods
     pod 'Moya'
 end
 
+def security_pods
+	pod 'KeychainAccess'
+	pod 'iOSAuthenticator', :git => 'https://github.com/mo3bius/iOSAuthenticator'
+end
+
 def utilites_pods
     pod 'SwiftyJSON'
     pod 'IQKeyboardManager'
@@ -33,6 +38,7 @@ abstract_target 'Abstract Target' do
 	networking_pods
 	utilites_pods
 	debugging_pods
+	security_pods
 
 	target 'IliadProd' do
 	end
