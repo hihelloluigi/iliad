@@ -1,0 +1,20 @@
+/* 
+  ChangeEmail.strings
+  Iliad
+
+  Created by Luigi Aiello on 16/08/18.
+  Copyright © 2018 Luigi Aiello. All rights reserved.
+*/
+
+"TITLE" = "Cambia email";
+"SUBTITLE" = "Ricordati che tutte le comunicazioni e i successi ripristini della password verranno inviate a questo indirizzo";
+"EMAIL_PLACEHOLDER" = "Email";
+"EMAIL_CONFIRMATION_PLACEHOLDER" = "Conferma nuova email";
+"PASSWORD_PLACEHOLDER" = "Password";
+"EMAIL_TEXTFIELD_ERROR" = "Inserisci email";
+"EMAIL_CONFIRMATION_TEXTFIELD_ERROR" = "Inserisci conferma nuova email";
+"PASSWORD_TEXTFIELD_ERROR" = "Inserisci password";
+"CHANGE_EMAIL_BUTTON" = "Procedi";
+"EMAIL_DIFFERENT_ERROR" = "Le email non corrispondono";
+"CHANGE_EMAIL_ERROR" = "Impossibile cambiare email. Prova a controllare i dati inseriti e riprova. Se dovessero esserci ancora problemi ti consigliamo di provare dal sito";
+"CHANGE_EMAIL_SUCCESS_MESSAGE" = "Email cambiata correttamente";
