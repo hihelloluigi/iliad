@@ -16,6 +16,7 @@ PODS:
     - SwiftMessages/App (= 4.1.4)
   - SwiftMessages/App (4.1.4)
   - SwiftyJSON (4.1.0)
+  - SwiftyUserDefaults (3.0.1)
   - TransitionButton (0.5.1)
 
 DEPENDENCIES:
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - SkyFloatingLabelTextField
   - SwiftMessages
   - SwiftyJSON
+  - SwiftyUserDefaults
   - TransitionButton
 
 SPEC REPOS:
@@ -42,6 +44,7 @@ SPEC REPOS:
     - SkyFloatingLabelTextField
     - SwiftMessages
     - SwiftyJSON
+    - SwiftyUserDefaults
     - TransitionButton
 
 EXTERNAL SOURCES:
@@ -65,8 +68,9 @@ SPEC CHECKSUMS:
   SkyFloatingLabelTextField: 4cbeece9c3aae97c6019d8fae511cb5b755874f7
   SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
   TransitionButton: 20f92b3cc726b047e4df200fdab5307f33395a81
 
-PODFILE CHECKSUM: aa3e87145b0f74f58ad0a292b968ec7e5c285784
+PODFILE CHECKSUM: 5edef6727a1eb227a8e9507a83bce5978cab8b0d
 
 COCOAPODS: 1.5.2
