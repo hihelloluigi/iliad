@@ -39,6 +39,7 @@ class LoginViewController: UIViewController {
 
     // Mark - Variables
     var showPasswordButton: UIButton?
+    let notification = UINotificationFeedbackGenerator()
 
     // Mark - Override
     override func viewDidLoad() {
@@ -160,9 +161,26 @@ class LoginViewController: UIViewController {
     }
 
     private func showError(title: String, message: String) {
-        self.loginButton.stopAnimation()
-        self.showErrorMessage(title: title, message: message)
-        view.isUserInteractionEnabled = true
+        self.loginButton.stopAnimation(animationStyle: .normal) {
+            self.showErrorMessage(title: title, message: message)
+            self.view.isUserInteractionEnabled = true
+            self.notification.notificationOccurred(.error)
+        }
+    }
+
+    private func showTextFieldError(textField: SkyFloatingLabelTextField, error: String) {
+        textField.errorMessage = error
+        notification.notificationOccurred(.error)
+    }
+
+    private func saveValues(username: String, password: String) -> String {
+        Defaults[.saveUsername] = checkBox.on
+
+        let passwordBase64 = password.toBase64()
+        Config.store(username: username)
+        Config.store(password: passwordBase64)
+
+        return passwordBase64
     }
 
     // Mark - Segue
@@ -222,28 +240,21 @@ class LoginViewController: UIViewController {
         else {
             return
         }
-        
-        if usernameText.isEmpty {
-            usernameTextField.errorMessage = "Login" ~> "USERNAME_TEXTFIELD_ERROR"
+
+        guard !usernameText.isEmpty else {
+            showTextFieldError(textField: usernameTextField, error: "Login" ~> "USERNAME_TEXTFIELD_ERROR")
             return
-        } else {
-            usernameTextField.errorMessage = nil
         }
+        usernameTextField.errorMessage = nil
 
-        if passwordText.isEmpty {
-            passwordTextField.errorMessage = "Login" ~> "PASSWORD_TEXTFIELD_ERROR"
+        guard !passwordText.isEmpty else {
+            showTextFieldError(textField: passwordTextField, error: "Login" ~> "PASSWORD_TEXTFIELD_ERROR")
             return
-        } else {
-            passwordTextField.errorMessage = nil
         }
+        passwordTextField.errorMessage = nil
 
-        if checkBox.on {
-            Config.store(username: usernameText)
-        }
+        let passwordBase64 = saveValues(username: usernameText, password: passwordText)
 
-        let passwordBase64 = passwordText.toBase64()
-        Config.store(username: usernameText)
-        Config.store(password: passwordBase64)
         getToken(username: usernameText, password: passwordBase64)
     }
     
