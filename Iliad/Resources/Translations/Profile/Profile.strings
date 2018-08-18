@@ -1,0 +1,10 @@
+/* 
+  Profile.strings
+  Iliad
+
+  Created by Luigi Aiello on 18/08/18.
+  Copyright © 2018 Luigi Aiello. All rights reserved.
+*/
+
+"CHANGE_PASSWORD" = "Cambia password";
+"SHOW_PUK" = "Mostra puk";

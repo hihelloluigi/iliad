@@ -18,3 +18,4 @@
 "EMAIL_DIFFERENT_ERROR" = "Le email non corrispondono";
 "CHANGE_EMAIL_ERROR" = "Impossibile cambiare email. Prova a controllare i dati inseriti e riprova. Se dovessero esserci ancora problemi ti consigliamo di provare dal sito";
 "CHANGE_EMAIL_SUCCESS_MESSAGE" = "Email cambiata correttamente";
+"WRONG_ACTUAL_PASSWORD_ERROR_MESSAGE" = "La password attuale non corrisponde con la tua password.";
