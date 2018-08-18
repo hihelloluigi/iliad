@@ -596,11 +596,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2M-7P-LO0" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
-                                <rect key="frame" x="130" y="254" width="60" height="60"/>
+                                <rect key="frame" x="125" y="249" width="70" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="CZd-JE-kYw"/>
-                                    <constraint firstAttribute="width" constant="60" id="w78-jV-mKs"/>
+                                    <constraint firstAttribute="height" constant="70" id="CZd-JE-kYw"/>
+                                    <constraint firstAttribute="width" constant="70" id="w78-jV-mKs"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
