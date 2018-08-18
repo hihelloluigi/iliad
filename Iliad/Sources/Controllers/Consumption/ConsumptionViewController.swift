@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 struct DetailsRow {
     let value: String?
@@ -24,7 +25,6 @@ class ConsumptionViewController: UIViewController {
     var nationlConsumption: Consumption?
     var abroadConsumption: Consumption?
     var user: User?
-
     var rows = [DetailsRow]()
     var isNationalConsumption: Bool = true
 
@@ -32,32 +32,28 @@ class ConsumptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setup()
+        getNationalConsumption()
         setupTableView()
+        configurationUI()
+        configurationText()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
-    }
 
     // Mark - Setup
-    private func setup() {
-        getNationalConsumption()
-    }
-
     private func setupTableView() {
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
+    }
+
+    private func configurationUI() {
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+    }
+
+    private func configurationText() {
     }
 
     // Mark - Helpers
@@ -102,6 +98,19 @@ class ConsumptionViewController: UIViewController {
         }
     }
 
+    private func retriveUserInformation(json: JSON) {
+        guard let user = user else {
+            return
+        }
+        let creditRenewal = json["iliad"]["0"]["0"].string?.components(separatedBy: "&")
+        user.credit = creditRenewal?[0]
+        if let stringDate = creditRenewal?[1] {
+            user.renewal = Date.from(string: stringDate, withFormat: "dd/MM/yyyy")
+        }
+
+        NotificationCenter.default.post(name: Notification.Name("profile"), object: nil, userInfo: ["user": user])
+    }
+
     // Mark - APIs
     private func getNationalConsumption() {
         API.ConsumptionClass.getNationalConsumption { (json) in
@@ -110,17 +119,7 @@ class ConsumptionViewController: UIViewController {
             }
 
             self.nationlConsumption = Consumption(json: json["iliad"])
-
-            let creditRenewal = json["iliad"]["0"]["0"].string?.components(separatedBy: "&")
-
-            if let user = self.user {
-                user.credit = creditRenewal?[0]
-                if let stringDate = creditRenewal?[1] {
-                    user.renewal = Date.from(string: stringDate, withFormat: "dd/MM/yyyy")
-                }
-
-                NotificationCenter.default.post(name: Notification.Name("profile"), object: nil, userInfo: ["user": user])
-            }
+            self.retriveUserInformation(json: json)
 
             self.makeRows(self.nationlConsumption)
         }
