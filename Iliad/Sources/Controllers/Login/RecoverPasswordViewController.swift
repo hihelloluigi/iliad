@@ -41,6 +41,7 @@ class RecoverPasswordViewController: UIViewController {
 
     // Mark - Variables
     var forgetUsername: Bool = false
+    let notification = UINotificationFeedbackGenerator()
 
     // Mark - Delegate
     weak var delegate: RecoverPasswordDelegate?
@@ -93,7 +94,6 @@ class RecoverPasswordViewController: UIViewController {
     // Mark - Helpers
     #if DEV
     private func autoFill() {
-        // VERY IMPORTANT: If you want to run the app with DEV target you have to insert a file called Credentials.swift with default varibles
         firstTextField.text = Credentials.username
         secondTextField.text = Credentials.email
     }
@@ -140,14 +140,29 @@ class RecoverPasswordViewController: UIViewController {
     private func showError() {
         showError()
     }
+    private func showError(title: String, message: String) {
+        self.recoverButton.stopAnimation(animationStyle: .normal) {
+            self.showErrorMessage(title: title, message: message)
+            self.view.isUserInteractionEnabled = true
+            self.notification.notificationOccurred(.error)
+        }
+    }
 
+
+    private func showTextFieldError(textField: SkyFloatingLabelTextField, error: String) {
+        textField.errorMessage = error
+        notification.notificationOccurred(.error)
+    }
+    
     // Mark - APIs
-    private func recoverPassword(username: String, email: String, token: String) {
+    private func recoverPassword(username: String, email: String) {
         recoverButton.startAnimation()
+        view.isUserInteractionEnabled = false
+
         API.RecoverPasswordClass.recoverPassword(username: username, email: email) { (success) in
             self.recoverButton.stopAnimation()
             guard success else {
-                self.showErrorMessage(title: "Commons" ~> "ERROR", message: "RecoverPassword" ~> "RESET_PASSWORD_ERROR_MESSAGE")
+                self.showError(title: "Commons" ~> "ERROR", message: "RecoverPassword" ~> "RESET_PASSWORD_ERROR_MESSAGE")
                 return
             }
             self.dismiss(animated: true, completion: {
@@ -156,12 +171,14 @@ class RecoverPasswordViewController: UIViewController {
         }
     }
 
-    private func forgetUsernameRecoverPassword(name: String, surname: String, email: String, token: String) {
+    private func forgetUsernameRecoverPassword(name: String, surname: String, email: String) {
         recoverButton.startAnimation()
+        view.isUserInteractionEnabled = false
+
         API.RecoverPasswordClass.recoverPasswordForgetUsername(name: name, surname: surname, email: email) { (success) in
             self.recoverButton.stopAnimation()
             guard success else {
-                self.showErrorMessage(title: "Commons" ~> "ERROR", message: "RecoverPassword" ~> "RESET_PASSWORD_ERROR_MESSAGE")
+                self.showError(title: "Commons" ~> "ERROR", message: "RecoverPassword" ~> "RESET_PASSWORD_ERROR_MESSAGE")
                 return
             }
             self.dismiss(animated: true, completion: {
@@ -174,42 +191,41 @@ class RecoverPasswordViewController: UIViewController {
     @IBAction func recoverDidTap(_ sender: Any) {
         guard
             let firstValue = firstTextField.text,
-            let secondValue = secondTextField.text,
-            let token = Config.token
+            let secondValue = secondTextField.text
         else {
             return
         }
 
-        if firstValue.isEmpty {
-            firstTextField.errorMessage = forgetUsername ? "RecoverPassword" ~> "NAME_TEXTFIELD_ERROR" : "RecoverPassword" ~> "USERNAME_TEXTFIELD_ERROR"
+        guard !firstValue.isEmpty else {
+            showTextFieldError(textField: firstTextField, error: forgetUsername ? "RecoverPassword" ~> "NAME_TEXTFIELD_ERROR" :
+                "RecoverPassword" ~> "USERNAME_TEXTFIELD_ERROR")
             return
-        } else {
-            firstTextField.errorMessage = nil
         }
+        firstTextField.errorMessage = nil
 
-        if secondValue.isEmpty {
-            secondTextField.errorMessage = forgetUsername ? "RecoverPassword" ~> "SURNAME_TEXTFIELD_ERROR" : "RecoverPassword" ~> "EMAIL_TEXTFIELD_ERROR"
+        guard !secondValue.isEmpty else {
+            showTextFieldError(textField: secondTextField, error: forgetUsername ? "RecoverPassword" ~> "SURNAME_TEXTFIELD_ERROR" :
+                                                                                "RecoverPassword" ~> "EMAIL_TEXTFIELD_ERROR")
             return
-        } else {
-            guard Utility.isValidEmail(testStr: secondValue) else {
-                secondTextField.errorMessage = "RecoverPassword" ~> "EMAIL_FORMAT_TEXTFIELD_ERROR"
-                return
-            }
-            secondTextField.errorMessage = nil
         }
+        guard Utility.isValidEmail(testStr: secondValue) else {
+            showTextFieldError(textField: secondTextField, error: "RecoverPassword" ~> "EMAIL_FORMAT_TEXTFIELD_ERROR")
+            return
+        }
+        secondTextField.errorMessage = nil
 
         if forgetUsername {
             if let thirdValue = thirdTextField.text, thirdValue.isEmpty {
                 guard Utility.isValidEmail(testStr: thirdValue) else {
-                    secondTextField.errorMessage = "RecoverPassword" ~> "EMAIL_FORMAT_TEXTFIELD_ERROR"
+                    showTextFieldError(textField: secondTextField, error: "RecoverPassword" ~> "EMAIL_FORMAT_TEXTFIELD_ERROR")
                     return
                 }
-                forgetUsernameRecoverPassword(name: firstValue, surname: secondValue, email: thirdValue, token: token)
+                forgetUsernameRecoverPassword(name: firstValue, surname: secondValue, email: thirdValue)
             } else {
-                thirdTextField.errorMessage = "RecoverPassword" ~> "EMAIL_TEXTFIELD_ERROR"
+                showTextFieldError(textField: thirdTextField, error: "RecoverPassword" ~> "EMAIL_TEXTFIELD_ERROR")
             }
         } else {
-            recoverPassword(username: firstValue, email: secondValue, token: token)
+            recoverPassword(username: firstValue, email: secondValue)
         }
     }
     
