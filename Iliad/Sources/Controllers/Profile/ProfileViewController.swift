@@ -54,27 +54,22 @@ class ProfileViewController: UIViewController {
 
         registerNotification()
         configurationUI()
-        fillElements()
         addGestures()
+        getGeneralInformations()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         self.scrollView.contentSize = self.stackView.frame.size
-        navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+        configurationText()
     }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
     // Mark - Setup
-    private func registerNotification() {
+    func registerNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(updateProfile(_:)), name: Notification.Name("profile"), object: nil)
     }
 
@@ -87,9 +82,10 @@ class ProfileViewController: UIViewController {
         passwordArrow.tintColor = .white
         pukImage.tintColor = .white
         pukArrow.tintColor = .white
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
 
-    private func fillElements() {
+    private func configurationText() {
         guard let user = user else {
             return
         }
@@ -97,18 +93,29 @@ class ProfileViewController: UIViewController {
         profilePhoneNumberLabel.text = user.phoneNumber
         creditIdCodeLabel.text = user.id
 
-        if let dateFormatted = user.renewal?.localizedString(dateWithStyle: .medium) {
+        if let email = user.email {
+            emailViewContainer.isHidden = false
+            emailLabel.text = email
+        } else {
+            emailViewContainer.isHidden = true
+        }
+
+        if let dateFormatted = user.renewal?.localizedString(dateWithStyle: .short) {
             creditRenewalLabel.isHidden = false
             creditRenewalLabel.text = "Prossimo rinnovo: \(dateFormatted)"
         } else {
             creditRenewalLabel.isHidden = true
         }
+        
         if let credit = user.credit {
             creditAvailableLabel.isHidden = false
             creditAvailableLabel.text = "Credito disponibile: \(credit)"
         } else {
             creditAvailableLabel.isHidden = true
         }
+
+        passwordLabel.text = "Profile" ~> "CHANGE_PASSWORD"
+        pukLabel.text = "Profile" ~> "SHOW_PUK"
     }
 
     private func addGestures() {
@@ -128,10 +135,24 @@ class ProfileViewController: UIViewController {
             return
         }
         self.user = user
-        fillElements()
     }
 
     // Mark - APIs
+    private func getGeneralInformations() {
+        API.InformationClass.getGeneralInformations { (json) in
+            guard let json = json else {
+                return
+            }
+
+            if let email = json["iliad"]["2"]["1"].string {
+                self.emailViewContainer.isHidden = false
+                self.user?.email = email
+                self.emailLabel.text = email
+            } else {
+                self.emailViewContainer.isHidden = true
+            }
+        }
+    }
     private func logout() {
         API.LoginClass.logout { (success) in
             guard
