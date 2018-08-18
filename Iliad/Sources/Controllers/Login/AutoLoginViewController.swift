@@ -26,6 +26,21 @@ class AutoLoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+    // Mark - Segue
+    private func performLogin(user: User) {
+        guard
+            let tabBarController = "Main" <%> "MainTabBarController" as? MainTabBarController,
+            let firstNavController = tabBarController.viewControllers?.first as? UINavigationController,
+            let consumptionViewController = firstNavController.viewControllers.last as? ConsumptionViewController
+        else {
+            return
+        }
+
+        consumptionViewController.user = user
+
+        self.present(tabBarController, animated: true, completion: nil)
+    }
+
     // Mark - Setup
     private func setup() {
         activityIndicator.tintColor = .iliadRed
@@ -48,21 +63,6 @@ class AutoLoginViewController: UIViewController {
         }, completion: { (success) in
             print(success)
         })
-    }
-
-    // Mark - Segue
-    private func performLogin(user: User) {
-        guard
-            let tabBarController = "Main" <%> "MainTabBarController" as? MainTabBarController,
-            let firstNavController = tabBarController.viewControllers?.first as? UINavigationController,
-            let consumptionViewController = firstNavController.viewControllers.last as? ConsumptionViewController
-        else {
-            return
-        }
-
-        consumptionViewController.user = user
-
-        self.present(tabBarController, animated: true, completion: nil)
     }
 
     // Mark - APIs
