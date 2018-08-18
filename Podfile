@@ -13,6 +13,7 @@ def graphics_components_pods
 	pod 'BEMCheckBox'
 	pod 'TransitionButton'
 	pod 'SwiftMessages'
+	pod 'NVActivityIndicatorView'
 end
 
 def networking_pods
