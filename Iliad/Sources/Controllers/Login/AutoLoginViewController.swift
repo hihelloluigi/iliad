@@ -7,21 +7,29 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class AutoLoginViewController: UIViewController {
 
     // Mark - Outlets
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
+    @IBOutlet weak var activityIndicator: NVActivityIndicatorView!
+
     // Mark - Override
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setup()
         getToken(username: Config.username(), password: Config.password())
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+
+    // Mark - Setup
+    private func setup() {
+        activityIndicator.tintColor = .iliadRed
+        activityIndicator.type = .pacman
     }
 
     // Mark - Helpers
