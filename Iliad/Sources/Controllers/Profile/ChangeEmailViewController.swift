@@ -36,6 +36,9 @@ class ChangeEmailViewController: UIViewController {
     @IBOutlet weak var changeEmailButton: TransitionButton!
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
 
+    // Mark - Variables
+    let notification = UINotificationFeedbackGenerator()
+
     // Mark - Delegate
     weak var delegate: ChangeEmailDelegate?
 
@@ -82,14 +85,33 @@ class ChangeEmailViewController: UIViewController {
         view.endEditing(true)
     }
 
+    private func showError(title: String, message: String) {
+        self.changeEmailButton.stopAnimation(animationStyle: .normal) {
+            self.showErrorMessage(title: title, message: message)
+            self.view.isUserInteractionEnabled = true
+            self.notification.notificationOccurred(.error)
+        }
+    }
+
+    private func showTextFieldError(textField: SkyFloatingLabelTextField, error: String) {
+        textField.errorMessage = error
+        notification.notificationOccurred(.error)
+    }
+
     // Mark - APIs
     private func changeEmail(email: String, emailConfirmation: String, password: String) {
+        changeEmailButton.startAnimation()
+        self.view.isUserInteractionEnabled = false
+
         API.InformationClass.changeEmail(email: email, emailConfirm: emailConfirmation, password: password) { (success) in
             guard success else {
-                self.showErrorMessage(title: "Commons" ~> "ERROR", message: "ChangeEmail" ~> "CHANGE_EMAIL_ERROR")
+                self.showError(title: "Commons" ~> "ERROR", message: "ChangeEmail" ~> "CHANGE_EMAIL_ERROR")
                 return
             }
 
+            self.changeEmailButton.stopAnimation()
+            self.view.isUserInteractionEnabled = true
+            
             self.dismiss(animated: true, completion: {
                 self.delegate?.changeEmailSucess(email)
             })
@@ -106,41 +128,42 @@ class ChangeEmailViewController: UIViewController {
             return
         }
 
-        if emailText.isEmpty {
-            emailTextField.errorMessage = "ChangeEmail" ~> "EMAIL_TEXTFIELD_ERROR"
+        guard !emailText.isEmpty else {
+            showTextFieldError(textField: emailTextField, error: "ChangeEmail" ~> "EMAIL_TEXTFIELD_ERROR")
             return
-        } else {
-            guard Utility.isValidEmail(testStr: emailText) else {
-                emailTextField.errorMessage = "RecoverPassword" ~> "EMAIL_FORMAT_TEXTFIELD_ERROR"
-                return
-            }
-            emailTextField.errorMessage = nil
         }
+        guard Utility.isValidEmail(testStr: emailText) else {
+            showTextFieldError(textField: emailTextField, error: "RecoverPassword" ~> "EMAIL_FORMAT_TEXTFIELD_ERROR")
+            return
+        }
+        emailTextField.errorMessage = nil
 
-        if emailConfirmationText.isEmpty {
-            emailConfirmationTextField.errorMessage = "ChangeEmail" ~> "EMAIL_CONFIRMATION_TEXTFIELD_ERROR"
+        guard !emailConfirmationText.isEmpty else {
+            showTextFieldError(textField: emailConfirmationTextField, error: "ChangeEmail" ~> "EMAIL_CONFIRMATION_TEXTFIELD_ERROR")
             return
-        } else {
-            guard Utility.isValidEmail(testStr: emailConfirmationText) else {
-                emailConfirmationTextField.errorMessage = "RecoverPassword" ~> "EMAIL_FORMAT_TEXTFIELD_ERROR"
-                return
-            }
-            emailConfirmationTextField.errorMessage = nil
         }
+        guard Utility.isValidEmail(testStr: emailConfirmationText) else {
+            showTextFieldError(textField: emailConfirmationTextField, error: "RecoverPassword" ~> "EMAIL_FORMAT_TEXTFIELD_ERROR")
+            return
+        }
+        emailConfirmationTextField.errorMessage = nil
 
-        if passwordText.isEmpty {
-            passwordTextField.errorMessage = "ChangeEmail" ~> "PASSWORD_TEXTFIELD_ERROR"
+        guard !passwordText.isEmpty else {
+            showTextFieldError(textField: passwordTextField, error: "ChangeEmail" ~> "PASSWORD_TEXTFIELD_ERROR")
             return
-        } else {
-            passwordTextField.errorMessage = nil
         }
+        passwordTextField.errorMessage = nil
 
         guard emailText == emailConfirmationText else {
-            emailConfirmationTextField.errorMessage = "ChangeEmail" ~> "EMAIL_DIFFERENT_ERROR"
+            showTextFieldError(textField: emailConfirmationTextField, error: "ChangeEmail" ~> "EMAIL_DIFFERENT_ERROR")
             return
         }
 
         let passwordBase64 = passwordText.toBase64()
+        guard let password = Config.password(), passwordBase64 == password else {
+            self.showErrorMessage(title: "Commons" ~> "ERROR", message: "ChangeEmail" ~> "WRONG_ACTUAL_PASSWORD_ERROR_MESSAGE")
+            return
+        }
         changeEmail(email: emailText, emailConfirmation: emailConfirmationText, password: passwordBase64)
     }
     

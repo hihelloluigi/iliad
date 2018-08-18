@@ -36,6 +36,9 @@ class ChangePasswordViewController: UIViewController {
     @IBOutlet weak var changePasswordButton: TransitionButton!
     @IBOutlet weak var cancelBarButton: UIBarButtonItem!
 
+    // Mark - Variables
+    let notification = UINotificationFeedbackGenerator()
+
     // Mark - Delegate
     weak var delegate: ChangePasswordDelegate?
 
@@ -81,14 +84,32 @@ class ChangePasswordViewController: UIViewController {
     @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
+    
+    private func showError(title: String, message: String) {
+        self.changePasswordButton.stopAnimation(animationStyle: .normal) {
+            self.showErrorMessage(title: title, message: message)
+            self.view.isUserInteractionEnabled = true
+            self.notification.notificationOccurred(.error)
+        }
+    }
+
+    private func showTextFieldError(textField: SkyFloatingLabelTextField, error: String) {
+        textField.errorMessage = error
+        notification.notificationOccurred(.error)
+    }
 
     // Mark - APIs
     private func changePassword(newPassword: String, newPasswordConfirmation: String, actualPassword: String) {
+        changePasswordButton.startAnimation()
+        self.view.isUserInteractionEnabled = false
+
         API.InformationClass.changePassword(newPassword: newPassword, newPasswordConfirm: newPasswordConfirmation, actualPassword: actualPassword) { (success) in
             guard success else {
-                self.showErrorMessage(title: "Commons" ~> "ERROR", message: "ChangePassword" ~> "CHANGE_PASSWORD_ERROR")
+                self.showError(title: "Commons" ~> "ERROR", message: "ChangePassword" ~> "CHANGE_PASSWORD_ERROR")
                 return
             }
+            self.changePasswordButton.stopAnimation()
+            self.view.isUserInteractionEnabled = true
 
             self.dismiss(animated: true, completion: {
                 self.delegate?.changePasswordSucess()
@@ -105,35 +126,38 @@ class ChangePasswordViewController: UIViewController {
         else {
             return
         }
-        if newPasswordText.isEmpty {
-            newPasswordTextField.errorMessage = "ChangePassword" ~> "NEW_PASSWORD_TEXTFIELD_ERROR"
-            return
-        } else {
-            newPasswordTextField.errorMessage = nil
-        }
 
-        if newPasswordConfirmationText.isEmpty {
-            newPasswordConfirmationTextField.errorMessage = "ChangePassword" ~> "NEW_PASSWORD_CONFIRMATION_TEXTFIELD_ERROR"
+        guard !newPasswordText.isEmpty else {
+            showTextFieldError(textField: newPasswordTextField, error: "ChangePassword" ~> "NEW_PASSWORD_TEXTFIELD_ERROR")
             return
-        } else {
-            newPasswordConfirmationTextField.errorMessage = nil
         }
+        newPasswordTextField.errorMessage = nil
 
-        if actualPasswordText.isEmpty {
-            actualPasswordTextField.errorMessage = "ChangePassword" ~> "ACTUAL_PASSWORD_TEXTFIELD_ERROR"
+        guard !newPasswordConfirmationText.isEmpty else {
+            showTextFieldError(textField: newPasswordConfirmationTextField, error: "ChangePassword" ~> "NEW_PASSWORD_CONFIRMATION_TEXTFIELD_ERROR")
             return
-        } else {
-            actualPasswordTextField.errorMessage = nil
         }
+        newPasswordConfirmationTextField.errorMessage = nil
+
+        guard !actualPasswordText.isEmpty else {
+            showTextFieldError(textField: actualPasswordTextField, error: "ChangePassword" ~> "ACTUAL_PASSWORD_TEXTFIELD_ERROR")
+            return
+        }
+        actualPasswordTextField.errorMessage = nil
 
         guard newPasswordText == newPasswordConfirmationText else {
-            newPasswordConfirmationTextField.errorMessage = "ChangePassword" ~> "PASSWORD_DIFFERENT_ERROR"
+            showTextFieldError(textField: newPasswordConfirmationTextField, error: "ChangePassword" ~> "PASSWORD_DIFFERENT_ERROR")
             return
         }
 
         let newPasswordBase64 = newPasswordText.toBase64()
         let newPasswordConfirmationBase64 = newPasswordConfirmationText.toBase64()
         let actualPasswordBase64 = actualPasswordText.toBase64()
+
+        guard let password = Config.password(), actualPasswordBase64 == password else {
+            self.showErrorMessage(title: "Commons" ~> "ERROR", message: "ChangePassword" ~> "WRONG_ACTUAL_PASSWORD_ERROR_MESSAGE")
+            return
+        }
 
         changePassword(newPassword: newPasswordBase64, newPasswordConfirmation: newPasswordConfirmationBase64, actualPassword: actualPasswordBase64)
     }
