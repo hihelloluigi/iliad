@@ -91,7 +91,7 @@ class RecoverPasswordViewController: UIViewController {
         cancelBarButton.title = "Commons" ~> "CANCEL"
     }
 
-    // Mark - Helpers
+    // Mark - Helpers Dev
     #if DEV
     private func autoFill() {
         firstTextField.text = Credentials.username
@@ -99,6 +99,7 @@ class RecoverPasswordViewController: UIViewController {
     }
     #endif
 
+    // Mark - Helpers
     private func changeFormLayout(forgetUsername: Bool) {
         if forgetUsername {
             // First
@@ -147,7 +148,6 @@ class RecoverPasswordViewController: UIViewController {
             self.notification.notificationOccurred(.error)
         }
     }
-
 
     private func showTextFieldError(textField: SkyFloatingLabelTextField, error: String) {
         textField.errorMessage = error

@@ -63,6 +63,31 @@ class LoginViewController: UIViewController {
         self.scrollView.contentSize = self.fieldsStackView.frame.size
     }
 
+    // Mark - Segue
+    private func performLogin(user: User) {
+        guard
+            let tabBarController = "Main" <%> "MainTabBarController" as? MainTabBarController,
+            let firstNavController = tabBarController.viewControllers?.first as? UINavigationController,
+            let lastNavController = tabBarController.viewControllers?.last as? UINavigationController,
+            let consumptionViewController = firstNavController.viewControllers.first as? ConsumptionViewController,
+            let profileViewController = lastNavController.viewControllers.first as? ProfileViewController
+        else {
+            return
+        }
+
+        consumptionViewController.user = user
+        profileViewController.user = user
+        profileViewController.registerNotification()
+
+        DispatchQueue.main.async {
+            self.loginButton.stopAnimation(animationStyle: .expand, completion: {
+                self.present(tabBarController, animated: true, completion: {
+                    self.view.isUserInteractionEnabled = true
+                })
+            })
+        }
+    }
+    
     // Mark - Setup
     private func setup() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
@@ -73,7 +98,7 @@ class LoginViewController: UIViewController {
 
         #if DEV
             autoFill()
-//            autoLogin()
+            autoLogin()
         #endif
     }
 
@@ -123,11 +148,7 @@ class LoginViewController: UIViewController {
         })
     }
 
-    // Mark - Helpers
-    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
-        view.endEditing(true)
-    }
-
+    // Mark - Helpers Dev
     #if DEV
     private func autoFill() {
         usernameTextField.text = Credentials.username
@@ -137,6 +158,11 @@ class LoginViewController: UIViewController {
         loginDidTap(loginButton)
     }
     #endif
+
+    // Mark - Helpers
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
 
     private func createShowPasswordButton() -> UIButton {
         let button = UIButton(type: .custom)
@@ -187,27 +213,6 @@ class LoginViewController: UIViewController {
         Config.store(password: passwordBase64)
 
         return passwordBase64
-    }
-
-    // Mark - Segue
-    private func performLogin(user: User) {
-        guard
-            let tabBarController = "Main" <%> "MainTabBarController" as? MainTabBarController,
-            let firstNavController = tabBarController.viewControllers?.first as? UINavigationController,
-            let consumptionViewController = firstNavController.viewControllers.last as? ConsumptionViewController
-            else {
-                return
-        }
-
-        consumptionViewController.user = user
-
-        DispatchQueue.main.async {
-            self.loginButton.stopAnimation(animationStyle: .expand, completion: {
-                self.present(tabBarController, animated: true, completion: {
-                    self.view.isUserInteractionEnabled = true
-                })
-            })
-        }
     }
     
     // Mark - APIs
