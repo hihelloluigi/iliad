@@ -18,16 +18,24 @@ class User {
     var isSimActive: Bool?
     var credit: String?
     var renewal: Date?
+    var email: String?
 
     // Mark - Init
     init(id: String?,
          name: String?,
          phoneNumber: String?,
-         isSimActive: Bool) {
+         isSimActive: Bool,
+         credit: String?,
+         renewal: Date?,
+         email: String?) {
+        
         self.id = id
         self.name = name
         self.phoneNumber = phoneNumber
         self.isSimActive = isSimActive
+        self.credit = credit
+        self.renewal = renewal
+        self.email = email
     }
 
     init(json: JSON) {

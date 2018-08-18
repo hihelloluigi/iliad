@@ -47,11 +47,10 @@ class Consumption {
         self.calls = json["1"]["0"].string
         self.extraCalls = json["1"]["1"].string
         self.sms = json["2"]["0"].string
-        self.extraCalls = json["2"]["1"].string
+        self.extraSMS = json["2"]["1"].string
         self.data = json["3"]["0"].string
         self.extraData = json["3"]["1"].string
         self.mms = json["4"]["0"].string
         self.extraMMS = json["4"]["1"].string
-
     }
 }
