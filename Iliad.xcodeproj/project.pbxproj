@@ -111,6 +111,15 @@
 		2A63F91B2125CA3C009D515C /* ChangePassword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A63F9182125CA3C009D515C /* ChangePassword.strings */; };
 		2A80F30E211AEF21008D8C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A80F30D211AEF21008D8C89 /* AppDelegate.swift */; };
 		2A80F315211AEF22008D8C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A80F314211AEF22008D8C89 /* Assets.xcassets */; };
+		2A922DE6212865FD003B1731 /* Profile.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A922DE5212865FD003B1731 /* Profile.strings */; };
+		2A922DE7212865FD003B1731 /* Profile.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A922DE5212865FD003B1731 /* Profile.strings */; };
+		2A922DE8212865FD003B1731 /* Profile.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A922DE5212865FD003B1731 /* Profile.strings */; };
+		2A922DEA21286FCC003B1731 /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A922DE921286FCC003B1731 /* CustomActivityIndicator.swift */; };
+		2A922DEB21286FCC003B1731 /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A922DE921286FCC003B1731 /* CustomActivityIndicator.swift */; };
+		2A922DEC21286FCC003B1731 /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A922DE921286FCC003B1731 /* CustomActivityIndicator.swift */; };
+		2A922DEE2128731D003B1731 /* Puk.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A922DED2128731D003B1731 /* Puk.strings */; };
+		2A922DEF212873BF003B1731 /* Puk.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A922DED2128731D003B1731 /* Puk.strings */; };
+		2A922DF0212873BF003B1731 /* Puk.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A922DED2128731D003B1731 /* Puk.strings */; };
 		2AA61771212593DF0062CA49 /* Login.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA61770212593DF0062CA49 /* Login.strings */; };
 		2AA61773212594A80062CA49 /* Login.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA61770212593DF0062CA49 /* Login.strings */; };
 		2AA61774212594A80062CA49 /* Login.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA61770212593DF0062CA49 /* Login.strings */; };
@@ -238,6 +247,9 @@
 		2A80F30D211AEF21008D8C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A80F314211AEF22008D8C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A80F319211AEF22008D8C89 /* iliadProd-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iliadProd-Info.plist"; sourceTree = "<group>"; };
+		2A922DE5212865FD003B1731 /* Profile.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Profile.strings; sourceTree = "<group>"; };
+		2A922DE921286FCC003B1731 /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
+		2A922DED2128731D003B1731 /* Puk.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Puk.strings; sourceTree = "<group>"; };
 		2AA61770212593DF0062CA49 /* Login.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Login.strings; sourceTree = "<group>"; };
 		2AA61775212596080062CA49 /* Commons.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Commons.strings; sourceTree = "<group>"; };
 		2AA61777212597650062CA49 /* RecoverPassword.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = RecoverPassword.strings; sourceTree = "<group>"; };
@@ -321,6 +333,7 @@
 		2A192F95211AFCE3007C1E5A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2A922DE921286FCC003B1731 /* CustomActivityIndicator.swift */,
 				2A23263F211C892F0045FBD7 /* CustomButton.swift */,
 				2A193024211B362E007C1E5A /* CardView.swift */,
 				2A232690211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift */,
@@ -441,8 +454,10 @@
 		2A63F9132125C8ED009D515C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				2A922DE5212865FD003B1731 /* Profile.strings */,
 				2A63F9142125C904009D515C /* ChangeEmail.strings */,
 				2A63F9182125CA3C009D515C /* ChangePassword.strings */,
+				2A922DED2128731D003B1731 /* Puk.strings */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -743,10 +758,12 @@
 				2AA6177B2125997A0062CA49 /* Info.strings in Resources */,
 				2A63F9162125C904009D515C /* ChangeEmail.strings in Resources */,
 				2AAF69822121BC57005DECE5 /* Options.storyboard in Resources */,
+				2A922DE7212865FD003B1731 /* Profile.strings in Resources */,
 				2AAF69912121BC95005DECE5 /* Main.storyboard in Resources */,
 				2AA61773212594A80062CA49 /* Login.strings in Resources */,
 				2A192FD2211B12BD007C1E5A /* Assets.xcassets in Resources */,
 				2AE214C02126FA4F00BB2F1C /* Settings.strings in Resources */,
+				2A922DF0212873BF003B1731 /* Puk.strings in Resources */,
 				2AE214B72126CB7B00BB2F1C /* Settings.storyboard in Resources */,
 				2A192FD3211B12BD007C1E5A /* LaunchScreen.storyboard in Resources */,
 				2AAF69882121BC57005DECE5 /* Services.storyboard in Resources */,
@@ -766,10 +783,12 @@
 				2AA6177C2125997A0062CA49 /* Info.strings in Resources */,
 				2A63F9172125C904009D515C /* ChangeEmail.strings in Resources */,
 				2AAF69832121BC57005DECE5 /* Options.storyboard in Resources */,
+				2A922DE8212865FD003B1731 /* Profile.strings in Resources */,
 				2AAF69922121BC95005DECE5 /* Main.storyboard in Resources */,
 				2AA61774212594A80062CA49 /* Login.strings in Resources */,
 				2A192FF1211B12C0007C1E5A /* Assets.xcassets in Resources */,
 				2AE214C12126FA4F00BB2F1C /* Settings.strings in Resources */,
+				2A922DEF212873BF003B1731 /* Puk.strings in Resources */,
 				2AE214B82126CB7B00BB2F1C /* Settings.storyboard in Resources */,
 				2A192FF2211B12C0007C1E5A /* LaunchScreen.storyboard in Resources */,
 				2AAF69892121BC57005DECE5 /* Services.storyboard in Resources */,
@@ -789,10 +808,12 @@
 				2A192F93211AF9F3007C1E5A /* Login.storyboard in Resources */,
 				2A63F9152125C904009D515C /* ChangeEmail.strings in Resources */,
 				2AAF69812121BC57005DECE5 /* Options.storyboard in Resources */,
+				2A922DE6212865FD003B1731 /* Profile.strings in Resources */,
 				2AAF69902121BC95005DECE5 /* Main.storyboard in Resources */,
 				2AA61771212593DF0062CA49 /* Login.strings in Resources */,
 				2A80F315211AEF22008D8C89 /* Assets.xcassets in Resources */,
 				2AE214BF2126FA4F00BB2F1C /* Settings.strings in Resources */,
+				2A922DEE2128731D003B1731 /* Puk.strings in Resources */,
 				2AE214B62126CB7B00BB2F1C /* Settings.storyboard in Resources */,
 				2A192F91211AF9F3007C1E5A /* LaunchScreen.storyboard in Resources */,
 				2AA61776212596080062CA49 /* Commons.strings in Resources */,
@@ -1017,6 +1038,7 @@
 				2AAF69AE2121CE95005DECE5 /* Date+XT.swift in Sources */,
 				2A192FBF211B12BD007C1E5A /* LoginViewController.swift in Sources */,
 				2A232641211C892F0045FBD7 /* CustomButton.swift in Sources */,
+				2A922DEB21286FCC003B1731 /* CustomActivityIndicator.swift in Sources */,
 				2A192FC0211B12BD007C1E5A /* API+Login.swift in Sources */,
 				2A192FC1211B12BD007C1E5A /* Typealiases.swift in Sources */,
 				2AAF699E2121BF3A005DECE5 /* ServicesViewController.swift in Sources */,
@@ -1069,6 +1091,7 @@
 				2AAF69AF2121CE95005DECE5 /* Date+XT.swift in Sources */,
 				2A192FDE211B12C0007C1E5A /* LoginViewController.swift in Sources */,
 				2A193014211B1DB3007C1E5A /* ConsumptionViewController.swift in Sources */,
+				2A922DEC21286FCC003B1731 /* CustomActivityIndicator.swift in Sources */,
 				2A192FDF211B12C0007C1E5A /* API+Login.swift in Sources */,
 				2A232642211C892F0045FBD7 /* CustomButton.swift in Sources */,
 				2AAF699F2121BF3A005DECE5 /* ServicesViewController.swift in Sources */,
@@ -1121,6 +1144,7 @@
 				2AAF69AD2121CE95005DECE5 /* Date+XT.swift in Sources */,
 				2A192F99211AFF16007C1E5A /* LoginViewController.swift in Sources */,
 				2A232640211C892F0045FBD7 /* CustomButton.swift in Sources */,
+				2A922DEA21286FCC003B1731 /* CustomActivityIndicator.swift in Sources */,
 				2A192FA2211B0306007C1E5A /* API+Login.swift in Sources */,
 				2A192FA5211B0366007C1E5A /* Typealiases.swift in Sources */,
 				2AAF699D2121BF3A005DECE5 /* ServicesViewController.swift in Sources */,
@@ -1235,7 +1259,10 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Staging/iliadStaging-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleStaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1252,7 +1279,10 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Staging/iliadStaging-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleStaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1269,7 +1299,10 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Dev/iliadDev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEV";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1287,7 +1320,10 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Dev/iliadDev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEV";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1419,7 +1455,10 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Prod/iliadProd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1436,7 +1475,10 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Prod/iliadProd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
