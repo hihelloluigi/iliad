@@ -19,7 +19,9 @@ class LoginViewController: UIViewController {
         // Views
     @IBOutlet weak var checkBox: BEMCheckBox!
     @IBOutlet weak var customNavigationBar: UINavigationBar!
-    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var fieldsStackView: UIStackView!
+
         // Text fields
     @IBOutlet weak var usernameTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
@@ -54,6 +56,11 @@ class LoginViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.scrollView.contentSize = self.fieldsStackView.frame.size
     }
 
     // Mark - Setup
