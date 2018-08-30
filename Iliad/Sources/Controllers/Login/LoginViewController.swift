@@ -67,17 +67,12 @@ class LoginViewController: UIViewController {
     private func performLogin(user: User) {
         guard
             let tabBarController = "Main" <%> "MainTabBarController" as? MainTabBarController,
-            let firstNavController = tabBarController.viewControllers?.first as? UINavigationController,
-            let lastNavController = tabBarController.viewControllers?.last as? UINavigationController,
-            let consumptionViewController = firstNavController.viewControllers.first as? ConsumptionViewController,
-            let profileViewController = lastNavController.viewControllers.first as? ProfileViewController
+            let consumptionViewController = tabBarController.viewControllers?.first as? HomeViewController
         else {
             return
         }
 
         consumptionViewController.user = user
-        profileViewController.user = user
-        profileViewController.registerNotification()
 
         DispatchQueue.main.async {
             self.loginButton.stopAnimation(animationStyle: .expand, completion: {
