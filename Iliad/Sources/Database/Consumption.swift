@@ -19,7 +19,6 @@ class Consumption {
     var mms: String?
     var extraMMS: String?
     var data: String?
-    var maxData: String?
     var extraData: String?
 
     // Mark - Init

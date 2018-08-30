@@ -42,6 +42,6 @@ class User {
         self.id = json["user_id"].string
         self.name = json["user_name"].string
         self.phoneNumber = json["user_numtell"].string
-        self.isSimActive = json["sim"].bool
+        self.isSimActive = json["sim"].string?.toBool()
     }
 }
