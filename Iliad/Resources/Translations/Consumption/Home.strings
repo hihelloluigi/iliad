@@ -1,0 +1,13 @@
+/* 
+  Home.strings
+  Iliad
+
+  Created by Luigi Aiello on 29/08/18.
+  Copyright © 2018 Luigi Aiello. All rights reserved.
+*/
+
+"TITLE" = "Ecco la lista dei tuoi consumi";
+"CREDIT" = "credito";
+"NEXT_RENEWAL" = "giorni al rinnovo";
+"NAME_TITLE" = "Ciao";
+"DETAILS_BUTTON" = "DETTAGLIO CONSUMI";
