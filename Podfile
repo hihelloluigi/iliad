@@ -14,6 +14,7 @@ def graphics_components_pods
 	pod 'TransitionButton'
 	pod 'SwiftMessages'
 	pod 'NVActivityIndicatorView'
+	pod 'BmoViewPager'
 end
 
 def networking_pods

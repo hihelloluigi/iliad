@@ -219,6 +219,7 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
     }
 
     /// A String value for the error message to display.
+    @IBInspectable
     open var errorMessage: String? {
         didSet {
             updateControl(true)
@@ -411,9 +412,11 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
     }
 
     fileprivate func updateLineView() {
-        if let lineView = lineView {
-            lineView.frame = lineViewRectForBounds(bounds, editing: editingOrSelected)
+        guard let lineView = lineView else {
+            return
         }
+
+        lineView.frame = lineViewRectForBounds(bounds, editing: editingOrSelected)
         updateLineColor()
     }
 
@@ -427,6 +430,10 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
     }
 
     fileprivate func updateLineColor() {
+        guard let lineView = lineView else {
+            return
+        }
+
         if !isEnabled {
             lineView.backgroundColor = disabledColor
         } else if hasErrorMessage {
@@ -437,6 +444,10 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
     }
 
     fileprivate func updateTitleColor() {
+        guard let titleLabel = titleLabel else {
+            return
+        }
+
         if !isEnabled {
             titleLabel.textColor = disabledColor
         } else if hasErrorMessage {
@@ -463,6 +474,9 @@ open class SkyFloatingLabelTextField: UITextField { // swiftlint:disable:this ty
     // MARK: - Title handling
 
     fileprivate func updateTitleLabel(_ animated: Bool = false) {
+        guard let titleLabel = titleLabel else {
+            return
+        }
 
         var titleText: String? = nil
         if hasErrorMessage {
