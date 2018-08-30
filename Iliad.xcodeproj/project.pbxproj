@@ -62,9 +62,6 @@
 		2A19300E211B1C50007C1E5A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19300D211B1C50007C1E5A /* User.swift */; };
 		2A19300F211B1C50007C1E5A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19300D211B1C50007C1E5A /* User.swift */; };
 		2A193010211B1C50007C1E5A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19300D211B1C50007C1E5A /* User.swift */; };
-		2A193012211B1DB3007C1E5A /* ConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193011211B1DB3007C1E5A /* ConsumptionViewController.swift */; };
-		2A193013211B1DB3007C1E5A /* ConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193011211B1DB3007C1E5A /* ConsumptionViewController.swift */; };
-		2A193014211B1DB3007C1E5A /* ConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193011211B1DB3007C1E5A /* ConsumptionViewController.swift */; };
 		2A193016211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */; };
 		2A193017211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */; };
 		2A193018211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */; };
@@ -109,8 +106,32 @@
 		2A63F9192125CA3C009D515C /* ChangePassword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A63F9182125CA3C009D515C /* ChangePassword.strings */; };
 		2A63F91A2125CA3C009D515C /* ChangePassword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A63F9182125CA3C009D515C /* ChangePassword.strings */; };
 		2A63F91B2125CA3C009D515C /* ChangePassword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A63F9182125CA3C009D515C /* ChangePassword.strings */; };
+		2A6606582136E58C00C96102 /* PagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6606572136E58C00C96102 /* PagerViewController.swift */; };
+		2A6606592136E58C00C96102 /* PagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6606572136E58C00C96102 /* PagerViewController.swift */; };
+		2A66065A2136E58C00C96102 /* PagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6606572136E58C00C96102 /* PagerViewController.swift */; };
+		2A66065C2136E64B00C96102 /* ConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66065B2136E64B00C96102 /* ConsumptionViewController.swift */; };
+		2A66065D2136E64B00C96102 /* ConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66065B2136E64B00C96102 /* ConsumptionViewController.swift */; };
+		2A66065E2136E64B00C96102 /* ConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66065B2136E64B00C96102 /* ConsumptionViewController.swift */; };
+		2A6606612137410300C96102 /* Home.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6606602137410300C96102 /* Home.strings */; };
+		2A6606622137410300C96102 /* Home.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6606602137410300C96102 /* Home.strings */; };
+		2A6606632137410300C96102 /* Home.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6606602137410300C96102 /* Home.strings */; };
+		2A6606652137490200C96102 /* ConsumptionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6606642137490200C96102 /* ConsumptionDetailsViewController.swift */; };
+		2A6606662137490200C96102 /* ConsumptionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6606642137490200C96102 /* ConsumptionDetailsViewController.swift */; };
+		2A6606672137490200C96102 /* ConsumptionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6606642137490200C96102 /* ConsumptionDetailsViewController.swift */; };
+		2A66066921374C1400C96102 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66066821374C1400C96102 /* Section.swift */; };
+		2A66066A21374C1400C96102 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66066821374C1400C96102 /* Section.swift */; };
+		2A66066B21374C1400C96102 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66066821374C1400C96102 /* Section.swift */; };
+		2A66066D21374C4000C96102 /* ConsumptionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66066C21374C4000C96102 /* ConsumptionDetail.swift */; };
+		2A66066E21374C4000C96102 /* ConsumptionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66066C21374C4000C96102 /* ConsumptionDetail.swift */; };
+		2A66066F21374C4000C96102 /* ConsumptionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66066C21374C4000C96102 /* ConsumptionDetail.swift */; };
+		2A66067121374F8200C96102 /* PseudoHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66067021374F8200C96102 /* PseudoHeaderTableViewCell.swift */; };
+		2A66067221374F8200C96102 /* PseudoHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66067021374F8200C96102 /* PseudoHeaderTableViewCell.swift */; };
+		2A66067321374F8200C96102 /* PseudoHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66067021374F8200C96102 /* PseudoHeaderTableViewCell.swift */; };
 		2A80F30E211AEF21008D8C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A80F30D211AEF21008D8C89 /* AppDelegate.swift */; };
 		2A80F315211AEF22008D8C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A80F314211AEF22008D8C89 /* Assets.xcassets */; };
+		2A90865D213457D400230AAB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A90865C213457D400230AAB /* HomeViewController.swift */; };
+		2A90865E213457D400230AAB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A90865C213457D400230AAB /* HomeViewController.swift */; };
+		2A90865F213457D400230AAB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A90865C213457D400230AAB /* HomeViewController.swift */; };
 		2A922DE6212865FD003B1731 /* Profile.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A922DE5212865FD003B1731 /* Profile.strings */; };
 		2A922DE7212865FD003B1731 /* Profile.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A922DE5212865FD003B1731 /* Profile.strings */; };
 		2A922DE8212865FD003B1731 /* Profile.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A922DE5212865FD003B1731 /* Profile.strings */; };
@@ -130,6 +151,9 @@
 		2AA6177C2125997A0062CA49 /* Info.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA617792125997A0062CA49 /* Info.strings */; };
 		2AA6177D2125997D0062CA49 /* RecoverPassword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA61777212597650062CA49 /* RecoverPassword.strings */; };
 		2AA6177E2125997E0062CA49 /* RecoverPassword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA61777212597650062CA49 /* RecoverPassword.strings */; };
+		2AA708C72137650E00927529 /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA708C62137650E00927529 /* DetailsCell.swift */; };
+		2AA708C82137650E00927529 /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA708C62137650E00927529 /* DetailsCell.swift */; };
+		2AA708C92137650E00927529 /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA708C62137650E00927529 /* DetailsCell.swift */; };
 		2AAF695D21219533005DECE5 /* API+Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF695C21219533005DECE5 /* API+Information.swift */; };
 		2AAF695E21219533005DECE5 /* API+Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF695C21219533005DECE5 /* API+Information.swift */; };
 		2AAF695F21219533005DECE5 /* API+Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF695C21219533005DECE5 /* API+Information.swift */; };
@@ -228,7 +252,6 @@
 		2A193004211B1AD6007C1E5A /* String+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+XT.swift"; sourceTree = "<group>"; };
 		2A193008211B1B2F007C1E5A /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		2A19300D211B1C50007C1E5A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		2A193011211B1DB3007C1E5A /* ConsumptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionViewController.swift; sourceTree = "<group>"; };
 		2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+XT.swift"; sourceTree = "<group>"; };
 		2A19301E211B1E7F007C1E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Consumption.storyboard; sourceTree = "<group>"; };
 		2A193024211B362E007C1E5A /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -243,10 +266,18 @@
 		2A63F90F2125C12C009D515C /* ShowPukViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowPukViewController.swift; sourceTree = "<group>"; };
 		2A63F9142125C904009D515C /* ChangeEmail.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ChangeEmail.strings; sourceTree = "<group>"; };
 		2A63F9182125CA3C009D515C /* ChangePassword.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ChangePassword.strings; sourceTree = "<group>"; };
+		2A6606572136E58C00C96102 /* PagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerViewController.swift; sourceTree = "<group>"; };
+		2A66065B2136E64B00C96102 /* ConsumptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionViewController.swift; sourceTree = "<group>"; };
+		2A6606602137410300C96102 /* Home.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Home.strings; sourceTree = "<group>"; };
+		2A6606642137490200C96102 /* ConsumptionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionDetailsViewController.swift; sourceTree = "<group>"; };
+		2A66066821374C1400C96102 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		2A66066C21374C4000C96102 /* ConsumptionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionDetail.swift; sourceTree = "<group>"; };
+		2A66067021374F8200C96102 /* PseudoHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PseudoHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		2A80F30A211AEF21008D8C89 /* IliadProd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IliadProd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A80F30D211AEF21008D8C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A80F314211AEF22008D8C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A80F319211AEF22008D8C89 /* iliadProd-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iliadProd-Info.plist"; sourceTree = "<group>"; };
+		2A90865C213457D400230AAB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2A922DE5212865FD003B1731 /* Profile.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Profile.strings; sourceTree = "<group>"; };
 		2A922DE921286FCC003B1731 /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
 		2A922DED2128731D003B1731 /* Puk.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Puk.strings; sourceTree = "<group>"; };
@@ -254,6 +285,7 @@
 		2AA61775212596080062CA49 /* Commons.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Commons.strings; sourceTree = "<group>"; };
 		2AA61777212597650062CA49 /* RecoverPassword.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = RecoverPassword.strings; sourceTree = "<group>"; };
 		2AA617792125997A0062CA49 /* Info.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Info.strings; sourceTree = "<group>"; };
+		2AA708C62137650E00927529 /* DetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCell.swift; sourceTree = "<group>"; };
 		2AAF695C21219533005DECE5 /* API+Information.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Information.swift"; sourceTree = "<group>"; };
 		2AAF6960212196E5005DECE5 /* API+Consumption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Consumption.swift"; sourceTree = "<group>"; };
 		2AAF69642121975F005DECE5 /* API+Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Service.swift"; sourceTree = "<group>"; };
@@ -430,6 +462,8 @@
 			children = (
 				2A19300D211B1C50007C1E5A /* User.swift */,
 				2AAF69A42121CB2F005DECE5 /* Consumption.swift */,
+				2A66066821374C1400C96102 /* Section.swift */,
+				2A66066C21374C4000C96102 /* ConsumptionDetail.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -439,6 +473,8 @@
 			children = (
 				2A193028211B38D9007C1E5A /* BasicCell.swift */,
 				2AAF69B02121DBFD005DECE5 /* OptionCell.swift */,
+				2A66067021374F8200C96102 /* PseudoHeaderTableViewCell.swift */,
+				2AA708C62137650E00927529 /* DetailsCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -446,7 +482,10 @@
 		2A232636211C84120045FBD7 /* Consumption */ = {
 			isa = PBXGroup;
 			children = (
-				2A193011211B1DB3007C1E5A /* ConsumptionViewController.swift */,
+				2A90865C213457D400230AAB /* HomeViewController.swift */,
+				2A6606572136E58C00C96102 /* PagerViewController.swift */,
+				2A66065B2136E64B00C96102 /* ConsumptionViewController.swift */,
+				2A6606642137490200C96102 /* ConsumptionDetailsViewController.swift */,
 			);
 			path = Consumption;
 			sourceTree = "<group>";
@@ -460,6 +499,14 @@
 				2A922DED2128731D003B1731 /* Puk.strings */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		2A66065F213740EF00C96102 /* Consumption */ = {
+			isa = PBXGroup;
+			children = (
+				2A6606602137410300C96102 /* Home.strings */,
+			);
+			path = Consumption;
 			sourceTree = "<group>";
 		};
 		2A80F301211AEF21008D8C89 = {
@@ -549,6 +596,7 @@
 			isa = PBXGroup;
 			children = (
 				2AA6177F212599810062CA49 /* Login */,
+				2A66065F213740EF00C96102 /* Consumption */,
 				2A63F9132125C8ED009D515C /* Profile */,
 				2AE214BD2126FA3E00BB2F1C /* Settings */,
 				2AA61775212596080062CA49 /* Commons.strings */,
@@ -756,6 +804,7 @@
 				2AAF69852121BC57005DECE5 /* Profile.storyboard in Resources */,
 				2A192FD1211B12BD007C1E5A /* Login.storyboard in Resources */,
 				2AA6177B2125997A0062CA49 /* Info.strings in Resources */,
+				2A6606622137410300C96102 /* Home.strings in Resources */,
 				2A63F9162125C904009D515C /* ChangeEmail.strings in Resources */,
 				2AAF69822121BC57005DECE5 /* Options.storyboard in Resources */,
 				2A922DE7212865FD003B1731 /* Profile.strings in Resources */,
@@ -781,6 +830,7 @@
 				2AAF69862121BC57005DECE5 /* Profile.storyboard in Resources */,
 				2A192FF0211B12C0007C1E5A /* Login.storyboard in Resources */,
 				2AA6177C2125997A0062CA49 /* Info.strings in Resources */,
+				2A6606632137410300C96102 /* Home.strings in Resources */,
 				2A63F9172125C904009D515C /* ChangeEmail.strings in Resources */,
 				2AAF69832121BC57005DECE5 /* Options.storyboard in Resources */,
 				2A922DE8212865FD003B1731 /* Profile.strings in Resources */,
@@ -806,6 +856,7 @@
 				2AA61778212597650062CA49 /* RecoverPassword.strings in Resources */,
 				2AAF69842121BC57005DECE5 /* Profile.storyboard in Resources */,
 				2A192F93211AF9F3007C1E5A /* Login.storyboard in Resources */,
+				2A6606612137410300C96102 /* Home.strings in Resources */,
 				2A63F9152125C904009D515C /* ChangeEmail.strings in Resources */,
 				2AAF69812121BC57005DECE5 /* Options.storyboard in Resources */,
 				2A922DE6212865FD003B1731 /* Profile.strings in Resources */,
@@ -849,6 +900,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Abstract Target-IliadProd/Pods-Abstract Target-IliadProd-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
+				"${BUILT_PRODUCTS_DIR}/BmoViewPager/BmoViewPager.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -866,6 +918,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BmoViewPager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -947,6 +1000,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Abstract Target-IliadStaging/Pods-Abstract Target-IliadStaging-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
+				"${BUILT_PRODUCTS_DIR}/BmoViewPager/BmoViewPager.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -964,6 +1018,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BmoViewPager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -991,6 +1046,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Abstract Target-IliadDev/Pods-Abstract Target-IliadDev-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
+				"${BUILT_PRODUCTS_DIR}/BmoViewPager/BmoViewPager.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
@@ -1008,6 +1064,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BmoViewPager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
@@ -1039,29 +1096,36 @@
 				2A192FBF211B12BD007C1E5A /* LoginViewController.swift in Sources */,
 				2A232641211C892F0045FBD7 /* CustomButton.swift in Sources */,
 				2A922DEB21286FCC003B1731 /* CustomActivityIndicator.swift in Sources */,
+				2A66067221374F8200C96102 /* PseudoHeaderTableViewCell.swift in Sources */,
 				2A192FC0211B12BD007C1E5A /* API+Login.swift in Sources */,
 				2A192FC1211B12BD007C1E5A /* Typealiases.swift in Sources */,
 				2AAF699E2121BF3A005DECE5 /* ServicesViewController.swift in Sources */,
-				2A193013211B1DB3007C1E5A /* ConsumptionViewController.swift in Sources */,
+				2AA708C82137650E00927529 /* DetailsCell.swift in Sources */,
 				2A192FC3211B12BD007C1E5A /* API.swift in Sources */,
 				2AF92DD9211C36A50058CFD2 /* UIColor+XT.swift in Sources */,
 				2A192FC4211B12BD007C1E5A /* AppDelegate.swift in Sources */,
 				2AE214C4212705D800BB2F1C /* Credentials.swift in Sources */,
+				2A66065D2136E64B00C96102 /* ConsumptionViewController.swift in Sources */,
 				2A19300F211B1C50007C1E5A /* User.swift in Sources */,
 				2A232692211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
 				2A192FC5211B12BD007C1E5A /* APIEndpoint.swift in Sources */,
 				2A23263C211C888F0045FBD7 /* Utility.swift in Sources */,
+				2A6606592136E58C00C96102 /* PagerViewController.swift in Sources */,
 				2A192FC7211B12BD007C1E5A /* APIEndpoint+Tasks.swift in Sources */,
 				2AAF69A62121CB2F005DECE5 /* Consumption.swift in Sources */,
 				2AAF69962121BD3E005DECE5 /* MainTabBarController.swift in Sources */,
+				2A90865E213457D400230AAB /* HomeViewController.swift in Sources */,
 				2AAF69B22121DD72005DECE5 /* OptionCell.swift in Sources */,
 				2AF92DD5211C33800058CFD2 /* API+RecoverPassword.swift in Sources */,
+				2A66066E21374C4000C96102 /* ConsumptionDetail.swift in Sources */,
+				2A66066A21374C1400C96102 /* Section.swift in Sources */,
 				2A192FC8211B12BD007C1E5A /* API+XT.swift in Sources */,
 				2AAF695E21219533005DECE5 /* API+Information.swift in Sources */,
 				2A193006211B1AE4007C1E5A /* String+XT.swift in Sources */,
 				2A192FC9211B12BD007C1E5A /* AppConfig.swift in Sources */,
 				2A63F9092125C117009D515C /* ChangePasswordViewController.swift in Sources */,
 				2A193026211B362E007C1E5A /* CardView.swift in Sources */,
+				2A6606662137490200C96102 /* ConsumptionDetailsViewController.swift in Sources */,
 				2AAF69662121975F005DECE5 /* API+Service.swift in Sources */,
 				2AE214BB2126D1AC00BB2F1C /* AutoLoginViewController.swift in Sources */,
 				2A63F90D2125C122009D515C /* ChangeEmailViewController.swift in Sources */,
@@ -1090,31 +1154,38 @@
 				2A192FDD211B12C0007C1E5A /* APIEndpoint+Paths.swift in Sources */,
 				2AAF69AF2121CE95005DECE5 /* Date+XT.swift in Sources */,
 				2A192FDE211B12C0007C1E5A /* LoginViewController.swift in Sources */,
-				2A193014211B1DB3007C1E5A /* ConsumptionViewController.swift in Sources */,
 				2A922DEC21286FCC003B1731 /* CustomActivityIndicator.swift in Sources */,
 				2A192FDF211B12C0007C1E5A /* API+Login.swift in Sources */,
+				2A66067321374F8200C96102 /* PseudoHeaderTableViewCell.swift in Sources */,
 				2A232642211C892F0045FBD7 /* CustomButton.swift in Sources */,
 				2AAF699F2121BF3A005DECE5 /* ServicesViewController.swift in Sources */,
 				2A192FE0211B12C0007C1E5A /* Typealiases.swift in Sources */,
+				2AA708C92137650E00927529 /* DetailsCell.swift in Sources */,
 				2AF92DDA211C36A50058CFD2 /* UIColor+XT.swift in Sources */,
 				2A19300B211B1B68007C1E5A /* Config.swift in Sources */,
 				2A193018211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */,
 				2AE214C5212705D800BB2F1C /* Credentials.swift in Sources */,
+				2A66065E2136E64B00C96102 /* ConsumptionViewController.swift in Sources */,
 				2A193027211B362E007C1E5A /* CardView.swift in Sources */,
 				2A19302B211B38D9007C1E5A /* BasicCell.swift in Sources */,
 				2A232693211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
 				2AF92DD6211C33800058CFD2 /* API+RecoverPassword.swift in Sources */,
+				2A66065A2136E58C00C96102 /* PagerViewController.swift in Sources */,
 				2A192FE2211B12C0007C1E5A /* API.swift in Sources */,
 				2A47620D211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */,
 				2AAF69A72121CB2F005DECE5 /* Consumption.swift in Sources */,
+				2A90865F213457D400230AAB /* HomeViewController.swift in Sources */,
 				2AAF69972121BD3E005DECE5 /* MainTabBarController.swift in Sources */,
 				2AAF69B32121DD72005DECE5 /* OptionCell.swift in Sources */,
+				2A66066F21374C4000C96102 /* ConsumptionDetail.swift in Sources */,
+				2A66066B21374C1400C96102 /* Section.swift in Sources */,
 				2A23263E211C88920045FBD7 /* InfoViewController.swift in Sources */,
 				2A192FE3211B12C0007C1E5A /* AppDelegate.swift in Sources */,
 				2AAF695F21219533005DECE5 /* API+Information.swift in Sources */,
 				2A192FE4211B12C0007C1E5A /* APIEndpoint.swift in Sources */,
 				2A193007211B1AE5007C1E5A /* String+XT.swift in Sources */,
 				2A63F90A2125C117009D515C /* ChangePasswordViewController.swift in Sources */,
+				2A6606672137490200C96102 /* ConsumptionDetailsViewController.swift in Sources */,
 				2A192FE6211B12C0007C1E5A /* APIEndpoint+Tasks.swift in Sources */,
 				2AAF69672121975F005DECE5 /* API+Service.swift in Sources */,
 				2AE214BC2126D1AC00BB2F1C /* AutoLoginViewController.swift in Sources */,
@@ -1145,29 +1216,36 @@
 				2A192F99211AFF16007C1E5A /* LoginViewController.swift in Sources */,
 				2A232640211C892F0045FBD7 /* CustomButton.swift in Sources */,
 				2A922DEA21286FCC003B1731 /* CustomActivityIndicator.swift in Sources */,
+				2A66067121374F8200C96102 /* PseudoHeaderTableViewCell.swift in Sources */,
 				2A192FA2211B0306007C1E5A /* API+Login.swift in Sources */,
 				2A192FA5211B0366007C1E5A /* Typealiases.swift in Sources */,
 				2AAF699D2121BF3A005DECE5 /* ServicesViewController.swift in Sources */,
+				2AA708C72137650E00927529 /* DetailsCell.swift in Sources */,
 				2A232638211C877D0045FBD7 /* InfoViewController.swift in Sources */,
-				2A193012211B1DB3007C1E5A /* ConsumptionViewController.swift in Sources */,
 				2A192F9E211B01F4007C1E5A /* API.swift in Sources */,
 				2AF92DD8211C36A50058CFD2 /* UIColor+XT.swift in Sources */,
 				2AE214C3212705D800BB2F1C /* Credentials.swift in Sources */,
+				2A66065C2136E64B00C96102 /* ConsumptionViewController.swift in Sources */,
 				2A80F30E211AEF21008D8C89 /* AppDelegate.swift in Sources */,
 				2A232691211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
 				2A19300E211B1C50007C1E5A /* User.swift in Sources */,
 				2A192FAF211B0383007C1E5A /* APIEndpoint.swift in Sources */,
+				2A6606582136E58C00C96102 /* PagerViewController.swift in Sources */,
 				2A192FB6211B061F007C1E5A /* AppConfig+Prod.swift in Sources */,
 				2AAF69A52121CB2F005DECE5 /* Consumption.swift in Sources */,
 				2AAF69952121BD3E005DECE5 /* MainTabBarController.swift in Sources */,
+				2A90865D213457D400230AAB /* HomeViewController.swift in Sources */,
 				2AAF69B12121DBFD005DECE5 /* OptionCell.swift in Sources */,
 				2A192FAB211B0383007C1E5A /* APIEndpoint+Tasks.swift in Sources */,
+				2A66066D21374C4000C96102 /* ConsumptionDetail.swift in Sources */,
+				2A66066921374C1400C96102 /* Section.swift in Sources */,
 				2A193005211B1AD6007C1E5A /* String+XT.swift in Sources */,
 				2AAF695D21219533005DECE5 /* API+Information.swift in Sources */,
 				2A192FA0211B02E7007C1E5A /* API+XT.swift in Sources */,
 				2A193025211B362E007C1E5A /* CardView.swift in Sources */,
 				2A63F9082125C117009D515C /* ChangePasswordViewController.swift in Sources */,
 				2A192FB4211B060A007C1E5A /* AppConfig.swift in Sources */,
+				2A6606652137490200C96102 /* ConsumptionDetailsViewController.swift in Sources */,
 				2AAF69652121975F005DECE5 /* API+Service.swift in Sources */,
 				2AE214BA2126D1AC00BB2F1C /* AutoLoginViewController.swift in Sources */,
 				2A63F90C2125C122009D515C /* ChangeEmailViewController.swift in Sources */,

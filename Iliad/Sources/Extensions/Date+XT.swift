@@ -211,6 +211,14 @@ extension Date {
     public var UTC: String {
         return Date.dateFormatterUTC.string(from: self)
     }
+
+    static func differentBetweenDate(first: Date, second: Date, components: Set<Calendar.Component>) -> DateComponents {
+        let calendar = Calendar.current
+        let date1 = calendar.startOfDay(for: first)
+        let date2 = calendar.startOfDay(for: second)
+
+        return calendar.dateComponents(components, from: date1, to: date2)
+    }
 }
 
 internal extension Calendar.Component {

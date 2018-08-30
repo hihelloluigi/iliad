@@ -33,14 +33,11 @@ class MainTabBarController: UITabBarController {
             print("No viewControllers found")
             return
         }
-        
+
         for index in 0..<viewControllers.count {
-            guard let navVC = viewControllers[index] as? UINavigationController else {
-                continue
-            }
-            navVC.title = items[index].name
-            navVC.tabBarItem.image = items[index].image
-            navVC.tabBarItem.selectedImage = items[index].selectedImage
+            viewControllers[index].title = items[index].name
+            viewControllers[index].tabBarItem.image = items[index].image
+            viewControllers[index].tabBarItem.selectedImage = items[index].selectedImage
         }
     }
 }
