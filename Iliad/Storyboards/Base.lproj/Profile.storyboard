@@ -861,7 +861,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XZu-cy-aLn">
-                                <rect key="frame" x="139" y="318" width="97" height="45"/>
+                                <rect key="frame" x="181.5" y="308.5" width="12" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="UD5-W1-e2w"/>
                                 </constraints>
@@ -870,7 +870,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="19v-vJ-e0n">
-                                <rect key="frame" x="38" y="597" width="311" height="50"/>
+                                <rect key="frame" x="32" y="601" width="311" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAK-QZ-ZP6" customClass="TransitionButton" customModule="TransitionButton">
                                         <rect key="frame" x="0.0" y="0.0" width="311" height="50"/>
