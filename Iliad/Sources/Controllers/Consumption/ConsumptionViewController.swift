@@ -1,167 +1,96 @@
 //
-//  HomeViewController.swift
+//  TestViewController.swift
 //  Iliad
 //
-//  Created by Luigi Aiello on 08/08/18.
+//  Created by Luigi Aiello on 29/08/18.
 //  Copyright © 2018 Luigi Aiello. All rights reserved.
 //
 
 import UIKit
-import SwiftyJSON
-
-struct DetailsRow {
-    let value: String?
-    let extraValue: String?
-    let image: UIImage?
-}
+import NVActivityIndicatorView
 
 class ConsumptionViewController: UIViewController {
 
     // Mark - Outlets
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var countryConsumptionBarButton: UIBarButtonItem!
+        // Views
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var activityIndicator: NVActivityIndicatorView!
+
+        // Calls
+    @IBOutlet weak var callLabel: UILabel!
+    @IBOutlet weak var callSubLabel: UILabel!
+    @IBOutlet weak var callImageView: UIImageView!
+
+        // SMS
+    @IBOutlet weak var smsLabel: UILabel!
+    @IBOutlet weak var smsSubLabel: UILabel!
+    @IBOutlet weak var smsImageView: UIImageView!
+
+        // MMS
+    @IBOutlet weak var mmsLabel: UILabel!
+    @IBOutlet weak var mmsSubLabel: UILabel!
+    @IBOutlet weak var mmsImageView: UIImageView!
+
+        // Data
+    @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet weak var dataSubLabel: UILabel!
+    @IBOutlet weak var dataImageView: UIImageView!
 
     // Mark - Variables
-    var nationlConsumption: Consumption?
-    var abroadConsumption: Consumption?
-    var user: User?
-    var rows = [DetailsRow]()
-    var isNationalConsumption: Bool = true
+    var consumption: Consumption?
 
     // Mark - Override
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        getNationalConsumption()
-        setupTableView()
+        setup()
         configurationUI()
-        configurationText()
     }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
     // Mark - Setup
-    private func setupTableView() {
-        tableView.dataSource = self
-        tableView.tableFooterView = UIView()
-        tableView.estimatedRowHeight = 100
-        tableView.rowHeight = UITableViewAutomaticDimension
+    private func setup() {
+        activityIndicator.tintColor = .iliadRed
+        activityIndicator.type = .pacman
     }
 
     private func configurationUI() {
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+        activityIndicator.isHidden = true
+        stackView.isHidden = true
     }
 
-    private func configurationText() {
-    }
-
-    // Mark - Helpers
-    private func makeRows(_ consumption: Consumption?) {
+    func configurionData(consumption: Consumption?) {
         guard let consumption = consumption else {
             return
         }
-        rows = [
-            DetailsRow(value: consumption.calls, extraValue: consumption.extraCalls, image: #imageLiteral(resourceName: "ic_call")),
-            DetailsRow(value: consumption.sms, extraValue: consumption.extraSMS, image: #imageLiteral(resourceName: "ic_sms")),
-            DetailsRow(value: consumption.mms, extraValue: consumption.extraMMS, image: #imageLiteral(resourceName: "ic_mms")),
-            DetailsRow(value: consumption.data, extraValue: consumption.extraData, image: #imageLiteral(resourceName: "ic_internet"))
-        ]
 
-        tableView.reloadData()
+        callLabel.text = consumption.calls
+        callSubLabel.text = consumption.extraCalls
+        callImageView.image = #imageLiteral(resourceName: "ic_call")
+        smsLabel.text = consumption.sms
+        smsSubLabel.text = consumption.extraSMS
+        smsImageView.image = #imageLiteral(resourceName: "ic_sms")
+        mmsLabel.text = consumption.mms
+        mmsSubLabel.text = consumption.extraMMS
+        mmsImageView.image = #imageLiteral(resourceName: "ic_mms")
+        dataLabel.text = consumption.data
+        dataSubLabel.text = consumption.extraData
+        dataImageView.image = #imageLiteral(resourceName: "ic_internet")
     }
 
-    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-        if isNationalConsumption {
-            getNationalConsumption()
-        } else {
-            getAbroadConsumption()
-        }
+    // Mark - Helpers
+    func load() {
+        stackView.isHidden = true
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
     }
 
-    private func changeCountryConsumption() {
-        if isNationalConsumption {
-            countryConsumptionBarButton.image = #imageLiteral(resourceName: "ic_italy_filled")
-
-            if let nationlConsumption = nationlConsumption {
-                makeRows(nationlConsumption)
-            } else {
-                getNationalConsumption()
-            }
-        } else {
-            countryConsumptionBarButton.image = #imageLiteral(resourceName: "ic_europe_filled")
-            if let abroadConsumption = abroadConsumption {
-                makeRows(abroadConsumption)
-            } else {
-                getAbroadConsumption()
-            }
-        }
-    }
-
-    private func retriveUserInformation(json: JSON) {
-        guard let user = user else {
-            return
-        }
-        let creditRenewal = json["iliad"]["0"]["0"].string?.components(separatedBy: "&")
-        user.credit = creditRenewal?[0]
-        if let stringDate = creditRenewal?[1] {
-            user.renewal = Date.from(string: stringDate, withFormat: "dd/MM/yyyy")
-        }
-
-        NotificationCenter.default.post(name: Notification.Name("profile"), object: nil, userInfo: ["user": user])
-    }
-
-    // Mark - APIs
-    private func getNationalConsumption() {
-        API.ConsumptionClass.getNationalConsumption { (json) in
-            guard let json = json else {
-                return
-            }
-
-            self.nationlConsumption = Consumption(json: json["iliad"])
-            self.retriveUserInformation(json: json)
-
-            self.makeRows(self.nationlConsumption)
-        }
-    }
-    private func getAbroadConsumption() {
-        API.ConsumptionClass.getAbroudConsumption { (json) in
-            guard let json = json else {
-                return
-            }
-            self.abroadConsumption = Consumption(json: json["iliad"])
-            self.makeRows(self.abroadConsumption)
-        }
-    }
-
-    // Mark - Actions
-    @IBAction func changeCountryConsumptionDidTap(_ sender: Any) {
-        isNationalConsumption = !isNationalConsumption
-        changeCountryConsumption()
-    }
-}
-
-// Mark - Table View Data Source
-extension ConsumptionViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rows.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard
-            indexPath.row < rows.count,
-            let cell = tableView.dequeueReusableCell(withIdentifier: "basic cell", for: indexPath) as? BasicCell
-        else {
-            return UITableViewCell()
-        }
-
-        let row = rows[indexPath.row]
-
-        cell.setup(value: row.value, extraValue: row.extraValue, image: row.image)
-        return cell
+    func finishLoad() {
+        stackView.isHidden = false
+        activityIndicator.isHidden = true
+        activityIndicator.stopAnimating()
     }
 }
