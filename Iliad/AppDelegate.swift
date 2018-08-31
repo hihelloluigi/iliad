@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyUserDefaults
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        setup()
         setupRootViewController()
         
         return true
@@ -47,6 +49,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // Mark - Setup
+    private func setup() {
+        // Firebase configurations
+        FirebaseApp.configure()
+    }
     private func setupRootViewController() {
         if Defaults[.autoLogin] && !Defaults[.loginWithBiometric] {
             guard let autoLoginVC = "Login" <%> "AutoLoginViewController" as? AutoLoginViewController else {
