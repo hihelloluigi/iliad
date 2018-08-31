@@ -37,6 +37,7 @@ class OptionCell: UITableViewCell {
     func setup(key: String?, isOn: Bool?, description: String?, handler: OptionHandler?) {
         descriptionLabel.text = description
         optionSwitch.isOn = isOn ?? false
+        optionSwitch.isEnabled = (key != "reseau_4g")
 
         self.key = key
         optionHandler = handler
