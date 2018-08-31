@@ -21,6 +21,16 @@ class SettingsViewController: UITableViewController {
     @IBOutlet weak var autoLoginLabel: UILabel!
     @IBOutlet weak var biometricLabel: UILabel!
 
+        // Image View
+    @IBOutlet weak var beerImageView: UIImageView!
+    @IBOutlet weak var devImageView: UIImageView!
+    @IBOutlet weak var alertImageView: UIImageView!
+    @IBOutlet weak var telegramImageView: UIImageView!
+    @IBOutlet weak var emailImageView: UIImageView!
+
+    // Mark - Varibles
+    let paypal = "https://paypal.me/luigiaiello"
+
     // Mark - Override
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,12 +53,19 @@ class SettingsViewController: UITableViewController {
     
     private func setupTableView() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     private func configurationUI() {
+        alertImageView.tintColor = .iliadRed
+        beerImageView.tintColor = .iliadRed
+        devImageView.tintColor = .iliadRed
+        telegramImageView.tintColor = .iliadRed
+        emailImageView.tintColor = .iliadRed
+
         navigationController?.navigationBar.shadowImage = UIImage()
     }
 
@@ -69,5 +86,28 @@ class SettingsViewController: UITableViewController {
             return
         }
         Defaults[.loginWithBiometric] = mySwitch.isOn
+    }
+}
+
+// Mark - Table View Delegate
+extension SettingsViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard indexPath.section == 1 else {
+            return
+        }
+
+        switch indexPath.row {
+        case 0:
+            guard let infoVC = "Login" <%> "InfoViewController" as? InfoViewController else {
+                return
+            }
+
+            self.present(infoVC, animated: true, completion: nil)
+        case 1:
+            Utility.open(url: paypal)
+        default:
+            print("What?")
+        }
     }
 }
