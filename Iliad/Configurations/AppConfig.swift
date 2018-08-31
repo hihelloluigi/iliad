@@ -47,9 +47,9 @@ enum DefaultConfiguration: String {
         case .development:
             return "http://192.168.1.220:8082"
         case .staging:
-            return "https://floating-brushlands-12196.herokuapp.com"
+            return "https://areapersonale.herokuapp.com"
         case .production:
-            return "https://floating-brushlands-12196.herokuapp.com"
+            return "https://areapersonale.herokuapp.com"
         }
     }
 }
