@@ -10,7 +10,7 @@ import UIKit
 
 struct ServicesRow {
     let key: String?
-    let isActive: Bool?
+    var isActive: Bool
     let description: String?
 }
 
@@ -54,30 +54,45 @@ class ServicesViewController: UIViewController {
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
     }
+    
+    // Mark - Helpers
+    private func showMessage(isActive: Bool, text: String?) {
+        guard let text = text else {
+            return
+        }
+
+        showSuccessMessage(title: "Successo", message: "\(text) \((isActive ? "attivato" : "disattivato"))")
+    }
 
     // Mark - APIs
     private func getServices() {
+        CustomActivityIndicator.progress()
         API.ServiceClass.getServices { (json) in
+            CustomActivityIndicator.hide()
             guard let json = json else {
                 return
             }
             for element in json["iliad"] {
                 if let key = element.1["3"].string, let isActive = element.1["2"].string, let description = element.1["0"].string {
-                    self.rows.append(ServicesRow(key: key, isActive: isActive.toBool(), description: description))
+                    self.rows.append(ServicesRow(key: key, isActive: isActive.toBool() ?? false, description: description))
                 }
             }
 
             self.tableView.reloadData()
         }
     }
-    private func changeService(key: String?, isOn: Bool) {
-        guard let key = key else {
-            return
-        }
+    private func changeService(key: String?, isOn: Bool, indexPath: IndexPath) {
+        guard let key = key else { return }
+
         API.ServiceClass.changeService(activate: isOn, service: key) { (success) in
             guard success else {
+                self.rows[indexPath.row].isActive = !isOn
+                self.tableView.reloadRows(at: [indexPath], with: .none)
+                self.showErrorMessage(message: "Impossibile \((self.rows[indexPath.row].isActive ? "attivare" : "disattivare")) l'opzione")
                 return
             }
+            self.rows[indexPath.row].isActive = isOn
+            self.showMessage(isActive: self.rows[indexPath.row].isActive, text: self.rows[indexPath.row].description)
         }
     }
 }
@@ -96,14 +111,14 @@ extension ServicesViewController: UITableViewDataSource {
         guard
             indexPath.row < rows.count,
             let cell = tableView.dequeueReusableCell(withIdentifier: "option cell", for: indexPath) as? OptionCell
-            else {
-                return UITableViewCell()
+        else {
+            return UITableViewCell()
         }
 
         let row = rows[indexPath.row]
 
         cell.setup(key: row.key, isOn: row.isActive, description: row.description) { (key, isOn) in
-            self.changeService(key: key, isOn: isOn)
+            self.changeService(key: key, isOn: isOn, indexPath: indexPath)
         }
 
         return cell

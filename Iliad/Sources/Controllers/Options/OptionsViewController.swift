@@ -10,7 +10,7 @@ import UIKit
 
 struct OptionsRow {
     let key: String?
-    let isActive: Bool?
+    var isActive: Bool
     let description: String?
 }
 
@@ -55,29 +55,43 @@ class OptionsViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
     }
 
+    // Mark - Helpers
+    private func showMessage(isActive: Bool, text: String?) {
+        guard let text = text else {
+            return
+        }
+
+        showSuccessMessage(title: "Successo", message: "\(text) \((isActive ? "attivato" : "disattivato"))")
+    }
+
     // Mark - APIs
     private func getOptions() {
+        CustomActivityIndicator.progress()
         API.OptionClass.getOptions { (json) in
+            CustomActivityIndicator.hide()
             guard let json = json else {
                 return
             }
             for element in json["iliad"] {
                 if let key = element.1["3"].string, let isActive = element.1["2"].string, let description = element.1["0"].string {
-                    self.rows.append(OptionsRow(key: key, isActive: isActive.toBool(), description: description))
+                    self.rows.append(OptionsRow(key: key, isActive: isActive.toBool() ?? false, description: description))
                 }
             }
 
             self.tableView.reloadData()
         }
     }
-    private func changeOption(key: String?, isOn: Bool) {
-        guard let key = key else {
-            return
-        }
+    private func changeOption(key: String?, isOn: Bool, indexPath: IndexPath) {
+        guard let key = key else { return }
         API.OptionClass.changeOption(activate: isOn, option: key) { (success) in
             guard success else {
+                self.rows[indexPath.row].isActive = !isOn
+                self.tableView.reloadRows(at: [indexPath], with: .none)
+                self.showErrorMessage(message: "Impossibile \((self.rows[indexPath.row].isActive ? "attivare" : "disattivare")) l'opzione")
                 return
             }
+            self.rows[indexPath.row].isActive = isOn
+            self.showMessage(isActive: self.rows[indexPath.row].isActive, text: self.rows[indexPath.row].description)
         }
     }
 }
@@ -103,7 +117,7 @@ extension OptionsViewController: UITableViewDataSource {
         let row = rows[indexPath.row]
 
         cell.setup(key: row.key, isOn: row.isActive, description: row.description) { (key, isOn) in
-            self.changeOption(key: key, isOn: isOn)
+            self.changeOption(key: key, isOn: isOn, indexPath: indexPath)
         }
         
         return cell
