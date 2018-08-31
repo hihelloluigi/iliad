@@ -69,3 +69,4 @@ fastlane/test_output
 
 # Project file
 Iliad/Configurations/Credentials\.swift 
+Iliad/Configurations/Prod/GoogleService-Info\.plist
