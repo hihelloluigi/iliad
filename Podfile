@@ -7,6 +7,10 @@ source 'https://github.com/CocoaPods/specs.git'
 ## Use frameworks
 use_frameworks!
 
+def firebase_pods
+	pod 'Firebase/Core'
+	pod 'Firebase/Performance'
+end
 
 def graphics_components_pods
 	pod 'SkyFloatingLabelTextField'
@@ -37,6 +41,7 @@ def debugging_pods
 end
 
 abstract_target 'Abstract Target' do 
+	firebase_pods
 	graphics_components_pods
 	networking_pods
 	utilites_pods
