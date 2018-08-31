@@ -7,134 +7,110 @@
 //
 
 import UIKit
+import SwiftyJSON
+
+enum ProfileRowType {
+    case header
+    case row
+}
+
+struct ProfileRow {
+    let order: Int
+    let type: ProfileRowType
+    let firstValue: String?
+    var secondValue: String?
+    let thirdValue: String?
+    let icon: UIImage?
+    let editIcon: UIImage?
+    let handler: VoidHandler?
+}
 
 class ProfileViewController: UIViewController {
 
     // Mark - Outlets
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var stackView: UIStackView!
-
-    // Profile
-    @IBOutlet weak var profileViewContainer: UIView!
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var profileNameLabel: UILabel!
-    @IBOutlet weak var profilePhoneNumberLabel: UILabel!
-
-    // Credit
-    @IBOutlet weak var creditViewContainer: UIView!
-    @IBOutlet weak var creditImage: UIImageView!
-    @IBOutlet weak var creditAvailableLabel: UILabel!
-    @IBOutlet weak var creditRenewalLabel: UILabel!
-    @IBOutlet weak var creditIdCodeLabel: UILabel!
-
-    // Email
-    @IBOutlet weak var emailViewContainer: UIView!
-    @IBOutlet weak var emailImage: UIImageView!
-    @IBOutlet weak var emailArrow: UIImageView!
-    @IBOutlet weak var emailLabel: UILabel!
-
-    // Password
-    @IBOutlet weak var passwordViewContainer: UIView!
-    @IBOutlet weak var passwordImage: UIImageView!
-    @IBOutlet weak var passwordArrow: UIImageView!
-    @IBOutlet weak var passwordLabel: UILabel!
-
-    // Puk
-    @IBOutlet weak var pukViewContainer: UIView!
-    @IBOutlet weak var pukImage: UIImageView!
-    @IBOutlet weak var pukArrow: UIImageView!
-    @IBOutlet weak var pukLabel: UILabel!
-
-    // Mark - User
+    @IBOutlet weak var tableView: UITableView!
+    
+    // Mark - Variables
     var user: User?
+    var rows = [ProfileRow]()
 
     // Mark - Override
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        registerNotification()
+        setup()
+        setupData()
+        setupTableView()
         configurationUI()
-        addGestures()
-        getGeneralInformations()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        self.scrollView.contentSize = self.stackView.frame.size
-        configurationText()
     }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
     // Mark - Setup
-    func registerNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(updateProfile(_:)), name: Notification.Name("profile"), object: nil)
+    private func setup() {
+        getGeneralInformations()
     }
-
+    private func setupData() {
+        guard let user = user else { return }
+        self.rows.append(ProfileRow(order: 0, type: .header, firstValue: user.name, secondValue: user.phoneNumber, thirdValue: user.id, icon: #imageLiteral(resourceName: "ic_profile"), editIcon: nil, handler: nil))
+    }
+    private func setupTableView() {
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableViewAutomaticDimension
+    }
     private func configurationUI() {
-        profileImage.tintColor = .iliadRed
-        creditImage.tintColor = .white
-        emailImage.tintColor = .white
-        emailArrow.tintColor = .white
-        passwordImage.tintColor = .white
-        passwordArrow.tintColor = .white
-        pukImage.tintColor = .white
-        pukArrow.tintColor = .white
         self.navigationController?.navigationBar.shadowImage = UIImage()
     }
 
-    private func configurationText() {
-        guard let user = user else {
-            return
+    // Mark - Helpers
+    private func retriveData(json: JSON) {
+        for element in json {
+            switch element.0 {
+            case "0": // Address
+                self.rows.append(ProfileRow(order: 1, type: .row, firstValue: element.1["0"].string, secondValue: element.1["1"].string, thirdValue: element.1["2"].string, icon: #imageLiteral(resourceName: "ic_home"), editIcon: nil, handler: nil))
+            case "1": // Payment
+                self.rows.append(ProfileRow(order: 2, type: .row, firstValue: element.1["0"].string, secondValue: element.1["1"].string, thirdValue: element.1["2"].string, icon: #imageLiteral(resourceName: "ic_credit_card"), editIcon: nil, handler: nil))
+            case "2": // Email
+                self.rows.append(ProfileRow(order: 3, type: .row, firstValue: element.1["0"].string, secondValue: element.1["1"].string, thirdValue: nil, icon: #imageLiteral(resourceName: "ic_email"), editIcon: #imageLiteral(resourceName: "ic_edit"), handler: {
+                    guard let changeEmailVC = "Profile" <%> "ChangeEmailViewController" as? ChangeEmailViewController else {
+                        return
+                    }
+
+                    changeEmailVC.delegate = self
+                    changeEmailVC.modalTransitionStyle = .crossDissolve
+                    self.present(changeEmailVC, animated: true, completion: nil)
+                }))
+            case "3": // Password
+                self.rows.append(ProfileRow(order: 4, type: .row, firstValue: element.1["0"].string, secondValue: element.1["1"].string, thirdValue: nil, icon: #imageLiteral(resourceName: "ic_recoverPassword"), editIcon: #imageLiteral(resourceName: "ic_edit"), handler: {
+                    guard let changePasswordVC = "Profile" <%> "ChangePasswordViewController" as? ChangePasswordViewController else {
+                        return
+                    }
+
+                    changePasswordVC.delegate = self
+                    changePasswordVC.modalTransitionStyle = .crossDissolve
+                    self.present(changePasswordVC, animated: true, completion: nil)
+                }))
+            case "4": // PUK
+                self.rows.append(ProfileRow(order: 5, type: .row, firstValue: element.1["0"].string, secondValue: element.1["1"].string, thirdValue: nil, icon: #imageLiteral(resourceName: "ic_recoverPassword"), editIcon: #imageLiteral(resourceName: "ic_showPassowrd"), handler: {
+                    guard let showPukVC = "Profile" <%> "ShowPukViewController" as? ShowPukViewController else {
+                        return
+                    }
+
+                    showPukVC.modalTransitionStyle = .crossDissolve
+                    self.present(showPukVC, animated: true, completion: nil)
+                }))
+            default:
+                break
+            }
         }
-        profileNameLabel.text = user.name
-        profilePhoneNumberLabel.text = user.phoneNumber
-        creditIdCodeLabel.text = user.id
-
-        if let email = user.email {
-            emailViewContainer.isHidden = false
-            emailLabel.text = email
-        } else {
-            emailViewContainer.isHidden = true
-        }
-
-        if let dateFormatted = user.renewal?.localizedString(dateWithStyle: .short) {
-            creditRenewalLabel.isHidden = false
-            creditRenewalLabel.text = "Prossimo rinnovo: \(dateFormatted)"
-        } else {
-            creditRenewalLabel.isHidden = true
-        }
-        
-        if let credit = user.credit {
-            creditAvailableLabel.isHidden = false
-            creditAvailableLabel.text = "Credito disponibile: \(credit)"
-        } else {
-            creditAvailableLabel.isHidden = true
-        }
-
-        passwordLabel.text = "Profile" ~> "CHANGE_PASSWORD"
-        pukLabel.text = "Profile" ~> "SHOW_PUK"
-    }
-
-    private func addGestures() {
-        let changeEmailGesture = UITapGestureRecognizer(target: self, action: #selector(self.changeEmail(_:)))
-        emailViewContainer.addGestureRecognizer(changeEmailGesture)
-
-        let changePasswordGesture = UITapGestureRecognizer(target: self, action: #selector(self.changePassword(_:)))
-        passwordViewContainer.addGestureRecognizer(changePasswordGesture)
-
-        let showPukGesture = UITapGestureRecognizer(target: self, action: #selector(self.showPuk(_:)))
-        pukViewContainer.addGestureRecognizer(showPukGesture)
-    }
-
-    // Mark - Notifications
-    @objc func updateProfile(_ notification: Notification) {
-        guard let user = notification.userInfo?["user"] as? User else {
-            return
-        }
-        self.user = user
     }
 
     // Mark - APIs
@@ -144,13 +120,10 @@ class ProfileViewController: UIViewController {
                 return
             }
 
-            if let email = json["iliad"]["2"]["1"].string {
-                self.emailViewContainer.isHidden = false
-                self.user?.email = email
-                self.emailLabel.text = email
-            } else {
-                self.emailViewContainer.isHidden = true
-            }
+            self.retriveData(json: json["iliad"])
+
+            self.rows = self.rows.sorted(by: { $0.order < $1.order })
+            self.tableView.reloadData()
         }
     }
     private func logout() {
@@ -172,36 +145,6 @@ class ProfileViewController: UIViewController {
         }
     }
 
-    // Mark - Gesture
-    @objc func changeEmail(_ sender: UITapGestureRecognizer) {
-        guard let changeEmailVC = "Profile" <%> "ChangeEmailViewController" as? ChangeEmailViewController else {
-            return
-        }
-
-        changeEmailVC.delegate = self
-        changeEmailVC.modalTransitionStyle = .crossDissolve
-        self.present(changeEmailVC, animated: true, completion: nil)
-    }
-
-    @objc func changePassword(_ sender: UITapGestureRecognizer) {
-        guard let changePasswordVC = "Profile" <%> "ChangePasswordViewController" as? ChangePasswordViewController else {
-            return
-        }
-
-        changePasswordVC.delegate = self
-        changePasswordVC.modalTransitionStyle = .crossDissolve
-        self.present(changePasswordVC, animated: true, completion: nil)
-    }
-    
-    @objc func showPuk(_ sender: UITapGestureRecognizer) {
-        guard let showPuk = "Profile" <%> "ShowPukViewController" as? ShowPukViewController else {
-            return
-        }
-
-        showPuk.modalTransitionStyle = .crossDissolve
-        self.present(showPuk, animated: true, completion: nil)
-    }
-
     // Mark - Actions
     @IBAction func settingsDidTap(_ sender: Any) {
         guard let settingsVC = "Settings" <%> "SettingsViewController" as? SettingsViewController else {
@@ -216,10 +159,56 @@ class ProfileViewController: UIViewController {
     }
 }
 
+// Mark - Table View Data Source
+extension ProfileViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return rows.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard indexPath.row < rows.count else {
+            return UITableViewCell()
+        }
+
+        let row = rows[indexPath.row]
+
+        switch row.type {
+        case .header:
+            return cellForHeaderAt(indexPath: indexPath, row: row)
+        case .row:
+            return cellForRowAt(indexPath: indexPath, row: row)
+        }
+    }
+
+    private func cellForHeaderAt(indexPath: IndexPath, row: ProfileRow) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "header cell", for: indexPath) as? HeaderCell else {
+            return UITableViewCell()
+        }
+        cell.setup(name: row.firstValue, phoneNumber: row.secondValue, idCode: row.thirdValue)
+
+        return cell
+    }
+
+    private func cellForRowAt(indexPath: IndexPath, row: ProfileRow) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "row cell", for: indexPath) as? RowCell else {
+            return UITableViewCell()
+        }
+
+        cell.setup(row: row)
+
+        return cell
+    }
+}
+
 // Mark - Change Email View Controller Delegate
 extension ProfileViewController: ChangeEmailDelegate {
     func changeEmailSucess(_ email: String) {
-        self.emailLabel.text = email
+        self.rows[3].secondValue = email
+        self.tableView.reloadData()
         self.showSuccessMessage(title: "Commons" ~> "SUCCESS", message: "ChangeEmail" ~> "CHANGE_EMAIL_SUCCESS_MESSAGE")
     }
 }
