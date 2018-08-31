@@ -23,11 +23,13 @@ class Utility {
 
     static func open(url: String?, errorHandler : (() -> Void)? = nil) {
         if let urlString = url, let url = URL(string: urlString) {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
-        } else {
-            if let errorHandler = errorHandler {
-                errorHandler()
+            UIApplication.shared.open(url, options: [:]) { (success) in
+                if !success {
+                    errorHandler?()
+                }
             }
+        } else {
+            errorHandler?()
         }
     }
 
