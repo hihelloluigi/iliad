@@ -9,12 +9,19 @@
 import UIKit
 import NVActivityIndicatorView
 
+protocol ConsumptionDelegate: NSObjectProtocol {
+    func reloadData()
+}
+
 class ConsumptionViewController: UIViewController {
 
     // Mark - Outlets
         // Views
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var activityIndicator: NVActivityIndicatorView!
+
+        // Buttons
+    @IBOutlet weak var reloadButton: UIButton!
 
         // Calls
     @IBOutlet weak var callLabel: UILabel!
@@ -38,6 +45,9 @@ class ConsumptionViewController: UIViewController {
 
     // Mark - Variables
     var consumption: Consumption?
+
+    // Mark - Delegate
+    weak var delegate: ConsumptionDelegate?
 
     // Mark - Override
     override func viewDidLoad() {
@@ -92,5 +102,10 @@ class ConsumptionViewController: UIViewController {
         stackView.isHidden = false
         activityIndicator.isHidden = true
         activityIndicator.stopAnimating()
+    }
+
+    // Mark - Actions
+    @IBAction func reloadDidTap(_ sender: Any) {
+        delegate?.reloadData()
     }
 }

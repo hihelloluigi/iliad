@@ -30,13 +30,16 @@ class AutoLoginViewController: UIViewController {
     private func performLogin(user: User) {
         guard
             let tabBarController = "Main" <%> "MainTabBarController" as? MainTabBarController,
-            let homeViewController = tabBarController.viewControllers?.first as? HomeViewController
+            let homeViewController = tabBarController.viewControllers?.first as? HomeViewController,
+            let navigationController = tabBarController.viewControllers?.last as? UINavigationController,
+            let profileVC = navigationController.viewControllers.first as? ProfileViewController
         else {
             return
         }
 
         homeViewController.user = user
-
+        profileVC.user = user
+        
         self.present(tabBarController, animated: true, completion: nil)
     }
 

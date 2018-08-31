@@ -67,12 +67,15 @@ class LoginViewController: UIViewController {
     private func performLogin(user: User) {
         guard
             let tabBarController = "Main" <%> "MainTabBarController" as? MainTabBarController,
-            let consumptionViewController = tabBarController.viewControllers?.first as? HomeViewController
+            let homeVC = tabBarController.viewControllers?.first as? HomeViewController,
+            let navigationController = tabBarController.viewControllers?.last as? UINavigationController,
+            let profileVC = navigationController.viewControllers.first as? ProfileViewController
         else {
             return
         }
 
-        consumptionViewController.user = user
+        homeVC.user = user
+        profileVC.user = user
 
         DispatchQueue.main.async {
             self.loginButton.stopAnimation(animationStyle: .expand, completion: {
@@ -287,7 +290,6 @@ class LoginViewController: UIViewController {
             return
         }
 
-        infoVC.modalTransitionStyle = .crossDissolve
         self.present(infoVC, animated: true, completion: nil)
     }
 }

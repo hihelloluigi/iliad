@@ -10,7 +10,8 @@ import UIKit
 import BmoViewPager
 
 protocol PagerDelegate: NSObjectProtocol {
-    func changePage(_ number: Int, testVC: UIViewController?)
+    func changePage(_ number: Int, viewController: ConsumptionViewController?)
+    func reloadData(_ number: Int, viewController: ConsumptionViewController?)
 }
 
 class PagerViewController: UIViewController {
@@ -56,11 +57,13 @@ extension PagerViewController: BmoViewPagerDataSource {
             guard let consumptionVC = "Consumption" <%> "ConsumptionViewController" as? ConsumptionViewController else {
                 return UIViewController()
             }
+            consumptionVC.delegate = self
             return consumptionVC
         case 1:
             guard let consumptionVC = "Consumption" <%> "ConsumptionViewController" as? ConsumptionViewController else {
                 return UIViewController()
             }
+            consumptionVC.delegate = self
             return consumptionVC
         default:
             return UIViewController()
@@ -68,9 +71,17 @@ extension PagerViewController: BmoViewPagerDataSource {
     }
 }
 
+// Mark - Pager Delegate
 extension PagerViewController: BmoViewPagerDelegate {
     func bmoViewPagerDelegate(_ viewPager: BmoViewPager, pageChanged page: Int) {
-        delegate?.changePage(page, testVC: viewPager.getReferencePageViewController(at: page))
+        delegate?.changePage(page, viewController: viewPager.getReferencePageViewController(at: page) as? ConsumptionViewController)
         pageControl.currentPage = page
+    }
+}
+
+// Mark - Consumption Delegate
+extension PagerViewController: ConsumptionDelegate {
+    func reloadData() {
+        delegate?.reloadData(viewPager.pageControlIndex, viewController: viewPager.getReferencePageViewController(at: viewPager.pageControlIndex) as? ConsumptionViewController)
     }
 }

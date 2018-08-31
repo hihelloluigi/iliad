@@ -86,10 +86,10 @@ class HomeViewController: UIViewController {
         nameLabel.text = nil
         titleDescriptionLabel.text = nil
         countryLabel.text = nil
-        creditLabel.text = nil
-        creditTitleLabel.text = nil
-        renewalLabel.text = nil
-        renewalTitleLabel.text = nil
+        creditLabel.text = "--"
+        creditTitleLabel.text = "Home" ~> "CREDIT"
+        renewalLabel.text = "--"
+        renewalTitleLabel.text = "Home" ~> "NEXT_RENEWAL"
     }
 
     // Mark - Helpers
@@ -102,7 +102,6 @@ class HomeViewController: UIViewController {
         if let credit = creditRenewal?[0] {
             user.credit = credit
             creditLabel.text = credit
-            creditTitleLabel.text = "Home" ~> "CREDIT"
         }
 
         if let stringDate = creditRenewal?[1], let renewal = Date.from(string: stringDate, withFormat: "dd/MM/yyyy") {
@@ -110,14 +109,25 @@ class HomeViewController: UIViewController {
 
             if let day = Date.differentBetweenDate(first: Date(), second: renewal, components: [.day]).day {
                 renewalLabel.text = "\(day)"
-                renewalTitleLabel.text = "Home" ~> "NEXT_RENEWAL"
             }
         }
     }
+    private func reloadConsumptionVC(_ viewController: ConsumptionViewController?, consumption: Consumption?) {
+        guard
+            let viewController = viewController,
+            let consumption = consumption
+        else {
+            return
+        }
+
+        viewController.finishLoad()
+        viewController.configurionData(consumption: consumption)
+    }
 
     // Mark - APIs
-    private func getNationalConsumption(viewController: UIViewController?) {
-        guard let viewController = viewController as? ConsumptionViewController else { return }
+    private func getNationalConsumption(viewController: ConsumptionViewController?) {
+        guard let viewController = viewController else { return }
+
         viewController.load()
         self.countryLabel.text = "ITALIA"
 
@@ -127,12 +137,12 @@ class HomeViewController: UIViewController {
             }
             self.nationlConsumption = Consumption(json: json["iliad"])
             self.retriveUserInformation(json: json)
-            viewController.finishLoad()
-            viewController.configurionData(consumption: self.nationlConsumption)
+            self.reloadConsumptionVC(viewController, consumption: self.nationlConsumption)
         }
     }
-    private func getAbroadConsumption(viewController: UIViewController?) {
-        guard let viewController = viewController as? ConsumptionViewController else { return }
+    private func getAbroadConsumption(viewController: ConsumptionViewController?) {
+        guard let viewController = viewController else { return }
+
         viewController.load()
         self.countryLabel.text = "EUROPA"
 
@@ -141,8 +151,7 @@ class HomeViewController: UIViewController {
                 return
             }
             self.abroadConsumption = Consumption(json: json["iliad"])
-            viewController.finishLoad()
-            viewController.configurionData(consumption: self.abroadConsumption)
+            self.reloadConsumptionVC(viewController, consumption: self.abroadConsumption)
         }
     }
 
@@ -159,12 +168,31 @@ class HomeViewController: UIViewController {
 
 // Mark - APIs
 extension HomeViewController: PagerDelegate {
-    func changePage(_ number: Int, testVC: UIViewController?) {
+    func changePage(_ number: Int, viewController: ConsumptionViewController?) {
         switch number {
         case 0:
-            getNationalConsumption(viewController: testVC)
+            if let nationlConsumption = nationlConsumption {
+                reloadConsumptionVC(viewController, consumption: nationlConsumption)
+            } else {
+                getNationalConsumption(viewController: viewController)
+            }
         case 1:
-            getAbroadConsumption(viewController: testVC)
+            if let abroadConsumption = abroadConsumption {
+                reloadConsumptionVC(viewController, consumption: abroadConsumption)
+            } else {
+                getAbroadConsumption(viewController: viewController)
+            }
+        default:
+            print("Nessuna pagina")
+        }
+    }
+
+    func reloadData(_ number: Int, viewController: ConsumptionViewController?) {
+        switch number {
+        case 0:
+            getNationalConsumption(viewController: viewController)
+        case 1:
+            getAbroadConsumption(viewController: viewController)
         default:
             print("Nessuna pagina")
         }
