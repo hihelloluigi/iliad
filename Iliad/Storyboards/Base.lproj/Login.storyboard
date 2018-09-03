@@ -254,8 +254,35 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OyA-6r-Ewp">
-                                <rect key="frame" x="32" y="72" width="256" height="332"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1H8-jm-MzL">
+                                <rect key="frame" x="32" y="486" width="256" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4b2-Sa-G57" customClass="TransitionButton" customModule="TransitionButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="50"/>
+                                        <color key="backgroundColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="dy2-SB-ZR3"/>
+                                        </constraints>
+                                        <state key="normal" title="DICHIARO DI AVER LETTO">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="spinnerColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="readPolicyDidTap:" destination="Fsp-cN-h5v" eventType="touchUpInside" id="XZo-bp-PME"/>
+                                            <action selector="recoverDidTap:" destination="FZs-wB-4YF" eventType="touchUpInside" id="bjX-ek-gqj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OyA-6r-Ewp">
+                                <rect key="frame" x="32" y="72" width="256" height="350"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attenzione" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.59999999999999998" translatesAutoresizingMaskIntoConstraints="NO" id="BjH-Gi-yb4">
                                         <rect key="frame" x="0.0" y="0.0" width="256" height="33.5"/>
@@ -263,70 +290,69 @@
                                         <color key="textColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V2H-Xn-z0Z">
-                                        <rect key="frame" x="0.0" y="49.5" width="256" height="282.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2H-Xn-z0Z">
+                                        <rect key="frame" x="0.0" y="41.5" width="256" height="250.5"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </string>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ygu-fF-GhD">
-                                <rect key="frame" x="32" y="436" width="256" height="116"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K5w-81-wYe" customClass="CustomButton" customModule="IliadDev" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="256" height="50"/>
-                                        <color key="backgroundColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="hOU-7M-SPd"/>
-                                        </constraints>
-                                        <state key="normal" title="CODICE APPLICAZIONE">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="appCodeDidTap:" destination="Fsp-cN-h5v" eventType="touchUpInside" id="JM2-1r-xJ4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dN-fP-Cvt" customClass="CustomButton" customModule="IliadDev" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="66" width="256" height="50"/>
-                                        <color key="backgroundColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="A9j-YR-w1x"/>
-                                        </constraints>
-                                        <state key="normal" title="CODICE SERVIZI">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="apiCodeDidTap:" destination="Fsp-cN-h5v" eventType="touchUpInside" id="nkf-vB-8HN"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ygu-fF-GhD">
+                                        <rect key="frame" x="0.0" y="300" width="256" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="K5w-81-wYe" customClass="CustomButton" customModule="IliadDev" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
+                                                <color key="backgroundColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="hOU-7M-SPd"/>
+                                                </constraints>
+                                                <state key="normal" title="APP">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="appCodeDidTap:" destination="Fsp-cN-h5v" eventType="touchUpInside" id="JM2-1r-xJ4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dN-fP-Cvt" customClass="CustomButton" customModule="IliadDev" customModuleProvider="target">
+                                                <rect key="frame" x="136" y="0.0" width="120" height="50"/>
+                                                <color key="backgroundColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="A9j-YR-w1x"/>
+                                                </constraints>
+                                                <state key="normal" title="SERVIZI">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="apiCodeDidTap:" destination="Fsp-cN-h5v" eventType="touchUpInside" id="nkf-vB-8HN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="pPL-au-SFW" secondAttribute="trailing" id="7wQ-Rb-j3C"/>
-                            <constraint firstItem="OyA-6r-Ewp" firstAttribute="top" secondItem="pPL-au-SFW" secondAttribute="bottom" constant="8" id="FDe-e5-71h"/>
                             <constraint firstItem="pPL-au-SFW" firstAttribute="top" secondItem="VnS-Om-pRN" secondAttribute="top" id="Fal-tj-ehu"/>
+                            <constraint firstItem="1H8-jm-MzL" firstAttribute="leading" secondItem="VnS-Om-pRN" secondAttribute="leading" constant="32" id="H3t-7y-SqP"/>
                             <constraint firstItem="OyA-6r-Ewp" firstAttribute="leading" secondItem="VnS-Om-pRN" secondAttribute="leading" constant="32" id="R0Y-tU-O51"/>
                             <constraint firstItem="pPL-au-SFW" firstAttribute="leading" secondItem="VnS-Om-pRN" secondAttribute="leading" id="TJK-2u-MD8"/>
-                            <constraint firstItem="Ygu-fF-GhD" firstAttribute="leading" secondItem="VnS-Om-pRN" secondAttribute="leading" constant="32" id="UwG-x0-JXa"/>
-                            <constraint firstItem="Ygu-fF-GhD" firstAttribute="top" secondItem="OyA-6r-Ewp" secondAttribute="bottom" constant="32" id="nnU-ib-hMa"/>
+                            <constraint firstItem="OyA-6r-Ewp" firstAttribute="top" secondItem="pPL-au-SFW" secondAttribute="bottom" constant="8" id="chc-Nk-ycV"/>
+                            <constraint firstItem="1H8-jm-MzL" firstAttribute="top" secondItem="OyA-6r-Ewp" secondAttribute="bottom" constant="64" id="lpP-gI-naj"/>
                             <constraint firstItem="VnS-Om-pRN" firstAttribute="trailing" secondItem="OyA-6r-Ewp" secondAttribute="trailing" constant="32" id="pgy-md-vrB"/>
-                            <constraint firstItem="VnS-Om-pRN" firstAttribute="bottom" secondItem="Ygu-fF-GhD" secondAttribute="bottom" constant="16" id="t8L-Bn-HcT"/>
-                            <constraint firstItem="VnS-Om-pRN" firstAttribute="trailing" secondItem="Ygu-fF-GhD" secondAttribute="trailing" constant="32" id="uAi-Q9-WO7"/>
+                            <constraint firstItem="VnS-Om-pRN" firstAttribute="bottom" secondItem="1H8-jm-MzL" secondAttribute="bottom" constant="32" id="ppV-ve-v4Z"/>
+                            <constraint firstItem="VnS-Om-pRN" firstAttribute="trailing" secondItem="1H8-jm-MzL" secondAttribute="trailing" constant="32" id="yya-G9-gZG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VnS-Om-pRN"/>
                     </view>
@@ -336,12 +362,13 @@
                         <outlet property="backBarButton" destination="PSv-VR-9hw" id="URi-ik-tR5"/>
                         <outlet property="customNavigationBar" destination="pPL-au-SFW" id="tex-9x-TWC"/>
                         <outlet property="descriptionTextView" destination="V2H-Xn-z0Z" id="g0U-Of-UCd"/>
+                        <outlet property="readPolicyButton" destination="4b2-Sa-G57" id="kaD-U2-4cv"/>
                         <outlet property="titleLabel" destination="BjH-Gi-yb4" id="2aj-zt-HJ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GmB-Yk-7qK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5426" y="3"/>
+            <point key="canvasLocation" x="5424.375" y="2.112676056338028"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Fml-gj-TMa">
