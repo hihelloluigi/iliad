@@ -83,7 +83,15 @@ class SettingsViewController: UITableViewController {
         guard let mySwitch = sender as? UISwitch else {
             return
         }
-        Defaults[.loginWithBiometric] = mySwitch.isOn
+
+        if mySwitch.isOn {
+            iOSAuthenticator.authenticateWithBiometricsAndPasscode(reason: "Accedi alla tua area personale", success: {
+                Defaults[.loginWithBiometric] = mySwitch.isOn
+            }, failure: { (error) in
+                print(error)
+                mySwitch.isOn = false
+            })
+        }
     }
 }
 

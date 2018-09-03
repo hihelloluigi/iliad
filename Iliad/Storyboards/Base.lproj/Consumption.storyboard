@@ -489,7 +489,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Dettaglio consumo" id="HDO-OB-FX9">
-                                        <barButtonItem key="leftBarButtonItem" title="Annulla" id="S2F-KT-PP7">
+                                        <barButtonItem key="leftBarButtonItem" title="Indietro" id="S2F-KT-PP7">
                                             <connections>
                                                 <action selector="cancelDidTap:" destination="HxI-LG-bdV" id="N18-Wf-sSq"/>
                                             </connections>

@@ -42,6 +42,7 @@ class LoginViewController: UIViewController {
     // Mark - Variables
     var showPasswordButton: UIButton?
     let notification = UINotificationFeedbackGenerator()
+    let userDefaults = UserDefaults(suiteName: "group.com.luigiaiello.consumptionWidget")
 
     // Mark - Override
     override func viewDidLoad() {
@@ -66,7 +67,10 @@ class LoginViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        cheackIfUserReadPolicy()
+
+        #if !DEV
+            cheackIfUserReadPolicy()
+        #endif
     }
 
     // Mark - Segue
@@ -79,6 +83,8 @@ class LoginViewController: UIViewController {
         else {
             return
         }
+
+        Utility.setUserDefaults(userDefaults: userDefaults, values: ["kLoginSuccessful": true])
 
         homeVC.user = user
         profileVC.user = user
@@ -102,7 +108,7 @@ class LoginViewController: UIViewController {
 
         #if DEV
             autoFill()
-            autoLogin()
+//            autoLogin()
         #endif
     }
 

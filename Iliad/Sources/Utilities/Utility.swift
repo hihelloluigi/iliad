@@ -39,4 +39,10 @@ class Utility {
         let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: testStr)
     }
+
+    static func setUserDefaults(userDefaults: UserDefaults?, values: [String: Any?]) {
+        for value in values {
+            userDefaults?.setValue(value.value, forKey: value.key)
+        }
+    }
 }

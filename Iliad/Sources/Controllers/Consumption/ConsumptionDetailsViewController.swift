@@ -27,6 +27,7 @@ class ConsumptionDetailsViewController: UIViewController {
 
         setup()
         setupTableView()
+        configurationText()
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,6 +44,9 @@ class ConsumptionDetailsViewController: UIViewController {
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    private func configurationText() {
+        cancelBarButton.title = "Commons" ~> "BACK"
     }
 
     // Mark - Helpers
