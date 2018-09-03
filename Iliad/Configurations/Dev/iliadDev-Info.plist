@@ -50,5 +50,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>com.apple.security.application-groups</key>
+	<array>
+		<string>group.com.luigiaiello.consumptionWidget</string>
+	</array>
 </dict>
 </plist>
