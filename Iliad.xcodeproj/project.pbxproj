@@ -92,6 +92,11 @@
 		2A23D956213844F10086AE79 /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23D955213844F10086AE79 /* RowCell.swift */; };
 		2A23D957213844F10086AE79 /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23D955213844F10086AE79 /* RowCell.swift */; };
 		2A23D958213844F10086AE79 /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23D955213844F10086AE79 /* RowCell.swift */; };
+		2A32F504213D7FC50020D0D3 /* Extension.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A32F503213D7FC40020D0D3 /* Extension.strings */; };
+		2A32F507213D80A50020D0D3 /* ConsumptionWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2AF84B2F213D6C6500026AE3 /* ConsumptionWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2A32F50B213D80B40020D0D3 /* String+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193004211B1AD6007C1E5A /* String+XT.swift */; };
+		2A32F50C213D849D0020D0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A80F314211AEF22008D8C89 /* Assets.xcassets */; };
+		2A32F50D213D87B30020D0D3 /* UIColor+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */; };
 		2A47620B211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
 		2A47620C211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
 		2A47620D211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
@@ -223,13 +228,12 @@
 		2AE214C3212705D800BB2F1C /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214C2212705D800BB2F1C /* Credentials.swift */; };
 		2AE214C4212705D800BB2F1C /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214C2212705D800BB2F1C /* Credentials.swift */; };
 		2AE214C5212705D800BB2F1C /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214C2212705D800BB2F1C /* Credentials.swift */; };
+		2AF00304213D9115001507C1 /* ConsumptionWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2AF84B2F213D6C6500026AE3 /* ConsumptionWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AF84B28213D675A00026AE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AF84B27213D675A00026AE3 /* GoogleService-Info.plist */; };
 		2AF84B30213D6C6500026AE3 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ADADDA5213D5F2D00FD7A54 /* NotificationCenter.framework */; };
 		2AF84B33213D6C6500026AE3 /* ConsumptionWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF84B32213D6C6500026AE3 /* ConsumptionWidgetViewController.swift */; };
 		2AF84B36213D6C6500026AE3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF84B34213D6C6500026AE3 /* MainInterface.storyboard */; };
-		2AF84B3A213D6C6500026AE3 /* ConsumptionWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2AF84B2F213D6C6500026AE3 /* ConsumptionWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2AF84B43213D6E3E00026AE3 /* ConsumptionWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2AF84B2F213D6C6500026AE3 /* ConsumptionWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2AF84B46213D6E4300026AE3 /* ConsumptionWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2AF84B2F213D6C6500026AE3 /* ConsumptionWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2AF84B4F213D7EC900026AE3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23263F211C892F0045FBD7 /* CustomButton.swift */; };
 		2AF92DCF211C2DD00058CFD2 /* API+RecoverPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DCE211C2DD00058CFD2 /* API+RecoverPassword.swift */; };
 		2AF92DD2211C32500058CFD2 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */; };
 		2AF92DD3211C32530058CFD2 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */; };
@@ -245,21 +249,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2AF84B38213D6C6500026AE3 /* PBXContainerItemProxy */ = {
+		2A32F508213D80A50020D0D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2A80F302211AEF21008D8C89 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2AF84B2E213D6C6500026AE3;
 			remoteInfo = ConsumptionWidget;
 		};
-		2AF84B44213D6E3E00026AE3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A80F302211AEF21008D8C89 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2AF84B2E213D6C6500026AE3;
-			remoteInfo = ConsumptionWidget;
-		};
-		2AF84B47213D6E4300026AE3 /* PBXContainerItemProxy */ = {
+		2AF00305213D9115001507C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2A80F302211AEF21008D8C89 /* Project object */;
 			proxyType = 1;
@@ -269,35 +266,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2ADADDB4213D5F2D00FD7A54 /* Embed App Extensions */ = {
+		2A32F50A213D80A50020D0D3 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2AF84B43213D6E3E00026AE3 /* ConsumptionWidget.appex in Embed App Extensions */,
+				2A32F507213D80A50020D0D3 /* ConsumptionWidget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2AF84B3E213D6C6500026AE3 /* Embed App Extensions */ = {
+		2AF00307213D9115001507C1 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2AF84B3A213D6C6500026AE3 /* ConsumptionWidget.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2AF84B49213D6E4300026AE3 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				2AF84B46213D6E4300026AE3 /* ConsumptionWidget.appex in Embed App Extensions */,
+				2AF00304213D9115001507C1 /* ConsumptionWidget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +324,7 @@
 		2A232690211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTouchDownGestureRecognizer.swift; sourceTree = "<group>"; };
 		2A23D95121383E380086AE79 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		2A23D955213844F10086AE79 /* RowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCell.swift; sourceTree = "<group>"; };
+		2A32F503213D7FC40020D0D3 /* Extension.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Extension.strings; sourceTree = "<group>"; };
 		2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+XT.swift"; sourceTree = "<group>"; };
 		2A63F9072125C117009D515C /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		2A63F90B2125C122009D515C /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
@@ -462,8 +449,8 @@
 		2A192F95211AFCE3007C1E5A /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2A922DE921286FCC003B1731 /* CustomActivityIndicator.swift */,
 				2A23263F211C892F0045FBD7 /* CustomButton.swift */,
+				2A922DE921286FCC003B1731 /* CustomActivityIndicator.swift */,
 				2A193024211B362E007C1E5A /* CardView.swift */,
 				2A232690211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift */,
 			);
@@ -592,6 +579,22 @@
 				2A6606642137490200C96102 /* ConsumptionDetailsViewController.swift */,
 			);
 			path = Consumption;
+			sourceTree = "<group>";
+		};
+		2A32F501213D7FA90020D0D3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2A32F502213D7FB10020D0D3 /* Translations */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2A32F502213D7FB10020D0D3 /* Translations */ = {
+			isa = PBXGroup;
+			children = (
+				2A32F503213D7FC40020D0D3 /* Extension.strings */,
+			);
+			path = Translations;
 			sourceTree = "<group>";
 		};
 		2A63F9132125C8ED009D515C /* Profile */ = {
@@ -777,6 +780,7 @@
 				2AF84B42213D6C8400026AE3 /* Configurations */,
 				2AF84B40213D6C7600026AE3 /* Sources */,
 				2AF84B3F213D6C6E00026AE3 /* Storyboard */,
+				2A32F501213D7FA90020D0D3 /* Resources */,
 			);
 			path = ConsumptionWidget;
 			sourceTree = "<group>";
@@ -861,12 +865,10 @@
 				2A192FCE211B12BD007C1E5A /* Frameworks */,
 				2A192FD0211B12BD007C1E5A /* Resources */,
 				CA97CC957028D79B7596449D /* [CP] Embed Pods Frameworks */,
-				2AF84B49213D6E4300026AE3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2AF84B48213D6E4300026AE3 /* PBXTargetDependency */,
 			);
 			name = IliadStaging;
 			productName = Iliad;
@@ -883,12 +885,12 @@
 				2A192FEF211B12C0007C1E5A /* Resources */,
 				2A193023211B2D98007C1E5A /* Swiftlint */,
 				D46CDEB3DF27D8BEF617F2E5 /* [CP] Embed Pods Frameworks */,
-				2AF84B3E213D6C6500026AE3 /* Embed App Extensions */,
+				2A32F50A213D80A50020D0D3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2AF84B39213D6C6500026AE3 /* PBXTargetDependency */,
+				2A32F509213D80A50020D0D3 /* PBXTargetDependency */,
 			);
 			name = IliadDev;
 			productName = Iliad;
@@ -904,12 +906,12 @@
 				2A80F307211AEF21008D8C89 /* Frameworks */,
 				2A80F308211AEF21008D8C89 /* Resources */,
 				31B99667BB9DB2078BB8D943 /* [CP] Embed Pods Frameworks */,
-				2ADADDB4213D5F2D00FD7A54 /* Embed App Extensions */,
+				2AF00307213D9115001507C1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2AF84B45213D6E3E00026AE3 /* PBXTargetDependency */,
+				2AF00306213D9115001507C1 /* PBXTargetDependency */,
 			);
 			name = IliadProd;
 			productName = Iliad;
@@ -1080,6 +1082,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A32F504213D7FC50020D0D3 /* Extension.strings in Resources */,
+				2A32F50C213D849D0020D0D3 /* Assets.xcassets in Resources */,
 				2AF84B36213D6C6500026AE3 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1519,27 +1523,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AF84B4F213D7EC900026AE3 /* CustomButton.swift in Sources */,
+				2A32F50B213D80B40020D0D3 /* String+XT.swift in Sources */,
 				2AF84B33213D6C6500026AE3 /* ConsumptionWidgetViewController.swift in Sources */,
+				2A32F50D213D87B30020D0D3 /* UIColor+XT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2AF84B39213D6C6500026AE3 /* PBXTargetDependency */ = {
+		2A32F509213D80A50020D0D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2AF84B2E213D6C6500026AE3 /* ConsumptionWidget */;
-			targetProxy = 2AF84B38213D6C6500026AE3 /* PBXContainerItemProxy */;
+			targetProxy = 2A32F508213D80A50020D0D3 /* PBXContainerItemProxy */;
 		};
-		2AF84B45213D6E3E00026AE3 /* PBXTargetDependency */ = {
+		2AF00306213D9115001507C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2AF84B2E213D6C6500026AE3 /* ConsumptionWidget */;
-			targetProxy = 2AF84B44213D6E3E00026AE3 /* PBXContainerItemProxy */;
-		};
-		2AF84B48213D6E4300026AE3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2AF84B2E213D6C6500026AE3 /* ConsumptionWidget */;
-			targetProxy = 2AF84B47213D6E4300026AE3 /* PBXContainerItemProxy */;
+			targetProxy = 2AF00305213D9115001507C1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1615,7 +1617,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2FF08424C2EC9A18AEE8E6F2 /* Pods-Abstract Target-IliadStaging.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Staging/IliadStaging.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -1637,7 +1638,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F74579818C2C7F36B5D468AB /* Pods-Abstract Target-IliadStaging.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Staging/IliadStaging.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -1871,7 +1871,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleDev.ConsumptionWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale.ConsumptionWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -1891,7 +1891,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleDev.ConsumptionWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale.ConsumptionWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
