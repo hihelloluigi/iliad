@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.1] - Build 7 - 2018-09-033
+### Added
+- Consumption extension
+- Autologin alert
+
+### Fixed
+- Fix cancel to back
+- Fix Biometric login and auto login
+
 ## [1.0.0] - Build 6 - 2018-08-31
 ### Added
 - Policy view
