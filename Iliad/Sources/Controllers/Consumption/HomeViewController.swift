@@ -9,6 +9,8 @@
 import UIKit
 import SwiftyJSON
 import TransitionButton
+import SwiftyUserDefaults
+import iOSAuthenticator
 
 class HomeViewController: UIViewController {
 
@@ -39,11 +41,13 @@ class HomeViewController: UIViewController {
     var nationlConsumption: Consumption?
     var abroadConsumption: Consumption?
     var pagerVC: PagerViewController?
+    let userDefaults = UserDefaults(suiteName: "group.com.luigiaiello.consumptionWidget")
 
     // Mark - Override
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setup()
         reset()
         configurationUI()
     }
@@ -69,6 +73,12 @@ class HomeViewController: UIViewController {
     }
 
     // Mark - Setup
+    private func setup() {
+        if !Defaults[.showSimpleLogin] {
+            showSimpleLoginAlert()
+        }
+    }
+
     private func configurationUI() {
         guard
             let user = user,
@@ -93,6 +103,28 @@ class HomeViewController: UIViewController {
     }
 
     // Mark - Helpers
+    private func showSimpleLoginAlert() {
+        Defaults[.showSimpleLogin] = true
+        let alert = UIAlertController(title: "Home" ~> "SIMPLE_LOGIN_TITLE", message: "Home" ~> "SIMPLE_LOGIN_MESSAGE", preferredStyle: .alert)
+        alert.view.tintColor = .iliadRed
+        let autoLoginAction = UIAlertAction(title: "Home" ~> "AUTOLOGIN_ACTIVE_BUTTON", style: .default) { (_) in
+            Defaults[.autoLogin] = true
+        }
+        let biometricLoginAction = UIAlertAction(title: "\("Home" ~> "BIOMETRIC_ACTIVE_BUTTON") \(iOSAuthenticator.biometricType())", style: .default) { (_) in
+            iOSAuthenticator.authenticateWithBiometricsAndPasscode(reason: "Accedi alla tua area personale", success: {
+                Defaults[.loginWithBiometric] = true
+            }, failure: { (error) in
+                print(error)
+            })
+        }
+        let cancelAction = UIAlertAction(title: "Commons" ~> "CANCEL", style: .cancel, handler: nil)
+
+        alert.addAction(autoLoginAction)
+        alert.addAction(biometricLoginAction)
+        alert.addAction(cancelAction)
+
+        self.present(alert, animated: true, completion: nil)
+    }
     private func retriveUserInformation(json: JSON) {
         guard let user = user else {
             return
@@ -134,7 +166,9 @@ class HomeViewController: UIViewController {
             guard let json = json else {
                 return
             }
-            self.nationlConsumption = Consumption(json: json["iliad"])
+            let consumption = Consumption(json: json["iliad"])
+            self.nationlConsumption = consumption
+            Utility.setUserDefaults(userDefaults: self.userDefaults, values: ["kCalls": consumption.calls, "kSMS": consumption.sms, "kMMS": consumption.mms, "kData": consumption.data])
             self.retriveUserInformation(json: json)
             self.reloadConsumptionVC(viewController, consumption: self.nationlConsumption)
         }
