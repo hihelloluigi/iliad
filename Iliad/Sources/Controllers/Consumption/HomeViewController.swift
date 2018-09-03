@@ -74,7 +74,7 @@ class HomeViewController: UIViewController {
 
     // Mark - Setup
     private func setup() {
-        if !Defaults[.showSimpleLogin] {
+        if !Defaults[.showSimpleLogin] && !Defaults[.autoLogin] && !Defaults[.loginWithBiometric] {
             showSimpleLoginAlert()
         }
     }
