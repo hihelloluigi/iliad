@@ -93,7 +93,6 @@
 		2A23D957213844F10086AE79 /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23D955213844F10086AE79 /* RowCell.swift */; };
 		2A23D958213844F10086AE79 /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23D955213844F10086AE79 /* RowCell.swift */; };
 		2A32F504213D7FC50020D0D3 /* Extension.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A32F503213D7FC40020D0D3 /* Extension.strings */; };
-		2A32F507213D80A50020D0D3 /* ConsumptionWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2AF84B2F213D6C6500026AE3 /* ConsumptionWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2A32F50B213D80B40020D0D3 /* String+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193004211B1AD6007C1E5A /* String+XT.swift */; };
 		2A32F50C213D849D0020D0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A80F314211AEF22008D8C89 /* Assets.xcassets */; };
 		2A32F50D213D87B30020D0D3 /* UIColor+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */; };
@@ -228,7 +227,7 @@
 		2AE214C3212705D800BB2F1C /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214C2212705D800BB2F1C /* Credentials.swift */; };
 		2AE214C4212705D800BB2F1C /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214C2212705D800BB2F1C /* Credentials.swift */; };
 		2AE214C5212705D800BB2F1C /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214C2212705D800BB2F1C /* Credentials.swift */; };
-		2AF00304213D9115001507C1 /* ConsumptionWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2AF84B2F213D6C6500026AE3 /* ConsumptionWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2AF00314213DC30C001507C1 /* ConsumptionWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2AF84B2F213D6C6500026AE3 /* ConsumptionWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2AF84B30213D6C6500026AE3 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ADADDA5213D5F2D00FD7A54 /* NotificationCenter.framework */; };
 		2AF84B33213D6C6500026AE3 /* ConsumptionWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF84B32213D6C6500026AE3 /* ConsumptionWidgetViewController.swift */; };
 		2AF84B36213D6C6500026AE3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF84B34213D6C6500026AE3 /* MainInterface.storyboard */; };
@@ -248,14 +247,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2A32F508213D80A50020D0D3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2A80F302211AEF21008D8C89 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2AF84B2E213D6C6500026AE3;
-			remoteInfo = ConsumptionWidget;
-		};
-		2AF00305213D9115001507C1 /* PBXContainerItemProxy */ = {
+		2AF00315213DC30C001507C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2A80F302211AEF21008D8C89 /* Project object */;
 			proxyType = 1;
@@ -265,24 +257,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2A32F50A213D80A50020D0D3 /* Embed App Extensions */ = {
+		2AF00317213DC30C001507C1 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				2A32F507213D80A50020D0D3 /* ConsumptionWidget.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2AF00307213D9115001507C1 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				2AF00304213D9115001507C1 /* ConsumptionWidget.appex in Embed App Extensions */,
+				2AF00314213DC30C001507C1 /* ConsumptionWidget.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -882,12 +863,10 @@
 				2A192FEF211B12C0007C1E5A /* Resources */,
 				2A193023211B2D98007C1E5A /* Swiftlint */,
 				D46CDEB3DF27D8BEF617F2E5 /* [CP] Embed Pods Frameworks */,
-				2A32F50A213D80A50020D0D3 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2A32F509213D80A50020D0D3 /* PBXTargetDependency */,
 			);
 			name = IliadDev;
 			productName = Iliad;
@@ -903,12 +882,12 @@
 				2A80F307211AEF21008D8C89 /* Frameworks */,
 				2A80F308211AEF21008D8C89 /* Resources */,
 				31B99667BB9DB2078BB8D943 /* [CP] Embed Pods Frameworks */,
-				2AF00307213D9115001507C1 /* Embed App Extensions */,
+				2AF00317213DC30C001507C1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2AF00306213D9115001507C1 /* PBXTargetDependency */,
+				2AF00316213DC30C001507C1 /* PBXTargetDependency */,
 			);
 			name = IliadProd;
 			productName = Iliad;
@@ -1529,15 +1508,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2A32F509213D80A50020D0D3 /* PBXTargetDependency */ = {
+		2AF00316213DC30C001507C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2AF84B2E213D6C6500026AE3 /* ConsumptionWidget */;
-			targetProxy = 2A32F508213D80A50020D0D3 /* PBXContainerItemProxy */;
-		};
-		2AF00306213D9115001507C1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2AF84B2E213D6C6500026AE3 /* ConsumptionWidget */;
-			targetProxy = 2AF00305213D9115001507C1 /* PBXContainerItemProxy */;
+			targetProxy = 2AF00315213DC30C001507C1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1655,7 +1629,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F7D6C6559BB064276CE6ECC1 /* Pods-Abstract Target-IliadDev.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Dev/IliadDev.entitlements";
 				CODE_SIGN_STYLE = Automatic;
@@ -1678,7 +1651,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 908DF9FC3DA5EA36B7A4F54B /* Pods-Abstract Target-IliadDev.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Dev/IliadDev.entitlements";
 				CODE_SIGN_STYLE = Automatic;
