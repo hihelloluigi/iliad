@@ -57,10 +57,16 @@ class LoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         self.scrollView.contentSize = self.fieldsStackView.frame.size
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        cheackIfUserReadPolicy()
     }
 
     // Mark - Segue
@@ -211,6 +217,18 @@ class LoginViewController: UIViewController {
         Config.store(password: passwordBase64)
 
         return passwordBase64
+    }
+
+    private func cheackIfUserReadPolicy() {
+        if !Defaults[.readPolicy] {
+            guard let infoVC = "Login" <%> "InfoViewController" as? InfoViewController else {
+                return
+            }
+
+            infoVC.showBackButton = false
+            
+            self.present(infoVC, animated: true, completion: nil)
+        }
     }
     
     // Mark - APIs

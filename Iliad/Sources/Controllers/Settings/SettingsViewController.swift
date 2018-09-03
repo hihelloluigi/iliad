@@ -23,7 +23,6 @@ class SettingsViewController: UITableViewController {
 
         // Image View
     @IBOutlet weak var beerImageView: UIImageView!
-    @IBOutlet weak var devImageView: UIImageView!
     @IBOutlet weak var alertImageView: UIImageView!
     @IBOutlet weak var telegramImageView: UIImageView!
     @IBOutlet weak var emailImageView: UIImageView!
@@ -62,7 +61,6 @@ class SettingsViewController: UITableViewController {
     private func configurationUI() {
         alertImageView.tintColor = .iliadRed
         beerImageView.tintColor = .iliadRed
-        devImageView.tintColor = .iliadRed
         telegramImageView.tintColor = .iliadRed
         emailImageView.tintColor = .iliadRed
 

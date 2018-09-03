@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
+import TransitionButton
 
 class InfoViewController: UIViewController {
 
@@ -24,8 +26,10 @@ class InfoViewController: UIViewController {
     @IBOutlet weak var backBarButton: UIBarButtonItem!
     @IBOutlet weak var appCodeButton: UIButton!
     @IBOutlet weak var apiCodeButton: UIButton!
+    @IBOutlet weak var readPolicyButton: TransitionButton!
 
     // Mark - Variables
+    var showBackButton: Bool = true
     let appCodeUrl = "https://github.com/mo3bius/iliad"
     let apiCodeUrl = "https://github.com/Fast0n/iliad"
 
@@ -35,6 +39,7 @@ class InfoViewController: UIViewController {
 
         configurationUI()
         configurationText()
+//        adjustUITextViewHeight(arg: descriptionTextView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +48,11 @@ class InfoViewController: UIViewController {
 
     // Mark - Setup
     private func configurationUI() {
+        readPolicyButton.isEnabled = !Defaults[.readPolicy]
+        readPolicyButton.backgroundColor = !Defaults[.readPolicy] ? .iliadRed : .lightGray
         customNavigationBar.shadowImage = UIImage()
+
+        Defaults[.readPolicy] ? backBarButton.show() : backBarButton.hidden()
     }
     private func configurationText() {
         titleLabel.text = "Info" ~> "TITLE"
@@ -53,14 +62,25 @@ class InfoViewController: UIViewController {
         apiCodeButton.setTitle("Info" ~> "API_CODE_BUTTON", for: .normal)
     }
 
-    // Mark - Actions
-    @IBAction func backDidTap(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    // Mark - Helpers
+    func adjustUITextViewHeight(arg : UITextView) {
+        arg.translatesAutoresizingMaskIntoConstraints = true
+        arg.sizeToFit()
+//        arg.isScrollEnabled = false
     }
+
+    // Mark - Actions
     @IBAction func appCodeDidTap(_ sender: Any) {
         Utility.link(url: appCodeUrl)
     }
     @IBAction func apiCodeDidTap(_ sender: Any) {
         Utility.link(url: apiCodeUrl)
+    }
+    @IBAction func backDidTap(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func readPolicyDidTap(_ sender: Any) {
+        Defaults[.readPolicy] = true
+        self.dismiss(animated: true, completion: nil)
     }
 }

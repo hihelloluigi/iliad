@@ -129,7 +129,6 @@ class HomeViewController: UIViewController {
         guard let viewController = viewController else { return }
 
         viewController.load()
-        self.countryLabel.text = "ITALIA"
 
         API.ConsumptionClass.getNationalConsumption { (json) in
             guard let json = json else {
@@ -144,7 +143,6 @@ class HomeViewController: UIViewController {
         guard let viewController = viewController else { return }
 
         viewController.load()
-        self.countryLabel.text = "EUROPA"
 
         API.ConsumptionClass.getAbroudConsumption { (json) in
             guard let json = json else {
@@ -171,12 +169,14 @@ extension HomeViewController: PagerDelegate {
     func changePage(_ number: Int, viewController: ConsumptionViewController?) {
         switch number {
         case 0:
+            self.countryLabel.text = "ITALIA"
             if let nationlConsumption = nationlConsumption {
                 reloadConsumptionVC(viewController, consumption: nationlConsumption)
             } else {
                 getNationalConsumption(viewController: viewController)
             }
         case 1:
+            self.countryLabel.text = "EUROPA"
             if let abroadConsumption = abroadConsumption {
                 reloadConsumptionVC(viewController, consumption: abroadConsumption)
             } else {
