@@ -206,6 +206,9 @@
 		2AAF69B12121DBFD005DECE5 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69B02121DBFD005DECE5 /* OptionCell.swift */; };
 		2AAF69B22121DD72005DECE5 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69B02121DBFD005DECE5 /* OptionCell.swift */; };
 		2AAF69B32121DD72005DECE5 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69B02121DBFD005DECE5 /* OptionCell.swift */; };
+		2AC5D7F4213ADC7A00DAECDC /* UIBarButtonItem+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5D7F3213ADC7A00DAECDC /* UIBarButtonItem+XT.swift */; };
+		2AC5D7F5213ADC7C00DAECDC /* UIBarButtonItem+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5D7F3213ADC7A00DAECDC /* UIBarButtonItem+XT.swift */; };
+		2AC5D7F6213ADC7C00DAECDC /* UIBarButtonItem+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5D7F3213ADC7A00DAECDC /* UIBarButtonItem+XT.swift */; };
 		2AE214B12126CB5000BB2F1C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214B02126CB5000BB2F1C /* SettingsViewController.swift */; };
 		2AE214B22126CB5000BB2F1C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214B02126CB5000BB2F1C /* SettingsViewController.swift */; };
 		2AE214B32126CB5000BB2F1C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214B02126CB5000BB2F1C /* SettingsViewController.swift */; };
@@ -311,6 +314,7 @@
 		2AAF69A42121CB2F005DECE5 /* Consumption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consumption.swift; sourceTree = "<group>"; };
 		2AAF69AC2121CE95005DECE5 /* Date+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+XT.swift"; sourceTree = "<group>"; };
 		2AAF69B02121DBFD005DECE5 /* OptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
+		2AC5D7F3213ADC7A00DAECDC /* UIBarButtonItem+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+XT.swift"; sourceTree = "<group>"; };
 		2AE214B02126CB5000BB2F1C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2AE214B52126CB7B00BB2F1C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		2AE214B92126D1AC00BB2F1C /* AutoLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginViewController.swift; sourceTree = "<group>"; };
@@ -464,6 +468,7 @@
 				2AAF69AC2121CE95005DECE5 /* Date+XT.swift */,
 				2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */,
 				2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */,
+				2AC5D7F3213ADC7A00DAECDC /* UIBarButtonItem+XT.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1150,6 +1155,7 @@
 				2A192FC4211B12BD007C1E5A /* AppDelegate.swift in Sources */,
 				2AE214C4212705D800BB2F1C /* Credentials.swift in Sources */,
 				2A66065D2136E64B00C96102 /* ConsumptionViewController.swift in Sources */,
+				2AC5D7F5213ADC7C00DAECDC /* UIBarButtonItem+XT.swift in Sources */,
 				2A19300F211B1C50007C1E5A /* User.swift in Sources */,
 				2A232692211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
 				2A192FC5211B12BD007C1E5A /* APIEndpoint.swift in Sources */,
@@ -1212,6 +1218,7 @@
 				2A193018211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */,
 				2AE214C5212705D800BB2F1C /* Credentials.swift in Sources */,
 				2A66065E2136E64B00C96102 /* ConsumptionViewController.swift in Sources */,
+				2AC5D7F6213ADC7C00DAECDC /* UIBarButtonItem+XT.swift in Sources */,
 				2A193027211B362E007C1E5A /* CardView.swift in Sources */,
 				2A19302B211B38D9007C1E5A /* BasicCell.swift in Sources */,
 				2A232693211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
@@ -1274,6 +1281,7 @@
 				2AF92DD8211C36A50058CFD2 /* UIColor+XT.swift in Sources */,
 				2AE214C3212705D800BB2F1C /* Credentials.swift in Sources */,
 				2A66065C2136E64B00C96102 /* ConsumptionViewController.swift in Sources */,
+				2AC5D7F4213ADC7A00DAECDC /* UIBarButtonItem+XT.swift in Sources */,
 				2A80F30E211AEF21008D8C89 /* AppDelegate.swift in Sources */,
 				2A232691211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
 				2A19300E211B1C50007C1E5A /* User.swift in Sources */,
@@ -1387,7 +1395,10 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Staging/iliadStaging-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleStaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1404,7 +1415,10 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Staging/iliadStaging-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleStaging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1421,8 +1435,11 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Dev/iliadDev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEV";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEV -Xfrontend -debug-time-function-bodies";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1439,8 +1456,11 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Dev/iliadDev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEV";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEV -Xfrontend -debug-time-function-bodies";
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleDev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -1571,11 +1591,14 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Prod/iliadProd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1588,11 +1611,14 @@
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Prod/iliadProd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
