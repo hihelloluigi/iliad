@@ -82,9 +82,9 @@ PODS:
   - Result (3.2.4)
   - Reveal-SDK (17)
   - SkyFloatingLabelTextField (3.5.2)
-  - SwiftMessages (5.0.0):
-    - SwiftMessages/App (= 5.0.0)
-  - SwiftMessages/App (5.0.0)
+  - SwiftMessages (5.0.1):
+    - SwiftMessages/App (= 5.0.1)
+  - SwiftMessages/App (5.0.1)
   - SwiftyJSON (4.1.0)
   - SwiftyUserDefaults (3.0.1)
   - TransitionButton (0.5.1)
@@ -166,7 +166,7 @@ SPEC CHECKSUMS:
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   Reveal-SDK: a6df49f47319bd19a110c960c498af32df72c0af
   SkyFloatingLabelTextField: f0672b67cd0e86abda946c0dc3b2fe8580767dbb
-  SwiftMessages: 342d312bf8d5ac11141285c8fec6308380df7f72
+  SwiftMessages: 32ce3cfc8388b41aae56ff4853cc752a20101147
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
   TransitionButton: 20f92b3cc726b047e4df200fdab5307f33395a81
