@@ -75,9 +75,21 @@ class ProfileViewController: UIViewController {
         for element in json {
             switch element.0 {
             case "0": // Address
-                self.rows.append(ProfileRow(order: 1, type: .row, firstValue: element.1["0"].string, secondValue: element.1["1"].string, thirdValue: element.1["2"].string, icon: #imageLiteral(resourceName: "ic_home"), editIcon: nil, handler: nil))
+                self.rows.append(ProfileRow(order: 1,
+                                            type: .row,
+                                            firstValue: element.1["0"].string,
+                                            secondValue: element.1["1"].string,
+                                            thirdValue: element.1["2"].string,
+                                            icon: #imageLiteral(resourceName: "ic_home"), editIcon: nil,
+                                            handler: nil))
             case "1": // Payment
-                self.rows.append(ProfileRow(order: 2, type: .row, firstValue: element.1["0"].string, secondValue: element.1["1"].string, thirdValue: element.1["2"].string, icon: #imageLiteral(resourceName: "ic_credit_card"), editIcon: nil, handler: nil))
+                self.rows.append(ProfileRow(order: 2,
+                                            type: .row,
+                                            firstValue: element.1["0"].string,
+                                            secondValue: element.1["1"].string,
+                                            thirdValue: element.1["2"].string,
+                                            icon: #imageLiteral(resourceName: "ic_credit_card"), editIcon: nil,
+                                            handler: nil))
             case "2": // Email
                 self.rows.append(ProfileRow(order: 3, type: .row, firstValue: element.1["0"].string, secondValue: element.1["1"].string, thirdValue: nil, icon: #imageLiteral(resourceName: "ic_email"), editIcon: #imageLiteral(resourceName: "ic_edit"), handler: {
                     guard let changeEmailVC = "Profile" <%> "ChangeEmailViewController" as? ChangeEmailViewController else {

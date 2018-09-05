@@ -83,7 +83,14 @@ class SettingsViewController: UITableViewController {
         guard let mySwitch = sender as? UISwitch else {
             return
         }
-        Defaults[.loginWithBiometric] = mySwitch.isOn
+
+        iOSAuthenticator.authenticateWithBiometricsAndPasscode(reason: "Accedi alla tua area personale", success: {
+            Defaults[.loginWithBiometric] = mySwitch.isOn
+        }, failure: { (error) in
+            print(error)
+            mySwitch.isOn = Defaults[.loginWithBiometric]
+            Utility.showAlert(title: "Settings" ~> "BIOMETRIC_LOGIN_ERROR_TITLE", message: "\("Settings" ~> "BIOMETRIC_LOGIN_ERROR_MESSAGE") \(mySwitch.isOn ? "Disattivare" : "Attivare") \(iOSAuthenticator.biometricType())")
+        })
     }
 }
 

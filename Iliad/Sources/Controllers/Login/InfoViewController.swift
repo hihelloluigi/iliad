@@ -39,7 +39,6 @@ class InfoViewController: UIViewController {
 
         configurationUI()
         configurationText()
-//        adjustUITextViewHeight(arg: descriptionTextView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,13 +59,6 @@ class InfoViewController: UIViewController {
         backBarButton.title = "Commons" ~> "BACK"
         appCodeButton.setTitle("Info" ~> "APP_CODE_BUTTON", for: .normal)
         apiCodeButton.setTitle("Info" ~> "API_CODE_BUTTON", for: .normal)
-    }
-
-    // Mark - Helpers
-    func adjustUITextViewHeight(arg : UITextView) {
-        arg.translatesAutoresizingMaskIntoConstraints = true
-        arg.sizeToFit()
-//        arg.isScrollEnabled = false
     }
 
     // Mark - Actions

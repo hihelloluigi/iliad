@@ -45,7 +45,7 @@ enum DefaultConfiguration: String {
     var urlString: String {
         switch self {
         case .development:
-            return "http://192.168.1.220:8082"
+            return "http://192.168.1.144:8082"
         case .staging:
             return "https://areapersonale.herokuapp.com"
         case .production:

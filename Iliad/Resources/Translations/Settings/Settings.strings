@@ -8,3 +8,5 @@
 
 "AUTO_LOGIN" = "Auto-login";
 "BIOMETRIC_LOGIN" = "Accedi con";
+"BIOMETRIC_LOGIN_ERROR_TITLE" = "Errore";
+"BIOMETRIC_LOGIN_ERROR_MESSAGE" = "Impossibile";

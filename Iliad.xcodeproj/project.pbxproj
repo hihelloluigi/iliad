@@ -92,6 +92,10 @@
 		2A23D956213844F10086AE79 /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23D955213844F10086AE79 /* RowCell.swift */; };
 		2A23D957213844F10086AE79 /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23D955213844F10086AE79 /* RowCell.swift */; };
 		2A23D958213844F10086AE79 /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23D955213844F10086AE79 /* RowCell.swift */; };
+		2A32F504213D7FC50020D0D3 /* Extension.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A32F503213D7FC40020D0D3 /* Extension.strings */; };
+		2A32F50B213D80B40020D0D3 /* String+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193004211B1AD6007C1E5A /* String+XT.swift */; };
+		2A32F50C213D849D0020D0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A80F314211AEF22008D8C89 /* Assets.xcassets */; };
+		2A32F50D213D87B30020D0D3 /* UIColor+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */; };
 		2A47620B211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
 		2A47620C211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
 		2A47620D211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
@@ -223,7 +227,11 @@
 		2AE214C3212705D800BB2F1C /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214C2212705D800BB2F1C /* Credentials.swift */; };
 		2AE214C4212705D800BB2F1C /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214C2212705D800BB2F1C /* Credentials.swift */; };
 		2AE214C5212705D800BB2F1C /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214C2212705D800BB2F1C /* Credentials.swift */; };
-		2AF6CD97213DF18500D18156 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AF6CD96213DF18500D18156 /* GoogleService-Info.plist */; };
+		2AF00314213DC30C001507C1 /* ConsumptionWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2AF84B2F213D6C6500026AE3 /* ConsumptionWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2AF84B30213D6C6500026AE3 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ADADDA5213D5F2D00FD7A54 /* NotificationCenter.framework */; };
+		2AF84B33213D6C6500026AE3 /* ConsumptionWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF84B32213D6C6500026AE3 /* ConsumptionWidgetViewController.swift */; };
+		2AF84B36213D6C6500026AE3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AF84B34213D6C6500026AE3 /* MainInterface.storyboard */; };
+		2AF84B4F213D7EC900026AE3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23263F211C892F0045FBD7 /* CustomButton.swift */; };
 		2AF92DCF211C2DD00058CFD2 /* API+RecoverPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DCE211C2DD00058CFD2 /* API+RecoverPassword.swift */; };
 		2AF92DD2211C32500058CFD2 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */; };
 		2AF92DD3211C32530058CFD2 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */; };
@@ -237,6 +245,30 @@
 		C6DF32393F8788875A24A7C2 /* Pods_Abstract_Target_IliadStaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC644D73C304814C492214A8 /* Pods_Abstract_Target_IliadStaging.framework */; };
 		CFDD73AC1A4BF5E2BE3B2204 /* Pods_Abstract_Target_IliadDev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CD4109D8897C9AFCA8D71E /* Pods_Abstract_Target_IliadDev.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2AF00315213DC30C001507C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A80F302211AEF21008D8C89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AF84B2E213D6C6500026AE3;
+			remoteInfo = ConsumptionWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2AF00317213DC30C001507C1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2AF00314213DC30C001507C1 /* ConsumptionWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2A192F8C211AF9F3007C1E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -272,6 +304,7 @@
 		2A232690211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTouchDownGestureRecognizer.swift; sourceTree = "<group>"; };
 		2A23D95121383E380086AE79 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		2A23D955213844F10086AE79 /* RowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCell.swift; sourceTree = "<group>"; };
+		2A32F503213D7FC40020D0D3 /* Extension.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Extension.strings; sourceTree = "<group>"; };
 		2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+XT.swift"; sourceTree = "<group>"; };
 		2A63F9072125C117009D515C /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		2A63F90B2125C122009D515C /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
@@ -314,12 +347,20 @@
 		2AAF69AC2121CE95005DECE5 /* Date+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+XT.swift"; sourceTree = "<group>"; };
 		2AAF69B02121DBFD005DECE5 /* OptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCell.swift; sourceTree = "<group>"; };
 		2AC5D7F3213ADC7A00DAECDC /* UIBarButtonItem+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+XT.swift"; sourceTree = "<group>"; };
+		2ADADDA5213D5F2D00FD7A54 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		2AE214B02126CB5000BB2F1C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		2AE214B52126CB7B00BB2F1C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		2AE214B52126CB7B00BB2F1C /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Settings.storyboard; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		2AE214B92126D1AC00BB2F1C /* AutoLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginViewController.swift; sourceTree = "<group>"; };
 		2AE214BE2126FA4F00BB2F1C /* Settings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Settings.strings; sourceTree = "<group>"; };
 		2AE214C2212705D800BB2F1C /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		2AF6CD96213DF18500D18156 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2AF84B2F213D6C6500026AE3 /* ConsumptionWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ConsumptionWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AF84B32213D6C6500026AE3 /* ConsumptionWidgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionWidgetViewController.swift; sourceTree = "<group>"; };
+		2AF84B35213D6C6500026AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		2AF84B37213D6C6500026AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AF84B4B213D6E8500026AE3 /* ConsumptionWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ConsumptionWidget.entitlements; sourceTree = "<group>"; };
+		2AF84B4C213D6F6900026AE3 /* IliadDev.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IliadDev.entitlements; sourceTree = "<group>"; };
+		2AF84B4D213D707A00026AE3 /* IliadStaging.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IliadStaging.entitlements; sourceTree = "<group>"; };
+		2AF84B4E213D708300026AE3 /* IliadProd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IliadProd.entitlements; sourceTree = "<group>"; };
 		2AF92DCE211C2DD00058CFD2 /* API+RecoverPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+RecoverPassword.swift"; sourceTree = "<group>"; };
 		2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 		2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+XT.swift"; sourceTree = "<group>"; };
@@ -359,6 +400,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2AF84B2C213D6C6500026AE3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AF84B30213D6C6500026AE3 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -379,8 +428,8 @@
 		2A192F95211AFCE3007C1E5A /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2A922DE921286FCC003B1731 /* CustomActivityIndicator.swift */,
 				2A23263F211C892F0045FBD7 /* CustomButton.swift */,
+				2A922DE921286FCC003B1731 /* CustomActivityIndicator.swift */,
 				2A193024211B362E007C1E5A /* CardView.swift */,
 				2A232690211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift */,
 			);
@@ -435,7 +484,7 @@
 		2A192FB0211B05ED007C1E5A /* Prod */ = {
 			isa = PBXGroup;
 			children = (
-				2AF6CD96213DF18500D18156 /* GoogleService-Info.plist */,
+				2AF84B4E213D708300026AE3 /* IliadProd.entitlements */,
 				2A192FB5211B061F007C1E5A /* AppConfig+Prod.swift */,
 				2A80F319211AEF22008D8C89 /* iliadProd-Info.plist */,
 			);
@@ -445,6 +494,7 @@
 		2A192FB1211B05F3007C1E5A /* Staging */ = {
 			isa = PBXGroup;
 			children = (
+				2AF84B4D213D707A00026AE3 /* IliadStaging.entitlements */,
 				2A192FB7211B0638007C1E5A /* AppConfig+Staging.swift */,
 				2A192FD9211B12BD007C1E5A /* iliadStaging-Info.plist */,
 			);
@@ -454,6 +504,7 @@
 		2A192FB2211B05F8007C1E5A /* Dev */ = {
 			isa = PBXGroup;
 			children = (
+				2AF84B4C213D6F6900026AE3 /* IliadDev.entitlements */,
 				2A192FB9211B064A007C1E5A /* AppConfig+Dev.swift */,
 				2A192FF8211B12C1007C1E5A /* iliadDev-Info.plist */,
 			);
@@ -508,6 +559,22 @@
 			path = Consumption;
 			sourceTree = "<group>";
 		};
+		2A32F501213D7FA90020D0D3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2A32F502213D7FB10020D0D3 /* Translations */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2A32F502213D7FB10020D0D3 /* Translations */ = {
+			isa = PBXGroup;
+			children = (
+				2A32F503213D7FC40020D0D3 /* Extension.strings */,
+			);
+			path = Translations;
+			sourceTree = "<group>";
+		};
 		2A63F9132125C8ED009D515C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -531,6 +598,7 @@
 			isa = PBXGroup;
 			children = (
 				2A80F30C211AEF21008D8C89 /* Iliad */,
+				2AF84B31213D6C6500026AE3 /* ConsumptionWidget */,
 				2A80F30B211AEF21008D8C89 /* Products */,
 				E86062355225B95ABD2F5248 /* Pods */,
 				A588A6B86D21B3763DF6ED5C /* Frameworks */,
@@ -543,6 +611,7 @@
 				2A80F30A211AEF21008D8C89 /* IliadProd.app */,
 				2A192FD8211B12BD007C1E5A /* IliadStaging.app */,
 				2A192FF7211B12C0007C1E5A /* IliadDev.app */,
+				2AF84B2F213D6C6500026AE3 /* ConsumptionWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -683,6 +752,50 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		2AF84B31213D6C6500026AE3 /* ConsumptionWidget */ = {
+			isa = PBXGroup;
+			children = (
+				2AF84B42213D6C8400026AE3 /* Configurations */,
+				2AF84B40213D6C7600026AE3 /* Sources */,
+				2AF84B3F213D6C6E00026AE3 /* Storyboard */,
+				2A32F501213D7FA90020D0D3 /* Resources */,
+			);
+			path = ConsumptionWidget;
+			sourceTree = "<group>";
+		};
+		2AF84B3F213D6C6E00026AE3 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2AF84B34213D6C6500026AE3 /* MainInterface.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		2AF84B40213D6C7600026AE3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2AF84B41213D6C7D00026AE3 /* Controllers */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		2AF84B41213D6C7D00026AE3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2AF84B32213D6C6500026AE3 /* ConsumptionWidgetViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2AF84B42213D6C8400026AE3 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				2AF84B4B213D6E8500026AE3 /* ConsumptionWidget.entitlements */,
+				2AF84B37213D6C6500026AE3 /* Info.plist */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
 		2AF92DD0211C323A0058CFD2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -700,6 +813,7 @@
 				A8CD4109D8897C9AFCA8D71E /* Pods_Abstract_Target_IliadDev.framework */,
 				754F9F367520EC3D64ACF3CC /* Pods_Abstract_Target_IliadProd.framework */,
 				BC644D73C304814C492214A8 /* Pods_Abstract_Target_IliadStaging.framework */,
+				2ADADDA5213D5F2D00FD7A54 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -768,15 +882,34 @@
 				2A80F307211AEF21008D8C89 /* Frameworks */,
 				2A80F308211AEF21008D8C89 /* Resources */,
 				31B99667BB9DB2078BB8D943 /* [CP] Embed Pods Frameworks */,
+				2AF00317213DC30C001507C1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2AF00316213DC30C001507C1 /* PBXTargetDependency */,
 			);
 			name = IliadProd;
 			productName = Iliad;
 			productReference = 2A80F30A211AEF21008D8C89 /* IliadProd.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2AF84B2E213D6C6500026AE3 /* ConsumptionWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AF84B3B213D6C6500026AE3 /* Build configuration list for PBXNativeTarget "ConsumptionWidget" */;
+			buildPhases = (
+				2AF84B2B213D6C6500026AE3 /* Sources */,
+				2AF84B2C213D6C6500026AE3 /* Frameworks */,
+				2AF84B2D213D6C6500026AE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConsumptionWidget;
+			productName = ConsumptionWidget;
+			productReference = 2AF84B2F213D6C6500026AE3 /* ConsumptionWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -788,8 +921,35 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Luigi Aiello";
 				TargetAttributes = {
+					2A192FBB211B12BD007C1E5A = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					2A192FDA211B12C0007C1E5A = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					2A80F309211AEF21008D8C89 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					2AF84B2E213D6C6500026AE3 = {
+						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -809,6 +969,7 @@
 				2A80F309211AEF21008D8C89 /* IliadProd */,
 				2A192FBB211B12BD007C1E5A /* IliadStaging */,
 				2A192FDA211B12C0007C1E5A /* IliadDev */,
+				2AF84B2E213D6C6500026AE3 /* ConsumptionWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -887,9 +1048,18 @@
 				2A192F91211AF9F3007C1E5A /* LaunchScreen.storyboard in Resources */,
 				2AA61776212596080062CA49 /* Commons.strings in Resources */,
 				2AAF69872121BC57005DECE5 /* Services.storyboard in Resources */,
-				2AF6CD97213DF18500D18156 /* GoogleService-Info.plist in Resources */,
 				2A19301F211B1E7F007C1E5A /* Consumption.storyboard in Resources */,
 				2A63F9192125CA3C009D515C /* ChangePassword.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AF84B2D213D6C6500026AE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A32F504213D7FC50020D0D3 /* Extension.strings in Resources */,
+				2A32F50C213D849D0020D0D3 /* Assets.xcassets in Resources */,
+				2AF84B36213D6C6500026AE3 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1324,7 +1494,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2AF84B2B213D6C6500026AE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AF84B4F213D7EC900026AE3 /* CustomButton.swift in Sources */,
+				2A32F50B213D80B40020D0D3 /* String+XT.swift in Sources */,
+				2AF84B33213D6C6500026AE3 /* ConsumptionWidgetViewController.swift in Sources */,
+				2A32F50D213D87B30020D0D3 /* UIColor+XT.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2AF00316213DC30C001507C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AF84B2E213D6C6500026AE3 /* ConsumptionWidget */;
+			targetProxy = 2AF00315213DC30C001507C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2A192F8B211AF9F3007C1E5A /* LaunchScreen.storyboard */ = {
@@ -1383,6 +1572,14 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
+		2AF84B34213D6C6500026AE3 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2AF84B35213D6C6500026AE3 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1391,6 +1588,7 @@
 			baseConfigurationReference = 2FF08424C2EC9A18AEE8E6F2 /* Pods-Abstract Target-IliadStaging.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Staging/IliadStaging.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Staging/iliadStaging-Info.plist";
@@ -1411,6 +1609,7 @@
 			baseConfigurationReference = F74579818C2C7F36B5D468AB /* Pods-Abstract Target-IliadStaging.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Staging/IliadStaging.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Staging/iliadStaging-Info.plist";
@@ -1431,6 +1630,7 @@
 			baseConfigurationReference = F7D6C6559BB064276CE6ECC1 /* Pods-Abstract Target-IliadDev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Dev/IliadDev.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Dev/iliadDev-Info.plist";
@@ -1452,6 +1652,7 @@
 			baseConfigurationReference = 908DF9FC3DA5EA36B7A4F54B /* Pods-Abstract Target-IliadDev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Dev/IliadDev.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Dev/iliadDev-Info.plist";
@@ -1586,7 +1787,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B7488A9A80BE83B962C92D8B /* Pods-Abstract Target-IliadProd.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Prod/IliadProd.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Prod/iliadProd-Info.plist";
@@ -1606,7 +1809,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 94448A748CC2882C4B07E2E9 /* Pods-Abstract Target-IliadProd.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Prod/IliadProd.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Prod/iliadProd-Info.plist";
@@ -1617,6 +1822,46 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2AF84B3C213D6C6500026AE3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ConsumptionWidget/Configurations/ConsumptionWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAT58Z69VZ;
+				INFOPLIST_FILE = "$(SRCROOT)/ConsumptionWidget/Configurations/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale.ConsumptionWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2AF84B3D213D6C6500026AE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ConsumptionWidget/Configurations/ConsumptionWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LAT58Z69VZ;
+				INFOPLIST_FILE = "$(SRCROOT)/ConsumptionWidget/Configurations/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale.ConsumptionWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1657,6 +1902,15 @@
 			buildConfigurations = (
 				2A80F31D211AEF22008D8C89 /* Debug */,
 				2A80F31E211AEF22008D8C89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2AF84B3B213D6C6500026AE3 /* Build configuration list for PBXNativeTarget "ConsumptionWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2AF84B3C213D6C6500026AE3 /* Debug */,
+				2AF84B3D213D6C6500026AE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

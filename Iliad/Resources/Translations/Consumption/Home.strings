@@ -11,3 +11,7 @@
 "NEXT_RENEWAL" = "giorni al rinnovo";
 "NAME_TITLE" = "Ciao";
 "DETAILS_BUTTON" = "DETTAGLIO CONSUMI";
+"SIMPLE_LOGIN_TITLE" = "Suggerimento!";
+"SIMPLE_LOGIN_MESSAGE" = "Attiva il login automatico o riconoscimento biometrico per velocizzare il prossimo accesso. Potrai sempre attivarlo o disattivarlo dalle impostazioni";
+"AUTOLOGIN_ACTIVE_BUTTON" = "Attiva login automatico";
+"BIOMETRIC_ACTIVE_BUTTON" = "Attiva";

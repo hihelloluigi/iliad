@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        setup()
+        setupFirebase()
         setupRootViewController()
         
         return true
@@ -49,9 +49,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // Mark - Setup
-    private func setup() {
-        // Firebase configurations
-        FirebaseApp.configure()
+    private func setupFirebase() {
+        guard
+            let filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist"),
+            let options = FirebaseOptions(contentsOfFile: filePath)
+        else {
+            return
+        }
+        FirebaseApp.configure(options: options)
     }
     private func setupRootViewController() {
         if Defaults[.autoLogin] && !Defaults[.loginWithBiometric] {

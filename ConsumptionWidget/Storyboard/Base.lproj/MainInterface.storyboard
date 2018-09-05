@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Consumption Widget View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="ConsumptionWidgetViewController" customModule="ConsumptionWidget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Twb-Ep-L3V">
+                                <rect key="frame" x="32" y="7" width="256" height="66"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="yxI-MJ-grm">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="25"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ckg-Fn-R2K">
+                                                <rect key="frame" x="0.0" y="0.0" width="84.5" height="25"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_call" translatesAutoresizingMaskIntoConstraints="NO" id="yYD-vv-bit">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                        <color key="tintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="25" id="GaU-uK-DBz"/>
+                                                            <constraint firstAttribute="height" constant="25" id="a8p-Ua-oSS"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Calls]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTn-zQ-xZ4">
+                                                        <rect key="frame" x="33" y="2.5" width="51.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                        <color key="textColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lg1-YS-81h">
+                                                <rect key="frame" x="174" y="0.0" width="82" height="25"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sms" translatesAutoresizingMaskIntoConstraints="NO" id="XZc-As-ifq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                        <color key="tintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="25" id="UzY-tX-FYX"/>
+                                                            <constraint firstAttribute="height" constant="25" id="iJF-uC-FYC"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[SMS]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lie-Cx-oYB">
+                                                        <rect key="frame" x="33" y="2.5" width="49" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                        <color key="textColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ncx-Q6-g1c">
+                                        <rect key="frame" x="0.0" y="41" width="256" height="25"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pBd-4o-cHH">
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="25"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_mms" translatesAutoresizingMaskIntoConstraints="NO" id="Kd5-ou-Vke">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                        <color key="tintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="Xp3-FG-soN"/>
+                                                            <constraint firstAttribute="width" constant="25" id="mHx-bY-Aak"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[MMS]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGs-DG-W9t">
+                                                        <rect key="frame" x="33" y="2.5" width="53" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                        <color key="textColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ooa-sq-Jy2">
+                                                <rect key="frame" x="173.5" y="0.0" width="82.5" height="25"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_internet" translatesAutoresizingMaskIntoConstraints="NO" id="12W-UZ-s75">
+                                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                        <color key="tintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="Cxq-Nn-1yz"/>
+                                                            <constraint firstAttribute="width" constant="25" id="ZGM-s5-99M"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Data]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsE-tj-3UQ">
+                                                        <rect key="frame" x="33" y="2.5" width="49.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                        <color key="textColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsd-wT-ZyK" customClass="CustomButton" customModule="ConsumptionWidget" customModuleProvider="target">
+                                <rect key="frame" x="32" y="15" width="256" height="50"/>
+                                <color key="backgroundColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Nhk-F3-Blg"/>
+                                </constraints>
+                                <state key="normal" title="ESEGUI L'ACCESSO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginDidTap:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="RSt-gQ-Owp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Twb-Ep-L3V" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="2xO-RX-Vf0"/>
+                            <constraint firstItem="xsd-wT-ZyK" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="32" id="HfO-fU-8fT"/>
+                            <constraint firstItem="xsd-wT-ZyK" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="Hwi-vl-GWN"/>
+                            <constraint firstItem="Twb-Ep-L3V" firstAttribute="leading" secondItem="ssy-KU-ocm" secondAttribute="leading" constant="32" id="PLX-74-ckj"/>
+                            <constraint firstItem="Twb-Ep-L3V" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ssy-KU-ocm" secondAttribute="top" id="Pat-9e-hiB"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="Twb-Ep-L3V" secondAttribute="trailing" constant="32" id="T6n-jZ-VGD"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="trailing" secondItem="xsd-wT-ZyK" secondAttribute="trailing" constant="32" id="npi-tb-gvF"/>
+                            <constraint firstItem="ssy-KU-ocm" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Twb-Ep-L3V" secondAttribute="bottom" id="oUf-Ca-kQh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ssy-KU-ocm"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="80"/>
+                    <connections>
+                        <outlet property="MMSImageView" destination="Kd5-ou-Vke" id="cjq-Yc-Qqa"/>
+                        <outlet property="MMSLabel" destination="wGs-DG-W9t" id="zpe-Rb-gws"/>
+                        <outlet property="SMSImageView" destination="XZc-As-ifq" id="JJe-xp-Gov"/>
+                        <outlet property="SMSLabel" destination="lie-Cx-oYB" id="InC-cq-16W"/>
+                        <outlet property="callsImageView" destination="yYD-vv-bit" id="XN3-B4-DGu"/>
+                        <outlet property="callsLabel" destination="KTn-zQ-xZ4" id="fTa-En-hcZ"/>
+                        <outlet property="dataImageView" destination="12W-UZ-s75" id="SgE-YA-hBR"/>
+                        <outlet property="dataLabel" destination="ZsE-tj-3UQ" id="Wx4-CW-ZvI"/>
+                        <outlet property="loginButton" destination="xsd-wT-ZyK" id="aGJ-4L-Qgh"/>
+                        <outlet property="stackView" destination="Twb-Ep-L3V" id="ENn-U3-H9V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.19999999999999" y="132.23388305847078"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_call" width="50" height="50"/>
+        <image name="ic_internet" width="24" height="24"/>
+        <image name="ic_mms" width="50" height="50"/>
+        <image name="ic_sms" width="50" height="50"/>
+    </resources>
+</document>

@@ -6,6 +6,7 @@
   Copyright © 2018 Luigi Aiello. All rights reserved.
 */
 
+"OK" = "Ok";
 "SUCCESS" = "Successo";
 "ERROR" = "Errore";
 "BACK" = "Indietro";

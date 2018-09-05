@@ -18,6 +18,7 @@ extension DefaultsKeys {
     static let autoLogin = DefaultsKey<Bool>("kAutoLogin")
     static let loginWithBiometric = DefaultsKey<Bool>("kLoginWithBiometric")
     static let readPolicy = DefaultsKey<Bool>("kReadPolicy")
+    static let showSimpleLogin = DefaultsKey<Bool>("kShowSimpleLogin")
 }
 
 class Config {
