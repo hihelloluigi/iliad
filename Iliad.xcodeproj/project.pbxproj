@@ -96,6 +96,9 @@
 		2A32F50B213D80B40020D0D3 /* String+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193004211B1AD6007C1E5A /* String+XT.swift */; };
 		2A32F50C213D849D0020D0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A80F314211AEF22008D8C89 /* Assets.xcassets */; };
 		2A32F50D213D87B30020D0D3 /* UIColor+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */; };
+		2A44A08B21400216003FA9C1 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A44A08A21400216003FA9C1 /* UINavigationBar.swift */; };
+		2A44A08C21400264003FA9C1 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A44A08A21400216003FA9C1 /* UINavigationBar.swift */; };
+		2A44A08D21400264003FA9C1 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A44A08A21400216003FA9C1 /* UINavigationBar.swift */; };
 		2A47620B211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
 		2A47620C211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
 		2A47620D211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
@@ -305,6 +308,7 @@
 		2A23D95121383E380086AE79 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		2A23D955213844F10086AE79 /* RowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowCell.swift; sourceTree = "<group>"; };
 		2A32F503213D7FC40020D0D3 /* Extension.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Extension.strings; sourceTree = "<group>"; };
+		2A44A08A21400216003FA9C1 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+XT.swift"; sourceTree = "<group>"; };
 		2A63F9072125C117009D515C /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		2A63F90B2125C122009D515C /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
@@ -520,6 +524,7 @@
 				2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */,
 				2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */,
 				2AC5D7F3213ADC7A00DAECDC /* UIBarButtonItem+XT.swift */,
+				2A44A08A21400216003FA9C1 /* UINavigationBar.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -955,7 +960,7 @@
 			};
 			buildConfigurationList = 2A80F305211AEF21008D8C89 /* Build configuration list for PBXProject "Iliad" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			developmentRegion = it;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -1360,6 +1365,7 @@
 				2A193017211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */,
 				2AAF696A21219A3D005DECE5 /* API+Option.swift in Sources */,
 				2A23263D211C88920045FBD7 /* InfoViewController.swift in Sources */,
+				2A44A08D21400264003FA9C1 /* UINavigationBar.swift in Sources */,
 				2A192FCB211B12BD007C1E5A /* APIEndpoint+Methods.swift in Sources */,
 				2A63F9112125C12C009D515C /* ShowPukViewController.swift in Sources */,
 				2AAF69A22121BF4F005DECE5 /* ProfileViewController.swift in Sources */,
@@ -1423,6 +1429,7 @@
 				2AE214B32126CB5000BB2F1C /* SettingsViewController.swift in Sources */,
 				2A193010211B1C50007C1E5A /* User.swift in Sources */,
 				2AAF696B21219A3D005DECE5 /* API+Option.swift in Sources */,
+				2A44A08C21400264003FA9C1 /* UINavigationBar.swift in Sources */,
 				2A192FEB211B12C0007C1E5A /* APIEndpoint+Core.swift in Sources */,
 				2A63F9122125C12C009D515C /* ShowPukViewController.swift in Sources */,
 				2AAF69A32121BF4F005DECE5 /* ProfileViewController.swift in Sources */,
@@ -1490,6 +1497,7 @@
 				2A63F9102125C12C009D515C /* ShowPukViewController.swift in Sources */,
 				2AAF69A12121BF4F005DECE5 /* ProfileViewController.swift in Sources */,
 				2AF92DD2211C32500058CFD2 /* RecoverPasswordViewController.swift in Sources */,
+				2A44A08B21400216003FA9C1 /* UINavigationBar.swift in Sources */,
 				2A192FAC211B0383007C1E5A /* APIEndpoint+Core.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1673,6 +1681,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1733,6 +1742,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
