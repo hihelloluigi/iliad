@@ -67,7 +67,7 @@ class ChangePasswordViewController: UIViewController {
 
     private func configurationUI() {
         passwordImageView.tintColor = .iliadRed
-        customNavigationBar.shadowImage = UIImage()
+        customNavigationBar.hideShadowBar()
     }
 
     private func configurationText() {

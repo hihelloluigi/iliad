@@ -28,16 +28,7 @@ class OptionsViewController: UIViewController {
 
         setup()
         setupTableView()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
-    }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
+        configurationUI()
     }
     
     override func didReceiveMemoryWarning() {
@@ -53,6 +44,9 @@ class OptionsViewController: UIViewController {
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    private func configurationUI() {
+        self.navigationController?.navigationBar.hideShadowBar()
     }
 
     // Mark - Helpers

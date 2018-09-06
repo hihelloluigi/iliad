@@ -48,8 +48,8 @@ class ShowPukViewController: UIViewController {
     // Mark - Setup
     private func configurationUI() {
         showPukImageView.tintColor = .iliadRed
-        customNavigationBar.shadowImage = UIImage()
         pukTextField.textAlignment = .center
+        customNavigationBar.hideShadowBar()
     }
 
     private func configurationText() {

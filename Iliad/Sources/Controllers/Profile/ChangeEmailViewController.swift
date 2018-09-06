@@ -67,7 +67,7 @@ class ChangeEmailViewController: UIViewController {
 
     private func configurationUI() {
         emailImageView.tintColor = .iliadRed
-        customNavigationBar.shadowImage = UIImage()
+        customNavigationBar.hideShadowBar()
     }
 
     private func configurationText() {

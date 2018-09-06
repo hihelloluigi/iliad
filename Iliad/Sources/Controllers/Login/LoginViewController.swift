@@ -117,7 +117,10 @@ class LoginViewController: UIViewController {
         passwordTextField.rightViewMode = .always
 
         logoImageView.tintColor = .iliadRed
-        customNavigationBar.shadowImage = UIImage()
+
+        customNavigationBar.hideShadowBar()
+//        customNavigationBar.setBackgroundImage(UIImage(), for: .default)
+//        customNavigationBar.shadowImage = UIImage()
     }
 
     private func configurationText() {

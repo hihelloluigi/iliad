@@ -81,7 +81,7 @@ class RecoverPasswordViewController: UIViewController {
     private func configurationUI() {
         lockImageView.tintColor = .iliadRed
         changeFormLayout(forgetUsername: forgetUsername)
-        customNavigationBar.shadowImage = UIImage()
+        customNavigationBar.hideShadowBar()
     }
 
     private func configurationText() {

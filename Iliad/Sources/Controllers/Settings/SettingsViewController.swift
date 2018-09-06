@@ -64,7 +64,7 @@ class SettingsViewController: UITableViewController {
         telegramImageView.tintColor = .iliadRed
         emailImageView.tintColor = .iliadRed
 
-        navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.hideShadowBar()
     }
 
     private func configurationText() {
