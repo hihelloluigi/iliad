@@ -49,7 +49,7 @@ class InfoViewController: UIViewController {
     private func configurationUI() {
         readPolicyButton.isEnabled = !Defaults[.readPolicy]
         readPolicyButton.backgroundColor = !Defaults[.readPolicy] ? .iliadRed : .lightGray
-        customNavigationBar.shadowImage = UIImage()
+        customNavigationBar.hideShadowBar()
 
         Defaults[.readPolicy] ? backBarButton.show() : backBarButton.hidden()
     }

@@ -118,7 +118,7 @@ class LoginViewController: UIViewController {
 
         logoImageView.tintColor = .iliadRed
 
-        customNavigationBar.hideShadowBar()
+        customNavigationBar.hideShadowBar()    }
 //        customNavigationBar.setBackgroundImage(UIImage(), for: .default)
 //        customNavigationBar.shadowImage = UIImage()
     }

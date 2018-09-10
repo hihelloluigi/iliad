@@ -10,7 +10,6 @@ import UIKit
 
 extension UINavigationBar {
     func hideShadowBar() {
-        self.setBackgroundImage(UIImage(), for: .default)
-        self.shadowImage = UIImage()
+        self.setValue(true, forKey: "hidesShadow")
     }
 }
