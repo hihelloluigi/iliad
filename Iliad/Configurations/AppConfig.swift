@@ -47,9 +47,11 @@ enum DefaultConfiguration: String {
         case .development:
             return "http://192.168.1.144:8082"
         case .staging:
-            return "https://areapersonale.herokuapp.com"
+            return "https://areapersonale.app"
+            // Version 1.0 - return "https://areapersonale.herokuapp.com"
         case .production:
-            return "https://areapersonale.herokuapp.com"
+            return "https://areapersonale.app"
+            // Version 1.0 - return "https://areapersonale.herokuapp.com"
         }
     }
 }
