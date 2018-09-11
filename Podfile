@@ -48,13 +48,13 @@ abstract_target 'Abstract Target' do
 	debugging_pods
 	security_pods
 
-	target 'IliadProd' do
+	target 'AreaPersonaleProd' do
 	end
 
-	target 'IliadStaging' do
+	target 'AreaPersonaleStaging' do
 	end
 
-	target 'IliadDev' do
+	target 'AreaPersonaleDev' do
 	end
 end
 

@@ -1,0 +1,6 @@
+framework module Pods_Abstract_Target_AreaPersonaleDev {
+  umbrella header "Pods-Abstract Target-AreaPersonaleDev-umbrella.h"
+
+  export *
+  module * { export * }
+}
