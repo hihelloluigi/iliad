@@ -2,6 +2,9 @@ PODS:
   - Alamofire (4.7.3)
   - BEMCheckBox (1.4.1)
   - BmoViewPager (4.1.3)
+  - ClusterKit/Core (0.3.4)
+  - ClusterKit/MapKit (0.3.4):
+    - ClusterKit/Core
   - Firebase/Core (5.7.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 5.1.1)
@@ -92,6 +95,7 @@ PODS:
 DEPENDENCIES:
   - BEMCheckBox
   - BmoViewPager
+  - ClusterKit/MapKit
   - Firebase/Core
   - Firebase/Performance
   - iOSAuthenticator (from `https://github.com/mo3bius/iOSAuthenticator`)
@@ -111,6 +115,7 @@ SPEC REPOS:
     - Alamofire
     - BEMCheckBox
     - BmoViewPager
+    - ClusterKit
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -147,6 +152,7 @@ SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   BmoViewPager: cf2e3c251f64872b5c8163365a620f2ef2fccb74
+  ClusterKit: 30d15b449a398103d130ea9661cab82bb99eb52d
   Firebase: 734a4f92957aa6c40e7ae3fda3d9359e1890aa87
   FirebaseAnalytics: 993577e91157feb40945abedd6ab346d8a4b6ac8
   FirebaseCore: 3a97432acb324b439fbed338e642f9cbb516a63d
@@ -171,6 +177,6 @@ SPEC CHECKSUMS:
   SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
   TransitionButton: 20f92b3cc726b047e4df200fdab5307f33395a81
 
-PODFILE CHECKSUM: 7b2c5553d37f475c55d55611ef81d21664a62642
+PODFILE CHECKSUM: 915621946d22c74909740f432765f0bd766fe430
 
 COCOAPODS: 1.5.2

@@ -34,6 +34,7 @@ def utilites_pods
     pod 'SwiftyJSON'
     pod 'IQKeyboardManager'
     pod 'SwiftyUserDefaults'
+    pod 'ClusterKit/MapKit'
 end
 
 def debugging_pods
