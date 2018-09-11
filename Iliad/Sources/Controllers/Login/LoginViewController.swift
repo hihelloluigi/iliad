@@ -38,6 +38,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: TransitionButton!
     @IBOutlet weak var forgotButton: UIButton!
     @IBOutlet weak var infoBarButton: UIBarButtonItem!
+    @IBOutlet weak var storeLocationButton: UIBarButtonItem!
 
     // Mark - Variables
     var showPasswordButton: UIButton?
@@ -298,7 +299,6 @@ class LoginViewController: UIViewController {
         }
 
         recoverPasswordVC.delegate = self
-        recoverPasswordVC.modalTransitionStyle = .crossDissolve
         self.present(recoverPasswordVC, animated: true, completion: nil)
     }
     
@@ -316,6 +316,14 @@ class LoginViewController: UIViewController {
         }
 
         self.present(infoVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func storeLocationDidTap(_ sender: Any) {
+        guard let storeVC = "Store" <%> "StoreViewController" as? StoreViewController else {
+            return
+        }
+
+        self.present(storeVC, animated: true, completion: nil)
     }
 }
 

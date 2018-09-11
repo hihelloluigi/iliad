@@ -89,7 +89,8 @@ class SettingsViewController: UITableViewController {
         }, failure: { (error) in
             print(error)
             mySwitch.isOn = Defaults[.loginWithBiometric]
-            Utility.showAlert(title: "Settings" ~> "BIOMETRIC_LOGIN_ERROR_TITLE", message: "\("Settings" ~> "BIOMETRIC_LOGIN_ERROR_MESSAGE") \(mySwitch.isOn ? "Disattivare" : "Attivare") \(iOSAuthenticator.biometricType())")
+            Utility.showAlert(title: "Settings" ~> "BIOMETRIC_LOGIN_ERROR_TITLE",
+                              message: "\("Settings" ~> "BIOMETRIC_LOGIN_ERROR_MESSAGE") \(mySwitch.isOn ? "Disattivare" : "Attivare") \(iOSAuthenticator.biometricType())")
         })
     }
 }

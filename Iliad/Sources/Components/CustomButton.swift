@@ -23,6 +23,7 @@ open class CustomButton: UIButton {
     @IBInspectable
     public var isCircle: Bool = false {
         didSet {
+            self.clipsToBounds = isCircle
             self.layer.cornerRadius = isCircle ? (0.5 * self.bounds.size.width) : 0
         }
     }
@@ -45,6 +46,34 @@ open class CustomButton: UIButton {
     public var borderColor: UIColor = .clear {
         didSet {
             self.layer.borderColor = self.borderColor.cgColor
+        }
+    }
+
+    @IBInspectable
+    public var shadowRadius: CGFloat = 0.0 {
+        didSet {
+            self.layer.shadowRadius = self.shadowRadius
+        }
+    }
+
+    @IBInspectable
+    public var shadowOpacity: Float = 0.0 {
+        didSet {
+            self.layer.shadowOpacity = self.shadowOpacity
+        }
+    }
+
+    @IBInspectable
+    public var shadowOffSet: CGSize = CGSize.zero {
+        didSet {
+            self.layer.shadowOffset = self.shadowOffSet
+        }
+    }
+
+    @IBInspectable
+    public var shadowColor: UIColor = .clear {
+        didSet {
+            self.layer.shadowColor = self.shadowColor.cgColor
         }
     }
 }

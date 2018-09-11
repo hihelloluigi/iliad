@@ -46,12 +46,10 @@ class Utility {
         }
     }
 
-
     static func showAlert(title: String?, message: String?, okHandler: ((UIAlertAction) -> Void)? = nil, cancelHandler: ((UIAlertAction) -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 
         alert.addAction(UIAlertAction(title: "Commons" ~> "OK", style: .default, handler: okHandler))
         alert.addAction(UIAlertAction(title: "Commons" ~> "CANCEL", style: .default, handler: cancelHandler))
-
     }
 }

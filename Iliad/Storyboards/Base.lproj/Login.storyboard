@@ -13,7 +13,7 @@
         <!--Recover Password View Controller-->
         <scene sceneID="8d6-dF-SeG">
             <objects>
-                <viewController storyboardIdentifier="RecoverPasswordViewController" id="FZs-wB-4YF" customClass="RecoverPasswordViewController" customModule="IliadDev" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecoverPasswordViewController" modalTransitionStyle="crossDissolve" id="FZs-wB-4YF" customClass="RecoverPasswordViewController" customModule="IliadDev" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dOQ-gJ-XHO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -384,9 +384,16 @@
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem id="ZDD-I7-xqg">
-                                        <barButtonItem key="rightBarButtonItem" image="ic_info" id="43w-s0-UNf">
+                                        <barButtonItem key="leftBarButtonItem" image="ic_info" id="43w-s0-UNf">
+                                            <color key="tintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="infoDidTap:" destination="lfu-lI-fqV" id="eJm-fw-Ff4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" image="ic_store" id="nT3-GG-mtu">
+                                            <color key="tintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="storeLocationDidTap:" destination="lfu-lI-fqV" id="w4h-U0-R54"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -610,6 +617,7 @@
                         <outlet property="passwordTextField" destination="sEh-iI-acH" id="pUJ-oF-gy0"/>
                         <outlet property="savePasswordLabel" destination="oDI-1g-rXv" id="J4M-cC-W9N"/>
                         <outlet property="scrollView" destination="HJa-KL-YoJ" id="2Ub-en-y63"/>
+                        <outlet property="storeLocationButton" destination="nT3-GG-mtu" id="yaQ-qR-h2j"/>
                         <outlet property="subtitleLabel" destination="o71-vE-xue" id="EGJ-ed-aaG"/>
                         <outlet property="titleLabel" destination="mv6-jt-uw1" id="8vW-bg-Qer"/>
                         <outlet property="usernameTextField" destination="S0W-At-iuq" id="UjI-qU-imJ"/>
@@ -661,5 +669,6 @@
         <image name="ic_info" width="24" height="24"/>
         <image name="ic_recoverPassword" width="64" height="64"/>
         <image name="ic_sim" width="28" height="22"/>
+        <image name="ic_store" width="24" height="24"/>
     </resources>
 </document>
