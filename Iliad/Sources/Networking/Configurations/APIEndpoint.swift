@@ -24,6 +24,9 @@ enum APIEndpoint {
     case recoverPassword(username: String, email: String)
     case recoverPasswordForgetUsername(name: String, surname: String, email: String)
 
+    // Store location
+    case getStore(location: String?)
+
     // Informations
     case getGeneralInformations
     case getPuk

@@ -25,6 +25,10 @@ extension APIEndpoint {
         case .recoverPasswordForgetUsername:
             return ("/recover")
 
+        // Store location
+        case .getStore:
+            return ("/store")
+
         // Informations
         case .getGeneralInformations:
             return ("/information")

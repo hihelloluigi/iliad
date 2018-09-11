@@ -27,7 +27,8 @@ extension APIEndpoint {
              .changeService,
              .serviceInfo,
              .getOptions,
-             .changeOption:
+             .changeOption,
+             .getStore:
             return .get
         }
     }

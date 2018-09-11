@@ -26,6 +26,10 @@ extension APIEndpoint {
         case .recoverPasswordForgetUsername(let name, let surname, let email):
             return .requestParameters(parameters: ["name": name, "surname": surname, "email": email, "token": accessToken], encoding: parameterEncoding)
 
+        // Store location
+        case .getStore(let location):
+            return .requestParameters(parameters: ["location": location ?? ""], encoding: parameterEncoding)
+
         // Informations
         case .getGeneralInformations:
             return .requestParameters(parameters: ["info": "true", "token": accessToken], encoding: parameterEncoding)
