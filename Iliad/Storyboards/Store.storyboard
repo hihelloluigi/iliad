@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="goV-Ke-BnS">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Store View Controller-->
+        <scene sceneID="lbX-Nh-tTf">
+            <objects>
+                <viewController storyboardIdentifier="StoreViewController" modalTransitionStyle="crossDissolve" id="goV-Ke-BnS" customClass="StoreViewController" customModule="IliadDev" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q2u-vF-GBi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="2B6-Tw-vjj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </mapView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iOX-D5-Juu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="c9m-Z5-9fV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTh-uV-0EY" customClass="CardView" customModule="IliadDev" customModuleProvider="target">
+                                <rect key="frame" x="317" y="60.000000000000007" width="50" height="100.66666666666669"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6D7-do-aAG">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="100.66666666666667"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbg-dR-1rS">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="V35-T5-JPo"/>
+                                                    <constraint firstAttribute="height" constant="50" id="oiM-4v-O20"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="ic_info"/>
+                                                <connections>
+                                                    <action selector="changeMapTypeDidTap:" destination="goV-Ke-BnS" eventType="touchUpInside" id="qQ0-dy-Zcd"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h6w-ZT-3Fd">
+                                                <rect key="frame" x="0.0" y="50" width="50" height="0.6666666666666643"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="0.5" id="mCC-Kf-rIG"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1a-ti-rqi">
+                                                <rect key="frame" x="0.0" y="50.666666666666671" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="iV6-NH-k67"/>
+                                                    <constraint firstAttribute="height" constant="50" id="lyX-be-xxS"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="ic_hunt"/>
+                                                <connections>
+                                                    <action selector="centerLocationDidTap:" destination="goV-Ke-BnS" eventType="touchUpInside" id="odm-mV-Log"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="6D7-do-aAG" firstAttribute="leading" secondItem="ZTh-uV-0EY" secondAttribute="leading" id="On0-wi-0dp"/>
+                                    <constraint firstAttribute="trailing" secondItem="6D7-do-aAG" secondAttribute="trailing" id="eQ6-Lj-CEN"/>
+                                    <constraint firstAttribute="bottom" secondItem="6D7-do-aAG" secondAttribute="bottom" id="rsj-a1-GYd"/>
+                                    <constraint firstItem="6D7-do-aAG" firstAttribute="top" secondItem="ZTh-uV-0EY" secondAttribute="top" id="xmG-CX-Om4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffSet">
+                                        <size key="value" width="0.40000000000000002" height="0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIK-17-67K" customClass="CustomButton" customModule="IliadDev" customModuleProvider="target">
+                                <rect key="frame" x="16" y="60" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JMH-fk-zVy"/>
+                                    <constraint firstAttribute="width" constant="50" id="Zu9-sF-AQN"/>
+                                </constraints>
+                                <color key="tintColor" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="ic_delete"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.79215686269999996" green="0.094117647060000004" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffSet">
+                                        <size key="value" width="0.40000000000000002" height="0.40000000000000002"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismissDidTap:" destination="goV-Ke-BnS" eventType="touchUpInside" id="fYA-pl-fYE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kOk-Ox-uvZ" firstAttribute="top" secondItem="iOX-D5-Juu" secondAttribute="bottom" id="4If-xK-5me"/>
+                            <constraint firstItem="iIK-17-67K" firstAttribute="leading" secondItem="kOk-Ox-uvZ" secondAttribute="leading" constant="16" id="AhK-4o-2Qa"/>
+                            <constraint firstItem="iOX-D5-Juu" firstAttribute="top" secondItem="Q2u-vF-GBi" secondAttribute="top" id="HJQ-Jt-cpA"/>
+                            <constraint firstItem="ZTh-uV-0EY" firstAttribute="top" secondItem="iOX-D5-Juu" secondAttribute="bottom" constant="16" id="KRi-aK-mQ4"/>
+                            <constraint firstItem="2B6-Tw-vjj" firstAttribute="leading" secondItem="kOk-Ox-uvZ" secondAttribute="leading" id="LVH-dF-1vh"/>
+                            <constraint firstItem="kOk-Ox-uvZ" firstAttribute="trailing" secondItem="iOX-D5-Juu" secondAttribute="trailing" id="O1D-2G-gc9"/>
+                            <constraint firstItem="kOk-Ox-uvZ" firstAttribute="trailing" secondItem="2B6-Tw-vjj" secondAttribute="trailing" id="OU6-ES-Zbs"/>
+                            <constraint firstItem="2B6-Tw-vjj" firstAttribute="top" secondItem="Q2u-vF-GBi" secondAttribute="top" id="ZH2-ve-xpb"/>
+                            <constraint firstItem="iIK-17-67K" firstAttribute="top" secondItem="iOX-D5-Juu" secondAttribute="bottom" constant="16" id="bfs-7d-uy6"/>
+                            <constraint firstItem="iOX-D5-Juu" firstAttribute="leading" secondItem="kOk-Ox-uvZ" secondAttribute="leading" id="cD0-JP-lna"/>
+                            <constraint firstAttribute="bottom" secondItem="2B6-Tw-vjj" secondAttribute="bottom" id="n14-PC-x1l"/>
+                            <constraint firstItem="kOk-Ox-uvZ" firstAttribute="trailing" secondItem="ZTh-uV-0EY" secondAttribute="trailing" constant="8" id="s19-c5-cVm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kOk-Ox-uvZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="blurEffect" destination="iOX-D5-Juu" id="9RL-YL-rze"/>
+                        <outlet property="centerLocationButton" destination="m1a-ti-rqi" id="p1z-Z1-WYQ"/>
+                        <outlet property="changeMapTypeButton" destination="Kbg-dR-1rS" id="PGH-Xk-CZR"/>
+                        <outlet property="dismissButton" destination="iIK-17-67K" id="H6k-fj-20d"/>
+                        <outlet property="mapView" destination="2B6-Tw-vjj" id="2Cf-lk-EGy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ucj-pK-vc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="128.57142857142858"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_delete" width="24" height="24"/>
+        <image name="ic_hunt" width="24" height="24"/>
+        <image name="ic_info" width="24" height="24"/>
+    </resources>
+</document>
