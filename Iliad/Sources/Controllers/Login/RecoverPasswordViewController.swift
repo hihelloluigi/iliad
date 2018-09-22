@@ -138,9 +138,6 @@ class RecoverPasswordViewController: UIViewController {
         view.endEditing(true)
     }
 
-    private func showError() {
-        showError()
-    }
     private func showError(title: String, message: String) {
         self.recoverButton.stopAnimation(animationStyle: .normal) {
             self.showErrorMessage(title: title, message: message)

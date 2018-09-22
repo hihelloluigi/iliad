@@ -17,7 +17,7 @@ extension UIImage {
         let paragraph = NSMutableParagraphStyle()
         paragraph.alignment = .center
 
-        let textFontAttributes = [NSAttributedStringKey.font: textFont, NSAttributedStringKey.foregroundColor: textColor, kCTParagraphStyleAttributeName: paragraph] as! [NSAttributedStringKey: Any]
+        let textFontAttributes = [NSAttributedString.Key.font: textFont, NSAttributedString.Key.foregroundColor: textColor, kCTParagraphStyleAttributeName: paragraph] as! [NSAttributedString.Key: Any]
 
         //Image
         let scale = UIScreen.main.scale
