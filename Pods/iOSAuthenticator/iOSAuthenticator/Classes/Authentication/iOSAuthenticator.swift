@@ -101,7 +101,7 @@ public class iOSAuthenticator: NSObject {
      - returns: A custom enum (iOSBiometryType) that specify if the biometric authenticator is: Available, Touch ID or Face ID
      */
     public class func biometricType() -> iOSBiometryType {
-        
+
         let context = LAContext()
         var type: iOSBiometryType = .notAvailable
         
@@ -197,12 +197,12 @@ public class iOSAuthenticator: NSObject {
         iOSAuthenticator.shared.customView = nil
     }
     private func registerNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground(_:)), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForgraund(_:)), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationDidEnterBackground(_:)), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForgraund(_:)), name: UIApplication.willEnterForegroundNotification, object: nil)
     }
     private func removeNotification() {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIApplication.didEnterBackgroundNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIApplication.willEnterForegroundNotification, object: nil)
     }
     
     @objc private func applicationDidEnterBackground(_ notification: NSNotification) {

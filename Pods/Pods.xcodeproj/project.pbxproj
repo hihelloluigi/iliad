@@ -1366,7 +1366,6 @@
 		BA7AEA325BE40AF6F64426BAE79D9B5E /* CGRectExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGRectExtension.swift; path = Source/CGRectExtension.swift; sourceTree = "<group>"; };
 		BA84AEF0EC9C80E844FC4336FE184962 /* KeychainAccess.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainAccess.xcconfig; sourceTree = "<group>"; };
 		BA9F0D642F438483ED2A181F2B07427B /* NVActivityIndicatorAnimationPacman.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationPacman.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationPacman.swift; sourceTree = "<group>"; };
-		BB45B32EE42C7550E5E6BE6D3C476593 /* MeasurementNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MeasurementNanoPB.framework; path = Frameworks/MeasurementNanoPB.framework; sourceTree = "<group>"; };
 		BB65580F4C3C01187F48EB1CC8A487BF /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB91461A49CCF40C1FB7E8F2F70521E0 /* TransitionButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TransitionButton.xcconfig; sourceTree = "<group>"; };
 		BB9D592A42CD3EFF93CCB7D89DDBD6A6 /* GPBCodedOutputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GPBCodedOutputStream.m; path = objectivec/GPBCodedOutputStream.m; sourceTree = "<group>"; };
@@ -1385,6 +1384,7 @@
 		BFF1E4CF7C0756586B413C1BED07ED6A /* Pods-Abstract Target-IliadProd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Abstract Target-IliadProd.release.xcconfig"; sourceTree = "<group>"; };
 		C0D778F487E31B3D3E280C6FFC7B598F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		C18EE7E50945EDD541796ADA9352F3EA /* BmoViewPager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BmoViewPager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1941FBBAC0FE4A2DB121F312FD325CD /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = Frameworks/GoogleAppMeasurement.framework; sourceTree = "<group>"; };
 		C1C153294D365236BA0C3014B6FD8744 /* GTMLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMLogger.h; path = Foundation/GTMLogger.h; sourceTree = "<group>"; };
 		C26E3C9B293E61F7D24F614781E5C814 /* FIRComponentContainerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRComponentContainerInternal.h; path = Firebase/Core/Private/FIRComponentContainerInternal.h; sourceTree = "<group>"; };
 		C2C1204642EEC14C5D0EC0F1D6185510 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
@@ -1414,6 +1414,7 @@
 		CFC6254C6F23B5C9856AB2FD53E987D0 /* CustomTransitionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomTransitionViewController.swift; path = Source/CustomTransitionViewController.swift; sourceTree = "<group>"; };
 		CFF4C6E67D2E34BFC6BE1FBE10FC4FED /* KeychainAccess.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeychainAccess.modulemap; sourceTree = "<group>"; };
 		D0206CEC8E6058624C5548E369FC7BBE /* TransitionButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TransitionButton-umbrella.h"; sourceTree = "<group>"; };
+		D065FFC082FD04D97A8BD0AED855DDFA /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RevealServer.framework; path = "RevealServer-18/iOS/RevealServer.framework"; sourceTree = "<group>"; };
 		D0CBA97F3048674EB29F1BEC85E734B6 /* BEMCheckBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BEMCheckBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1063E13F739421C8B2F7D207F4C63C9 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D17A18F4EE42AEB586ABFDF753932BA4 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -1468,10 +1469,8 @@
 		E58E5DFF162D2A68DFE2CCB50FD7475F /* Pods-Abstract Target-IliadProd-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Abstract Target-IliadProd-resources.sh"; sourceTree = "<group>"; };
 		E5AC8792C2BA06958CAF882F6D0960B8 /* GULNetworkMessageCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GULNetworkMessageCode.h; path = GoogleUtilities/Network/Private/GULNetworkMessageCode.h; sourceTree = "<group>"; };
 		E701F31C7E4F88543815EACD28C1F331 /* NVActivityIndicatorAnimationBallPulseSync.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NVActivityIndicatorAnimationBallPulseSync.swift; path = Source/NVActivityIndicatorView/Animations/NVActivityIndicatorAnimationBallPulseSync.swift; sourceTree = "<group>"; };
-		E777EED43358AE1C832F8B3222F38A2D /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppMeasurement.framework; path = Frameworks/GoogleAppMeasurement.framework; sourceTree = "<group>"; };
 		E7991BEDD73452E098A805E088211D45 /* GULNetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULNetwork.m; path = GoogleUtilities/Network/GULNetwork.m; sourceTree = "<group>"; };
 		E8036997A9672186557FB8F447E76480 /* FIRAnalyticsConfiguration+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FIRAnalyticsConfiguration+Internal.h"; path = "Firebase/Core/Private/FIRAnalyticsConfiguration+Internal.h"; sourceTree = "<group>"; };
-		E81838C78ECF56B44AFDFA6D24E6DEAA /* RevealServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RevealServer.framework; path = "RevealServer-17/iOS/RevealServer.framework"; sourceTree = "<group>"; };
 		E8484A38417B61D1A076AC6D39D01479 /* Empty.pbobjc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Empty.pbobjc.h; path = objectivec/google/protobuf/Empty.pbobjc.h; sourceTree = "<group>"; };
 		E8730EB8C235F09DB23A1FE0E2B22C81 /* GULSwizzledObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GULSwizzledObject.m; path = GoogleUtilities/ISASwizzler/GULSwizzledObject.m; sourceTree = "<group>"; };
 		E98FF44BBA063BF1C98344D4256AE29C /* TransitionButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TransitionButton-dummy.m"; sourceTree = "<group>"; };
@@ -1848,7 +1847,7 @@
 		1BE402FAA9B2ED8C48DC4483D04AAA77 /* Reveal-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				465445FD94799A93DEF474AD5D863C98 /* Frameworks */,
+				790F4A88823657676B9B24AF2007D97B /* Frameworks */,
 			);
 			path = "Reveal-SDK";
 			sourceTree = "<group>";
@@ -1940,6 +1939,14 @@
 			);
 			name = "Pods-Abstract Target-IliadStaging";
 			path = "Target Support Files/Pods-Abstract Target-IliadStaging";
+			sourceTree = "<group>";
+		};
+		2736C0717DDFB1FC20D37F8F4698FA8C /* GoogleAppMeasurement */ = {
+			isa = PBXGroup;
+			children = (
+				A93EB958A7BA81AE374A81AB2D546A60 /* Frameworks */,
+			);
+			path = GoogleAppMeasurement;
 			sourceTree = "<group>";
 		};
 		2EFFB0FED72200BB07291D8443025041 /* CoreOnly */ = {
@@ -2083,14 +2090,6 @@
 				DF7CD503C5265870CB3D4C5131140E3F /* Support Files */,
 			);
 			path = SwiftyUserDefaults;
-			sourceTree = "<group>";
-		};
-		465445FD94799A93DEF474AD5D863C98 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E81838C78ECF56B44AFDFA6D24E6DEAA /* RevealServer.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		48AB15C0CCB7AB28D057F2D5272F39AD /* Products */ = {
@@ -2323,7 +2322,7 @@
 				40FF6202EDF6D39E21C41CCCCADEC101 /* FirebaseCore */,
 				205643978898B6339E13BA8694651458 /* FirebaseInstanceID */,
 				C81DD3D5A77B9EE7EC375E92D90789DF /* FirebasePerformance */,
-				7815DBDC7B4273DDB3000F2E76F60CE1 /* GoogleAppMeasurement */,
+				2736C0717DDFB1FC20D37F8F4698FA8C /* GoogleAppMeasurement */,
 				48E09E908C3EF4BE98F1690EA9ADC9EF /* GoogleToolboxForMac */,
 				6D04A1AB9CB51C17CD9ECD1184EB1A8A /* GoogleUtilities */,
 				D4AD8CFB0E405003B70F785E2C12E05C /* GTMSessionFetcher */,
@@ -2345,20 +2344,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7815DBDC7B4273DDB3000F2E76F60CE1 /* GoogleAppMeasurement */ = {
-			isa = PBXGroup;
-			children = (
-				9175835A6304E0E3CB413187DE351774 /* Frameworks */,
-			);
-			path = GoogleAppMeasurement;
-			sourceTree = "<group>";
-		};
 		786A5834D42EAEC972BF5F0B42D5B28F /* FirebaseAnalytics */ = {
 			isa = PBXGroup;
 			children = (
 				5A400442BD0F0F5736B245F4E0D0C2EB /* Frameworks */,
 			);
 			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		790F4A88823657676B9B24AF2007D97B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D065FFC082FD04D97A8BD0AED855DDFA /* RevealServer.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7CC75F14E7CEF2760432FCE8CE3298E2 /* Pods-Abstract Target-IliadProd */ = {
@@ -2525,15 +2524,6 @@
 			name = Presenter;
 			sourceTree = "<group>";
 		};
-		9175835A6304E0E3CB413187DE351774 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E777EED43358AE1C832F8B3222F38A2D /* GoogleAppMeasurement.framework */,
-				BB45B32EE42C7550E5E6BE6D3C476593 /* MeasurementNanoPB.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		91C93EEE3FE2BFC934F3CEF113D6CAAA /* AppDelegateSwizzler */ = {
 			isa = PBXGroup;
 			children = (
@@ -2625,6 +2615,14 @@
 				8018778495519167E656D8ECCE4ABE98 /* GTMSessionUploadFetcher.m */,
 			);
 			name = Core;
+			sourceTree = "<group>";
+		};
+		A93EB958A7BA81AE374A81AB2D546A60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1941FBBAC0FE4A2DB121F312FD325CD /* GoogleAppMeasurement.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		AFE5ADB401C8E1B38997C896D848F115 /* Targets Support Files */ = {
@@ -3819,7 +3817,39 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1000;
+				TargetAttributes = {
+					123F89F7E8DB3444EAD2F61E835952E2 = {
+						LastSwiftMigration = 1000;
+					};
+					1E25DE212171AF97E8CDAC2ED1A1ABCC = {
+						LastSwiftMigration = 1000;
+					};
+					3D997A2071806AA908503A54FDB94C6E = {
+						LastSwiftMigration = 1000;
+					};
+					46F960D6F4D1364D9AC46EA5C3156681 = {
+						LastSwiftMigration = 1000;
+					};
+					64C29FDDA7BD39277BB6785C4B40FCEC = {
+						LastSwiftMigration = 1000;
+					};
+					7EF32424C94AC2407557695DDE338FEC = {
+						LastSwiftMigration = 1000;
+					};
+					88E9EC28B8B46C3631E6B242B50F4442 = {
+						LastSwiftMigration = 1000;
+					};
+					8905DB6521F8FDC34752B69DEE3FDEB7 = {
+						LastSwiftMigration = 1000;
+					};
+					9749FEC86D945A13F98E7FCD33DB54AB = {
+						LastSwiftMigration = 1000;
+					};
+					D702AF623C2ED8480E5326EDD68C996C = {
+						LastSwiftMigration = 1000;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -5866,6 +5896,38 @@
 			};
 			name = Release;
 		};
+		A31943F9F5029D53B6666F7FEBF2B5A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D022267106483A22DECD4FC8034675D /* iOSAuthenticator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iOSAuthenticator/iOSAuthenticator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOSAuthenticator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iOSAuthenticator/iOSAuthenticator.modulemap";
+				PRODUCT_MODULE_NAME = iOSAuthenticator;
+				PRODUCT_NAME = iOSAuthenticator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		A8970E06D31507F502B44F0664863A57 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 47F7930098F589455CFD1EF450FB083F /* BmoViewPager.xcconfig */;
@@ -5929,39 +5991,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		AA54C86256B59845D67F97054981E3EA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D022267106483A22DECD4FC8034675D /* iOSAuthenticator.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/iOSAuthenticator/iOSAuthenticator-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/iOSAuthenticator/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/iOSAuthenticator/iOSAuthenticator.modulemap";
-				PRODUCT_MODULE_NAME = iOSAuthenticator;
-				PRODUCT_NAME = iOSAuthenticator;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		AF2BABAC2AFB7C14369D98BF5A384974 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -6030,6 +6059,71 @@
 			};
 			name = Debug;
 		};
+		B89AF4A4522801FA8C1136E29511B811 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D022267106483A22DECD4FC8034675D /* iOSAuthenticator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/iOSAuthenticator/iOSAuthenticator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/iOSAuthenticator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/iOSAuthenticator/iOSAuthenticator.modulemap";
+				PRODUCT_MODULE_NAME = iOSAuthenticator;
+				PRODUCT_NAME = iOSAuthenticator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B913AD4484E319BA6ADA44CBAF6DE5F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E14146648DA75530F87EF908CF40457 /* SwiftMessages.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftMessages/SwiftMessages-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftMessages/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftMessages/SwiftMessages.modulemap";
+				PRODUCT_MODULE_NAME = SwiftMessages;
+				PRODUCT_NAME = SwiftMessages;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		BB92FB6D9E62ED55D82CD16F4273CC7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D27661D46F969D638A76FC94FFAFD08A /* ClusterKit.xcconfig */;
@@ -6055,38 +6149,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BBC7ED2BDE5E9743A7BC9CF117B54B8D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D022267106483A22DECD4FC8034675D /* iOSAuthenticator.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/iOSAuthenticator/iOSAuthenticator-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/iOSAuthenticator/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/iOSAuthenticator/iOSAuthenticator.modulemap";
-				PRODUCT_MODULE_NAME = iOSAuthenticator;
-				PRODUCT_NAME = iOSAuthenticator;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -6269,6 +6331,39 @@
 			};
 			name = Release;
 		};
+		D86AF5A671BC83D6084EFB58C0C77D5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E14146648DA75530F87EF908CF40457 /* SwiftMessages.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftMessages/SwiftMessages-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftMessages/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftMessages/SwiftMessages.modulemap";
+				PRODUCT_MODULE_NAME = SwiftMessages;
+				PRODUCT_NAME = SwiftMessages;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		D8D7052A0A64B6E5CF24725B77134F2B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D27661D46F969D638A76FC94FFAFD08A /* ClusterKit.xcconfig */;
@@ -6369,38 +6464,6 @@
 			};
 			name = Debug;
 		};
-		EB6C558C49BD45EC6835BE0934FBEBC9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E14146648DA75530F87EF908CF40457 /* SwiftMessages.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftMessages/SwiftMessages-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftMessages/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftMessages/SwiftMessages.modulemap";
-				PRODUCT_MODULE_NAME = SwiftMessages;
-				PRODUCT_NAME = SwiftMessages;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		EC74BEA18B2458AE6F4A1698C13D2B50 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0356907B148B499B923B7299398DA5A8 /* FirebaseCore.xcconfig */;
@@ -6430,39 +6493,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		F70AAAFD5B855D93ABD3587F1A832528 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E14146648DA75530F87EF908CF40457 /* SwiftMessages.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftMessages/SwiftMessages-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftMessages/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftMessages/SwiftMessages.modulemap";
-				PRODUCT_MODULE_NAME = SwiftMessages;
-				PRODUCT_NAME = SwiftMessages;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.1;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -6587,8 +6617,8 @@
 		9BFDEB656E871A6DB76659EF0034ECF5 /* Build configuration list for PBXNativeTarget "iOSAuthenticator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BBC7ED2BDE5E9743A7BC9CF117B54B8D /* Debug */,
-				AA54C86256B59845D67F97054981E3EA /* Release */,
+				A31943F9F5029D53B6666F7FEBF2B5A7 /* Debug */,
+				B89AF4A4522801FA8C1136E29511B811 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -6641,8 +6671,8 @@
 		CA1296286BD949F46D653549BCFDFD50 /* Build configuration list for PBXNativeTarget "SwiftMessages" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EB6C558C49BD45EC6835BE0934FBEBC9 /* Debug */,
-				F70AAAFD5B855D93ABD3587F1A832528 /* Release */,
+				B913AD4484E319BA6ADA44CBAF6DE5F6 /* Debug */,
+				D86AF5A671BC83D6084EFB58C0C77D5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

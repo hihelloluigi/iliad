@@ -1,6 +1,6 @@
 {
   "name": "iOSAuthenticator",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "summary": "A simple wrapper on AuthLocation",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/mo3bius/iOSAuthenticator",
@@ -13,11 +13,11 @@
   },
   "source": {
     "git": "https://github.com/mo3bius/iOSAuthenticator.git",
-    "tag": "0.2.0"
+    "tag": "0.3.0"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "swift_version": "4.1",
+  "swift_version": "4.2",
   "source_files": "iOSAuthenticator/Classes/**/*"
 }
