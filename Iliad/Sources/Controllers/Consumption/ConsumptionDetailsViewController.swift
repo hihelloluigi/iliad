@@ -43,7 +43,7 @@ class ConsumptionDetailsViewController: UIViewController {
         tableView.delegate = self
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 100
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
     }
     private func configurationText() {
         cancelBarButton.title = "Commons" ~> "BACK"

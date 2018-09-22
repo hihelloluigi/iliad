@@ -13,7 +13,7 @@ class StoreAnnotationView: MKAnnotationView {
         willSet {
             canShowCallout = true
             let mapsButton = UIButton(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 30, height: 30)))
-            mapsButton.setBackgroundImage(#imageLiteral(resourceName: "ic_map"), for: UIControlState())
+            mapsButton.setBackgroundImage(#imageLiteral(resourceName: "ic_map"), for: UIControl.State())
             rightCalloutAccessoryView = mapsButton
 
             if let title = annotation?.title, let type = StoreType(label: title) {

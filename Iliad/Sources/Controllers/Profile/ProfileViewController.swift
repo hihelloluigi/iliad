@@ -64,7 +64,7 @@ class ProfileViewController: UIViewController {
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         tableView.estimatedRowHeight = 100
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
     }
     private func configurationUI() {
         self.navigationController?.navigationBar.hideShadowBar()
