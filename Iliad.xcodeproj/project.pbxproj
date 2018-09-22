@@ -32,6 +32,8 @@
 		2A03FE60215671CD00AEBF82 /* API+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE5F215671CD00AEBF82 /* API+Store.swift */; };
 		2A03FE61215671CD00AEBF82 /* API+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE5F215671CD00AEBF82 /* API+Store.swift */; };
 		2A03FE62215671CD00AEBF82 /* API+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE5F215671CD00AEBF82 /* API+Store.swift */; };
+		2A03FE63215679A100AEBF82 /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A03FE3E2156715500AEBF82 /* Store.storyboard */; };
+		2A03FE64215679A400AEBF82 /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A03FE3E2156715500AEBF82 /* Store.storyboard */; };
 		2A192F91211AF9F3007C1E5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A192F8B211AF9F3007C1E5A /* LaunchScreen.storyboard */; };
 		2A192F93211AF9F3007C1E5A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A192F8F211AF9F3007C1E5A /* Login.storyboard */; };
 		2A192F99211AFF16007C1E5A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192F98211AFF16007C1E5A /* LoginViewController.swift */; };
@@ -1057,6 +1059,7 @@
 				2AA61773212594A80062CA49 /* Login.strings in Resources */,
 				2A192FD2211B12BD007C1E5A /* Assets.xcassets in Resources */,
 				2AE214C02126FA4F00BB2F1C /* Settings.strings in Resources */,
+				2A03FE63215679A100AEBF82 /* Store.storyboard in Resources */,
 				2A922DF0212873BF003B1731 /* Puk.strings in Resources */,
 				2AE214B72126CB7B00BB2F1C /* Settings.storyboard in Resources */,
 				2A192FD3211B12BD007C1E5A /* LaunchScreen.storyboard in Resources */,
@@ -1083,6 +1086,7 @@
 				2AA61774212594A80062CA49 /* Login.strings in Resources */,
 				2A192FF1211B12C0007C1E5A /* Assets.xcassets in Resources */,
 				2AE214C12126FA4F00BB2F1C /* Settings.strings in Resources */,
+				2A03FE64215679A400AEBF82 /* Store.storyboard in Resources */,
 				2A922DEF212873BF003B1731 /* Puk.strings in Resources */,
 				2AE214B82126CB7B00BB2F1C /* Settings.storyboard in Resources */,
 				2A192FF2211B12C0007C1E5A /* LaunchScreen.storyboard in Resources */,
