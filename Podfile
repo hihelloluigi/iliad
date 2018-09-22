@@ -39,6 +39,8 @@ end
 
 def debugging_pods
     pod 'Reveal-SDK', :configurations => ['Debug']
+    pod 'Fabric'
+	pod 'Crashlytics'
 end
 
 abstract_target 'Abstract Target' do 

@@ -949,6 +949,7 @@
 				2A80F308211AEF21008D8C89 /* Resources */,
 				31B99667BB9DB2078BB8D943 /* [CP] Embed Pods Frameworks */,
 				2AF00317213DC30C001507C1 /* Embed App Extensions */,
+				2A03FE6521568F1100AEBF82 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -1137,6 +1138,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2A03FE6521568F1100AEBF82 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Fabric;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 0c952a3c4738837978041bedea4bc038af87877f 69ce95087f1adbfc43f3ec3b2ac8d411a9e0df5af552e818d4532e63a4a0c6a7\n";
+		};
 		2A193023211B2D98007C1E5A /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1905,6 +1925,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Prod/IliadProd.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Prod/iliadProd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1927,6 +1948,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Prod/IliadProd.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Prod/iliadProd-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

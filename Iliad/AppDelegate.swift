@@ -9,6 +9,8 @@
 import UIKit
 import SwiftyUserDefaults
 import Firebase
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        setupFirebase()
+        setup()
         setupRootViewController()
         
         return true
@@ -49,15 +51,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // Mark - Setup
-    private func setupFirebase() {
-        guard
-            let filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist"),
-            let options = FirebaseOptions(contentsOfFile: filePath)
-        else {
-            return
+    private func setup() {
+        // Firebase
+        if let filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist"),
+            let options = FirebaseOptions(contentsOfFile: filePath) {
+            FirebaseApp.configure(options: options)
         }
-        FirebaseApp.configure(options: options)
+
+        // Fabric
+        Fabric.with([Crashlytics.self])
     }
+
     private func setupRootViewController() {
         if Defaults[.autoLogin] && !Defaults[.loginWithBiometric] {
             guard let autoLoginVC = "Login" <%> "AutoLoginViewController" as? AutoLoginViewController else {
