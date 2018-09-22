@@ -149,7 +149,10 @@ class ProfileViewController: UIViewController {
                 return
             }
 
+            loginVC.logout = true
+
             UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                window.rootViewController?.dismiss(animated: true, completion: nil)
                 window.rootViewController = loginVC
             }, completion: { (success) in
                 print(success)

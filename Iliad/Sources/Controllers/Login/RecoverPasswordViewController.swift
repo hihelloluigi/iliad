@@ -205,11 +205,6 @@ class RecoverPasswordViewController: UIViewController {
                                                                                 "RecoverPassword" ~> "EMAIL_TEXTFIELD_ERROR")
             return
         }
-        guard Utility.isValidEmail(testStr: secondValue) else {
-            showTextFieldError(textField: secondTextField, error: "RecoverPassword" ~> "EMAIL_FORMAT_TEXTFIELD_ERROR")
-            return
-        }
-        secondTextField.errorMessage = nil
 
         if forgetUsername {
             if let thirdValue = thirdTextField.text, thirdValue.isEmpty {
@@ -222,6 +217,11 @@ class RecoverPasswordViewController: UIViewController {
                 showTextFieldError(textField: thirdTextField, error: "RecoverPassword" ~> "EMAIL_TEXTFIELD_ERROR")
             }
         } else {
+            guard Utility.isValidEmail(testStr: secondValue) else {
+                showTextFieldError(textField: secondTextField, error: "RecoverPassword" ~> "EMAIL_FORMAT_TEXTFIELD_ERROR")
+                return
+            }
+            secondTextField.errorMessage = nil
             recoverPassword(username: firstValue, email: secondValue)
         }
     }
