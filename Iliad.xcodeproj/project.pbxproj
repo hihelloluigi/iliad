@@ -7,6 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A03FE402156715500AEBF82 /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A03FE3E2156715500AEBF82 /* Store.storyboard */; };
+		2A03FE472156717300AEBF82 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE432156717300AEBF82 /* MapManager.swift */; };
+		2A03FE482156717300AEBF82 /* StoreClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE442156717300AEBF82 /* StoreClusterView.swift */; };
+		2A03FE492156717300AEBF82 /* StoreAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE452156717300AEBF82 /* StoreAnnotationView.swift */; };
+		2A03FE4A2156717300AEBF82 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE462156717300AEBF82 /* StoreViewController.swift */; };
+		2A03FE4B2156717900AEBF82 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE462156717300AEBF82 /* StoreViewController.swift */; };
+		2A03FE4C2156717A00AEBF82 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE462156717300AEBF82 /* StoreViewController.swift */; };
+		2A03FE4D2156717D00AEBF82 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE432156717300AEBF82 /* MapManager.swift */; };
+		2A03FE4E2156717D00AEBF82 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE432156717300AEBF82 /* MapManager.swift */; };
+		2A03FE4F2156717F00AEBF82 /* StoreClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE442156717300AEBF82 /* StoreClusterView.swift */; };
+		2A03FE502156718000AEBF82 /* StoreClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE442156717300AEBF82 /* StoreClusterView.swift */; };
+		2A03FE512156718200AEBF82 /* StoreAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE452156717300AEBF82 /* StoreAnnotationView.swift */; };
+		2A03FE522156718200AEBF82 /* StoreAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE452156717300AEBF82 /* StoreAnnotationView.swift */; };
+		2A03FE542156719D00AEBF82 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE532156719D00AEBF82 /* Store.swift */; };
+		2A03FE552156719D00AEBF82 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE532156719D00AEBF82 /* Store.swift */; };
+		2A03FE562156719D00AEBF82 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE532156719D00AEBF82 /* Store.swift */; };
+		2A03FE59215671AA00AEBF82 /* UIView+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE57215671AA00AEBF82 /* UIView+XT.swift */; };
+		2A03FE5A215671AA00AEBF82 /* UIView+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE57215671AA00AEBF82 /* UIView+XT.swift */; };
+		2A03FE5B215671AA00AEBF82 /* UIView+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE57215671AA00AEBF82 /* UIView+XT.swift */; };
+		2A03FE5C215671AA00AEBF82 /* UIImage+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE58215671AA00AEBF82 /* UIImage+XT.swift */; };
+		2A03FE5D215671AA00AEBF82 /* UIImage+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE58215671AA00AEBF82 /* UIImage+XT.swift */; };
+		2A03FE5E215671AA00AEBF82 /* UIImage+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE58215671AA00AEBF82 /* UIImage+XT.swift */; };
+		2A03FE60215671CD00AEBF82 /* API+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE5F215671CD00AEBF82 /* API+Store.swift */; };
+		2A03FE61215671CD00AEBF82 /* API+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE5F215671CD00AEBF82 /* API+Store.swift */; };
+		2A03FE62215671CD00AEBF82 /* API+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE5F215671CD00AEBF82 /* API+Store.swift */; };
 		2A192F91211AF9F3007C1E5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A192F8B211AF9F3007C1E5A /* LaunchScreen.storyboard */; };
 		2A192F93211AF9F3007C1E5A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A192F8F211AF9F3007C1E5A /* Login.storyboard */; };
 		2A192F99211AFF16007C1E5A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192F98211AFF16007C1E5A /* LoginViewController.swift */; };
@@ -274,6 +299,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A03FE3F2156715500AEBF82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Store.storyboard; sourceTree = "<group>"; };
+		2A03FE432156717300AEBF82 /* MapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
+		2A03FE442156717300AEBF82 /* StoreClusterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreClusterView.swift; sourceTree = "<group>"; };
+		2A03FE452156717300AEBF82 /* StoreAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreAnnotationView.swift; sourceTree = "<group>"; };
+		2A03FE462156717300AEBF82 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		2A03FE532156719D00AEBF82 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		2A03FE57215671AA00AEBF82 /* UIView+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+XT.swift"; sourceTree = "<group>"; };
+		2A03FE58215671AA00AEBF82 /* UIImage+XT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+XT.swift"; sourceTree = "<group>"; };
+		2A03FE5F215671CD00AEBF82 /* API+Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API+Store.swift"; sourceTree = "<group>"; };
 		2A192F8C211AF9F3007C1E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A192F90211AF9F3007C1E5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		2A192F98211AFF16007C1E5A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -415,6 +449,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A03FE412156717300AEBF82 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				2A03FE422156717300AEBF82 /* Utilities */,
+				2A03FE462156717300AEBF82 /* StoreViewController.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		2A03FE422156717300AEBF82 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2A03FE432156717300AEBF82 /* MapManager.swift */,
+				2A03FE442156717300AEBF82 /* StoreClusterView.swift */,
+				2A03FE452156717300AEBF82 /* StoreAnnotationView.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		2A192F94211AFC72007C1E5A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +505,7 @@
 		2A192F9B211B01A5007C1E5A /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				2A03FE5F215671CD00AEBF82 /* API+Store.swift */,
 				2A192F9D211B01F4007C1E5A /* API.swift */,
 				2A192F9F211B02E7007C1E5A /* API+XT.swift */,
 				2A192FA1211B0306007C1E5A /* API+Login.swift */,
@@ -518,6 +572,8 @@
 		2A193003211B1AC7007C1E5A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2A03FE58215671AA00AEBF82 /* UIImage+XT.swift */,
+				2A03FE57215671AA00AEBF82 /* UIView+XT.swift */,
 				2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */,
 				2A193004211B1AD6007C1E5A /* String+XT.swift */,
 				2AAF69AC2121CE95005DECE5 /* Date+XT.swift */,
@@ -532,6 +588,7 @@
 		2A19300C211B1C3A007C1E5A /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				2A03FE532156719D00AEBF82 /* Store.swift */,
 				2A19300D211B1C50007C1E5A /* User.swift */,
 				2AAF69A42121CB2F005DECE5 /* Consumption.swift */,
 				2A66066821374C1400C96102 /* Section.swift */,
@@ -647,6 +704,7 @@
 			children = (
 				2AF92DD0211C323A0058CFD2 /* Login */,
 				2AAF69932121BD0C005DECE5 /* TabBar */,
+				2A03FE412156717300AEBF82 /* Store */,
 				2A232636211C84120045FBD7 /* Consumption */,
 				2AAF696E2121BB60005DECE5 /* Options */,
 				2AAF696D2121BB58005DECE5 /* Services */,
@@ -662,6 +720,7 @@
 				2A192F8B211AF9F3007C1E5A /* LaunchScreen.storyboard */,
 				2A192F8F211AF9F3007C1E5A /* Login.storyboard */,
 				2AAF698E2121BC95005DECE5 /* Main.storyboard */,
+				2A03FE3E2156715500AEBF82 /* Store.storyboard */,
 				2A19301D211B1E7F007C1E5A /* Consumption.storyboard */,
 				2AAF697B2121BC56005DECE5 /* Options.storyboard */,
 				2AAF697F2121BC57005DECE5 /* Services.storyboard */,
@@ -942,6 +1001,7 @@
 					};
 					2A80F309211AEF21008D8C89 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -950,6 +1010,7 @@
 					};
 					2AF84B2E213D6C6500026AE3 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -1048,6 +1109,7 @@
 				2AA61771212593DF0062CA49 /* Login.strings in Resources */,
 				2A80F315211AEF22008D8C89 /* Assets.xcassets in Resources */,
 				2AE214BF2126FA4F00BB2F1C /* Settings.strings in Resources */,
+				2A03FE402156715500AEBF82 /* Store.storyboard in Resources */,
 				2A922DEE2128731D003B1731 /* Puk.strings in Resources */,
 				2AE214B62126CB7B00BB2F1C /* Settings.storyboard in Resources */,
 				2A192F91211AF9F3007C1E5A /* LaunchScreen.storyboard in Resources */,
@@ -1095,6 +1157,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
 				"${BUILT_PRODUCTS_DIR}/BmoViewPager/BmoViewPager.framework",
+				"${BUILT_PRODUCTS_DIR}/ClusterKit/ClusterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -1104,7 +1167,7 @@
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${PODS_ROOT}/Reveal-SDK/RevealServer-17/iOS/RevealServer.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-18/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -1118,6 +1181,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BmoViewPager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ClusterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -1205,6 +1269,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
 				"${BUILT_PRODUCTS_DIR}/BmoViewPager/BmoViewPager.framework",
+				"${BUILT_PRODUCTS_DIR}/ClusterKit/ClusterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -1214,7 +1279,7 @@
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${PODS_ROOT}/Reveal-SDK/RevealServer-17/iOS/RevealServer.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-18/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -1228,6 +1293,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BmoViewPager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ClusterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -1261,6 +1327,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
 				"${BUILT_PRODUCTS_DIR}/BmoViewPager/BmoViewPager.framework",
+				"${BUILT_PRODUCTS_DIR}/ClusterKit/ClusterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
@@ -1270,7 +1337,7 @@
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${PODS_ROOT}/Reveal-SDK/RevealServer-17/iOS/RevealServer.framework",
+				"${PODS_ROOT}/Reveal-SDK/RevealServer-18/iOS/RevealServer.framework",
 				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -1284,6 +1351,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BmoViewPager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ClusterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
@@ -1317,6 +1385,7 @@
 				2AAF6962212196E5005DECE5 /* API+Consumption.swift in Sources */,
 				2A192FBE211B12BD007C1E5A /* APIEndpoint+Paths.swift in Sources */,
 				2AAF69AE2121CE95005DECE5 /* Date+XT.swift in Sources */,
+				2A03FE5D215671AA00AEBF82 /* UIImage+XT.swift in Sources */,
 				2A192FBF211B12BD007C1E5A /* LoginViewController.swift in Sources */,
 				2A232641211C892F0045FBD7 /* CustomButton.swift in Sources */,
 				2A922DEB21286FCC003B1731 /* CustomActivityIndicator.swift in Sources */,
@@ -1332,14 +1401,19 @@
 				2A66065D2136E64B00C96102 /* ConsumptionViewController.swift in Sources */,
 				2AC5D7F5213ADC7C00DAECDC /* UIBarButtonItem+XT.swift in Sources */,
 				2A19300F211B1C50007C1E5A /* User.swift in Sources */,
+				2A03FE61215671CD00AEBF82 /* API+Store.swift in Sources */,
 				2A232692211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
+				2A03FE512156718200AEBF82 /* StoreAnnotationView.swift in Sources */,
 				2A192FC5211B12BD007C1E5A /* APIEndpoint.swift in Sources */,
 				2A23263C211C888F0045FBD7 /* Utility.swift in Sources */,
 				2A6606592136E58C00C96102 /* PagerViewController.swift in Sources */,
 				2A192FC7211B12BD007C1E5A /* APIEndpoint+Tasks.swift in Sources */,
 				2AAF69A62121CB2F005DECE5 /* Consumption.swift in Sources */,
+				2A03FE4B2156717900AEBF82 /* StoreViewController.swift in Sources */,
 				2AAF69962121BD3E005DECE5 /* MainTabBarController.swift in Sources */,
+				2A03FE552156719D00AEBF82 /* Store.swift in Sources */,
 				2A90865E213457D400230AAB /* HomeViewController.swift in Sources */,
+				2A03FE4F2156717F00AEBF82 /* StoreClusterView.swift in Sources */,
 				2AAF69B22121DD72005DECE5 /* OptionCell.swift in Sources */,
 				2AF92DD5211C33800058CFD2 /* API+RecoverPassword.swift in Sources */,
 				2A66066E21374C4000C96102 /* ConsumptionDetail.swift in Sources */,
@@ -1352,6 +1426,7 @@
 				2A63F9092125C117009D515C /* ChangePasswordViewController.swift in Sources */,
 				2A193026211B362E007C1E5A /* CardView.swift in Sources */,
 				2A6606662137490200C96102 /* ConsumptionDetailsViewController.swift in Sources */,
+				2A03FE4E2156717D00AEBF82 /* MapManager.swift in Sources */,
 				2AAF69662121975F005DECE5 /* API+Service.swift in Sources */,
 				2AE214BB2126D1AC00BB2F1C /* AutoLoginViewController.swift in Sources */,
 				2A63F90D2125C122009D515C /* ChangeEmailViewController.swift in Sources */,
@@ -1368,6 +1443,7 @@
 				2A44A08D21400264003FA9C1 /* UINavigationBar.swift in Sources */,
 				2A192FCB211B12BD007C1E5A /* APIEndpoint+Methods.swift in Sources */,
 				2A63F9112125C12C009D515C /* ShowPukViewController.swift in Sources */,
+				2A03FE5A215671AA00AEBF82 /* UIView+XT.swift in Sources */,
 				2AAF69A22121BF4F005DECE5 /* ProfileViewController.swift in Sources */,
 				2A19302A211B38D9007C1E5A /* BasicCell.swift in Sources */,
 				2A192FCC211B12BD007C1E5A /* APIEndpoint+Core.swift in Sources */,
@@ -1381,6 +1457,7 @@
 				2AAF6963212196E5005DECE5 /* API+Consumption.swift in Sources */,
 				2A192FDD211B12C0007C1E5A /* APIEndpoint+Paths.swift in Sources */,
 				2AAF69AF2121CE95005DECE5 /* Date+XT.swift in Sources */,
+				2A03FE5E215671AA00AEBF82 /* UIImage+XT.swift in Sources */,
 				2A192FDE211B12C0007C1E5A /* LoginViewController.swift in Sources */,
 				2A922DEC21286FCC003B1731 /* CustomActivityIndicator.swift in Sources */,
 				2A192FDF211B12C0007C1E5A /* API+Login.swift in Sources */,
@@ -1396,14 +1473,19 @@
 				2A66065E2136E64B00C96102 /* ConsumptionViewController.swift in Sources */,
 				2AC5D7F6213ADC7C00DAECDC /* UIBarButtonItem+XT.swift in Sources */,
 				2A193027211B362E007C1E5A /* CardView.swift in Sources */,
+				2A03FE62215671CD00AEBF82 /* API+Store.swift in Sources */,
 				2A19302B211B38D9007C1E5A /* BasicCell.swift in Sources */,
+				2A03FE522156718200AEBF82 /* StoreAnnotationView.swift in Sources */,
 				2A232693211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
 				2AF92DD6211C33800058CFD2 /* API+RecoverPassword.swift in Sources */,
 				2A66065A2136E58C00C96102 /* PagerViewController.swift in Sources */,
 				2A192FE2211B12C0007C1E5A /* API.swift in Sources */,
 				2A47620D211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */,
+				2A03FE4C2156717A00AEBF82 /* StoreViewController.swift in Sources */,
 				2AAF69A72121CB2F005DECE5 /* Consumption.swift in Sources */,
+				2A03FE562156719D00AEBF82 /* Store.swift in Sources */,
 				2A90865F213457D400230AAB /* HomeViewController.swift in Sources */,
+				2A03FE502156718000AEBF82 /* StoreClusterView.swift in Sources */,
 				2AAF69972121BD3E005DECE5 /* MainTabBarController.swift in Sources */,
 				2AAF69B32121DD72005DECE5 /* OptionCell.swift in Sources */,
 				2A66066F21374C4000C96102 /* ConsumptionDetail.swift in Sources */,
@@ -1416,6 +1498,7 @@
 				2A193007211B1AE5007C1E5A /* String+XT.swift in Sources */,
 				2A63F90A2125C117009D515C /* ChangePasswordViewController.swift in Sources */,
 				2A6606672137490200C96102 /* ConsumptionDetailsViewController.swift in Sources */,
+				2A03FE4D2156717D00AEBF82 /* MapManager.swift in Sources */,
 				2A192FE6211B12C0007C1E5A /* APIEndpoint+Tasks.swift in Sources */,
 				2AAF69672121975F005DECE5 /* API+Service.swift in Sources */,
 				2AE214BC2126D1AC00BB2F1C /* AutoLoginViewController.swift in Sources */,
@@ -1432,6 +1515,7 @@
 				2A44A08C21400264003FA9C1 /* UINavigationBar.swift in Sources */,
 				2A192FEB211B12C0007C1E5A /* APIEndpoint+Core.swift in Sources */,
 				2A63F9122125C12C009D515C /* ShowPukViewController.swift in Sources */,
+				2A03FE5B215671AA00AEBF82 /* UIView+XT.swift in Sources */,
 				2AAF69A32121BF4F005DECE5 /* ProfileViewController.swift in Sources */,
 				2AF92DD4211C32540058CFD2 /* RecoverPasswordViewController.swift in Sources */,
 				2A192FEC211B12C0007C1E5A /* AppConfig+Dev.swift in Sources */,
@@ -1445,6 +1529,7 @@
 				2AAF6961212196E5005DECE5 /* API+Consumption.swift in Sources */,
 				2A192FAE211B0383007C1E5A /* APIEndpoint+Paths.swift in Sources */,
 				2AAF69AD2121CE95005DECE5 /* Date+XT.swift in Sources */,
+				2A03FE5C215671AA00AEBF82 /* UIImage+XT.swift in Sources */,
 				2A192F99211AFF16007C1E5A /* LoginViewController.swift in Sources */,
 				2A232640211C892F0045FBD7 /* CustomButton.swift in Sources */,
 				2A922DEA21286FCC003B1731 /* CustomActivityIndicator.swift in Sources */,
@@ -1460,14 +1545,17 @@
 				2A66065C2136E64B00C96102 /* ConsumptionViewController.swift in Sources */,
 				2AC5D7F4213ADC7A00DAECDC /* UIBarButtonItem+XT.swift in Sources */,
 				2A80F30E211AEF21008D8C89 /* AppDelegate.swift in Sources */,
+				2A03FE60215671CD00AEBF82 /* API+Store.swift in Sources */,
 				2A232691211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
 				2A19300E211B1C50007C1E5A /* User.swift in Sources */,
 				2A192FAF211B0383007C1E5A /* APIEndpoint.swift in Sources */,
 				2A6606582136E58C00C96102 /* PagerViewController.swift in Sources */,
 				2A192FB6211B061F007C1E5A /* AppConfig+Prod.swift in Sources */,
 				2AAF69A52121CB2F005DECE5 /* Consumption.swift in Sources */,
+				2A03FE4A2156717300AEBF82 /* StoreViewController.swift in Sources */,
 				2AAF69952121BD3E005DECE5 /* MainTabBarController.swift in Sources */,
 				2A90865D213457D400230AAB /* HomeViewController.swift in Sources */,
+				2A03FE542156719D00AEBF82 /* Store.swift in Sources */,
 				2AAF69B12121DBFD005DECE5 /* OptionCell.swift in Sources */,
 				2A192FAB211B0383007C1E5A /* APIEndpoint+Tasks.swift in Sources */,
 				2A66066D21374C4000C96102 /* ConsumptionDetail.swift in Sources */,
@@ -1495,7 +1583,11 @@
 				2A192FAD211B0383007C1E5A /* APIEndpoint+Methods.swift in Sources */,
 				2A193029211B38D9007C1E5A /* BasicCell.swift in Sources */,
 				2A63F9102125C12C009D515C /* ShowPukViewController.swift in Sources */,
+				2A03FE482156717300AEBF82 /* StoreClusterView.swift in Sources */,
 				2AAF69A12121BF4F005DECE5 /* ProfileViewController.swift in Sources */,
+				2A03FE492156717300AEBF82 /* StoreAnnotationView.swift in Sources */,
+				2A03FE472156717300AEBF82 /* MapManager.swift in Sources */,
+				2A03FE59215671AA00AEBF82 /* UIView+XT.swift in Sources */,
 				2AF92DD2211C32500058CFD2 /* RecoverPasswordViewController.swift in Sources */,
 				2A44A08B21400216003FA9C1 /* UINavigationBar.swift in Sources */,
 				2A192FAC211B0383007C1E5A /* APIEndpoint+Core.swift in Sources */,
@@ -1524,6 +1616,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2A03FE3E2156715500AEBF82 /* Store.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A03FE3F2156715500AEBF82 /* Base */,
+			);
+			name = Store.storyboard;
+			sourceTree = "<group>";
+		};
 		2A192F8B211AF9F3007C1E5A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1810,7 +1910,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1832,7 +1932,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1852,7 +1952,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale.ConsumptionWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1872,7 +1972,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale.ConsumptionWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

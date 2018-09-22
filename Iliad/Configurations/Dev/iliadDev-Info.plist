@@ -32,7 +32,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>11</string>
+	<string>12</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -41,13 +41,13 @@
 		<true/>
 	</dict>
 	<key>NSFaceIDUsageDescription</key>
-	<string>Quest&apos; app richiede l&apos;autorizzazione per usare il Face ID per l&apos;autenticazione mediante il riconoscimento dei volti.</string>
+	<string>Quest' app richiede l'autorizzazione per usare il Face ID per l'autenticazione mediante il riconoscimento dei volti.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Quest&apos; app richiede l&apos;autorizzazione alla posizione per mostrare i negozi iliad vicino a te.</string>
+	<string>Quest' app richiede l'autorizzazione alla posizione per mostrare i negozi iliad vicino a te.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Quest&apos; app richiede l&apos;autorizzazione alla posizione per mostrare i negozi iliad vicino a te.</string>
+	<string>Quest' app richiede l'autorizzazione alla posizione per mostrare i negozi iliad vicino a te.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Quest&apos; app richiede l&apos;autorizzazione alla posizione per mostrare i negozi iliad vicino a te.</string>
+	<string>Quest' app richiede l'autorizzazione alla posizione per mostrare i negozi iliad vicino a te.</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
