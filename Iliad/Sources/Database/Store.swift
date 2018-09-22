@@ -80,7 +80,7 @@ class Store: NSObject, MKAnnotation {
 
     func mapItem() -> MKMapItem {
         let addressDict = [CNPostalAddressStreetKey: city]
-        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDict as [String : Any])
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDict as [String: Any])
         let mapItem = MKMapItem(placemark: placemark)
         mapItem.name = teachesLabel?.rawValue
 

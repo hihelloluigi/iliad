@@ -10,7 +10,6 @@ import UIKit
 import SwiftMessages
 
 extension UIViewController {
-    
     private func showMessage(title: String, message: String, color: UIColor, buttonTitle: String? = nil) {
         let view = MessageView.viewFromNib(layout: .cardView)
         var config = SwiftMessages.defaultConfig
@@ -26,6 +25,7 @@ extension UIViewController {
         view.configureTheme(backgroundColor: color, foregroundColor: UIColor.white, iconImage: nil, iconText: nil)
 //        config.dimMode = .gray(interactive: true)
         config.presentationContext = .viewController(self)
+        
         // Show
         SwiftMessages.show(config: config, view: view)
     }
