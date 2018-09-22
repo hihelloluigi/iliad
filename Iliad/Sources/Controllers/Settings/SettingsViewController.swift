@@ -20,15 +20,20 @@ class SettingsViewController: UITableViewController {
         // Labels
     @IBOutlet weak var autoLoginLabel: UILabel!
     @IBOutlet weak var biometricLabel: UILabel!
-
+    @IBOutlet weak var iliadFirstNumberLabel: UILabel!
+    @IBOutlet weak var iliadSecondNumberLabel: UILabel!
         // Image View
     @IBOutlet weak var beerImageView: UIImageView!
     @IBOutlet weak var alertImageView: UIImageView!
     @IBOutlet weak var telegramImageView: UIImageView!
     @IBOutlet weak var emailImageView: UIImageView!
+    @IBOutlet weak var iliadFirstNumberImageView: UIImageView!
+    @IBOutlet weak var iliadSecondNumberImageView: UIImageView!
 
     // Mark - Varibles
     let paypal = "https://paypal.me/luigiaiello"
+    let iliadFirtNumber = "177"
+    let iliadSecondNumber = "3518995177"
 
     // Mark - Override
     override func viewDidLoad() {
@@ -63,6 +68,8 @@ class SettingsViewController: UITableViewController {
         beerImageView.tintColor = .iliadRed
         telegramImageView.tintColor = .iliadRed
         emailImageView.tintColor = .iliadRed
+        iliadFirstNumberImageView.tintColor = .iliadRed
+        iliadSecondNumberImageView.tintColor = .iliadRed
 
         self.navigationController?.navigationBar.hideShadowBar()
     }
@@ -99,21 +106,34 @@ class SettingsViewController: UITableViewController {
 extension SettingsViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        guard indexPath.section == 1 else {
-            return
-        }
 
-        switch indexPath.row {
-        case 0:
-            guard let infoVC = "Login" <%> "InfoViewController" as? InfoViewController else {
-                return
-            }
-
-            self.present(infoVC, animated: true, completion: nil)
+        switch indexPath.section {
+        case 0, 3:
+            break
         case 1:
-            Utility.open(url: paypal)
+            switch indexPath.row {
+            case 0:
+                guard let infoVC = "Login" <%> "InfoViewController" as? InfoViewController else {
+                    return
+                }
+
+                self.present(infoVC, animated: true, completion: nil)
+            case 1:
+                Utility.open(url: paypal)
+            default:
+                print("What?")
+            }
+        case 2:
+            switch indexPath.row {
+            case 0:
+                Utility.open(url: "tel://\(iliadFirtNumber)")
+            case 1:
+                Utility.open(url: "tel://\(iliadSecondNumber)")
+            default:
+                print("What?")
+            }
         default:
-            print("What?")
+            break
         }
     }
 }

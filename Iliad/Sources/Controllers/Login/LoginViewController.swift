@@ -41,9 +41,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var storeLocationButton: UIBarButtonItem!
 
     // Mark - Variables
-    var showPasswordButton: UIButton?
-    let notification = UINotificationFeedbackGenerator()
-    let userDefaults = UserDefaults(suiteName: "group.com.luigiaiello.consumptionWidget")
+    private var showPasswordButton: UIButton?
+    private let notification = UINotificationFeedbackGenerator()
+    private let userDefaults = UserDefaults(suiteName: "group.com.luigiaiello.consumptionWidget")
+    var logout = false
 
     // Mark - Override
     override func viewDidLoad() {
@@ -53,7 +54,10 @@ class LoginViewController: UIViewController {
         configurationUI()
         configurationText()
         recoverUsername()
-        loginWithBiometric()
+
+        if !logout {
+            loginWithBiometric()
+        }
     }
 
     override func didReceiveMemoryWarning() {
