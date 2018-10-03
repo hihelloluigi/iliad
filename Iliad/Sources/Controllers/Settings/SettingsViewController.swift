@@ -108,8 +108,6 @@ extension SettingsViewController {
         tableView.deselectRow(at: indexPath, animated: true)
 
         switch indexPath.section {
-        case 0, 3:
-            break
         case 1:
             switch indexPath.row {
             case 0:
