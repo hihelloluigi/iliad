@@ -60,16 +60,3 @@ abstract_target 'Abstract Target' do
 	target 'IliadDev' do
 	end
 end
-
-
-post_install do |installer|
-	installer.pods_project.targets.each do |target|
-		if target.name == 'BmoViewPager' || target.name == 'TransitionButton'
-			target.build_configurations.each do |config|
-				config.build_settings['SWIFT_VERSION'] = '4'
-			end
-		end
-	end
-end
-
-

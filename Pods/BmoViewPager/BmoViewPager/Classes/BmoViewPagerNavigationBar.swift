@@ -17,6 +17,11 @@ class WeakBmoVPbar<T: BmoViewPagerNavigationBar> {
 
 @IBDesignable
 public class BmoViewPagerNavigationBar: UIView {
+    deinit {
+        contentOffsetObserver?.invalidate()
+        contentOffsetObserver = nil
+    }
+
     public weak var viewPager: BmoViewPager? {
         didSet {
             if let viewPager = viewPager, inited == true {
@@ -31,9 +36,14 @@ public class BmoViewPagerNavigationBar: UIView {
             pageListView?.autoFocus = autoFocus
         }
     }
-    
+
+    /// between 0.0 to 1.0, default is 0.0
+    public var edgeMaskPercentage: Float = 0.0
+    /// how much offset let mask enlarge to max, default is 16.0
+    public var edgeMaskTriggerOffset: Float = 16.0
+
     /// vierPager's navigation bar scroll orientataion
-    public var orientation: UIPageViewControllerNavigationOrientation = .horizontal
+    public var orientation: UIPageViewController.NavigationOrientation = .horizontal
     
     /// if you not allow user change viewPager page by tap navigation bar item, disable it
     public var isEnabledTapEvent: Bool = true
@@ -42,9 +52,28 @@ public class BmoViewPagerNavigationBar: UIView {
     public var isInterpolationAnimated: Bool = true
     
     weak var pageViewController: BmoPageViewController?
-    fileprivate weak var pageListView: BmoPageItemList?
-    fileprivate var itemListSelectBlock = false
-    fileprivate var inited = false
+    private weak var pageListView: BmoPageItemList?
+    private var itemListSelectBlock = false
+    private var contentOffsetObserver: NSKeyValueObservation?
+    private lazy var maskLayerHorizontal: CAGradientLayer = {
+        let layer = CAGradientLayer()
+        layer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
+        layer.backgroundColor = UIColor.clear.cgColor
+        layer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        layer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        layer.locations = [0.0, 0.0, 1.0, 1.0]
+        return layer
+    }()
+    private lazy var maskLayerVertical: CAGradientLayer = {
+        let layer = CAGradientLayer()
+        layer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
+        layer.backgroundColor = UIColor.clear.cgColor
+        layer.startPoint = CGPoint(x: 0.5, y: 0.0)
+        layer.endPoint = CGPoint(x: 0.5, y: 1.0)
+        layer.locations = [0.0, 0.0, 1.0, 1.0]
+        return layer
+    }()
+    private var inited = false
     
     public override func didMoveToWindow() {
         super.didMoveToWindow()
@@ -54,20 +83,56 @@ public class BmoViewPagerNavigationBar: UIView {
                 self.resetViewPager(viewPager)
             }
         }
+        if edgeMaskPercentage > 0.0 {
+            if self.orientation == .horizontal {
+                self.pageListView?.layer.mask = maskLayerHorizontal
+            } else {
+                self.pageListView?.layer.mask = maskLayerVertical
+            }
+        }
+        self.contentOffsetObserver = pageListView?.collectionView?.observe(\.contentOffset, options: [.new], changeHandler: { [unowned self] (collectionView, value) in
+            if let offset = value.newValue, self.edgeMaskPercentage > 0.0 {
+                let offsetValue: Float = self.orientation == .horizontal ? Float(offset.x) : Float(offset.y)
+                let percentage = (1 - max((self.edgeMaskTriggerOffset - offsetValue), 0) / self.edgeMaskTriggerOffset) * self.edgeMaskPercentage
+                let fraction1 = NSNumber(value: percentage * 0.5)
+                var fraction2 = NSNumber(value: 1 - percentage * 0.5)
+                if self.orientation == .horizontal {
+                    if floor(offset.x + collectionView.bounds.width) >= floor(collectionView.contentSize.width) {
+                        fraction2 = 1.0
+                    } else if percentage < 1.0 {
+                        fraction2 = NSNumber(value: 1 - self.edgeMaskPercentage * 0.5)
+                    }
+                } else {
+                    if floor(offset.y + collectionView.bounds.height) >= floor(collectionView.contentSize.height) {
+                        fraction2 = 1.0
+                    } else if percentage < 1.0 {
+                        fraction2 = NSNumber(value: 1 - self.edgeMaskPercentage * 0.5)
+                    }
+                }
+                self.maskLayerVertical.locations = [0.0, fraction1, fraction2, 1.0]
+                self.maskLayerHorizontal.locations = [0.0, fraction1, fraction2, 1.0]
+            }
+        })
     }
-    
+
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        maskLayerVertical.frame = self.bounds
+        maskLayerHorizontal.frame = self.bounds
+    }
+
     public override func draw(_ rect: CGRect) {
         super.draw(rect)
         if self.viewPager != nil { return }
         let str1 = "BMO ViewPager NavigationBar"
         let str2 = "Need to assign a BmoViewPager"
         let mainAttributed = [
-            NSAttributedStringKey.foregroundColor  : UIColor.black,
-            NSAttributedStringKey.font             : UIFont.boldSystemFont(ofSize: 24.0),
+            NSAttributedString.Key.foregroundColor  : UIColor.black,
+            NSAttributedString.Key.font             : UIFont.boldSystemFont(ofSize: 24.0),
             ]
         let subAttributed = [
-            NSAttributedStringKey.foregroundColor  : UIColor.lightGray,
-            NSAttributedStringKey.font             : UIFont.boldSystemFont(ofSize: 17.0),
+            NSAttributedString.Key.foregroundColor  : UIColor.lightGray,
+            NSAttributedString.Key.font             : UIFont.boldSystemFont(ofSize: 17.0),
             ]
         let str1Size = str1.bmoVP.size(attribute: mainAttributed, size: .zero)
         let str2Size = str2.bmoVP.size(attribute: subAttributed, size: .zero)
@@ -157,9 +222,12 @@ extension BmoViewPagerNavigationBar: BmoPageItemListDelegate {
         var scrollPosition = -1
         if index == (previousIndex ?? viewPager.presentedPageIndex) + 1 {
             scrollPosition = 2
-        }
-        if index == (previousIndex ?? viewPager.presentedPageIndex) - 1 {
+        } else if index == (previousIndex ?? viewPager.presentedPageIndex) - 1 {
             scrollPosition = 0
+        } else if index == 0 && viewPager.infinitScroll == true {
+            if let pageCount = pageListView?.bmoViewPagerCount, previousIndex == pageCount - 1 {
+                scrollPosition = 2
+            }
         }
         let changePage = { [weak self] in
             self?.itemListSelectBlock = false

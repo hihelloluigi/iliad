@@ -364,6 +364,10 @@ class BmoPageItemList: UIView, UICollectionViewDelegate, UICollectionViewDataSou
         if let size = bmoDataSource?.bmoViewPagerDataSourceNaviagtionBarItemSize?(bmoViewPager, navigationBar: navigationBar, forPageListAt: index), size != .zero {
             return size
         }
+        var itemSpace: CGFloat = 32.0
+        if let dataSourceItemSpace = bmoDataSource?.bmoViewPagerDataSourceNaviagtionBarItemSpace?(bmoViewPager, navigationBar: navigationBar, forPageListAt: index) {
+            itemSpace = dataSourceItemSpace
+        }
         guard let title = bmoDataSource?.bmoViewPagerDataSourceNaviagtionBarItemTitle?(bmoViewPager, navigationBar: navigationBar, forPageListAt: index) else {
             return CGSize.zero
         }
@@ -371,9 +375,9 @@ class BmoPageItemList: UIView, UICollectionViewDelegate, UICollectionViewDataSou
         calculateSizeLabel.sizeToFit()
         let size = calculateSizeLabel.bounds.size
         if navigationBar.orientation == .horizontal {
-            return CGSize(width: size.width + 32, height: collectionView.bounds.size.height)
+            return CGSize(width: size.width + itemSpace, height: collectionView.bounds.size.height)
         } else {
-            return CGSize(width: collectionView.bounds.size.width, height: size.height + 32)
+            return CGSize(width: collectionView.bounds.size.width, height: size.height + itemSpace)
         }
     }
 }
@@ -393,7 +397,7 @@ class BmoPageItemCell: UICollectionViewCell {
         self.contentView.addSubview(titleLabel)
         titleLabel.bmoVP.autoFit(self.contentView)
     }
-    func configureCell(title: String, focusProgress: CGFloat, orientation: UIPageViewControllerNavigationOrientation,
+    func configureCell(title: String, focusProgress: CGFloat, orientation: UIPageViewController.NavigationOrientation,
                        rearAttributed: [NSAttributedString.Key : Any]?, foreAttributed: [NSAttributedString.Key : Any]?,
                        backgroundView: UIView?, foreBackgroundView: UIView?) {
         titleLabel.text = title
@@ -459,7 +463,11 @@ class PercentageLayer: CALayer {
         }
         if key == "percentage" {
             let animation = CABasicAnimation(keyPath: key)
+            #if swift(>=4.2)
+            animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+            #else
             animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+            #endif
             animation.fromValue = presentationLayer.percentage
             animation.duration = 0.33
             return animation

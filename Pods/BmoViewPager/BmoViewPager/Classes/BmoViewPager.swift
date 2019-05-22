@@ -11,9 +11,10 @@ import UIKit
 @objc public protocol BmoViewPagerDataSource {
     func bmoViewPagerDataSourceNumberOfPage(in viewPager: BmoViewPager) -> Int
     func bmoViewPagerDataSource(_ viewPager: BmoViewPager, viewControllerForPageAt page: Int) -> UIViewController
-    
-    @objc optional func bmoViewPagerDataSourceNaviagtionBarItemTitle(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> String?
+
     @objc optional func bmoViewPagerDataSourceNaviagtionBarItemSize(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> CGSize
+    @objc optional func bmoViewPagerDataSourceNaviagtionBarItemTitle(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> String?
+    @objc optional func bmoViewPagerDataSourceNaviagtionBarItemSpace(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> CGFloat
     @objc optional func bmoViewPagerDataSourceNaviagtionBarItemNormalAttributed(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> [NSAttributedString.Key : Any]?
     @objc optional func bmoViewPagerDataSourceNaviagtionBarItemHighlightedAttributed(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> [NSAttributedString.Key : Any]?
     @objc optional func bmoViewPagerDataSourceNaviagtionBarItemNormalBackgroundView(_ viewPager: BmoViewPager, navigationBar: BmoViewPagerNavigationBar, forPageListAt page: Int) -> UIView?
@@ -27,42 +28,73 @@ import UIKit
 }
 
 @IBDesignable
+
 public class BmoViewPager: UIView {
     @IBInspectable var isHorizontal: Bool = true {
         didSet {
             if isHorizontal {
-                orientation = UIPageViewControllerNavigationOrientation.horizontal
+                orientation = UIPageViewController.NavigationOrientation.horizontal
             } else {
-                orientation = UIPageViewControllerNavigationOrientation.vertical
+                orientation = UIPageViewController.NavigationOrientation.vertical
             }
         }
     }
     
     lazy var delegateProxy: BmoViewPagerDelegateProxy = {
-        return BmoViewPagerDelegateProxy(viewPager: self, forwardDelegate: self, delegate: self)
+        return BmoViewPagerDelegateProxy(viewPager: self, forwardDelegate: scrollViewDelegate ?? self, delegate: self)
     }()
-    
+
+    /// delegate of UIScrollview in BmoViewPager's UIPageViewController
+    public weak var scrollViewDelegate: UIScrollViewDelegate? {
+        didSet {
+            delegateProxy.forwardDelegate = scrollViewDelegate
+        }
+    }
+
     /// UIScrollview in BmoViewPager's UIPageViewController
     weak var scrollView: UIScrollView? {
-        get {
-            return pageViewController.pageScrollView
+        didSet {
+            delegateObserver = scrollView?.observe(\.delegate, options: [.new], changeHandler: { [weak self] (scrollView, value) in
+                if let newDelegate = (value.newValue as? UIScrollViewDelegate), !(newDelegate is BmoViewPagerDelegateProxy) {
+                    if let delegate = self?.pageViewController.scrollViewDelegate as? BmoViewPagerDelegateProxy {
+                        delegate.forwardDelegate = newDelegate
+                        scrollView.delegate = delegate
+                    } else {
+                        self?.delegateProxy.forwardDelegate = newDelegate
+                        scrollView.delegate = self?.delegateProxy
+                    }
+                }
+            })
         }
     }
 
     /// vierPager scroll orientataion
-    public var orientation: UIPageViewControllerNavigationOrientation = .horizontal {
+    public var orientation: UIPageViewController.NavigationOrientation = .horizontal {
         didSet {
             if orientation != pageViewController.navigationOrientation {
+                #if swift(>=4.2)
+                pageViewController.willMove(toParent: nil)
+                pageViewController.view.removeFromSuperview()
+                pageViewController.removeFromParent()
+                #else
                 pageViewController.willMove(toParentViewController: nil)
                 pageViewController.view.removeFromSuperview()
                 pageViewController.removeFromParentViewController()
+                #endif
                 pageViewController = BmoPageViewController(viewPager: self, scrollDelegate: delegateProxy, orientation: self.orientation)
                 
                 if let vc = parentViewController {
+                    #if swift(>=4.2)
+                    vc.addChild(pageViewController)
+                    self.addSubview(pageViewController.view)
+                    pageViewController.view.bmoVP.autoFit(self)
+                    pageViewController.didMove(toParent: vc)
+                    #else
                     vc.addChildViewController(pageViewController)
                     self.addSubview(pageViewController.view)
                     pageViewController.view.bmoVP.autoFit(self)
                     pageViewController.didMove(toParentViewController: vc)
+                    #endif
                 }
                 pageViewController.infinitScroll = infinitScroll
                 pageViewController.bmoDataSource = dataSource
@@ -79,9 +111,15 @@ public class BmoViewPager: UIView {
     public weak var parentViewController: UIViewController? {
         didSet {
             if let vc = parentViewController {
+                #if swift(>=4.2)
+                vc.addChild(pageViewController)
+                vc.automaticallyAdjustsScrollViewInsets = false
+                pageViewController.didMove(toParent: vc)
+                #else
                 vc.addChildViewController(pageViewController)
                 vc.automaticallyAdjustsScrollViewInsets = false
                 pageViewController.didMove(toParentViewController: vc)
+                #endif
             }
         }
     }
@@ -103,6 +141,11 @@ public class BmoViewPager: UIView {
             pageViewController.scrollable = scrollable
         }
     }
+
+    /// between 0.0 to 1.0, default is 0.0
+    public var edgeMaskPercentage: Float = 0.0
+    /// how much offset let mask enlarge to max, default is 32.0
+    public var edgeMaskTriggerOffset: Float = 32.0
 
     public var lastPresentedPageIndex: Int = 0
     private var _presentedPageIndex: Int = 0
@@ -174,15 +217,34 @@ public class BmoViewPager: UIView {
         pageVC.view.bmoVP.autoFit(self)
         return pageVC
     }()
+
+    internal var referencePageViewControllers = [Int : WeakBmoVPpageViewController]()
+    internal var navigationBars = [WeakBmoVPbar]()
     
     private let defaultNavigaionBar = BmoViewPagerNavigationBar()
     private var presentedIndexInternalFlag = false
-    internal var referencePageViewControllers = [Int : WeakBmoVPpageViewController]()
-    internal var navigationBars = [WeakBmoVPbar]()
-    fileprivate var delegateObserver: NSKeyValueObservation?
-    fileprivate var lastContentOffSet: CGPoint? = nil
-    fileprivate var boundChanged: Bool = false
-    fileprivate var inited = false
+    private var delegateObserver: NSKeyValueObservation?
+    private var lastContentOffSet: CGPoint? = nil
+    private var boundChanged: Bool = false
+    private lazy var maskLayerHorizontal: CAGradientLayer = {
+        let layer = CAGradientLayer()
+        layer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
+        layer.backgroundColor = UIColor.clear.cgColor
+        layer.startPoint = CGPoint(x: 0.0, y: 0.5)
+        layer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        layer.locations = [0.0, 0.0, 1.0, 1.0]
+        return layer
+    }()
+    private lazy var maskLayerVertical: CAGradientLayer = {
+        let layer = CAGradientLayer()
+        layer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor, UIColor.black.cgColor, UIColor.clear.cgColor]
+        layer.backgroundColor = UIColor.clear.cgColor
+        layer.startPoint = CGPoint(x: 0.5, y: 0.0)
+        layer.endPoint = CGPoint(x: 0.5, y: 1.0)
+        layer.locations = [0.0, 0.0, 1.0, 1.0]
+        return layer
+    }()
+    private var inited = false
     
     public override var bounds: CGRect {
         didSet {
@@ -192,13 +254,17 @@ public class BmoViewPager: UIView {
             }
         }
     }
+    deinit {
+        delegateObserver?.invalidate()
+        delegateObserver = nil
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    convenience init(initPage: Int, orientation: UIPageViewControllerNavigationOrientation = .horizontal) {
+    convenience init(initPage: Int, orientation: UIPageViewController.NavigationOrientation = .horizontal) {
         self.init()
         self.internalSetPresentedIndex(initPage)
         self.isHorizontal = (orientation == .horizontal)
@@ -219,15 +285,24 @@ public class BmoViewPager: UIView {
             pageControlIndex = presentedPageIndex
             inited = true
             if let vc = self.parentViewController {
+                #if swift(>=4.2)
+                vc.addChild(pageViewController)
+                pageViewController.didMove(toParent: vc)
+                #else
                 vc.addChildViewController(pageViewController)
                 pageViewController.didMove(toParentViewController: vc)
+                #endif
             }
             pageViewController.infinitScroll = self.infinitScroll
             pageViewController.scrollable = self.scrollable
             pageViewController.reloadData()
-            
-            if let existedDelegate = scrollView?.delegate, !(existedDelegate is BmoViewPagerDelegateProxy) {
-                delegateProxy.forwardDelegate = existedDelegate
+
+            if edgeMaskPercentage > 0.0 {
+                if self.orientation == .horizontal {
+                    self.pageViewController.view.layer.mask = maskLayerHorizontal
+                } else {
+                    self.pageViewController.view.layer.mask = maskLayerVertical
+                }
             }
         }
     }
@@ -277,6 +352,8 @@ public class BmoViewPager: UIView {
     
     public override func layoutSubviews() {
         super.layoutSubviews()
+        self.maskLayerVertical.frame = self.bounds
+        self.maskLayerHorizontal.frame = self.bounds
         self.pageViewController.view.setNeedsLayout()
     }
     
@@ -326,6 +403,22 @@ extension BmoViewPager: BmoViewPagerDelegateProxyDataSource {
     }
     func setLastContentOffSet(_ point: CGPoint) {
         self.lastContentOffSet = point
+    }
+    func setLastScrollAbsProgress(_ fraction: CGFloat) {
+        if let bounds = scrollView?.bounds, self.edgeMaskPercentage > 0.0 {
+            let length = (self.orientation == .horizontal ? bounds.width : bounds.height)
+            var offsetValue: Float = 0.0
+            if fraction > 0.5 {
+                offsetValue = Float(length * (1 - fraction))
+            } else {
+                offsetValue = Float(length * fraction)
+            }
+            let percentage = (1 - max((self.edgeMaskTriggerOffset - offsetValue), 0) / self.edgeMaskTriggerOffset) * self.edgeMaskPercentage
+            let fraction1 = NSNumber(value: percentage * 0.5)
+            let fraction2 = NSNumber(value: 1 - percentage * 0.5)
+            self.maskLayerVertical.locations = [0.0, fraction1, fraction2, 1.0]
+            self.maskLayerHorizontal.locations = [0.0, fraction1, fraction2, 1.0]
+        }
     }
 }
 

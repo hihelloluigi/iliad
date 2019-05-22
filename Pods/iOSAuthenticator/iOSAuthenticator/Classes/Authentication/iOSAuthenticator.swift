@@ -26,7 +26,7 @@
 import UIKit
 import LocalAuthentication
 
-public enum iOSBiometryType {
+@objc public enum iOSBiometryType: Int {
     case touchID
     case faceID
     case notAvailable
@@ -55,7 +55,7 @@ public class iOSAuthenticator: NSObject {
      
      - returns: Boolean value that indicate if device is unlockable by: Passcode, Touch ID or Face ID
      */
-    public class func canAuthenticate() -> Bool {
+    @objc public class func canAuthenticate() -> Bool {
         
         var isAuthenticationAvailable = false
         var authError: NSError? = nil
@@ -71,7 +71,7 @@ public class iOSAuthenticator: NSObject {
      
      - returns: Boolean value that indicate if device is unlockable by: Touch ID or Face ID
      */
-    public class func canAuthenticateWithBiometric() -> Bool {
+    @objc public class func canAuthenticateWithBiometric() -> Bool {
         
         var isBiometricAuthenticationAvailable = false
         var authError: NSError? = nil
@@ -87,7 +87,7 @@ public class iOSAuthenticator: NSObject {
      
      - returns: Boolean value that indicate if Face ID is available
      */
-    public class func faceIDAvailable() -> Bool {
+    @objc public class func faceIDAvailable() -> Bool {
         if #available(iOS 11.0, *) {
             let context = LAContext()
             return (context.canEvaluatePolicy(LAPolicy.deviceOwnerAuthentication, error: nil) && context.biometryType == .faceID)
@@ -100,7 +100,7 @@ public class iOSAuthenticator: NSObject {
      
      - returns: A custom enum (iOSBiometryType) that specify if the biometric authenticator is: Available, Touch ID or Face ID
      */
-    public class func biometricType() -> iOSBiometryType {
+    @objc public class func biometricType() -> iOSBiometryType {
 
         let context = LAContext()
         var type: iOSBiometryType = .notAvailable
@@ -114,6 +114,8 @@ public class iOSAuthenticator: NSObject {
                     type = .faceID
                 case .none:
                     type = .notAvailable
+                @unknown default:
+                    fatalError()
                 }
             } else {
                 return .touchID
@@ -126,7 +128,7 @@ public class iOSAuthenticator: NSObject {
     /**
      Invalidate authetication
     */
-    public class func invalidate() {
+    @objc public class func invalidate() {
         guard let authContext = iOSAuthenticator.shared.authenticationContext else {
             return
         }
@@ -143,7 +145,7 @@ public class iOSAuthenticator: NSObject {
      - Parameter success:           Callback if authentication is successful.
      - Parameter failure:           Callback if authentication is not successful.
      */
-    public class func authenticateWithBiometricsAndPasscode(reason: String, cancelTitle: String? = nil, success successBlock:@escaping AuthenticationSuccess, failure failureBlock:@escaping AuthenticationFailure) {
+    @objc public class func authenticateWithBiometricsAndPasscode(reason: String, cancelTitle: String? = nil, success successBlock:@escaping AuthenticationSuccess, failure failureBlock:@escaping AuthenticationFailure) {
         
         let context = LAContext()
         iOSAuthenticator.shared.authenticationContext = context
@@ -168,7 +170,7 @@ public class iOSAuthenticator: NSObject {
      - Parameter success:           Callback if authentication is successful.
      - Parameter failure:           Callback if authentication is not successful.
      */
-    public class func authenticateWithBiometricsAndFallback(reason: String, fallbackTitle: String? = nil, cancelTitle: String? = nil, fallback: Fallback?, success successBlock:@escaping AuthenticationSuccess, failure failureBlock:@escaping AuthenticationFailure) {
+    @objc public class func authenticateWithBiometricsAndFallback(reason: String, fallbackTitle: String? = nil, cancelTitle: String? = nil, fallback: Fallback?, success successBlock:@escaping AuthenticationSuccess, failure failureBlock:@escaping AuthenticationFailure) {
         
         let context = LAContext()
         iOSAuthenticator.shared.authenticationContext = context
@@ -188,11 +190,11 @@ public class iOSAuthenticator: NSObject {
         iOSAuthenticator.shared.evaluate(policy: .deviceOwnerAuthenticationWithBiometrics, with: context, reason: reason, fallback: fallback, success: successBlock, failure: failureBlock)
     }
 
-    public static func preventBackgroundSnapshot(customView: UIView?) {
+    @objc public static func preventBackgroundSnapshot(customView: UIView?) {
         iOSAuthenticator.shared.registerNotification()
         iOSAuthenticator.shared.customView = customView
     }
-    public static func removePreventBackgroundSnapshot() {
+    @objc public static func removePreventBackgroundSnapshot() {
         iOSAuthenticator.shared.removeNotification()
         iOSAuthenticator.shared.customView = nil
     }

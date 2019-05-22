@@ -156,7 +156,12 @@
     return finalController;
 }
 
--(UIView*)superviewOfClassType:(Class)classType
+-(UIView*)superviewOfClassType:(nonnull Class)classType
+{
+    return [self superviewOfClassType:classType belowView:nil];
+}
+
+-(nullable __kindof UIView*)superviewOfClassType:(nonnull Class)classType belowView:(nullable UIView*)belowView
 {
     UIView *superview = self.superview;
     
@@ -184,6 +189,10 @@
                 return superview;
             }
         }
+        else if (belowView == superview)
+        {
+            return nil;
+        }
         
         superview = superview.superview;
     }
@@ -206,7 +215,7 @@
 
     if (_IQcanBecomeFirstResponder == YES)
     {
-        _IQcanBecomeFirstResponder = ([self isUserInteractionEnabled] && ![self isHidden] && [self alpha]!=0.0 && ![self isAlertViewTextField]  && !self.searchBar);
+        _IQcanBecomeFirstResponder = ([self isUserInteractionEnabled] && ![self isHidden] && [self alpha]!=0.0 && ![self isAlertViewTextField]  && !self.textFieldSearchBar);
     }
     
     return _IQcanBecomeFirstResponder;
@@ -376,7 +385,7 @@
     return debugInfo;
 }
 
--(UISearchBar *)searchBar
+-(UISearchBar *)textFieldSearchBar
 {
     UIResponder *searchBar = [self nextResponder];
     

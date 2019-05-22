@@ -27,7 +27,7 @@ import Foundation
 import LocalAuthentication
 
 /// Authentication Errors
-public enum AuthenticationError {
+@objc public enum AuthenticationError: Int {
     
     case failed
     case appCancel

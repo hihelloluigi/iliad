@@ -33,7 +33,7 @@ To create an instance of the class, use Interface builder, or do it from code. T
 ![](/SkyFloatingLabelTextField/images/example-1.gif)
 
 ```swift
-let textField = SkyFloatingLabelTextField(frame: CGRectMake(10, 10, 200, 45))
+let textField = SkyFloatingLabelTextField(frame: CGRect(x: 10, y: 10, width: 200, height: 45))
 textField.placeholder = "Name"
 textField.title = "Your full name"
 self.view.addSubview(textField)
@@ -50,12 +50,12 @@ let lightGreyColor = UIColor(red: 197/255, green: 205/255, blue: 205/255, alpha:
 let darkGreyColor = UIColor(red: 52/255, green: 42/255, blue: 61/255, alpha: 1.0)
 let overcastBlueColor = UIColor(red: 0, green: 187/255, blue: 204/255, alpha: 1.0)
 
-let textField1 = SkyFloatingLabelTextField(frame: CGRectMake(10, 10, 120, 45))
+let textField1 = SkyFloatingLabelTextField(frame: CGRect(x: 10, y: 10, width: 120, height: 45))
 textField1.placeholder = "First name"
 textField1.title = "Given name"
 self.view.addSubview(textField1)
 
-let textField2 = SkyFloatingLabelTextField(frame: CGRectMake(150, 10, 120, 45))
+let textField2 = SkyFloatingLabelTextField(frame: CGRect(x: 150, y: 10, width: 120, height: 45))
 textField2.placeholder = "Last name"
 textField2.title = "Family name"
 
@@ -123,7 +123,7 @@ self.view.addSubview(textField1)
 
 The textfield supports displaying an error state - this can be useful for example when validating fields on the fly. When the `errorMessage` property is set on the control, then the control is highlighted with the color set in the `errorColor` property.
 
-To get notified of different events happening on the textfield - such as the text changing, editing starting or ending - just set the `delegate` property to a class implementing the standard [UITextFieldDelegate](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextFieldDelegate_Protocol/) protocol:
+To get notified of different events happening on the textfield - such as the text changing, editing starting or ending - just set the `func addTarget(_ target: Any?, action: Selector, for controlEvents: UIControl.Event)` with the` .editingChanged`. also can set the `delegate` property to a class implementing the standard [UITextFieldDelegate](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextFieldDelegate_Protocol/) protocol:
 
 ![](/SkyFloatingLabelTextField/images/example-4.gif)
 
@@ -131,17 +131,17 @@ To get notified of different events happening on the textfield - such as the tex
 class MyViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
-        let textField1 = SkyFloatingLabelTextField(frame: CGRectMake(10, 10, 120, 45))
+        let textField1 = SkyFloatingLabelTextField(frame: CGRect(x: 10, y: 10, width: 120, height: 45))
         textField1.placeholder = "Email"
         textField1.title = "Email address"
         textField1.errorColor = UIColor.redColor()
-        textField1.delegate = self
+        textField1.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         self.view.addSubview(textField1)
     }
-
-    /// Implementing a method on the UITextFieldDelegate protocol. This will notify us when something has changed on the textfield
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        if let text = textField.text {
+    
+    // This will notify us when something has changed on the textfield
+    @objc func textFieldDidChange(_ textfield: UITextField) {
+        if let text = textfield.text {
             if let floatingLabelTextField = textField as? SkyFloatingLabelTextField {
                 if(text.characters.count < 3 || !text.containsString("@")) {
                     floatingLabelTextField.errorMessage = "Invalid email"
@@ -152,7 +152,6 @@ class MyViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-        return true
     }
 }
 ```
