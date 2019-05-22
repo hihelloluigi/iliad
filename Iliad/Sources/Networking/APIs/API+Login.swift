@@ -33,16 +33,16 @@ extension API {
         }
 
         class func logout(_ completionHandler: SuccessHandler?) {
-            API.provider().request(.logout()) { (result) in
+            API.provider().request(.logout) { (result) in
                 API.responseJson(result, { (json) in
                     guard
                         result.value?.statusCode == 200,
                         let json = json,
                         let result = json["iliad"]["0"].string,
                         let boolResult = result.toBool()
-                        else {
-                            completionHandler?(false)
-                            return
+                    else {
+                        completionHandler?(false)
+                        return
                     }
                     completionHandler?(boolResult)
                 })

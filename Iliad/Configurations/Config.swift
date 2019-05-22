@@ -14,11 +14,11 @@ import SwiftyUserDefaults
  */
 
 extension DefaultsKeys {
-    static let saveUsername = DefaultsKey<Bool>("kSaveUsername")
-    static let autoLogin = DefaultsKey<Bool>("kAutoLogin")
-    static let loginWithBiometric = DefaultsKey<Bool>("kLoginWithBiometric")
-    static let readPolicy = DefaultsKey<Bool>("kReadPolicy")
-    static let showSimpleLogin = DefaultsKey<Bool>("kShowSimpleLogin")
+    static let saveUsername = DefaultsKey<Bool>("kSaveUsername", defaultValue: false)
+    static let autoLogin = DefaultsKey<Bool>("kAutoLogin", defaultValue: false)
+    static let loginWithBiometric = DefaultsKey<Bool>("kLoginWithBiometric", defaultValue: false)
+    static let readPolicy = DefaultsKey<Bool>("kReadPolicy", defaultValue: false)
+    static let showSimpleLogin = DefaultsKey<Bool>("kShowSimpleLogin", defaultValue: false)
 }
 
 class Config {

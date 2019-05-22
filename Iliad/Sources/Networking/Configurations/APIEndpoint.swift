@@ -18,7 +18,7 @@ enum APIEndpoint {
     // Login/Logout
     case getToken(username: String, password: String)
     case login(username: String, password: String)
-    case logout()
+    case logout
     
     // Recover password
     case recoverPassword(username: String, email: String)
