@@ -19,6 +19,7 @@ def graphics_components_pods
 	pod 'SwiftMessages'
 	pod 'NVActivityIndicatorView'
 	pod 'BmoViewPager'
+	pod 'ClusterKit/MapKit'
 end
 
 def networking_pods
@@ -27,14 +28,14 @@ end
 
 def security_pods
 	pod 'KeychainAccess'
-	pod 'iOSAuthenticator', :git => 'https://github.com/mo3bius/iOSAuthenticator'
+	pod 'iOSAuthenticator'
 end
 
 def utilites_pods
     pod 'SwiftyJSON'
-    pod 'IQKeyboardManager'
+	pod 'IQKeyboardManagerSwift'
     pod 'SwiftyUserDefaults'
-    pod 'ClusterKit/MapKit'
+	pod 'R.swift'
 end
 
 def debugging_pods
@@ -51,12 +52,15 @@ abstract_target 'Abstract Target' do
 	debugging_pods
 	security_pods
 
-	target 'IliadProd' do
+	target 'Iliad Production' do
 	end
 
-	target 'IliadStaging' do
+	target 'Iliad Testing' do
 	end
 
-	target 'IliadDev' do
+	target 'Iliad Staging' do
+	end
+
+	target 'Iliad Development' do
 	end
 end

@@ -316,6 +316,11 @@ open class SwiftMessages {
          of `WindowViewController`.
          */
         public var windowViewController: ((_ windowLevel: UIWindow.Level?, _ config: SwiftMessages.Config) -> WindowViewController)?
+
+        /**
+         Supply an instance of `KeyboardTrackingView` to have the message view avoid the keyboard.
+         */
+        public var keyboardTrackingView: KeyboardTrackingView?
     }
     
     /**
@@ -385,9 +390,9 @@ open class SwiftMessages {
     /**
      Hide the current message being displayed by animating it away.
      */
-    open func hide() {
+    open func hide(animated: Bool = true) {
         messageQueue.sync {
-            hideCurrent()
+            hideCurrent(animated: animated)
         }
     }
 
@@ -540,7 +545,7 @@ open class SwiftMessages {
         // the dismiss gesture begins before we've queued the autohide
         // block on animation completion.
         self.autohideToken = current
-        current.showDate = Date()
+        current.showDate = CACurrentMediaTime()
         DispatchQueue.main.async { [weak self] in
             guard let strongSelf = self else { return }
             do {
@@ -571,20 +576,22 @@ open class SwiftMessages {
         queue = queue.filter { $0.id != id }
         delays.ids.remove(id)
     }
-
-    fileprivate func hideCurrent() {
+ 
+    fileprivate func hideCurrent(animated: Bool = true) {
         guard let current = _current, !current.isHiding else { return }
-        let delay = current.delayHide ?? 0
-        DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self, weak current] in
-            guard let strongCurrent = current else { return }
-            strongCurrent.hide { (completed) in
-                guard completed, let strongSelf = self, let strongCurrent = current else { return }
+        let action = { [weak self] in
+            current.hide(animated: animated) { (completed) in
+                guard completed, let strongSelf = self else { return }
                 strongSelf.messageQueue.sync {
-                    guard strongSelf._current === strongCurrent else { return }
-                    strongSelf.counts[strongCurrent.id] = nil
+                    guard strongSelf._current === current else { return }
+                    strongSelf.counts[current.id] = nil
                     strongSelf._current = nil
                 }
             }
+        }
+        let delay = current.delayHide ?? 0
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            action()
         }
     }
 
@@ -595,13 +602,17 @@ open class SwiftMessages {
         autohideToken = current
         if let pauseDuration = current.pauseDuration {
             let delayTime = DispatchTime.now() + pauseDuration
-            messageQueue.asyncAfter(deadline: delayTime, execute: { [weak self, weak current] in
-                guard let strongSelf = self, let current = current else { return }
+            messageQueue.asyncAfter(deadline: delayTime, execute: {
                 // Make sure we've still got a green light to auto-hide.
-                if strongSelf.autohideToken !== current { return }
-                strongSelf.internalHide(id: current.id)
+                if self.autohideToken !== current { return }
+                self.internalHide(id: current.id)
             })
         }
+    }
+
+    deinit {
+        // Prevent orphaned messages
+        hideCurrent()
     }
 }
 
@@ -826,8 +837,8 @@ extension SwiftMessages {
         globalInstance.show(config: config, view: view)
     }
 
-    public static func hide() {
-        globalInstance.hide()
+    public static func hide(animated: Bool = true) {
+        globalInstance.hide(animated: animated)
     }
     
     public static func hideAll() {

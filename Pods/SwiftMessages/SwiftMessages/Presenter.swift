@@ -40,7 +40,7 @@ class Presenter: NSObject {
     var config: SwiftMessages.Config
     let view: UIView
     weak var delegate: PresenterDelegate?
-    lazy var maskingView: MaskingView = { return MaskingView() }()
+    let maskingView = MaskingView()
     var presentationContext = PresentationContext.viewController(Weak<UIViewController>(value: nil))
     let animator: Animator
 
@@ -55,6 +55,7 @@ class Presenter: NSObject {
             var mutableView = view
             id = withUnsafePointer(to: &mutableView) { "\($0)" }
         }
+
         super.init()
     }
 
@@ -87,7 +88,7 @@ class Presenter: NSObject {
         return duration
     }
 
-    var showDate: Date?
+    var showDate: CFTimeInterval?
 
     private var interactivelyHidden = false;
 
@@ -100,7 +101,7 @@ class Presenter: NSObject {
     var delayHide: TimeInterval? {
         if interactivelyHidden { return 0 }
         if case .indefinite(let opts) = config.duration, let showDate = showDate {
-            let timeIntervalShown = -showDate.timeIntervalSinceNow
+            let timeIntervalShown = CACurrentMediaTime() - showDate
             return max(0, opts.minimum - timeIntervalShown)
         }
         return nil
@@ -175,17 +176,24 @@ class Presenter: NSObject {
 
     var isHiding = false
 
-    func hide(completion: @escaping AnimationCompletion) {
+    func hide(animated: Bool, completion: @escaping AnimationCompletion) {
         isHiding = true
         self.config.eventListeners.forEach { $0(.willHide) }
         let context = animationContext()
-        animator.hide(context: context) { (completed) in
+        let action = {
             if let viewController = self.presentationContext.viewControllerValue() as? WindowViewController {
                 viewController.uninstall()
             }
             self.maskingView.removeFromSuperview()
             completion(true)
             self.config.eventListeners.forEach { $0(.didHide) }
+        }
+        guard animated else {
+            action()
+            return
+        }
+        animator.hide(context: context) { (completed) in
+            action()
         }
 
         func undim() {
@@ -341,6 +349,9 @@ class Presenter: NSObject {
             maskingView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
             topLayoutConstraint(view: maskingView, containerView: containerView, viewController: presentationContext.viewControllerValue()).isActive = true
             bottomLayoutConstraint(view: maskingView, containerView: containerView, viewController: presentationContext.viewControllerValue()).isActive = true
+            if let keyboardTrackingView = config.keyboardTrackingView {
+                maskingView.install(keyboardTrackingView: keyboardTrackingView)
+            }
             // Update the container view's layout in order to know the masking view's frame
             containerView.layoutIfNeeded()
         }
