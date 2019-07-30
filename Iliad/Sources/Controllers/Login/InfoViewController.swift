@@ -12,28 +12,28 @@ import TransitionButton
 
 class InfoViewController: UIViewController {
 
-    // Mark - Outlets
-        // Views
+    // MARK: - Outlets
+    // Views
     @IBOutlet weak var customNavigationBar: UINavigationBar!
 
-        // Labels
+    // Labels
     @IBOutlet weak var titleLabel: UILabel!
 
-        // TextView
+    // TextView
     @IBOutlet weak var descriptionTextView: UITextView!
 
-        // Buttons
+    // Buttons
     @IBOutlet weak var backBarButton: UIBarButtonItem!
     @IBOutlet weak var appCodeButton: UIButton!
     @IBOutlet weak var apiCodeButton: UIButton!
     @IBOutlet weak var readPolicyButton: TransitionButton!
 
-    // Mark - Variables
+    // MARK: - Variables
     var showBackButton: Bool = true
     let appCodeUrl = "https://github.com/mo3bius/iliad"
     let apiCodeUrl = "https://github.com/Fast0n/iliad"
 
-    // Mark - Override
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,7 +45,7 @@ class InfoViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    // Mark - Setup
+    // MARK: - Setup
     private func configurationUI() {
         readPolicyButton.isEnabled = !Defaults[.readPolicy]
         readPolicyButton.backgroundColor = !Defaults[.readPolicy] ? .iliadRed : .lightGray
@@ -53,24 +53,28 @@ class InfoViewController: UIViewController {
 
         Defaults[.readPolicy] ? backBarButton.show() : backBarButton.hidden()
     }
+    
     private func configurationText() {
-        titleLabel.text = "Info" ~> "TITLE"
-        descriptionTextView.text = "Info" ~> "DESCRIPTION"
-        backBarButton.title = "Commons" ~> "BACK"
-        appCodeButton.setTitle("Info" ~> "APP_CODE_BUTTON", for: .normal)
-        apiCodeButton.setTitle("Info" ~> "API_CODE_BUTTON", for: .normal)
+        titleLabel.text = R.string.info.title()
+        descriptionTextView.text = R.string.info.description()
+        backBarButton.title = R.string.commons.back()
+        appCodeButton.setTitle(R.string.info.app_code_button(), for: .normal)
+        apiCodeButton.setTitle(R.string.info.api_code_button(), for: .normal)
     }
 
-    // Mark - Actions
+    // MARK: - Actions
     @IBAction func appCodeDidTap(_ sender: Any) {
         Utility.link(url: appCodeUrl)
     }
+    
     @IBAction func apiCodeDidTap(_ sender: Any) {
         Utility.link(url: apiCodeUrl)
     }
+    
     @IBAction func backDidTap(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func readPolicyDidTap(_ sender: Any) {
         Defaults[.readPolicy] = true
         self.dismiss(animated: true, completion: nil)

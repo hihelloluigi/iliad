@@ -3,10 +3,109 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		046D597EEA1A6C101E842637 /* Pods_Abstract_Target_Iliad_Production.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36FE8290E0DD738D22515838 /* Pods_Abstract_Target_Iliad_Production.framework */; };
+		0D60BCDB2FB2DC17D6678358 /* Pods_Abstract_Target_Iliad_Testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A35CDFA044B440DAE27C80C /* Pods_Abstract_Target_Iliad_Testing.framework */; };
+		1AD8B5C922F0363B001B0C55 /* API+Consumption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF6960212196E5005DECE5 /* API+Consumption.swift */; };
+		1AD8B5CA22F0363B001B0C55 /* APIEndpoint+Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FA9211B0383007C1E5A /* APIEndpoint+Paths.swift */; };
+		1AD8B5CB22F0363B001B0C55 /* Date+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69AC2121CE95005DECE5 /* Date+XT.swift */; };
+		1AD8B5CC22F0363B001B0C55 /* UIImage+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE58215671AA00AEBF82 /* UIImage+XT.swift */; };
+		1AD8B5CD22F0363B001B0C55 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192F98211AFF16007C1E5A /* LoginViewController.swift */; };
+		1AD8B5CE22F0363B001B0C55 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23263F211C892F0045FBD7 /* CustomButton.swift */; };
+		1AD8B5CF22F0363B001B0C55 /* CustomActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A922DE921286FCC003B1731 /* CustomActivityIndicator.swift */; };
+		1AD8B5D022F0363B001B0C55 /* PseudoHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66067021374F8200C96102 /* PseudoHeaderTableViewCell.swift */; };
+		1AD8B5D122F0363B001B0C55 /* API+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FA1211B0306007C1E5A /* API+Login.swift */; };
+		1AD8B5D222F0363B001B0C55 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FA4211B0366007C1E5A /* Typealiases.swift */; };
+		1AD8B5D322F0363B001B0C55 /* ServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF699C2121BF3A005DECE5 /* ServicesViewController.swift */; };
+		1AD8B5D422F0363B001B0C55 /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA708C62137650E00927529 /* DetailsCell.swift */; };
+		1AD8B5D522F0363B001B0C55 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A232637211C877D0045FBD7 /* InfoViewController.swift */; };
+		1AD8B5D622F0363B001B0C55 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192F9D211B01F4007C1E5A /* API.swift */; };
+		1AD8B5D722F0363B001B0C55 /* UIColor+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */; };
+		1AD8B5D822F0363B001B0C55 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214C2212705D800BB2F1C /* Credentials.swift */; };
+		1AD8B5D922F0363B001B0C55 /* ConsumptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66065B2136E64B00C96102 /* ConsumptionViewController.swift */; };
+		1AD8B5DA22F0363B001B0C55 /* UIBarButtonItem+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5D7F3213ADC7A00DAECDC /* UIBarButtonItem+XT.swift */; };
+		1AD8B5DB22F0363B001B0C55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A80F30D211AEF21008D8C89 /* AppDelegate.swift */; };
+		1AD8B5DC22F0363B001B0C55 /* API+Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE5F215671CD00AEBF82 /* API+Store.swift */; };
+		1AD8B5DD22F0363B001B0C55 /* SingleTouchDownGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A232690211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift */; };
+		1AD8B5DE22F0363B001B0C55 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A19300D211B1C50007C1E5A /* User.swift */; };
+		1AD8B5DF22F0363B001B0C55 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FAA211B0383007C1E5A /* APIEndpoint.swift */; };
+		1AD8B5E022F0363B001B0C55 /* PagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6606572136E58C00C96102 /* PagerViewController.swift */; };
+		1AD8B5E122F0363B001B0C55 /* AppConfig+Prod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FB5211B061F007C1E5A /* AppConfig+Prod.swift */; };
+		1AD8B5E222F0363B001B0C55 /* Consumption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69A42121CB2F005DECE5 /* Consumption.swift */; };
+		1AD8B5E322F0363B001B0C55 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE462156717300AEBF82 /* StoreViewController.swift */; };
+		1AD8B5E422F0363B001B0C55 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69942121BD3E005DECE5 /* MainTabBarController.swift */; };
+		1AD8B5E522F0363B001B0C55 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A90865C213457D400230AAB /* HomeViewController.swift */; };
+		1AD8B5E622F0363B001B0C55 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE532156719D00AEBF82 /* Store.swift */; };
+		1AD8B5E722F0363B001B0C55 /* OptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69B02121DBFD005DECE5 /* OptionCell.swift */; };
+		1AD8B5E822F0363B001B0C55 /* APIEndpoint+Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FA6211B0382007C1E5A /* APIEndpoint+Tasks.swift */; };
+		1AD8B5E922F0363B001B0C55 /* ConsumptionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66066C21374C4000C96102 /* ConsumptionDetail.swift */; };
+		1AD8B5EA22F0363B001B0C55 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A66066821374C1400C96102 /* Section.swift */; };
+		1AD8B5EB22F0363B001B0C55 /* String+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193004211B1AD6007C1E5A /* String+XT.swift */; };
+		1AD8B5EC22F0363B001B0C55 /* API+Information.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF695C21219533005DECE5 /* API+Information.swift */; };
+		1AD8B5ED22F0363B001B0C55 /* API+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192F9F211B02E7007C1E5A /* API+XT.swift */; };
+		1AD8B5EE22F0363B001B0C55 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193024211B362E007C1E5A /* CardView.swift */; };
+		1AD8B5EF22F0363B001B0C55 /* RowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23D955213844F10086AE79 /* RowCell.swift */; };
+		1AD8B5F022F0363B001B0C55 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A63F9072125C117009D515C /* ChangePasswordViewController.swift */; };
+		1AD8B5F122F0363B001B0C55 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FB3211B060A007C1E5A /* AppConfig.swift */; };
+		1AD8B5F222F0363B001B0C55 /* ConsumptionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6606642137490200C96102 /* ConsumptionDetailsViewController.swift */; };
+		1AD8B5F322F0363B001B0C55 /* API+Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69642121975F005DECE5 /* API+Service.swift */; };
+		1AD8B5F422F0363B001B0C55 /* AutoLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214B92126D1AC00BB2F1C /* AutoLoginViewController.swift */; };
+		1AD8B5F522F0363B001B0C55 /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A63F90B2125C122009D515C /* ChangeEmailViewController.swift */; };
+		1AD8B5F622F0363B001B0C55 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69982121BF27005DECE5 /* OptionsViewController.swift */; };
+		1AD8B5F722F0363B001B0C55 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A23D95121383E380086AE79 /* HeaderCell.swift */; };
+		1AD8B5F822F0363B001B0C55 /* UIViewController+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47620A211C6C79002AC7D1 /* UIViewController+XT.swift */; };
+		1AD8B5F922F0363B001B0C55 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193008211B1B2F007C1E5A /* Config.swift */; };
+		1AD8B5FA22F0363B001B0C55 /* UIStoryboard+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193015211B1DF1007C1E5A /* UIStoryboard+XT.swift */; };
+		1AD8B5FB22F0363B001B0C55 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A232639211C884D0045FBD7 /* Utility.swift */; };
+		1AD8B5FC22F0363B001B0C55 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE214B02126CB5000BB2F1C /* SettingsViewController.swift */; };
+		1AD8B5FD22F0363B001B0C55 /* API+RecoverPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DCE211C2DD00058CFD2 /* API+RecoverPassword.swift */; };
+		1AD8B5FE22F0363B001B0C55 /* API+Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF696821219A3D005DECE5 /* API+Option.swift */; };
+		1AD8B5FF22F0363B001B0C55 /* APIEndpoint+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FA8211B0383007C1E5A /* APIEndpoint+Methods.swift */; };
+		1AD8B60022F0363B001B0C55 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A193028211B38D9007C1E5A /* BasicCell.swift */; };
+		1AD8B60122F0363B001B0C55 /* ShowPukViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A63F90F2125C12C009D515C /* ShowPukViewController.swift */; };
+		1AD8B60222F0363B001B0C55 /* StoreClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE442156717300AEBF82 /* StoreClusterView.swift */; };
+		1AD8B60322F0363B001B0C55 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAF69A02121BF4F005DECE5 /* ProfileViewController.swift */; };
+		1AD8B60422F0363B001B0C55 /* StoreAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE452156717300AEBF82 /* StoreAnnotationView.swift */; };
+		1AD8B60522F0363B001B0C55 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE432156717300AEBF82 /* MapManager.swift */; };
+		1AD8B60622F0363B001B0C55 /* UIView+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE57215671AA00AEBF82 /* UIView+XT.swift */; };
+		1AD8B60722F0363B001B0C55 /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */; };
+		1AD8B60822F0363B001B0C55 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A44A08A21400216003FA9C1 /* UINavigationBar.swift */; };
+		1AD8B60922F0363B001B0C55 /* APIEndpoint+Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A192FA7211B0382007C1E5A /* APIEndpoint+Core.swift */; };
+		1AD8B60D22F0363B001B0C55 /* Info.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA617792125997A0062CA49 /* Info.strings */; };
+		1AD8B60E22F0363B001B0C55 /* RecoverPassword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA61777212597650062CA49 /* RecoverPassword.strings */; };
+		1AD8B60F22F0363B001B0C55 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF697D2121BC56005DECE5 /* Profile.storyboard */; };
+		1AD8B61022F0363B001B0C55 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A192F8F211AF9F3007C1E5A /* Login.storyboard */; };
+		1AD8B61122F0363B001B0C55 /* Home.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A6606602137410300C96102 /* Home.strings */; };
+		1AD8B61222F0363B001B0C55 /* ChangeEmail.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A63F9142125C904009D515C /* ChangeEmail.strings */; };
+		1AD8B61322F0363B001B0C55 /* Options.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF697B2121BC56005DECE5 /* Options.storyboard */; };
+		1AD8B61422F0363B001B0C55 /* Profile.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A922DE5212865FD003B1731 /* Profile.strings */; };
+		1AD8B61522F0363B001B0C55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF698E2121BC95005DECE5 /* Main.storyboard */; };
+		1AD8B61622F0363B001B0C55 /* Login.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA61770212593DF0062CA49 /* Login.strings */; };
+		1AD8B61722F0363B001B0C55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A80F314211AEF22008D8C89 /* Assets.xcassets */; };
+		1AD8B61822F0363B001B0C55 /* Settings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AE214BE2126FA4F00BB2F1C /* Settings.strings */; };
+		1AD8B61922F0363B001B0C55 /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A03FE3E2156715500AEBF82 /* Store.storyboard */; };
+		1AD8B61A22F0363B001B0C55 /* Puk.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A922DED2128731D003B1731 /* Puk.strings */; };
+		1AD8B61B22F0363B001B0C55 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE214B52126CB7B00BB2F1C /* Settings.storyboard */; };
+		1AD8B61C22F0363B001B0C55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A192F8B211AF9F3007C1E5A /* LaunchScreen.storyboard */; };
+		1AD8B61D22F0363B001B0C55 /* Commons.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2AA61775212596080062CA49 /* Commons.strings */; };
+		1AD8B61E22F0363B001B0C55 /* Services.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAF697F2121BC57005DECE5 /* Services.storyboard */; };
+		1AD8B61F22F0363B001B0C55 /* Consumption.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A19301D211B1E7F007C1E5A /* Consumption.storyboard */; };
+		1AD8B62022F0363B001B0C55 /* ChangePassword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A63F9182125CA3C009D515C /* ChangePassword.strings */; };
+		1AD8B62322F0363B001B0C55 /* ConsumptionWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2AF84B2F213D6C6500026AE3 /* ConsumptionWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1AD8B62C22F0375D001B0C55 /* AppConfig+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B62B22F0375D001B0C55 /* AppConfig+Testing.swift */; };
+		1AD8B63722F03D9B001B0C55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AD8B63622F03D9B001B0C55 /* GoogleService-Info.plist */; };
+		1AD8B63E22F0425E001B0C55 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B63D22F0425E001B0C55 /* R.generated.swift */; };
+		1AD8B63F22F0425E001B0C55 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B63D22F0425E001B0C55 /* R.generated.swift */; };
+		1AD8B64022F0425E001B0C55 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B63D22F0425E001B0C55 /* R.generated.swift */; };
+		1AD8B64122F0425E001B0C55 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B63D22F0425E001B0C55 /* R.generated.swift */; };
+		1AD8B64422F04585001B0C55 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B64322F04585001B0C55 /* BaseViewController.swift */; };
+		1AD8B64522F04585001B0C55 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B64322F04585001B0C55 /* BaseViewController.swift */; };
+		1AD8B64622F04585001B0C55 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B64322F04585001B0C55 /* BaseViewController.swift */; };
+		1AD8B64722F04585001B0C55 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8B64322F04585001B0C55 /* BaseViewController.swift */; };
+		1CFA3B6E7050A220245FBB24 /* Pods_Abstract_Target_Iliad_Development.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12DF493C3B362DEB89064B43 /* Pods_Abstract_Target_Iliad_Development.framework */; };
 		2A03FE402156715500AEBF82 /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A03FE3E2156715500AEBF82 /* Store.storyboard */; };
 		2A03FE472156717300AEBF82 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE432156717300AEBF82 /* MapManager.swift */; };
 		2A03FE482156717300AEBF82 /* StoreClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A03FE442156717300AEBF82 /* StoreClusterView.swift */; };
@@ -271,12 +370,17 @@
 		2AF92DD8211C36A50058CFD2 /* UIColor+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */; };
 		2AF92DD9211C36A50058CFD2 /* UIColor+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */; };
 		2AF92DDA211C36A50058CFD2 /* UIColor+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */; };
-		AC40DE2FB908B14B7010935F /* Pods_Abstract_Target_IliadProd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 754F9F367520EC3D64ACF3CC /* Pods_Abstract_Target_IliadProd.framework */; };
-		C6DF32393F8788875A24A7C2 /* Pods_Abstract_Target_IliadStaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC644D73C304814C492214A8 /* Pods_Abstract_Target_IliadStaging.framework */; };
-		CFDD73AC1A4BF5E2BE3B2204 /* Pods_Abstract_Target_IliadDev.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8CD4109D8897C9AFCA8D71E /* Pods_Abstract_Target_IliadDev.framework */; };
+		72B4918AD1B21AE1E24FB7CC /* Pods_Abstract_Target_Iliad_Staging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F647A22CF0D4E6375C7822F8 /* Pods_Abstract_Target_Iliad_Staging.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1AD8B5C622F0363B001B0C55 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A80F302211AEF21008D8C89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AF84B2E213D6C6500026AE3;
+			remoteInfo = ConsumptionWidget;
+		};
 		2AF00315213DC30C001507C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2A80F302211AEF21008D8C89 /* Project object */;
@@ -287,6 +391,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1AD8B62222F0363B001B0C55 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1AD8B62322F0363B001B0C55 /* ConsumptionWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AF00317213DC30C001507C1 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +416,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		12DF493C3B362DEB89064B43 /* Pods_Abstract_Target_Iliad_Development.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstract_Target_Iliad_Development.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1586314DA290422BD398E50E /* Pods-Abstract Target-Iliad Development.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-Iliad Development.debug.xcconfig"; path = "Target Support Files/Pods-Abstract Target-Iliad Development/Pods-Abstract Target-Iliad Development.debug.xcconfig"; sourceTree = "<group>"; };
+		1AD8B62822F0363B001B0C55 /* Iliad Testing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Iliad Testing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AD8B62922F0363C001B0C55 /* iliadTesting-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iliadTesting-Info.plist"; sourceTree = "<group>"; };
+		1AD8B62B22F0375D001B0C55 /* AppConfig+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppConfig+Testing.swift"; sourceTree = "<group>"; };
+		1AD8B62F22F03871001B0C55 /* IliadDevelopment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IliadDevelopment.entitlements; sourceTree = "<group>"; };
+		1AD8B63622F03D9B001B0C55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1AD8B63822F03F69001B0C55 /* iliadStaging-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iliadStaging-Info.plist"; sourceTree = "<group>"; };
+		1AD8B63A22F03FBE001B0C55 /* IliadStaging.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IliadStaging.entitlements; sourceTree = "<group>"; };
+		1AD8B63B22F0405F001B0C55 /* IliadTesting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IliadTesting.entitlements; sourceTree = "<group>"; };
+		1AD8B63C22F04085001B0C55 /* IliadProduction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IliadProduction.entitlements; sourceTree = "<group>"; };
+		1AD8B63D22F0425E001B0C55 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		1AD8B64322F04585001B0C55 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		21AF3800227E17A34770CBF0 /* Pods-Abstract Target-Iliad Production.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-Iliad Production.release.xcconfig"; path = "Target Support Files/Pods-Abstract Target-Iliad Production/Pods-Abstract Target-Iliad Production.release.xcconfig"; sourceTree = "<group>"; };
 		2A03FE3F2156715500AEBF82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Store.storyboard; sourceTree = "<group>"; };
 		2A03FE432156717300AEBF82 /* MapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 		2A03FE442156717300AEBF82 /* StoreClusterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreClusterView.swift; sourceTree = "<group>"; };
@@ -326,10 +455,9 @@
 		2A192FB5211B061F007C1E5A /* AppConfig+Prod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppConfig+Prod.swift"; sourceTree = "<group>"; };
 		2A192FB7211B0638007C1E5A /* AppConfig+Staging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppConfig+Staging.swift"; sourceTree = "<group>"; };
 		2A192FB9211B064A007C1E5A /* AppConfig+Dev.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppConfig+Dev.swift"; sourceTree = "<group>"; };
-		2A192FD8211B12BD007C1E5A /* IliadStaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IliadStaging.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A192FD9211B12BD007C1E5A /* iliadStaging-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "iliadStaging-Info.plist"; path = "/Users/luigi/Workspace/iliad/Iliad/Configurations/Staging/iliadStaging-Info.plist"; sourceTree = "<absolute>"; };
-		2A192FF7211B12C0007C1E5A /* IliadDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IliadDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A192FF8211B12C1007C1E5A /* iliadDev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "iliadDev-Info.plist"; path = "/Users/luigi/Workspace/iliad/Iliad/Configurations/Dev/iliadDev-Info.plist"; sourceTree = "<absolute>"; };
+		2A192FD8211B12BD007C1E5A /* Iliad Staging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Iliad Staging.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A192FF7211B12C0007C1E5A /* Iliad Development.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Iliad Development.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A192FF8211B12C1007C1E5A /* iliadDevelopment-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iliadDevelopment-Info.plist"; sourceTree = "<group>"; };
 		2A193004211B1AD6007C1E5A /* String+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+XT.swift"; sourceTree = "<group>"; };
 		2A193008211B1B2F007C1E5A /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		2A19300D211B1C50007C1E5A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -358,10 +486,10 @@
 		2A66066821374C1400C96102 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		2A66066C21374C4000C96102 /* ConsumptionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionDetail.swift; sourceTree = "<group>"; };
 		2A66067021374F8200C96102 /* PseudoHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PseudoHeaderTableViewCell.swift; sourceTree = "<group>"; };
-		2A80F30A211AEF21008D8C89 /* IliadProd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IliadProd.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A80F30A211AEF21008D8C89 /* Iliad Production.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Iliad Production.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A80F30D211AEF21008D8C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A80F314211AEF22008D8C89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2A80F319211AEF22008D8C89 /* iliadProd-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iliadProd-Info.plist"; sourceTree = "<group>"; };
+		2A80F319211AEF22008D8C89 /* iliadProduction-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iliadProduction-Info.plist"; sourceTree = "<group>"; };
 		2A90865C213457D400230AAB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2A922DE5212865FD003B1731 /* Profile.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Profile.strings; sourceTree = "<group>"; };
 		2A922DE921286FCC003B1731 /* CustomActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActivityIndicator.swift; sourceTree = "<group>"; };
@@ -398,29 +526,34 @@
 		2AF84B35213D6C6500026AE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		2AF84B37213D6C6500026AE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AF84B4B213D6E8500026AE3 /* ConsumptionWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ConsumptionWidget.entitlements; sourceTree = "<group>"; };
-		2AF84B4C213D6F6900026AE3 /* IliadDev.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IliadDev.entitlements; sourceTree = "<group>"; };
-		2AF84B4D213D707A00026AE3 /* IliadStaging.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IliadStaging.entitlements; sourceTree = "<group>"; };
-		2AF84B4E213D708300026AE3 /* IliadProd.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IliadProd.entitlements; sourceTree = "<group>"; };
 		2AF92DCE211C2DD00058CFD2 /* API+RecoverPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+RecoverPassword.swift"; sourceTree = "<group>"; };
 		2AF92DD1211C32500058CFD2 /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
 		2AF92DD7211C36A50058CFD2 /* UIColor+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+XT.swift"; sourceTree = "<group>"; };
-		2FF08424C2EC9A18AEE8E6F2 /* Pods-Abstract Target-IliadStaging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-IliadStaging.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract Target-IliadStaging/Pods-Abstract Target-IliadStaging.debug.xcconfig"; sourceTree = "<group>"; };
-		754F9F367520EC3D64ACF3CC /* Pods_Abstract_Target_IliadProd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstract_Target_IliadProd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		908DF9FC3DA5EA36B7A4F54B /* Pods-Abstract Target-IliadDev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-IliadDev.release.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract Target-IliadDev/Pods-Abstract Target-IliadDev.release.xcconfig"; sourceTree = "<group>"; };
-		94448A748CC2882C4B07E2E9 /* Pods-Abstract Target-IliadProd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-IliadProd.release.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract Target-IliadProd/Pods-Abstract Target-IliadProd.release.xcconfig"; sourceTree = "<group>"; };
-		A8CD4109D8897C9AFCA8D71E /* Pods_Abstract_Target_IliadDev.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstract_Target_IliadDev.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7488A9A80BE83B962C92D8B /* Pods-Abstract Target-IliadProd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-IliadProd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract Target-IliadProd/Pods-Abstract Target-IliadProd.debug.xcconfig"; sourceTree = "<group>"; };
-		BC644D73C304814C492214A8 /* Pods_Abstract_Target_IliadStaging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstract_Target_IliadStaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F74579818C2C7F36B5D468AB /* Pods-Abstract Target-IliadStaging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-IliadStaging.release.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract Target-IliadStaging/Pods-Abstract Target-IliadStaging.release.xcconfig"; sourceTree = "<group>"; };
-		F7D6C6559BB064276CE6ECC1 /* Pods-Abstract Target-IliadDev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-IliadDev.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Abstract Target-IliadDev/Pods-Abstract Target-IliadDev.debug.xcconfig"; sourceTree = "<group>"; };
+		36FE8290E0DD738D22515838 /* Pods_Abstract_Target_Iliad_Production.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstract_Target_Iliad_Production.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FFEBD2D2B13FE6F085216CA /* Pods-Abstract Target-Iliad Staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-Iliad Staging.debug.xcconfig"; path = "Target Support Files/Pods-Abstract Target-Iliad Staging/Pods-Abstract Target-Iliad Staging.debug.xcconfig"; sourceTree = "<group>"; };
+		6A35CDFA044B440DAE27C80C /* Pods_Abstract_Target_Iliad_Testing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstract_Target_Iliad_Testing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90E1A6D6840A45F6F786000B /* Pods-Abstract Target-Iliad Production.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-Iliad Production.debug.xcconfig"; path = "Target Support Files/Pods-Abstract Target-Iliad Production/Pods-Abstract Target-Iliad Production.debug.xcconfig"; sourceTree = "<group>"; };
+		975388C448AAE3C8A6CDEB30 /* Pods-Abstract Target-Iliad Development.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-Iliad Development.release.xcconfig"; path = "Target Support Files/Pods-Abstract Target-Iliad Development/Pods-Abstract Target-Iliad Development.release.xcconfig"; sourceTree = "<group>"; };
+		A9D33396BED16D10E2574121 /* Pods-Abstract Target-Iliad Testing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-Iliad Testing.debug.xcconfig"; path = "Target Support Files/Pods-Abstract Target-Iliad Testing/Pods-Abstract Target-Iliad Testing.debug.xcconfig"; sourceTree = "<group>"; };
+		DBBF78CD7D963714266CFFF6 /* Pods-Abstract Target-Iliad Testing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-Iliad Testing.release.xcconfig"; path = "Target Support Files/Pods-Abstract Target-Iliad Testing/Pods-Abstract Target-Iliad Testing.release.xcconfig"; sourceTree = "<group>"; };
+		E34D9FA5475565C6AC4C20DF /* Pods-Abstract Target-Iliad Staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Abstract Target-Iliad Staging.release.xcconfig"; path = "Target Support Files/Pods-Abstract Target-Iliad Staging/Pods-Abstract Target-Iliad Staging.release.xcconfig"; sourceTree = "<group>"; };
+		F647A22CF0D4E6375C7822F8 /* Pods_Abstract_Target_Iliad_Staging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Abstract_Target_Iliad_Staging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1AD8B60A22F0363B001B0C55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D60BCDB2FB2DC17D6678358 /* Pods_Abstract_Target_Iliad_Testing.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2A192FCE211B12BD007C1E5A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6DF32393F8788875A24A7C2 /* Pods_Abstract_Target_IliadStaging.framework in Frameworks */,
+				72B4918AD1B21AE1E24FB7CC /* Pods_Abstract_Target_Iliad_Staging.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +561,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFDD73AC1A4BF5E2BE3B2204 /* Pods_Abstract_Target_IliadDev.framework in Frameworks */,
+				1CFA3B6E7050A220245FBB24 /* Pods_Abstract_Target_Iliad_Development.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,7 +569,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC40DE2FB908B14B7010935F /* Pods_Abstract_Target_IliadProd.framework in Frameworks */,
+				046D597EEA1A6C101E842637 /* Pods_Abstract_Target_Iliad_Production.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +584,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AD8B62A22F036ED001B0C55 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				1AD8B63B22F0405F001B0C55 /* IliadTesting.entitlements */,
+				1AD8B62B22F0375D001B0C55 /* AppConfig+Testing.swift */,
+				1AD8B62922F0363C001B0C55 /* iliadTesting-Info.plist */,
+			);
+			path = Testing;
+			sourceTree = "<group>";
+		};
+		1AD8B64222F04578001B0C55 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2AAF69942121BD3E005DECE5 /* MainTabBarController.swift */,
+				1AD8B64322F04585001B0C55 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		2A03FE412156717300AEBF82 /* Store */ = {
 			isa = PBXGroup;
 			children = (
@@ -541,34 +693,35 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		2A192FB0211B05ED007C1E5A /* Prod */ = {
+		2A192FB0211B05ED007C1E5A /* Production */ = {
 			isa = PBXGroup;
 			children = (
-				2AF84B4E213D708300026AE3 /* IliadProd.entitlements */,
+				1AD8B63C22F04085001B0C55 /* IliadProduction.entitlements */,
 				2A192FB5211B061F007C1E5A /* AppConfig+Prod.swift */,
-				2A80F319211AEF22008D8C89 /* iliadProd-Info.plist */,
+				2A80F319211AEF22008D8C89 /* iliadProduction-Info.plist */,
 			);
-			path = Prod;
+			path = Production;
 			sourceTree = "<group>";
 		};
 		2A192FB1211B05F3007C1E5A /* Staging */ = {
 			isa = PBXGroup;
 			children = (
-				2AF84B4D213D707A00026AE3 /* IliadStaging.entitlements */,
+				1AD8B63A22F03FBE001B0C55 /* IliadStaging.entitlements */,
 				2A192FB7211B0638007C1E5A /* AppConfig+Staging.swift */,
-				2A192FD9211B12BD007C1E5A /* iliadStaging-Info.plist */,
+				1AD8B63822F03F69001B0C55 /* iliadStaging-Info.plist */,
 			);
 			path = Staging;
 			sourceTree = "<group>";
 		};
-		2A192FB2211B05F8007C1E5A /* Dev */ = {
+		2A192FB2211B05F8007C1E5A /* Development */ = {
 			isa = PBXGroup;
 			children = (
-				2AF84B4C213D6F6900026AE3 /* IliadDev.entitlements */,
+				1AD8B62F22F03871001B0C55 /* IliadDevelopment.entitlements */,
+				1AD8B63622F03D9B001B0C55 /* GoogleService-Info.plist */,
 				2A192FB9211B064A007C1E5A /* AppConfig+Dev.swift */,
-				2A192FF8211B12C1007C1E5A /* iliadDev-Info.plist */,
+				2A192FF8211B12C1007C1E5A /* iliadDevelopment-Info.plist */,
 			);
-			path = Dev;
+			path = Development;
 			sourceTree = "<group>";
 		};
 		2A193003211B1AC7007C1E5A /* Extensions */ = {
@@ -664,18 +817,19 @@
 				2A80F30C211AEF21008D8C89 /* Iliad */,
 				2AF84B31213D6C6500026AE3 /* ConsumptionWidget */,
 				2A80F30B211AEF21008D8C89 /* Products */,
-				E86062355225B95ABD2F5248 /* Pods */,
 				A588A6B86D21B3763DF6ED5C /* Frameworks */,
+				4F19DAC30A8FB5DFA0F282B0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		2A80F30B211AEF21008D8C89 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2A80F30A211AEF21008D8C89 /* IliadProd.app */,
-				2A192FD8211B12BD007C1E5A /* IliadStaging.app */,
-				2A192FF7211B12C0007C1E5A /* IliadDev.app */,
+				2A80F30A211AEF21008D8C89 /* Iliad Production.app */,
+				2A192FD8211B12BD007C1E5A /* Iliad Staging.app */,
+				2A192FF7211B12C0007C1E5A /* Iliad Development.app */,
 				2AF84B2F213D6C6500026AE3 /* ConsumptionWidget.appex */,
+				1AD8B62822F0363B001B0C55 /* Iliad Testing.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -695,6 +849,7 @@
 		2A80F31F211AEF37008D8C89 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1AD8B63D22F0425E001B0C55 /* R.generated.swift */,
 				2AA61772212593E70062CA49 /* Translations */,
 				2A80F314211AEF22008D8C89 /* Assets.xcassets */,
 			);
@@ -704,8 +859,8 @@
 		2A80F320211AEF3C008D8C89 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1AD8B64222F04578001B0C55 /* Base */,
 				2AF92DD0211C323A0058CFD2 /* Login */,
-				2AAF69932121BD0C005DECE5 /* TabBar */,
 				2A03FE412156717300AEBF82 /* Store */,
 				2A232636211C84120045FBD7 /* Consumption */,
 				2AAF696E2121BB60005DECE5 /* Options */,
@@ -738,9 +893,10 @@
 				2A192FB3211B060A007C1E5A /* AppConfig.swift */,
 				2A193008211B1B2F007C1E5A /* Config.swift */,
 				2AE214C2212705D800BB2F1C /* Credentials.swift */,
-				2A192FB0211B05ED007C1E5A /* Prod */,
+				2A192FB0211B05ED007C1E5A /* Production */,
+				1AD8B62A22F036ED001B0C55 /* Testing */,
 				2A192FB1211B05F3007C1E5A /* Staging */,
-				2A192FB2211B05F8007C1E5A /* Dev */,
+				2A192FB2211B05F8007C1E5A /* Development */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -792,14 +948,6 @@
 				2AAF69982121BF27005DECE5 /* OptionsViewController.swift */,
 			);
 			path = Options;
-			sourceTree = "<group>";
-		};
-		2AAF69932121BD0C005DECE5 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				2AAF69942121BD3E005DECE5 /* MainTabBarController.swift */,
-			);
-			path = TabBar;
 			sourceTree = "<group>";
 		};
 		2AE214B42126CB5500BB2F1C /* Settings */ = {
@@ -873,92 +1021,121 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		4F19DAC30A8FB5DFA0F282B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1586314DA290422BD398E50E /* Pods-Abstract Target-Iliad Development.debug.xcconfig */,
+				975388C448AAE3C8A6CDEB30 /* Pods-Abstract Target-Iliad Development.release.xcconfig */,
+				90E1A6D6840A45F6F786000B /* Pods-Abstract Target-Iliad Production.debug.xcconfig */,
+				21AF3800227E17A34770CBF0 /* Pods-Abstract Target-Iliad Production.release.xcconfig */,
+				5FFEBD2D2B13FE6F085216CA /* Pods-Abstract Target-Iliad Staging.debug.xcconfig */,
+				E34D9FA5475565C6AC4C20DF /* Pods-Abstract Target-Iliad Staging.release.xcconfig */,
+				A9D33396BED16D10E2574121 /* Pods-Abstract Target-Iliad Testing.debug.xcconfig */,
+				DBBF78CD7D963714266CFFF6 /* Pods-Abstract Target-Iliad Testing.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A588A6B86D21B3763DF6ED5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A8CD4109D8897C9AFCA8D71E /* Pods_Abstract_Target_IliadDev.framework */,
-				754F9F367520EC3D64ACF3CC /* Pods_Abstract_Target_IliadProd.framework */,
-				BC644D73C304814C492214A8 /* Pods_Abstract_Target_IliadStaging.framework */,
 				2ADADDA5213D5F2D00FD7A54 /* NotificationCenter.framework */,
+				12DF493C3B362DEB89064B43 /* Pods_Abstract_Target_Iliad_Development.framework */,
+				36FE8290E0DD738D22515838 /* Pods_Abstract_Target_Iliad_Production.framework */,
+				F647A22CF0D4E6375C7822F8 /* Pods_Abstract_Target_Iliad_Staging.framework */,
+				6A35CDFA044B440DAE27C80C /* Pods_Abstract_Target_Iliad_Testing.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E86062355225B95ABD2F5248 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F7D6C6559BB064276CE6ECC1 /* Pods-Abstract Target-IliadDev.debug.xcconfig */,
-				908DF9FC3DA5EA36B7A4F54B /* Pods-Abstract Target-IliadDev.release.xcconfig */,
-				B7488A9A80BE83B962C92D8B /* Pods-Abstract Target-IliadProd.debug.xcconfig */,
-				94448A748CC2882C4B07E2E9 /* Pods-Abstract Target-IliadProd.release.xcconfig */,
-				2FF08424C2EC9A18AEE8E6F2 /* Pods-Abstract Target-IliadStaging.debug.xcconfig */,
-				F74579818C2C7F36B5D468AB /* Pods-Abstract Target-IliadStaging.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2A192FBB211B12BD007C1E5A /* IliadStaging */ = {
+		1AD8B5C422F0363B001B0C55 /* Iliad Testing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A192FD5211B12BD007C1E5A /* Build configuration list for PBXNativeTarget "IliadStaging" */;
+			buildConfigurationList = 1AD8B62522F0363B001B0C55 /* Build configuration list for PBXNativeTarget "Iliad Testing" */;
 			buildPhases = (
-				B48E894E00CE81831C0ADD22 /* [CP] Check Pods Manifest.lock */,
+				5A51450A7E4FF5EDC34E8C53 /* [CP] Check Pods Manifest.lock */,
+				1AD8B5C822F0363B001B0C55 /* Sources */,
+				1AD8B60A22F0363B001B0C55 /* Frameworks */,
+				1AD8B60C22F0363B001B0C55 /* Resources */,
+				1AD8B62222F0363B001B0C55 /* Embed App Extensions */,
+				1AD8B63422F03981001B0C55 /* Crashlytics */,
+				9BCECDD056583596B1ABB08A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1AD8B5C522F0363B001B0C55 /* PBXTargetDependency */,
+			);
+			name = "Iliad Testing";
+			productName = Iliad;
+			productReference = 1AD8B62822F0363B001B0C55 /* Iliad Testing.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2A192FBB211B12BD007C1E5A /* Iliad Staging */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A192FD5211B12BD007C1E5A /* Build configuration list for PBXNativeTarget "Iliad Staging" */;
+			buildPhases = (
+				F3E59A1A2D00FDD3599A563B /* [CP] Check Pods Manifest.lock */,
 				2A192FBD211B12BD007C1E5A /* Sources */,
 				2A192FCE211B12BD007C1E5A /* Frameworks */,
 				2A192FD0211B12BD007C1E5A /* Resources */,
-				CA97CC957028D79B7596449D /* [CP] Embed Pods Frameworks */,
+				1AD8B63322F03965001B0C55 /* Crashlytics */,
+				6614F68BD249A4BF3BF83153 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = IliadStaging;
+			name = "Iliad Staging";
 			productName = Iliad;
-			productReference = 2A192FD8211B12BD007C1E5A /* IliadStaging.app */;
+			productReference = 2A192FD8211B12BD007C1E5A /* Iliad Staging.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2A192FDA211B12C0007C1E5A /* IliadDev */ = {
+		2A192FDA211B12C0007C1E5A /* Iliad Development */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A192FF4211B12C0007C1E5A /* Build configuration list for PBXNativeTarget "IliadDev" */;
+			buildConfigurationList = 2A192FF4211B12C0007C1E5A /* Build configuration list for PBXNativeTarget "Iliad Development" */;
 			buildPhases = (
-				393D655E27B24F3D5AAC0A7B /* [CP] Check Pods Manifest.lock */,
+				CF81FCE713282AAF2926C904 /* [CP] Check Pods Manifest.lock */,
+				1AD8B63222F03936001B0C55 /* R.swift */,
 				2A192FDC211B12C0007C1E5A /* Sources */,
 				2A192FED211B12C0007C1E5A /* Frameworks */,
 				2A192FEF211B12C0007C1E5A /* Resources */,
+				1AD8B63122F0391D001B0C55 /* Checker */,
 				2A193023211B2D98007C1E5A /* Swiftlint */,
-				D46CDEB3DF27D8BEF617F2E5 /* [CP] Embed Pods Frameworks */,
+				1AD8B63022F038F4001B0C55 /* Crashlytics */,
+				5B038732A68170E65989FBE5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = IliadDev;
+			name = "Iliad Development";
 			productName = Iliad;
-			productReference = 2A192FF7211B12C0007C1E5A /* IliadDev.app */;
+			productReference = 2A192FF7211B12C0007C1E5A /* Iliad Development.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2A80F309211AEF21008D8C89 /* IliadProd */ = {
+		2A80F309211AEF21008D8C89 /* Iliad Production */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A80F31C211AEF22008D8C89 /* Build configuration list for PBXNativeTarget "IliadProd" */;
+			buildConfigurationList = 2A80F31C211AEF22008D8C89 /* Build configuration list for PBXNativeTarget "Iliad Production" */;
 			buildPhases = (
-				BAA82AD64FF6E208CCB02982 /* [CP] Check Pods Manifest.lock */,
+				8FDCB9771A8F4135CF1C031D /* [CP] Check Pods Manifest.lock */,
 				2A80F306211AEF21008D8C89 /* Sources */,
 				2A80F307211AEF21008D8C89 /* Frameworks */,
 				2A80F308211AEF21008D8C89 /* Resources */,
-				31B99667BB9DB2078BB8D943 /* [CP] Embed Pods Frameworks */,
 				2AF00317213DC30C001507C1 /* Embed App Extensions */,
-				2A03FE6521568F1100AEBF82 /* Fabric */,
+				1AD8B63522F03985001B0C55 /* Crashlytics */,
+				1CABA37BCF4B46E3E9A18783 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				2AF00316213DC30C001507C1 /* PBXTargetDependency */,
 			);
-			name = IliadProd;
+			name = "Iliad Production";
 			productName = Iliad;
-			productReference = 2A80F30A211AEF21008D8C89 /* IliadProd.app */;
+			productReference = 2A80F30A211AEF21008D8C89 /* Iliad Production.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2AF84B2E213D6C6500026AE3 /* ConsumptionWidget */ = {
@@ -988,6 +1165,13 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Luigi Aiello";
 				TargetAttributes = {
+					1AD8B5C422F0363B001B0C55 = {
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					2A192FBB211B12BD007C1E5A = {
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -1037,15 +1221,43 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2A80F309211AEF21008D8C89 /* IliadProd */,
-				2A192FBB211B12BD007C1E5A /* IliadStaging */,
-				2A192FDA211B12C0007C1E5A /* IliadDev */,
+				2A80F309211AEF21008D8C89 /* Iliad Production */,
+				1AD8B5C422F0363B001B0C55 /* Iliad Testing */,
+				2A192FBB211B12BD007C1E5A /* Iliad Staging */,
+				2A192FDA211B12C0007C1E5A /* Iliad Development */,
 				2AF84B2E213D6C6500026AE3 /* ConsumptionWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1AD8B60C22F0363B001B0C55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AD8B60D22F0363B001B0C55 /* Info.strings in Resources */,
+				1AD8B60E22F0363B001B0C55 /* RecoverPassword.strings in Resources */,
+				1AD8B60F22F0363B001B0C55 /* Profile.storyboard in Resources */,
+				1AD8B61022F0363B001B0C55 /* Login.storyboard in Resources */,
+				1AD8B61122F0363B001B0C55 /* Home.strings in Resources */,
+				1AD8B61222F0363B001B0C55 /* ChangeEmail.strings in Resources */,
+				1AD8B61322F0363B001B0C55 /* Options.storyboard in Resources */,
+				1AD8B61422F0363B001B0C55 /* Profile.strings in Resources */,
+				1AD8B61522F0363B001B0C55 /* Main.storyboard in Resources */,
+				1AD8B61622F0363B001B0C55 /* Login.strings in Resources */,
+				1AD8B61722F0363B001B0C55 /* Assets.xcassets in Resources */,
+				1AD8B61822F0363B001B0C55 /* Settings.strings in Resources */,
+				1AD8B61922F0363B001B0C55 /* Store.storyboard in Resources */,
+				1AD8B61A22F0363B001B0C55 /* Puk.strings in Resources */,
+				1AD8B61B22F0363B001B0C55 /* Settings.storyboard in Resources */,
+				1AD8B61C22F0363B001B0C55 /* LaunchScreen.storyboard in Resources */,
+				1AD8B61D22F0363B001B0C55 /* Commons.strings in Resources */,
+				1AD8B61E22F0363B001B0C55 /* Services.storyboard in Resources */,
+				1AD8B61F22F0363B001B0C55 /* Consumption.storyboard in Resources */,
+				1AD8B62022F0363B001B0C55 /* ChangePassword.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2A192FD0211B12BD007C1E5A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1097,6 +1309,7 @@
 				2A193021211B1E7F007C1E5A /* Consumption.storyboard in Resources */,
 				2A63F8FE2125A618009D515C /* Commons.strings in Resources */,
 				2A63F91B2125CA3C009D515C /* ChangePassword.strings in Resources */,
+				1AD8B63722F03D9B001B0C55 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1140,20 +1353,136 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A03FE6521568F1100AEBF82 /* Fabric */ = {
+		1AD8B63022F038F4001B0C55 /* Crashlytics */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
 			);
-			name = Fabric;
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" 0c952a3c4738837978041bedea4bc038af87877f 69ce95087f1adbfc43f3ec3b2ac8d411a9e0df5af552e818d4532e63a4a0c6a7\n";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+		};
+		1AD8B63122F0391D001B0C55 /* Checker */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Checker;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Applications/Checker.app/Contents/Resources/start-analyzer.app/Contents/MacOS/start-analyzer || echo \"WARNING: start-analyzer not installed.\"\n";
+		};
+		1AD8B63222F03936001B0C55 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		1AD8B63322F03965001B0C55 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+		};
+		1AD8B63422F03981001B0C55 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+		};
+		1AD8B63522F03985001B0C55 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
+		};
+		1CABA37BCF4B46E3E9A18783 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-Iliad Production/Pods-Abstract Target-Iliad Production-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-Iliad Production/Pods-Abstract Target-Iliad Production-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-Iliad Production/Pods-Abstract Target-Iliad Production-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		2A193023211B2D98007C1E5A /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1167,239 +1496,225 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: Swiftlint not installed, download from https://github.com/realm/Swiftlint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: Swiftlint not installed, download from https://github.com/realm/Swiftlint\"\nfi\n";
 		};
-		31B99667BB9DB2078BB8D943 /* [CP] Embed Pods Frameworks */ = {
+		5A51450A7E4FF5EDC34E8C53 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-IliadProd/Pods-Abstract Target-IliadProd-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
-				"${BUILT_PRODUCTS_DIR}/BmoViewPager/BmoViewPager.framework",
-				"${BUILT_PRODUCTS_DIR}/ClusterKit/ClusterKit.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
-				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${PODS_ROOT}/Reveal-SDK/RevealServer-22/iOS/RevealServer.framework",
-				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
-				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
-				"${BUILT_PRODUCTS_DIR}/iOSAuthenticator/iOSAuthenticator.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BmoViewPager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ClusterKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSAuthenticator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-IliadProd/Pods-Abstract Target-IliadProd-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		393D655E27B24F3D5AAC0A7B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Abstract Target-IliadDev-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Abstract Target-Iliad Testing-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B48E894E00CE81831C0ADD22 /* [CP] Check Pods Manifest.lock */ = {
+		5B038732A68170E65989FBE5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-Iliad Development/Pods-Abstract Target-Iliad Development-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-Iliad Development/Pods-Abstract Target-Iliad Development-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-Iliad Development/Pods-Abstract Target-Iliad Development-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6614F68BD249A4BF3BF83153 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-Iliad Staging/Pods-Abstract Target-Iliad Staging-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-Iliad Staging/Pods-Abstract Target-Iliad Staging-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-Iliad Staging/Pods-Abstract Target-Iliad Staging-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FDCB9771A8F4135CF1C031D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Abstract Target-IliadStaging-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Abstract Target-Iliad Production-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BAA82AD64FF6E208CCB02982 /* [CP] Check Pods Manifest.lock */ = {
+		9BCECDD056583596B1ABB08A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-Iliad Testing/Pods-Abstract Target-Iliad Testing-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-Iliad Testing/Pods-Abstract Target-Iliad Testing-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-Iliad Testing/Pods-Abstract Target-Iliad Testing-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF81FCE713282AAF2926C904 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Abstract Target-IliadProd-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Abstract Target-Iliad Development-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CA97CC957028D79B7596449D /* [CP] Embed Pods Frameworks */ = {
+		F3E59A1A2D00FDD3599A563B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-IliadStaging/Pods-Abstract Target-IliadStaging-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
-				"${BUILT_PRODUCTS_DIR}/BmoViewPager/BmoViewPager.framework",
-				"${BUILT_PRODUCTS_DIR}/ClusterKit/ClusterKit.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
-				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${PODS_ROOT}/Reveal-SDK/RevealServer-22/iOS/RevealServer.framework",
-				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
-				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
-				"${BUILT_PRODUCTS_DIR}/iOSAuthenticator/iOSAuthenticator.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			inputFileListPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BmoViewPager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ClusterKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSAuthenticator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"$(DERIVED_FILE_DIR)/Pods-Abstract Target-Iliad Staging-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-IliadStaging/Pods-Abstract Target-IliadStaging-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D46CDEB3DF27D8BEF617F2E5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-IliadDev/Pods-Abstract Target-IliadDev-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
-				"${BUILT_PRODUCTS_DIR}/BmoViewPager/BmoViewPager.framework",
-				"${BUILT_PRODUCTS_DIR}/ClusterKit/ClusterKit.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
-				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
-				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${PODS_ROOT}/Reveal-SDK/RevealServer-22/iOS/RevealServer.framework",
-				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyUserDefaults/SwiftyUserDefaults.framework",
-				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
-				"${BUILT_PRODUCTS_DIR}/iOSAuthenticator/iOSAuthenticator.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BmoViewPager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ClusterKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealServer.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyUserDefaults.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iOSAuthenticator.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Abstract Target-IliadDev/Pods-Abstract Target-IliadDev-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1AD8B5C822F0363B001B0C55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AD8B5C922F0363B001B0C55 /* API+Consumption.swift in Sources */,
+				1AD8B5CA22F0363B001B0C55 /* APIEndpoint+Paths.swift in Sources */,
+				1AD8B62C22F0375D001B0C55 /* AppConfig+Testing.swift in Sources */,
+				1AD8B5CB22F0363B001B0C55 /* Date+XT.swift in Sources */,
+				1AD8B5CC22F0363B001B0C55 /* UIImage+XT.swift in Sources */,
+				1AD8B5CD22F0363B001B0C55 /* LoginViewController.swift in Sources */,
+				1AD8B5CE22F0363B001B0C55 /* CustomButton.swift in Sources */,
+				1AD8B5CF22F0363B001B0C55 /* CustomActivityIndicator.swift in Sources */,
+				1AD8B5D022F0363B001B0C55 /* PseudoHeaderTableViewCell.swift in Sources */,
+				1AD8B5D122F0363B001B0C55 /* API+Login.swift in Sources */,
+				1AD8B5D222F0363B001B0C55 /* Typealiases.swift in Sources */,
+				1AD8B5D322F0363B001B0C55 /* ServicesViewController.swift in Sources */,
+				1AD8B5D422F0363B001B0C55 /* DetailsCell.swift in Sources */,
+				1AD8B5D522F0363B001B0C55 /* InfoViewController.swift in Sources */,
+				1AD8B5D622F0363B001B0C55 /* API.swift in Sources */,
+				1AD8B5D722F0363B001B0C55 /* UIColor+XT.swift in Sources */,
+				1AD8B5D822F0363B001B0C55 /* Credentials.swift in Sources */,
+				1AD8B5D922F0363B001B0C55 /* ConsumptionViewController.swift in Sources */,
+				1AD8B5DA22F0363B001B0C55 /* UIBarButtonItem+XT.swift in Sources */,
+				1AD8B5DB22F0363B001B0C55 /* AppDelegate.swift in Sources */,
+				1AD8B5DC22F0363B001B0C55 /* API+Store.swift in Sources */,
+				1AD8B5DD22F0363B001B0C55 /* SingleTouchDownGestureRecognizer.swift in Sources */,
+				1AD8B5DE22F0363B001B0C55 /* User.swift in Sources */,
+				1AD8B5DF22F0363B001B0C55 /* APIEndpoint.swift in Sources */,
+				1AD8B5E022F0363B001B0C55 /* PagerViewController.swift in Sources */,
+				1AD8B5E122F0363B001B0C55 /* AppConfig+Prod.swift in Sources */,
+				1AD8B5E222F0363B001B0C55 /* Consumption.swift in Sources */,
+				1AD8B5E322F0363B001B0C55 /* StoreViewController.swift in Sources */,
+				1AD8B5E422F0363B001B0C55 /* MainTabBarController.swift in Sources */,
+				1AD8B5E522F0363B001B0C55 /* HomeViewController.swift in Sources */,
+				1AD8B5E622F0363B001B0C55 /* Store.swift in Sources */,
+				1AD8B5E722F0363B001B0C55 /* OptionCell.swift in Sources */,
+				1AD8B5E822F0363B001B0C55 /* APIEndpoint+Tasks.swift in Sources */,
+				1AD8B5E922F0363B001B0C55 /* ConsumptionDetail.swift in Sources */,
+				1AD8B5EA22F0363B001B0C55 /* Section.swift in Sources */,
+				1AD8B5EB22F0363B001B0C55 /* String+XT.swift in Sources */,
+				1AD8B5EC22F0363B001B0C55 /* API+Information.swift in Sources */,
+				1AD8B5ED22F0363B001B0C55 /* API+XT.swift in Sources */,
+				1AD8B5EE22F0363B001B0C55 /* CardView.swift in Sources */,
+				1AD8B5EF22F0363B001B0C55 /* RowCell.swift in Sources */,
+				1AD8B5F022F0363B001B0C55 /* ChangePasswordViewController.swift in Sources */,
+				1AD8B64522F04585001B0C55 /* BaseViewController.swift in Sources */,
+				1AD8B5F122F0363B001B0C55 /* AppConfig.swift in Sources */,
+				1AD8B5F222F0363B001B0C55 /* ConsumptionDetailsViewController.swift in Sources */,
+				1AD8B5F322F0363B001B0C55 /* API+Service.swift in Sources */,
+				1AD8B5F422F0363B001B0C55 /* AutoLoginViewController.swift in Sources */,
+				1AD8B5F522F0363B001B0C55 /* ChangeEmailViewController.swift in Sources */,
+				1AD8B5F622F0363B001B0C55 /* OptionsViewController.swift in Sources */,
+				1AD8B5F722F0363B001B0C55 /* HeaderCell.swift in Sources */,
+				1AD8B5F822F0363B001B0C55 /* UIViewController+XT.swift in Sources */,
+				1AD8B5F922F0363B001B0C55 /* Config.swift in Sources */,
+				1AD8B5FA22F0363B001B0C55 /* UIStoryboard+XT.swift in Sources */,
+				1AD8B5FB22F0363B001B0C55 /* Utility.swift in Sources */,
+				1AD8B5FC22F0363B001B0C55 /* SettingsViewController.swift in Sources */,
+				1AD8B5FD22F0363B001B0C55 /* API+RecoverPassword.swift in Sources */,
+				1AD8B5FE22F0363B001B0C55 /* API+Option.swift in Sources */,
+				1AD8B5FF22F0363B001B0C55 /* APIEndpoint+Methods.swift in Sources */,
+				1AD8B60022F0363B001B0C55 /* BasicCell.swift in Sources */,
+				1AD8B60122F0363B001B0C55 /* ShowPukViewController.swift in Sources */,
+				1AD8B60222F0363B001B0C55 /* StoreClusterView.swift in Sources */,
+				1AD8B60322F0363B001B0C55 /* ProfileViewController.swift in Sources */,
+				1AD8B60422F0363B001B0C55 /* StoreAnnotationView.swift in Sources */,
+				1AD8B60522F0363B001B0C55 /* MapManager.swift in Sources */,
+				1AD8B63F22F0425E001B0C55 /* R.generated.swift in Sources */,
+				1AD8B60622F0363B001B0C55 /* UIView+XT.swift in Sources */,
+				1AD8B60722F0363B001B0C55 /* RecoverPasswordViewController.swift in Sources */,
+				1AD8B60822F0363B001B0C55 /* UINavigationBar.swift in Sources */,
+				1AD8B60922F0363B001B0C55 /* APIEndpoint+Core.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2A192FBD211B12BD007C1E5A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1423,6 +1738,7 @@
 				2A66065D2136E64B00C96102 /* ConsumptionViewController.swift in Sources */,
 				2AC5D7F5213ADC7C00DAECDC /* UIBarButtonItem+XT.swift in Sources */,
 				2A19300F211B1C50007C1E5A /* User.swift in Sources */,
+				1AD8B64622F04585001B0C55 /* BaseViewController.swift in Sources */,
 				2A03FE61215671CD00AEBF82 /* API+Store.swift in Sources */,
 				2A232692211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
 				2A03FE512156718200AEBF82 /* StoreAnnotationView.swift in Sources */,
@@ -1457,6 +1773,7 @@
 				2A47620C211C6C79002AC7D1 /* UIViewController+XT.swift in Sources */,
 				2A192FCA211B12BD007C1E5A /* AppConfig+Staging.swift in Sources */,
 				2AF92DD3211C32530058CFD2 /* RecoverPasswordViewController.swift in Sources */,
+				1AD8B64022F0425E001B0C55 /* R.generated.swift in Sources */,
 				2A19300A211B1B67007C1E5A /* Config.swift in Sources */,
 				2AE214B22126CB5000BB2F1C /* SettingsViewController.swift in Sources */,
 				2A193017211B1DF1007C1E5A /* UIStoryboard+XT.swift in Sources */,
@@ -1495,6 +1812,7 @@
 				2A66065E2136E64B00C96102 /* ConsumptionViewController.swift in Sources */,
 				2AC5D7F6213ADC7C00DAECDC /* UIBarButtonItem+XT.swift in Sources */,
 				2A193027211B362E007C1E5A /* CardView.swift in Sources */,
+				1AD8B64722F04585001B0C55 /* BaseViewController.swift in Sources */,
 				2A03FE62215671CD00AEBF82 /* API+Store.swift in Sources */,
 				2A19302B211B38D9007C1E5A /* BasicCell.swift in Sources */,
 				2A03FE522156718200AEBF82 /* StoreAnnotationView.swift in Sources */,
@@ -1529,6 +1847,7 @@
 				2AAF699B2121BF27005DECE5 /* OptionsViewController.swift in Sources */,
 				2A192FE7211B12C0007C1E5A /* API+XT.swift in Sources */,
 				2A192FE8211B12C0007C1E5A /* AppConfig.swift in Sources */,
+				1AD8B64122F0425E001B0C55 /* R.generated.swift in Sources */,
 				2A192FEA211B12C0007C1E5A /* APIEndpoint+Methods.swift in Sources */,
 				2A23263B211C888F0045FBD7 /* Utility.swift in Sources */,
 				2AE214B32126CB5000BB2F1C /* SettingsViewController.swift in Sources */,
@@ -1567,6 +1886,7 @@
 				2A66065C2136E64B00C96102 /* ConsumptionViewController.swift in Sources */,
 				2AC5D7F4213ADC7A00DAECDC /* UIBarButtonItem+XT.swift in Sources */,
 				2A80F30E211AEF21008D8C89 /* AppDelegate.swift in Sources */,
+				1AD8B64422F04585001B0C55 /* BaseViewController.swift in Sources */,
 				2A03FE60215671CD00AEBF82 /* API+Store.swift in Sources */,
 				2A232691211CF1F60045FBD7 /* SingleTouchDownGestureRecognizer.swift in Sources */,
 				2A19300E211B1C50007C1E5A /* User.swift in Sources */,
@@ -1601,6 +1921,7 @@
 				2A23263A211C884D0045FBD7 /* Utility.swift in Sources */,
 				2AE214B12126CB5000BB2F1C /* SettingsViewController.swift in Sources */,
 				2AF92DCF211C2DD00058CFD2 /* API+RecoverPassword.swift in Sources */,
+				1AD8B63E22F0425E001B0C55 /* R.generated.swift in Sources */,
 				2AAF696921219A3D005DECE5 /* API+Option.swift in Sources */,
 				2A192FAD211B0383007C1E5A /* APIEndpoint+Methods.swift in Sources */,
 				2A193029211B38D9007C1E5A /* BasicCell.swift in Sources */,
@@ -1630,6 +1951,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1AD8B5C522F0363B001B0C55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AF84B2E213D6C6500026AE3 /* ConsumptionWidget */;
+			targetProxy = 1AD8B5C622F0363B001B0C55 /* PBXContainerItemProxy */;
+		};
 		2AF00316213DC30C001507C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2AF84B2E213D6C6500026AE3 /* ConsumptionWidget */;
@@ -1713,13 +2039,58 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1AD8B62622F0363B001B0C55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9D33396BED16D10E2574121 /* Pods-Abstract Target-Iliad Testing.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Testing/IliadTesting.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = LAT58Z69VZ;
+				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Testing/iliadTesting-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale.Testing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1AD8B62722F0363B001B0C55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBBF78CD7D963714266CFFF6 /* Pods-Abstract Target-Iliad Testing.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Testing/IliadTesting.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = LAT58Z69VZ;
+				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Testing/iliadTesting-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale.Testing;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		2A192FD6211B12BD007C1E5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FF08424C2EC9A18AEE8E6F2 /* Pods-Abstract Target-IliadStaging.debug.xcconfig */;
+			baseConfigurationReference = 5FFEBD2D2B13FE6F085216CA /* Pods-Abstract Target-Iliad Staging.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Staging/IliadStaging.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Staging/iliadStaging-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1727,20 +2098,21 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleStaging;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale.Staging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		2A192FD7211B12BD007C1E5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F74579818C2C7F36B5D468AB /* Pods-Abstract Target-IliadStaging.release.xcconfig */;
+			baseConfigurationReference = E34D9FA5475565C6AC4C20DF /* Pods-Abstract Target-Iliad Staging.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Staging/IliadStaging.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Staging/iliadStaging-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1748,29 +2120,30 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleStaging;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale.Staging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		2A192FF5211B12C0007C1E5A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7D6C6559BB064276CE6ECC1 /* Pods-Abstract Target-IliadDev.debug.xcconfig */;
+			baseConfigurationReference = 1586314DA290422BD398E50E /* Pods-Abstract Target-Iliad Development.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Dev/IliadDev.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Development/IliadDevelopment.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
-				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Dev/iliadDev-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Development/iliadDevelopment-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEV";
-				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleDev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale.Development;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1779,20 +2152,21 @@
 		};
 		2A192FF6211B12C0007C1E5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 908DF9FC3DA5EA36B7A4F54B /* Pods-Abstract Target-IliadDev.release.xcconfig */;
+			baseConfigurationReference = 975388C448AAE3C8A6CDEB30 /* Pods-Abstract Target-Iliad Development.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Dev/IliadDev.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Development/IliadDevelopment.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
-				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Dev/iliadDev-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Development/iliadDevelopment-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEV";
-				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonaleDev;
+				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale.Development;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1917,14 +2291,14 @@
 		};
 		2A80F31D211AEF22008D8C89 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7488A9A80BE83B962C92D8B /* Pods-Abstract Target-IliadProd.debug.xcconfig */;
+			baseConfigurationReference = 90E1A6D6840A45F6F786000B /* Pods-Abstract Target-Iliad Production.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Prod/IliadProd.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Production/IliadProduction.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
-				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Prod/iliadProd-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Production/iliadProduction-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1932,21 +2306,21 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		2A80F31E211AEF22008D8C89 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94448A748CC2882C4B07E2E9 /* Pods-Abstract Target-IliadProd.release.xcconfig */;
+			baseConfigurationReference = 21AF3800227E17A34770CBF0 /* Pods-Abstract Target-Iliad Production.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Prod/IliadProd.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/Iliad/Configurations/Production/IliadProduction.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
-				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Prod/iliadProd-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Iliad/Configurations/Production/iliadProduction-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1954,7 +2328,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.luigiaiello.areapersonale;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1964,6 +2338,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ConsumptionWidget/Configurations/ConsumptionWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/ConsumptionWidget/Configurations/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1984,6 +2359,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = ConsumptionWidget/Configurations/ConsumptionWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = LAT58Z69VZ;
 				INFOPLIST_FILE = "$(SRCROOT)/ConsumptionWidget/Configurations/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2002,7 +2378,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2A192FD5211B12BD007C1E5A /* Build configuration list for PBXNativeTarget "IliadStaging" */ = {
+		1AD8B62522F0363B001B0C55 /* Build configuration list for PBXNativeTarget "Iliad Testing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AD8B62622F0363B001B0C55 /* Debug */,
+				1AD8B62722F0363B001B0C55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A192FD5211B12BD007C1E5A /* Build configuration list for PBXNativeTarget "Iliad Staging" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A192FD6211B12BD007C1E5A /* Debug */,
@@ -2011,7 +2396,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A192FF4211B12C0007C1E5A /* Build configuration list for PBXNativeTarget "IliadDev" */ = {
+		2A192FF4211B12C0007C1E5A /* Build configuration list for PBXNativeTarget "Iliad Development" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A192FF5211B12C0007C1E5A /* Debug */,
@@ -2029,7 +2414,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A80F31C211AEF22008D8C89 /* Build configuration list for PBXNativeTarget "IliadProd" */ = {
+		2A80F31C211AEF22008D8C89 /* Build configuration list for PBXNativeTarget "Iliad Production" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A80F31D211AEF22008D8C89 /* Debug */,

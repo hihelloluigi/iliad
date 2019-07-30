@@ -8,22 +8,9 @@
 
 import UIKit
 
-enum TabBarItems: Int {
-    case consumption = 0
-    case options = 1
-    case services = 2
-    case profile = 3
-}
-
-struct Item {
-    let name: String
-    let image: UIImage
-    let selectedImage: UIImage
-}
-
 class MainTabBarController: UITabBarController {
 
-    // MARK: - Variables
+    // Mark - Variables
     let items: [Item] = [
         Item(name: "Consumi", image: #imageLiteral(resourceName: "ic_dashboard"), selectedImage: #imageLiteral(resourceName: "ic_dashboard_filled")),
         Item(name: "Opzioni", image: #imageLiteral(resourceName: "ic_list2"), selectedImage: #imageLiteral(resourceName: "ic_list2")),
@@ -31,14 +18,14 @@ class MainTabBarController: UITabBarController {
         Item(name: "Profilo", image: #imageLiteral(resourceName: "ic_profile"), selectedImage: #imageLiteral(resourceName: "ic_profile_filled"))
     ]
 
-    // MARK: - Life Cycle
+    // MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configurationUI()
     }
 
-    // MARK: - Setup
+    // Mark - Setup
     private func configurationUI() {
         self.tabBar.tintColor = .iliadRed
 
@@ -55,3 +42,15 @@ class MainTabBarController: UITabBarController {
     }
 }
 
+enum TabBarItems: Int {
+    case consumption = 0
+    case options = 1
+    case services = 2
+    case profile = 3
+}
+
+struct Item {
+    let name: String
+    let image: UIImage
+    let selectedImage: UIImage
+}

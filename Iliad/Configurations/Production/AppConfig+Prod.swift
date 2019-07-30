@@ -1,5 +1,5 @@
 //
-//  AppConfig+Staging.swift
+//  File.swift
 //  MiTwit
 //
 //  Created by Luigi Aiello on 16/11/17.
@@ -12,7 +12,7 @@ import Firebase
 extension AppConfig {
     
     // MARK: - Constants
-    static let webserviceConfiguration = DefaultConfiguration.staging
+    static let webserviceConfiguration = DefaultConfiguration.production
     
     // MARK: - Configurations
     class func configureFirebase() {

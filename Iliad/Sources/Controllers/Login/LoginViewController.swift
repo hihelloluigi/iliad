@@ -13,28 +13,28 @@ import TransitionButton
 import iOSAuthenticator
 import SwiftyUserDefaults
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
 
-    // Mark - Outlets
-        // Views
+    // MARK: - Outlets
+    // Views
     @IBOutlet weak var checkBox: BEMCheckBox!
     @IBOutlet weak var customNavigationBar: UINavigationBar!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var fieldsStackView: UIStackView!
 
-        // Text fields
+    // Text fields
     @IBOutlet weak var usernameTextField: SkyFloatingLabelTextField!
     @IBOutlet weak var passwordTextField: SkyFloatingLabelTextField!
 
-        // ImageViews
+    // ImageViews
     @IBOutlet weak var logoImageView: UIImageView!
 
-        // Labels
+    // Labels
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var savePasswordLabel: UILabel!
     
-        // Buttons
+    // Buttons
     @IBOutlet weak var loginButton: TransitionButton!
     @IBOutlet weak var forgotButton: UIButton!
     @IBOutlet weak var infoBarButton: UIBarButtonItem!
@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
     private let userDefaults = UserDefaults(suiteName: "group.com.luigiaiello.consumptionWidget")
     var logout = false
 
-    // Mark - Override
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -58,10 +58,6 @@ class LoginViewController: UIViewController {
         if !logout {
             loginWithBiometric()
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -78,10 +74,10 @@ class LoginViewController: UIViewController {
         #endif
     }
 
-    // Mark - Segue
+    // MARK: - Segue
     private func performLogin(user: User) {
         guard
-            let tabBarController = "Main" <%> "MainTabBarController" as? MainTabBarController,
+            let tabBarController = R.storyboard.main.mainTabBarController(),
             let homeVC = tabBarController.viewControllers?.first as? HomeViewController,
             let navigationController = tabBarController.viewControllers?.last as? UINavigationController,
             let profileVC = navigationController.viewControllers.first as? ProfileViewController
@@ -103,7 +99,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    // Mark - Setup
+    // MARK: - Setup
     private func setup() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
         self.view.addGestureRecognizer(tapGesture)
@@ -127,13 +123,13 @@ class LoginViewController: UIViewController {
     }
 
     private func configurationText() {
-        titleLabel.text = "Login" ~> "TITLE"
-        subtitleLabel.text = "Login" ~> "SUBTITLE"
-        usernameTextField.placeholder = "Login" ~> "USERNAME_PLACEHOLDER"
-        passwordTextField.placeholder = "Login" ~> "PASSWORD_PLACEHOLDER"
-        savePasswordLabel.text = "Login" ~> "SAVE_USERNAME"
-        loginButton.setTitle("Login" ~> "LOGIN_BUTTON", for: .normal)
-        forgotButton.setTitle("Login" ~> "FOROT_PASSWORD_BUTTON", for: .normal)
+        titleLabel.text = R.string.login.title()
+        subtitleLabel.text = R.string.login.subtitle()
+        usernameTextField.placeholder = R.string.login.username_placeholder()
+        passwordTextField.placeholder = R.string.login.password_placeholder()
+        savePasswordLabel.text = R.string.login.save_username()
+        loginButton.setTitle(R.string.login.login_button(), for: .normal)
+        forgotButton.setTitle(R.string.login.forgot_password_button(), for: .normal)
     }
 
     private func recoverUsername() {
@@ -164,7 +160,7 @@ class LoginViewController: UIViewController {
         })
     }
 
-    // Mark - Helpers Dev
+    // MARK: - Helpers Dev
     #if DEV
     private func autoFill() {
         usernameTextField.text = Credentials.username
@@ -233,7 +229,7 @@ class LoginViewController: UIViewController {
 
     private func cheackIfUserReadPolicy() {
         if !Defaults[.readPolicy] {
-            guard let infoVC = "Login" <%> "InfoViewController" as? InfoViewController else {
+            guard let infoVC = R.storyboard.login.infoViewController() else {
                 return
             }
 
@@ -250,7 +246,7 @@ class LoginViewController: UIViewController {
 
         API.LoginClass.getToken(username: username, password: password) { (token, success) in
             guard success, let token = token else {
-                self.showError(title: "Commons" ~> "ERROR", message: "Login" ~> "LOGIN_ERROR_MESSAGE")
+                self.showError(title: R.string.commons.error(), message: R.string.login.login_error_message())
                 return
             }
 
@@ -262,7 +258,7 @@ class LoginViewController: UIViewController {
     private func login(username: String, password: String) {
         API.LoginClass.login(username: username, password: password) { (json) in
             guard let json = json else {
-                self.showError(title: "Commons" ~> "ERROR", message: "Login" ~> "LOGIN_ERROR_MESSAGE")
+                self.showError(title: R.string.commons.error(), message: R.string.login.login_error_message())
                 return
             }
 
@@ -271,7 +267,7 @@ class LoginViewController: UIViewController {
         }
     }
 
-    // Mark - Actions
+    // MARK: - Actions
     @IBAction func loginDidTap(_ sender: Any) {
         guard
             let usernameText = usernameTextField.text,
@@ -281,13 +277,13 @@ class LoginViewController: UIViewController {
         }
 
         guard !usernameText.isEmpty else {
-            showTextFieldError(textField: usernameTextField, error: "Login" ~> "USERNAME_TEXTFIELD_ERROR")
+            showTextFieldError(textField: usernameTextField, error: R.string.login.username_textfield_error())
             return
         }
         usernameTextField.errorMessage = nil
 
         guard !passwordText.isEmpty else {
-            showTextFieldError(textField: passwordTextField, error: "Login" ~> "PASSWORD_TEXTFIELD_ERROR")
+            showTextFieldError(textField: passwordTextField, error:  R.string.login.password_textfield_error())
             return
         }
         passwordTextField.errorMessage = nil
@@ -298,11 +294,12 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotPasswordDidTap(_ sender: Any) {
-        guard let recoverPasswordVC = "Login" <%> "RecoverPasswordViewController" as? RecoverPasswordViewController else {
+        guard let recoverPasswordVC = R.storyboard.login.recoverPasswordViewController() else {
             return
         }
 
         recoverPasswordVC.delegate = self
+        
         self.present(recoverPasswordVC, animated: true, completion: nil)
     }
     
@@ -315,7 +312,7 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func infoDidTap(_ sender: Any) {
-        guard let infoVC = "Login" <%> "InfoViewController" as? InfoViewController else {
+        guard let infoVC = R.storyboard.login.infoViewController() else {
             return
         }
 
@@ -323,7 +320,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func storeLocationDidTap(_ sender: Any) {
-        guard let storeVC = "Store" <%> "StoreViewController" as? StoreViewController else {
+        guard let storeVC = R.storyboard.store.storeViewController() else {
             return
         }
 
@@ -331,23 +328,9 @@ class LoginViewController: UIViewController {
     }
 }
 
-// Mark - Text Field Delegate
-extension LoginViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        guard let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField else {
-            textField.resignFirstResponder()
-            return true
-        }
-
-        nextField.becomeFirstResponder()
-
-        return false
-    }
-}
-
-// Mark - Recover Password View Controller Delegate
+// MARK: - Recover Password View Controller Delegate
 extension LoginViewController: RecoverPasswordDelegate {
     func recoverEmailSend() {
-        self.showSuccessMessage(title: "Commons" ~> "SUCCESS", message: "Login" ~> "RESET_PASSWORD_SUCCESS_MESSAGE")
+        self.showSuccessMessage(title: R.string.commons.success(), message: R.string.login.reset_password_success_message())
     }
 }

@@ -6,8 +6,8 @@
   Copyright © 2018 Luigi Aiello. All rights reserved.
 */
 
-"OK" = "Ok";
-"SUCCESS" = "Successo";
-"ERROR" = "Errore";
-"BACK" = "Indietro";
-"CANCEL" = "Annulla";
+"ok" = "Ok";
+"success" = "Successo";
+"error" = "Errore";
+"back" = "Indietro";
+"cancel" = "Annulla";

@@ -6,7 +6,7 @@
   Copyright © 2018 Luigi Aiello. All rights reserved.
 */
 
-"TITLE" = "Attenzione";
-"DESCRIPTION" = "Questa non è un'applicazione ufficiale. Tutti i marchi riportati appartengono ai leggitimi proprietari. Marchi di terzi, nomi di prodotti, nomi commerciali, nomi corporativi e società citati possono essere marchi di proprietà dei rispettivi titolari o marchi registrati da altre società e sono stati utilizzati a puro scopo esplicativo ed a beneficio del possessore, senza alcun fine di violazione dei diritti di Copyright vigenti. I tuoi dati non verranno salvati o divulgati ad aziende terze in alcun modo. Il progetto utilizza servizi open source, ed il codice è interamente consultabile.";
-"APP_CODE_BUTTON" = "APP";
-"API_CODE_BUTTON" = "SERVIZI";
+"title" = "Attenzione";
+"description" = "Questa non è un'applicazione ufficiale. Tutti i marchi riportati appartengono ai leggitimi proprietari. Marchi di terzi, nomi di prodotti, nomi commerciali, nomi corporativi e società citati possono essere marchi di proprietà dei rispettivi titolari o marchi registrati da altre società e sono stati utilizzati a puro scopo esplicativo ed a beneficio del possessore, senza alcun fine di violazione dei diritti di Copyright vigenti. I tuoi dati non verranno salvati o divulgati ad aziende terze in alcun modo. Il progetto utilizza servizi open source, ed il codice è interamente consultabile.";
+"app_code_button" = "APP";
+"api_code_button" = "SERVIZI";

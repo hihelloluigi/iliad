@@ -1,6 +1,7 @@
 excluded: 
   - Carthage
   - Pods
+  - R.generated.swift
 #disabled_rules:
   #- shorthand_operator
   #- trailing_whitespace

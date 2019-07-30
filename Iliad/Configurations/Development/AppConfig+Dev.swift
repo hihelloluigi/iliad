@@ -1,5 +1,5 @@
 //
-//  AppConfig+Staging.swift
+//  AppConfig+Dev.swift
 //  MiTwit
 //
 //  Created by Luigi Aiello on 16/11/17.
@@ -12,15 +12,15 @@ import Firebase
 extension AppConfig {
     
     // MARK: - Constants
-    static let webserviceConfiguration = DefaultConfiguration.staging
+    static let webserviceConfiguration = DefaultConfiguration.development
     
     // MARK: - Configurations
     class func configureFirebase() {
         guard
             let filePath = Bundle.main.path(forResource: "GoogleService-Info", ofType: "plist"),
             let options = FirebaseOptions(contentsOfFile: filePath)
-            else {
-                return
+        else {
+            return
         }
         
         FirebaseApp.configure(options: options)

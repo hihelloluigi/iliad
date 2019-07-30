@@ -11,10 +11,10 @@ import NVActivityIndicatorView
 
 class AutoLoginViewController: UIViewController {
 
-    // Mark - Outlets
+    // MARK: - Outlets
     @IBOutlet weak var activityIndicator: NVActivityIndicatorView!
 
-    // Mark - Override
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,10 +26,10 @@ class AutoLoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    // Mark - Segue
+    // MARK: - Segue
     private func performLogin(user: User) {
         guard
-            let tabBarController = "Main" <%> "MainTabBarController" as? MainTabBarController,
+            let tabBarController = R.storyboard.main.mainTabBarController(),
             let homeViewController = tabBarController.viewControllers?.first as? HomeViewController,
             let navigationController = tabBarController.viewControllers?.last as? UINavigationController,
             let profileVC = navigationController.viewControllers.first as? ProfileViewController
@@ -43,19 +43,19 @@ class AutoLoginViewController: UIViewController {
         self.present(tabBarController, animated: true, completion: nil)
     }
 
-    // Mark - Setup
+    // MARK: - Setup
     private func setup() {
         activityIndicator.tintColor = .iliadRed
         activityIndicator.type = .pacman
     }
 
-    // Mark - Helpers
+    // MARK: - Helpers
     private func loginError() {
         self.activityIndicator.stopAnimating()
 
         guard
             let window = UIApplication.shared.windows.first,
-            let loginVC = "Login" <%> "LoginViewController" as? LoginViewController
+            let loginVC = R.storyboard.login.loginViewController()
         else {
             print("Impossible to do logout")
             return
@@ -66,8 +66,8 @@ class AutoLoginViewController: UIViewController {
             print(success)
         })
     }
-
-    // Mark - APIs
+    
+    // MARK: - APIs
     private func getToken(username: String?, password: String?) {
         guard
             let username = username,

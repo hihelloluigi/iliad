@@ -27,6 +27,8 @@ class AppConfig {
 enum DefaultConfiguration: String {
     case development = "Develop"
     case staging = "Staging"
+    case testing = "Testing"
+
     case production = "Production"
     
     init?(rawValue: String) {
@@ -35,6 +37,8 @@ enum DefaultConfiguration: String {
             self = .development
         case DefaultConfiguration.staging.rawValue:
             self = .staging
+        case DefaultConfiguration.testing.rawValue:
+            self = .testing
         case DefaultConfiguration.production.rawValue:
             self = .production
         default:
@@ -49,6 +53,9 @@ enum DefaultConfiguration: String {
         case .staging:
             return "https://areapersonale.app"
             // Version 1.0 - return "https://areapersonale.herokuapp.com"
+        case .testing:
+            return "https://areapersonale.app"
+        // Version 1.0 - return "https://areapersonale.herokuapp.com"
         case .production:
             return "https://areapersonale.app"
             // Version 1.0 - return "https://areapersonale.herokuapp.com"

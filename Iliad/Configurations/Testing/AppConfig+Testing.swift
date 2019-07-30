@@ -1,9 +1,9 @@
 //
-//  AppConfig+Staging.swift
-//  MiTwit
+//  AppConfig+Testing.swift
+//  Iliad Testing
 //
-//  Created by Luigi Aiello on 16/11/17.
-//  Copyright © 2017 MindTek. All rights reserved.
+//  Created by Luigi Aiello on 30/07/2019.
+//  Copyright © 2019 Luigi Aiello. All rights reserved.
 //
 
 import Foundation
@@ -12,7 +12,7 @@ import Firebase
 extension AppConfig {
     
     // MARK: - Constants
-    static let webserviceConfiguration = DefaultConfiguration.staging
+    static let webserviceConfiguration = DefaultConfiguration.testing
     
     // MARK: - Configurations
     class func configureFirebase() {
